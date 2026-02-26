@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getAllPosts } from "@/lib/blog";
 import BlogCard from "@/components/BlogCard";
 
@@ -17,76 +18,98 @@ export default function HomePage() {
       >
         <div
           style={{
-            display: "inline-block",
-            background: "var(--accent)",
-            border: "3px solid var(--border)",
-            borderRadius: "4px",
-            padding: "4px 12px",
-            marginBottom: "1.5rem",
-            fontFamily: "'Space Mono', monospace",
-            fontSize: "0.8rem",
-            fontWeight: 700,
-            textTransform: "uppercase",
-            letterSpacing: "1px",
-            boxShadow: "var(--shadow-sm)",
+            display: "flex",
+            alignItems: "center",
+            gap: "3rem",
+            flexWrap: "wrap",
           }}
         >
-          Google Developer Expert · Web
-        </div>
+          {/* Left: text */}
+          <div style={{ flex: "1 1 380px", minWidth: 0 }}>
+            <div
+              style={{
+                display: "inline-block",
+                background: "var(--accent)",
+                border: "3px solid var(--border)",
+                borderRadius: "4px",
+                padding: "4px 12px",
+                marginBottom: "1.5rem",
+                fontFamily: "'Space Mono', monospace",
+                fontSize: "0.8rem",
+                fontWeight: 700,
+                textTransform: "uppercase",
+                letterSpacing: "1px",
+                boxShadow: "var(--shadow-sm)",
+              }}
+            >
+              Google Developer Expert · Web
+            </div>
 
-        <h1
-          style={{
-            fontFamily: "'Space Grotesk', sans-serif",
-            fontWeight: 800,
-            fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
-            lineHeight: 1.05,
-            color: "var(--text)",
-            maxWidth: "900px",
-            marginBottom: "1.5rem",
-          }}
-        >
-          Hola, soy{" "}
-          <span
-            style={{
-              background: "var(--accent)",
-              padding: "0 8px",
-              border: "3px solid var(--border)",
-              borderRadius: "4px",
-              boxShadow: "var(--shadow-sm)",
-              whiteSpace: "nowrap",
-            }}
-          >
-            Carlos
-          </span>
-          .
-          <br />
-          Ingeniero de Software
-          <br />
-          y creador de contenido.
-        </h1>
+            <h1
+              style={{
+                fontFamily: "'Space Grotesk', sans-serif",
+                fontWeight: 800,
+                fontSize: "clamp(2.2rem, 5vw, 4rem)",
+                lineHeight: 1.05,
+                color: "var(--text)",
+                marginBottom: "1.5rem",
+              }}
+            >
+              Hola, soy{" "}
+              <span
+                style={{
+                  background: "var(--accent)",
+                  padding: "0 8px",
+                  border: "3px solid var(--border)",
+                  borderRadius: "4px",
+                  boxShadow: "var(--shadow-sm)",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                Carlos
+              </span>
+              .
+              <br />
+              Ingeniero de Software
+              <br />
+              y creador de contenido.
+            </h1>
 
-        <p
-          style={{
-            color: "var(--text-secondary)",
-            fontSize: "1.2rem",
-            maxWidth: "620px",
-            lineHeight: 1.7,
-            marginBottom: "2rem",
-          }}
-        >
-          20+ años haciendo webs. Escribo sobre JavaScript, TypeScript,
-          arquitectura de software e inteligencia artificial.
-          <strong style={{ color: "var(--text)" }}> 640k seguidores</strong> en
-          redes, professor asociado en la Universidad Europea.
-        </p>
+            <p
+              style={{
+                color: "var(--text-secondary)",
+                fontSize: "1.1rem",
+                lineHeight: 1.7,
+                marginBottom: "2rem",
+              }}
+            >
+              20+ años haciendo webs. Escribo sobre JavaScript, TypeScript,
+              arquitectura de software e inteligencia artificial.{" "}
+              <strong style={{ color: "var(--text)" }}>640k seguidores</strong>{" "}
+              en redes, profesor asociado en la Universidad Europea.
+            </p>
 
-        <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-          <Link href="/blog" className="neo-btn neo-btn-primary">
-            Leer el blog →
-          </Link>
-          <Link href="/about" className="neo-btn">
-            Sobre mí
-          </Link>
+            <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+              <Link href="/blog" className="neo-btn neo-btn-primary">
+                Leer el blog →
+              </Link>
+              <Link href="/about" className="neo-btn">
+                Sobre mí
+              </Link>
+            </div>
+          </div>
+
+          {/* Right: photo */}
+          <div style={{ flex: "0 0 auto" }}>
+            <Image
+              src="/carlos-azaustre.png"
+              alt="Carlos Azaustre — Ingeniero de Software y Google Developer Expert"
+              width={420}
+              height={420}
+              style={{ display: "block", maxWidth: "100%", height: "auto" }}
+              priority
+            />
+          </div>
         </div>
       </section>
 

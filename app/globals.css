@@ -202,12 +202,48 @@ body {
 
 .prose-neo ul,
 .prose-neo ol {
-  padding-left: 1.5rem;
+  padding-left: 1.75rem;
   margin-bottom: 1.25rem;
 }
 
 .prose-neo li {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Neobrutalist bullet — yellow square with black shadow */
+.prose-neo ul {
+  list-style: none;
+  padding-left: 1.75rem;
+}
+
+.prose-neo ul li {
+  position: relative;
+  padding-left: 0.25rem;
+}
+
+.prose-neo ul li::before {
+  content: '';
+  position: absolute;
+  left: -1.4rem;
+  top: 0.45em;
+  width: 10px;
+  height: 10px;
+  background: var(--accent);
+  border: 2px solid var(--border);
+  box-shadow: 2px 2px 0px var(--border);
+  flex-shrink: 0;
+}
+
+/* Ordered lists keep their numbers but styled */
+.prose-neo ol {
+  list-style: decimal;
+  padding-left: 1.75rem;
+}
+
+.prose-neo ol li::marker {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  color: var(--text);
 }
 
 .prose-neo blockquote {
