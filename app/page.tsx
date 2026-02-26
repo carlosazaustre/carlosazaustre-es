@@ -3,7 +3,7 @@ import { getAllPosts } from "@/lib/blog";
 import BlogCard from "@/components/BlogCard";
 
 export default function HomePage() {
-  const recentPosts = getAllPosts().slice(0, 3);
+  const recentPosts = getAllPosts().slice(0, 6);
 
   return (
     <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "3rem 1.5rem" }}>

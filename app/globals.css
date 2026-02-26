@@ -329,6 +329,143 @@ body {
   border-color: #28c840;
 }
 
+/* ── YouTube window ── */
+.prose-neo .yt-window {
+  border: 3px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  margin: 1.75rem 0;
+  background: #1a1a1a;
+}
+
+.prose-neo .yt-titlebar {
+  display: flex;
+  align-items: center;
+  background: #cc0000;
+  border-bottom: 2px solid var(--border);
+  height: 44px;
+  padding: 0 14px;
+  gap: 0;
+}
+
+/* Traffic light dots */
+.prose-neo .yt-dots {
+  width: 54px;
+  height: 14px;
+  flex-shrink: 0;
+  background-image:
+    radial-gradient(circle, #ff5f57 5px, transparent 5px),
+    radial-gradient(circle, #ffbd2e 5px, transparent 5px),
+    radial-gradient(circle, #28c840 5px, transparent 5px);
+  background-size: 18px 14px, 18px 14px, 18px 14px;
+  background-position: 0px center, 18px center, 36px center;
+  background-repeat: no-repeat;
+}
+
+/* YouTube label */
+.prose-neo .yt-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  margin: 0 auto;
+}
+
+/* YouTube play icon via CSS */
+.prose-neo .yt-icon {
+  display: inline-block;
+  width: 18px;
+  height: 14px;
+  background: #fff;
+  border-radius: 3px;
+  position: relative;
+  flex-shrink: 0;
+}
+.prose-neo .yt-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  border-style: solid;
+  border-width: 4px 0 4px 7px;
+  border-color: transparent transparent transparent #cc0000;
+}
+
+/* Subscribe button */
+.prose-neo .yt-subscribe {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 5px 12px;
+  background: var(--accent);
+  color: var(--border);
+  border: 2px solid var(--border);
+  border-radius: 3px;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+  box-shadow: 2px 2px 0 var(--border);
+}
+.prose-neo .yt-subscribe:hover {
+  box-shadow: 3px 3px 0 var(--border);
+  transform: translate(-1px, -1px);
+  background: #fff;
+}
+
+/* 16:9 iframe wrapper */
+.prose-neo .yt-embed {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.prose-neo .yt-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ── Spotify embed ── */
+.prose-neo .spotify-window {
+  border: 3px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin: 1.75rem 0;
+}
+
+.prose-neo .spotify-window iframe {
+  display: block;
+  border: none;
+}
+
+/* ── Summary / Callout box ── */
+.prose-neo .neo-summary {
+  background: #FFFDE7;
+  border: 3px solid var(--border);
+  border-left: 6px solid var(--accent);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
 /* ── highlight.js custom theme (dark, neobrutalist) ── */
 .hljs { color: #e8e8e8; }
 .hljs-comment, .hljs-quote             { color: #6a737d; font-style: italic; }
