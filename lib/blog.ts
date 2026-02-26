@@ -78,6 +78,25 @@ function formatReadingTime(text: string): string {
   return `${minutes} min`;
 }
 
+function extractExcerpt(content: string, maxLength = 160): string {
+  // Strip MDX/markdown: remove frontmatter fence, headings, images, links, inline code, bold/italic
+  const clean = content
+    .replace(/^---[\s\S]*?---/, "")
+    .replace(/!\[.*?\]\(.*?\)/g, "")
+    .replace(/\[([^\]]+)\]\(.*?\)/g, "$1")
+    .replace(/#{1,6}\s+/g, "")
+    .replace(/`{1,3}[^`]*`{1,3}/g, "")
+    .replace(/\*{1,2}([^*]+)\*{1,2}/g, "$1")
+    .replace(/_{1,2}([^_]+)_{1,2}/g, "$1")
+    .replace(/<[^>]+>/g, "")
+    .replace(/\n+/g, " ")
+    .trim();
+
+  if (clean.length <= maxLength) return clean;
+  const cut = clean.lastIndexOf(" ", maxLength);
+  return clean.slice(0, cut > 0 ? cut : maxLength) + "…";
+}
+
 export function getAllPosts(): PostMeta[] {
   if (!fs.existsSync(BLOG_DIR)) return [];
 
@@ -95,7 +114,7 @@ export function getAllPosts(): PostMeta[] {
       slug,
       title: data.title ?? "Sin título",
       date: data.date ? String(data.date) : new Date().toISOString(),
-      excerpt: data.excerpt ?? "",
+      excerpt: data.excerpt ?? extractExcerpt(content),
       tags: Array.isArray(data.tags) ? data.tags : [],
       readingTime: formatReadingTime(content),
       coverImage: data.coverImage ?? null,
@@ -138,7 +157,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     slug,
     title: data.title ?? "Sin título",
     date: data.date ? String(data.date) : new Date().toISOString(),
-    excerpt: data.excerpt ?? "",
+    excerpt: data.excerpt ?? extractExcerpt(content),
     tags: Array.isArray(data.tags) ? data.tags : [],
     readingTime: formatReadingTime(content),
     coverImage: data.coverImage ?? null,
