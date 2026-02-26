@@ -534,10 +534,243 @@ body {
 }
 
 /* ────────────────────────────────────────────
+   TABLES (inside blog posts)
+──────────────────────────────────────────── */
+
+.prose-neo table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin: 2rem 0;
+  font-size: 0.9rem;
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.prose-neo thead {
+  background: var(--accent);
+}
+
+.prose-neo thead th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text);
+  border-right: 2px solid var(--border);
+  white-space: nowrap;
+}
+
+.prose-neo thead th:last-child {
+  border-right: none;
+}
+
+.prose-neo tbody tr {
+  border-top: 2px solid var(--border);
+  transition: background 0.1s;
+}
+
+.prose-neo tbody tr:hover {
+  background: #fff9e0;
+}
+
+.prose-neo tbody td {
+  padding: 0.7rem 1rem;
+  color: var(--text-secondary);
+  border-right: 2px solid var(--border);
+  vertical-align: middle;
+  line-height: 1.5;
+}
+
+.prose-neo tbody td:last-child {
+  border-right: none;
+}
+
+.prose-neo tbody td strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+/* Row striping */
+.prose-neo tbody tr:nth-child(even) {
+  background: #f9f9f4;
+}
+
+.prose-neo tbody tr:nth-child(even):hover {
+  background: #fff9e0;
+}
+
+/* ────────────────────────────────────────────
    SELECTION
 ──────────────────────────────────────────── */
 
 ::selection {
   background: var(--accent);
   color: var(--text);
+}
+
+/* ────────────────────────────────────────────
+   USES PAGE
+──────────────────────────────────────────── */
+
+.uses-link-badge {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border: 1.5px solid var(--border);
+  border-radius: 3px;
+  padding: 1px 6px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+.uses-link-badge:hover {
+  background: var(--accent);
+  color: var(--text);
+}
+
+/* ────────────────────────────────────────────
+   NAVBAR RESPONSIVE
+──────────────────────────────────────────── */
+
+.nav-desktop {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-hamburger {
+  display: none;
+  background: var(--text);
+  color: var(--accent);
+  border: 3px solid var(--border);
+  border-radius: 4px;
+  padding: 6px 8px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 var(--border);
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+.nav-hamburger:active {
+  box-shadow: none;
+  transform: translate(2px, 2px);
+}
+
+.neo-btn-active {
+  background: var(--text) !important;
+  color: var(--accent) !important;
+}
+
+/* Overlay */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 26, 26, 0.55);
+  z-index: 200;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Offcanvas panel */
+.nav-offcanvas {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(320px, 85vw);
+  background: var(--card);
+  border-left: 3px solid var(--border);
+  box-shadow: -8px 0 0 var(--border);
+  z-index: 300;
+  transform: translateX(100%);
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-offcanvas-open {
+  transform: translateX(0);
+}
+
+.nav-offcanvas-link {
+  display: block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.85rem 1rem;
+  border: 3px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg);
+  box-shadow: 3px 3px 0 var(--border);
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+
+.nav-offcanvas-link:hover {
+  box-shadow: 5px 5px 0 var(--border);
+  transform: translate(-2px, -2px);
+}
+
+.nav-offcanvas-link-active {
+  background: var(--accent) !important;
+}
+
+/* ────────────────────────────────────────────
+   RESPONSIVE BREAKPOINTS
+──────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  /* Navbar */
+  .nav-desktop   { display: none; }
+  .nav-hamburger { display: inline-flex; }
+
+  /* Typography */
+  .prose-neo {
+    font-size: 1rem;
+  }
+
+  /* Code windows */
+  .code-window,
+  .yt-window {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  /* Blog article header */
+  .article-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Hero titles */
+  h1 {
+    font-size: clamp(1.8rem, 8vw, 2.5rem) !important;
+  }
+
+  /* Book grid: 1 column on very small screens */
+  .books-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Uses grid */
+  .uses-link-badge {
+    font-size: 0.6rem;
+  }
 }

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import type { LucideIcon } from "lucide-react";
+import { Youtube, Instagram, Twitter, Linkedin, Music2, Calendar } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Sobre mí",
@@ -61,30 +63,33 @@ const timeline = [
   },
 ];
 
-const stats = [
-  { label: "YouTube", value: "157k", icon: "📺" },
-  { label: "TikTok", value: "115k", icon: "🎵" },
-  { label: "Instagram", value: "127k", icon: "📸" },
-  { label: "X / Twitter", value: "80k", icon: "🐦" },
-  { label: "LinkedIn", value: "60k+", icon: "💼" },
-  { label: "Años en esto", value: "20+", icon: "🗓️" },
+const stats: { label: string; value: string; icon: LucideIcon; color: string }[] = [
+  { label: "YouTube", value: "157k", icon: Youtube, color: "#FF0000" },
+  { label: "TikTok", value: "115k", icon: Music2, color: "#000000" },
+  { label: "Instagram", value: "127k", icon: Instagram, color: "#E1306C" },
+  { label: "X / Twitter", value: "80k", icon: Twitter, color: "#1DA1F2" },
+  { label: "LinkedIn", value: "60k+", icon: Linkedin, color: "#0A66C2" },
+  { label: "Años en esto", value: "20+", icon: Calendar, color: "var(--border)" },
 ];
 
 const books = [
   {
     title: "Aprendiendo JavaScript",
-    desc: "Fundamentos del lenguaje desde cero. Uno de los libros de JavaScript más vendidos en Amazon España.",
-    url: "https://amzn.to/aprendiendo-js",
-  },
-  {
-    title: "Dominando JavaScript",
-    desc: "Patrones avanzados, ES2015+ y buenas prácticas para llevar tu JavaScript al siguiente nivel.",
-    url: "https://amzn.to/dominando-js",
+    desc: "Desde cero hasta ECMAScript 6+. Uno de los libros de JavaScript más vendidos en Amazon España.",
+    url: "https://amzn.to/3tDLkMp",
+    cover: "/book-aprendiendo-javascript.jpg",
   },
   {
     title: "Aprendiendo React",
-    desc: "Introducción práctica a React con ejemplos reales y el ecosistema moderno.",
+    desc: "Guía para aprender React.js desde cero con ejemplos reales y el ecosistema moderno.",
     url: "https://leanpub.com/aprendiendo-react",
+    cover: "/book-aprendiendo-react.jpg",
+  },
+  {
+    title: "Dominando JavaScript",
+    desc: "Técnicas avanzadas para el desarrollo web moderno. ES2015+ y buenas prácticas.",
+    url: "https://amzn.to/3NQJXj8",
+    cover: "/book-dominando-javascript.jpg",
   },
 ];
 
@@ -181,14 +186,24 @@ export default function AboutPage() {
         </div>
 
         <div style={{ flex: "0 0 auto" }}>
-          <Image
-            src="/carlos-azaustre.png"
-            alt="Carlos Azaustre"
-            width={360}
-            height={360}
-            style={{ display: "block", maxWidth: "100%", height: "auto" }}
-            priority
-          />
+          <div
+            style={{
+              border: "3px solid var(--border)",
+              borderRadius: "8px",
+              boxShadow: "8px 8px 0 var(--border)",
+              overflow: "hidden",
+              lineHeight: 0,
+            }}
+          >
+            <Image
+              src="/carlos-azaustre.jpg"
+              alt="Carlos Azaustre en su setup de streaming"
+              width={380}
+              height={285}
+              style={{ display: "block", maxWidth: "100%", height: "auto" }}
+              priority
+            />
+          </div>
         </div>
       </section>
 
@@ -213,13 +228,29 @@ export default function AboutPage() {
             gap: "1rem",
           }}
         >
-          {stats.map((s) => (
+          {stats.map((s) => {
+            const Icon = s.icon;
+            return (
             <div
               key={s.label}
               className="neo-card"
               style={{ padding: "1.25rem", textAlign: "center" }}
             >
-              <div style={{ fontSize: "1.5rem", marginBottom: "0.4rem" }}>{s.icon}</div>
+              <div style={{ marginBottom: "0.6rem", display: "flex", justifyContent: "center" }}>
+                <div style={{
+                  width: "40px",
+                  height: "40px",
+                  background: s.color,
+                  border: "2px solid var(--border)",
+                  borderRadius: "8px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  boxShadow: "2px 2px 0 var(--border)",
+                }}>
+                  <Icon size={20} strokeWidth={2} color="#ffffff" />
+                </div>
+              </div>
               <div
                 style={{
                   fontFamily: "'Space Mono', monospace",
@@ -245,7 +276,8 @@ export default function AboutPage() {
                 {s.label}
               </div>
             </div>
-          ))}
+          );
+          })}
         </div>
       </section>
 
@@ -256,88 +288,109 @@ export default function AboutPage() {
             fontFamily: "'Space Grotesk', sans-serif",
             fontWeight: 800,
             fontSize: "1.5rem",
-            marginBottom: "2rem",
+            marginBottom: "2.5rem",
             borderBottom: "3px solid var(--border)",
             paddingBottom: "0.5rem",
           }}
         >
           Trayectoria
         </h2>
-        <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
-          {timeline.map((item, i) => (
-            <div
-              key={i}
-              style={{
-                display: "flex",
-                gap: "1.5rem",
-                alignItems: "flex-start",
-              }}
-            >
-              {/* Year + line */}
+
+        <div style={{ position: "relative", paddingLeft: "2.5rem" }}>
+          {/* Vertical line */}
+          <div
+            style={{
+              position: "absolute",
+              left: "10px",
+              top: "10px",
+              bottom: "10px",
+              width: "3px",
+              background: "var(--border)",
+            }}
+          />
+
+          {timeline.map((item, i) => {
+            const isLast = i === timeline.length - 1;
+            const isHoy = item.year === "Hoy";
+            return (
               <div
+                key={i}
                 style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  flexShrink: 0,
-                  width: "72px",
+                  position: "relative",
+                  marginBottom: isLast ? 0 : "1.75rem",
                 }}
               >
+                {/* Dot on the line */}
                 <div
                   style={{
-                    background: item.year === "Hoy" ? "var(--text)" : "var(--accent)",
+                    position: "absolute",
+                    left: "-2.5rem",
+                    top: "14px",
+                    width: "20px",
+                    height: "20px",
+                    borderRadius: "50%",
+                    background: isHoy ? "var(--text)" : "var(--accent)",
                     border: "3px solid var(--border)",
-                    borderRadius: "4px",
-                    padding: "3px 8px",
-                    fontFamily: "'Space Mono', monospace",
-                    fontSize: "0.72rem",
-                    fontWeight: 800,
-                    color: item.year === "Hoy" ? "var(--accent)" : "var(--text)",
-                    whiteSpace: "nowrap",
                     boxShadow: "2px 2px 0 var(--border)",
-                    textAlign: "center",
+                    zIndex: 1,
+                    transform: isHoy ? "scale(1.2)" : "scale(1)",
                   }}
-                >
-                  {item.year}
-                </div>
-                {i < timeline.length - 1 && (
-                  <div
-                    style={{
-                      width: "3px",
-                      flex: 1,
-                      background: "var(--border)",
-                      minHeight: "32px",
-                    }}
-                  />
-                )}
-              </div>
+                />
 
-              {/* Content */}
-              <div style={{ paddingBottom: i < timeline.length - 1 ? "1.75rem" : 0, paddingTop: "2px" }}>
-                <h3
+                {/* Card */}
+                <div
+                  className="neo-card"
                   style={{
-                    fontFamily: "'Space Grotesk', sans-serif",
-                    fontWeight: 800,
-                    fontSize: "1rem",
-                    color: "var(--text)",
-                    marginBottom: "0.3rem",
+                    padding: "1.1rem 1.25rem",
+                    background: isHoy ? "var(--text)" : "var(--card)",
                   }}
                 >
-                  {item.title}
-                </h3>
-                <p
-                  style={{
-                    fontSize: "0.9rem",
-                    color: "var(--text-secondary)",
-                    lineHeight: 1.6,
-                    margin: 0,
-                  }}
-                >
-                  {item.desc}
-                </p>
+                  {/* Year badge */}
+                  <div style={{ marginBottom: "0.4rem" }}>
+                    <span
+                      style={{
+                        display: "inline-block",
+                        background: isHoy ? "var(--accent)" : "var(--accent)",
+                        color: "var(--text)",
+                        border: "2px solid var(--border)",
+                        borderRadius: "3px",
+                        padding: "1px 8px",
+                        fontFamily: "'Space Mono', monospace",
+                        fontSize: "0.7rem",
+                        fontWeight: 800,
+                        boxShadow: "2px 2px 0 var(--border)",
+                        filter: isHoy ? "invert(0)" : "none",
+                      }}
+                    >
+                      {item.year}
+                    </span>
+                  </div>
+
+                  <h3
+                    style={{
+                      fontFamily: "'Space Grotesk', sans-serif",
+                      fontWeight: 800,
+                      fontSize: "1rem",
+                      color: isHoy ? "var(--accent)" : "var(--text)",
+                      marginBottom: "0.35rem",
+                    }}
+                  >
+                    {item.title}
+                  </h3>
+                  <p
+                    style={{
+                      fontSize: "0.88rem",
+                      color: isHoy ? "#aaa" : "var(--text-secondary)",
+                      lineHeight: 1.65,
+                      margin: 0,
+                    }}
+                  >
+                    {item.desc}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
@@ -369,39 +422,62 @@ export default function AboutPage() {
               target="_blank"
               rel="noopener noreferrer"
               className="neo-card"
-              style={{ padding: "1.5rem", textDecoration: "none", display: "block" }}
+              style={{
+                padding: "1.25rem",
+                textDecoration: "none",
+                display: "flex",
+                flexDirection: "column",
+                gap: "0.75rem",
+              }}
             >
+              {/* Cover */}
+              <div
+                style={{
+                  border: "2px solid var(--border)",
+                  borderRadius: "4px",
+                  overflow: "hidden",
+                  lineHeight: 0,
+                }}
+              >
+                <Image
+                  src={book.cover}
+                  alt={book.title}
+                  width={400}
+                  height={533}
+                  style={{ width: "100%", height: "auto", display: "block" }}
+                />
+              </div>
               <h3
                 style={{
                   fontFamily: "'Space Grotesk', sans-serif",
                   fontWeight: 800,
-                  fontSize: "1.05rem",
+                  fontSize: "1rem",
                   color: "var(--text)",
-                  marginBottom: "0.6rem",
+                  margin: 0,
                 }}
               >
                 {book.title}
               </h3>
               <p
                 style={{
-                  fontSize: "0.88rem",
+                  fontSize: "0.85rem",
                   color: "var(--text-secondary)",
                   lineHeight: 1.6,
                   margin: 0,
+                  flex: 1,
                 }}
               >
                 {book.desc}
               </p>
               <span
                 style={{
-                  display: "inline-block",
-                  marginTop: "1rem",
                   fontFamily: "'Space Mono', monospace",
                   fontSize: "0.75rem",
                   fontWeight: 700,
                   textTransform: "uppercase",
                   color: "var(--text-muted)",
                   borderBottom: "2px solid var(--accent)",
+                  alignSelf: "flex-start",
                 }}
               >
                 Ver libro →
