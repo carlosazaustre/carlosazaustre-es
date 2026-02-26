@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --accent: #FFCC00;
+  --accent-hover: #E6B800;
+  --bg: #FAFAF5;
+  --card: #FFFFFF;
+  --border: #1A1A1A;
+  --text: #1A1A1A;
+  --text-secondary: #555555;
+  --text-muted: #888888;
+  --shadow: 4px 4px 0px #1A1A1A;
+  --shadow-sm: 2px 2px 0px #1A1A1A;
+  --shadow-hover: 6px 6px 0px #1A1A1A;
+  --shadow-lg: 8px 8px 0px #1A1A1A;
+  --radius: 4px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ────────────────────────────────────────────
+   NEO-BRUTALISM BASE COMPONENTS
+──────────────────────────────────────────── */
+
+.neo-card {
+  background: var(--card);
+  border: 3px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.neo-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translate(-2px, -2px);
+}
+
+.neo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 3px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: all 0.1s ease;
+  background: var(--card);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.neo-btn:hover {
+  box-shadow: var(--shadow);
+  transform: translate(-1px, -1px);
+}
+
+.neo-btn:active {
+  box-shadow: none;
+  transform: translate(2px, 2px);
+}
+
+.neo-btn-primary {
+  background: var(--accent);
+  color: var(--text);
+}
+
+.neo-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  border: 2px solid var(--border);
+  border-radius: 2px;
+  font-family: 'Space Mono', monospace;
+}
+
+.neo-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 2px solid var(--border);
+  border-radius: 2px;
+  background: var(--accent);
+  color: var(--text);
+  font-family: 'Space Mono', monospace;
+  box-shadow: var(--shadow-sm);
+  text-decoration: none;
+  transition: all 0.1s ease;
+}
+
+.neo-tag:hover {
+  box-shadow: var(--shadow);
+  transform: translate(-1px, -1px);
+}
+
+.neo-divider {
+  border: none;
+  border-top: 3px solid var(--border);
+  margin: 2rem 0;
+}
+
+/* ────────────────────────────────────────────
+   NAVBAR
+──────────────────────────────────────────── */
+
+.navbar {
+  background: var(--accent);
+  border-bottom: 3px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* ────────────────────────────────────────────
+   BLOG POST CONTENT (Markdown rendered)
+──────────────────────────────────────────── */
+
+.prose-neo {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text);
+  max-width: 72ch;
+}
+
+.prose-neo h1,
+.prose-neo h2,
+.prose-neo h3,
+.prose-neo h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  color: var(--text);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.prose-neo h2 {
+  font-size: 1.6rem;
+  border-bottom: 3px solid var(--border);
+  padding-bottom: 0.4rem;
+}
+
+.prose-neo h3 {
+  font-size: 1.25rem;
+}
+
+.prose-neo p {
+  margin-bottom: 1.25rem;
+}
+
+.prose-neo a {
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 3px;
+  transition: background 0.1s;
+}
+
+.prose-neo a:hover {
+  background: var(--accent);
+}
+
+.prose-neo strong {
+  font-weight: 800;
+}
+
+.prose-neo em {
+  font-style: italic;
+}
+
+.prose-neo ul,
+.prose-neo ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose-neo li {
+  margin-bottom: 0.4rem;
+}
+
+.prose-neo blockquote {
+  border-left: 5px solid var(--accent);
+  padding: 1rem 1.5rem;
+  background: #FFFDE7;
+  border: 3px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  margin: 1.5rem 0;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.prose-neo code {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.875em;
+  background: #f0f0ea;
+  border: 1.5px solid var(--border);
+  border-radius: 2px;
+  padding: 1px 6px;
+}
+
+/* ── macOS code window ── */
+.prose-neo .code-window {
+  border: 3px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  margin: 1.75rem 0;
+  background: #1a1a1a;
+}
+
+/* Titlebar — real element */
+.prose-neo .code-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #484848;
+  border-bottom: 2px solid var(--border);
+  height: 40px;
+  padding: 0 14px;
+  /* traffic light dots via ::before */
+}
+
+.prose-neo .code-titlebar::before {
+  content: '';
+  display: block;
+  width: 54px;
+  height: 14px;
+  flex-shrink: 0;
+  background-image:
+    radial-gradient(circle, #ff5f57 5px, transparent 5px),
+    radial-gradient(circle, #ffbd2e 5px, transparent 5px),
+    radial-gradient(circle, #28c840 5px, transparent 5px);
+  background-size: 18px 14px, 18px 14px, 18px 14px;
+  background-position: 0px center, 18px center, 36px center;
+  background-repeat: no-repeat;
+}
+
+/* Language label */
+.prose-neo .code-lang {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ccc;
+  margin: 0 auto;
+}
+
+/* Code area */
+.prose-neo .code-window pre {
+  margin: 0;
+  padding: 1.25rem 1.5rem;
+  overflow-x: auto;
+  background: #1a1a1a;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.prose-neo .code-window pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+/* Copy button — lives inside the titlebar */
+.copy-btn {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  background: #333;
+  color: #ccc;
+  border: 1.5px solid #666;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.copy-btn:hover {
+  background: #555;
+  color: #fff;
+  border-color: #999;
+}
+
+.copy-btn.copied {
+  background: #28c840;
+  color: #fff;
+  border-color: #28c840;
+}
+
+/* ── highlight.js custom theme (dark, neobrutalist) ── */
+.hljs { color: #e8e8e8; }
+.hljs-comment, .hljs-quote             { color: #6a737d; font-style: italic; }
+.hljs-keyword, .hljs-selector-tag,
+.hljs-built_in, .hljs-name,
+.hljs-tag                              { color: #FFCC00; font-weight: 700; }
+.hljs-string, .hljs-attr,
+.hljs-symbol, .hljs-bullet,
+.hljs-addition                         { color: #a8ff78; }
+.hljs-title, .hljs-section             { color: #79b8ff; font-weight: 700; }
+.hljs-variable, .hljs-template-variable{ color: #ffab70; }
+.hljs-type, .hljs-class .hljs-title    { color: #b392f0; font-weight: 700; }
+.hljs-number, .hljs-literal            { color: #ff8b8b; }
+.hljs-params                           { color: #e8e8e8; }
+.hljs-deletion                         { color: #ff5f57; }
+.hljs-emphasis                         { font-style: italic; }
+.hljs-strong                           { font-weight: bold; }
+
+.prose-neo img {
+  border: 3px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 100%;
+}
+
+.prose-neo hr {
+  border: none;
+  border-top: 3px solid var(--border);
+  margin: 2rem 0;
+}
+
+/* ────────────────────────────────────────────
+   SELECTION
+──────────────────────────────────────────── */
+
+::selection {
+  background: var(--accent);
+  color: var(--text);
+}
