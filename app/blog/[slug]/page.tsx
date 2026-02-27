@@ -9,6 +9,36 @@ import SubscribeNewsletter from "@/components/SubscribeNewsletter";
 import BookBanner from "@/components/BookBanner";
 import { getBookRecommendation, BOOKS } from "@/lib/book-recommendation";
 
+/**
+ * Divide el HTML del artículo en dos mitades cortando en el </p>
+ * más cercano al 50% del contenido. Si el artículo es muy corto
+ * devuelve [html, ""] para que el banner quede al final.
+ */
+function splitHtmlAtMidpoint(html: string): [string, string] {
+  const MIN_LENGTH = 1500; // no dividir artículos muy cortos
+  if (html.length < MIN_LENGTH) return [html, ""];
+
+  const mid = Math.floor(html.length / 2);
+
+  // Buscar el </p> más cercano al 50% (primero hacia adelante, luego atrás)
+  const forward = html.indexOf("</p>", mid);
+  const backward = html.lastIndexOf("</p>", mid);
+
+  let cutIndex: number;
+  if (forward === -1 && backward === -1) return [html, ""];
+  else if (forward === -1) cutIndex = backward + 4;
+  else if (backward === -1) cutIndex = forward + 4;
+  else {
+    // Elegir el más cercano al punto medio
+    cutIndex =
+      Math.abs(forward - mid) <= Math.abs(backward - mid)
+        ? forward + 4
+        : backward + 4;
+  }
+
+  return [html.slice(0, cutIndex), html.slice(cutIndex)];
+}
+
 interface Props {
   params: Promise<{ slug: string }>;
 }
@@ -60,6 +90,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   const bookKey = getBookRecommendation(post);
   const recommendedBook = bookKey ? BOOKS[bookKey] : null;
+  const [contentFirst, contentSecond] = splitHtmlAtMidpoint(post.content);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -206,8 +237,16 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         )}
 
-        {/* Main content */}
-        <ArticleContent html={post.content} />
+        {/* Main content — primera mitad */}
+        <ArticleContent html={contentFirst} />
+
+        {/* Banner libro en el interior del artículo (~mitad del texto) */}
+        {recommendedBook && contentSecond && (
+          <BookBanner book={recommendedBook} />
+        )}
+
+        {/* Main content — segunda mitad */}
+        {contentSecond && <ArticleContent html={contentSecond} />}
       </article>
 
       {/* Bottom nav */}
@@ -257,8 +296,8 @@ export default async function BlogPostPage({ params }: Props) {
         </div>
       </div>
 
-      {/* Libro recomendado */}
-      {recommendedBook && <BookBanner book={recommendedBook} />}
+      {/* Libro recomendado — fallback para artículos cortos (sin segunda mitad) */}
+      {recommendedBook && !contentSecond && <BookBanner book={recommendedBook} />}
 
       {/* Newsletter */}
       <div style={{ marginTop: "3rem" }}>
