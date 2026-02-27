@@ -4,6 +4,7 @@ import Link from "next/link";
 import { getPostBySlug, getAllPosts } from "@/lib/blog";
 import ReadingProgress from "@/components/ReadingProgress";
 import ArticleContent from "@/components/ArticleContent";
+import DisqusComments from "@/components/DisqusComments";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -215,6 +216,10 @@ export default async function BlogPostPage({ params }: Props) {
           </a>
         </div>
       </div>
+
+      {/* Comentarios Disqus */}
+      <DisqusComments slug={post.slug} title={post.title} />
+
     </div>
     </>
   );
