@@ -91,7 +91,9 @@ export default async function LinksPage() {
           {latestVideo && (
             <LinkButton href={latestVideo.url} bg="#FF0000" emoji="▶" title={latestVideo.title} sub={`Último vídeo · ${new Date(latestVideo.published).toLocaleDateString("es-ES", { day: "numeric", month: "short" })}`} thumbnail={latestVideo.thumbnail} />
           )}
-          <LinkButton href="https://amzn.to/3tDLkMp" bg="#FF9900" textColor="#1A1A1A" emoji="📖" title="Aprendiendo JavaScript" sub="El libro · Amazon España" />
+          <LinkButton href="https://amzn.to/3tDLkMp" bg="#FF9900" textColor="#1A1A1A" emoji="📖" title="Aprendiendo JavaScript" sub="Libro · Amazon España" />
+          <LinkButton href="https://amzn.to/3NQJXj8" bg="#FF9900" textColor="#1A1A1A" emoji="📖" title="Dominando JavaScript" sub="Libro · Amazon España" />
+          <LinkButton href="https://leanpub.com/aprendiendo-react" bg="#61DAFB" textColor="#1A1A1A" emoji="⚛" title="Aprendiendo React" sub="Libro · LeanPub" />
         </div>
 
         {/* ── Section: Newsletter ── */}
