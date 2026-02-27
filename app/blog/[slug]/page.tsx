@@ -6,6 +6,8 @@ import ReadingProgress from "@/components/ReadingProgress";
 import ArticleContent from "@/components/ArticleContent";
 import DisqusComments from "@/components/DisqusComments";
 import SubscribeNewsletter from "@/components/SubscribeNewsletter";
+import BookBanner from "@/components/BookBanner";
+import { getBookRecommendation, BOOKS } from "@/lib/book-recommendation";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -55,6 +57,9 @@ export default async function BlogPostPage({ params }: Props) {
   const post = await getPostBySlug(slug);
 
   if (!post) notFound();
+
+  const bookKey = getBookRecommendation(post);
+  const recommendedBook = bookKey ? BOOKS[bookKey] : null;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -251,6 +256,9 @@ export default async function BlogPostPage({ params }: Props) {
           </a>
         </div>
       </div>
+
+      {/* Libro recomendado */}
+      {recommendedBook && <BookBanner book={recommendedBook} />}
 
       {/* Newsletter */}
       <div style={{ marginTop: "3rem" }}>
