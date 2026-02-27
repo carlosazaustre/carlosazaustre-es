@@ -50,25 +50,6 @@ export default async function HomePage() {
         >
           {/* Left: text */}
           <div style={{ flex: "1 1 380px", minWidth: 0 }}>
-            <div
-              style={{
-                display: "inline-block",
-                background: "var(--accent)",
-                border: "3px solid var(--border)",
-                borderRadius: "4px",
-                padding: "4px 12px",
-                marginBottom: "1.5rem",
-                fontFamily: "'Space Mono', monospace",
-                fontSize: "0.8rem",
-                fontWeight: 700,
-                textTransform: "uppercase",
-                letterSpacing: "1px",
-                boxShadow: "var(--shadow-sm)",
-              }}
-            >
-              Google Developer Expert · Web
-            </div>
-
             <h1
               style={{
                 fontFamily: "'Space Grotesk', sans-serif",
@@ -96,7 +77,7 @@ export default async function HomePage() {
               <br />
               Ingeniero de Software
               <br />
-              y creador de contenido.
+              y creador de contenido educativo.
             </h1>
 
             <p
