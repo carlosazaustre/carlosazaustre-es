@@ -168,6 +168,51 @@ export default async function LinksPage() {
           <LinkButton href="/blog" bg="#1A1A1A" emoji="✍" title="/blog — Artículos" sub="Tutoriales y reflexiones sobre desarrollo web" isInternal />
         </div>
 
+        {/* ── Section: Partners ── */}
+        <SectionHeader>Mis partners</SectionHeader>
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", marginBottom: "2rem" }}>
+
+          {/* Elgato */}
+          <div style={{
+            background: "#fff", border: "3px solid #1A1A1A", borderRadius: "4px",
+            boxShadow: "4px 4px 0 #1A1A1A", padding: "1rem 1.125rem",
+          }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.6rem" }}>
+              <div style={{
+                width: 40, height: 40, background: "#1A1A1A", border: "2px solid #1A1A1A",
+                borderRadius: "4px", display: "flex", alignItems: "center", justifyContent: "center",
+                flexShrink: 0, fontSize: "1.1rem",
+              }}>
+                🎙
+              </div>
+              <div>
+                <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 800, fontSize: "0.95rem", color: "#1A1A1A" }}>
+                  Elgato
+                </div>
+                <div style={{ fontFamily: "'Space Mono', monospace", fontSize: "0.62rem", color: "#888" }}>
+                  🚀 Sube de nivel tu setup de creador
+                </div>
+              </div>
+            </div>
+            <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "0.82rem", color: "#444", lineHeight: 1.55, margin: "0 0 0.75rem" }}>
+              5% de descuento en todo el catálogo Elgato con mi código:
+            </p>
+            <div style={{
+              background: "#FFCC00", border: "3px solid #1A1A1A", borderRadius: "4px",
+              padding: "0.5rem 0.875rem", display: "flex", alignItems: "center", justifyContent: "space-between",
+              boxShadow: "3px 3px 0 #1A1A1A",
+            }}>
+              <span style={{ fontFamily: "'Space Mono', monospace", fontWeight: 700, fontSize: "0.85rem", color: "#1A1A1A", letterSpacing: "1px" }}>
+                ZZ-CARLOS-AZAUSTRE
+              </span>
+              <span style={{ fontFamily: "'Space Mono', monospace", fontSize: "0.65rem", color: "#1A1A1A" }}>
+                5% off
+              </span>
+            </div>
+          </div>
+
+        </div>
+
         {/* Footer */}
         <div style={{ textAlign: "center", borderTop: "2px solid #ddd", paddingTop: "1.25rem" }}>
           <Link href="/" style={{ fontFamily: "'Space Mono', monospace", fontSize: "0.65rem", color: "#999",
