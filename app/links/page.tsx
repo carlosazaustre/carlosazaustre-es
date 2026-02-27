@@ -84,6 +84,59 @@ export default async function LinksPage() {
           Ingeniero de software, profesor asociado en la Universidad Europea y creador de contenido educativo sobre JavaScript, arquitectura de software e IA.
         </p>
 
+        {/* ── FEATURED: Curso IA ── */}
+        <a
+          href="https://thebigschool.com/sp/curso-de-desarrollo-ia-a-ca/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="links-btn"
+          style={{ display: "block", textDecoration: "none", marginBottom: "1.75rem" }}
+        >
+          <div style={{
+            background: "#FFCC00",
+            border: "3px solid #1A1A1A",
+            borderRadius: "4px",
+            boxShadow: "5px 5px 0 #1A1A1A",
+            padding: "1rem 1.125rem",
+          }}>
+            {/* Badge */}
+            <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.6rem" }}>
+              <span style={{
+                background: "#1A1A1A", color: "#FFCC00",
+                fontFamily: "'Space Mono', monospace", fontSize: "0.6rem", fontWeight: 700,
+                textTransform: "uppercase", letterSpacing: "1px",
+                padding: "2px 8px", borderRadius: "3px",
+              }}>
+                🔥 Gratis · 10-12 marzo
+              </span>
+            </div>
+            {/* Title */}
+            <div style={{
+              fontFamily: "'Space Grotesk', sans-serif", fontWeight: 800,
+              fontSize: "1.05rem", color: "#1A1A1A", lineHeight: 1.25, marginBottom: "0.4rem",
+            }}>
+              Curso de Desarrollo con IA
+            </div>
+            {/* Sub */}
+            <div style={{
+              fontFamily: "'Space Mono', monospace", fontSize: "0.65rem",
+              color: "#444", lineHeight: 1.5, marginBottom: "0.75rem",
+            }}>
+              Con Big School y MoureDev · Online y con certificado
+            </div>
+            {/* CTA */}
+            <div style={{
+              display: "inline-flex", alignItems: "center", gap: "0.4rem",
+              background: "#1A1A1A", color: "#FFCC00",
+              fontFamily: "'Space Grotesk', sans-serif", fontWeight: 800, fontSize: "0.85rem",
+              padding: "0.45rem 1rem", borderRadius: "3px",
+              border: "2px solid #1A1A1A",
+            }}>
+              Apuntarse gratis →
+            </div>
+          </div>
+        </a>
+
         {/* ── Section: Comunidad ── */}
         <SectionHeader>Comunidad</SectionHeader>
         <div style={{ display: "flex", flexDirection: "column", gap: "0.625rem", marginBottom: "1rem" }}>
