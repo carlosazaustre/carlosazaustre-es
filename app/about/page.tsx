@@ -64,15 +64,6 @@ const timeline = [
   },
 ];
 
-const stats: { label: string; value: string; icon: LucideIcon; color: string }[] = [
-  { label: "YouTube", value: "157k", icon: Youtube, color: "#FF0000" },
-  { label: "TikTok", value: "115k", icon: Music2, color: "#000000" },
-  { label: "Instagram", value: "127k", icon: Instagram, color: "#E1306C" },
-  { label: "X / Twitter", value: "80k", icon: Twitter, color: "#1DA1F2" },
-  { label: "LinkedIn", value: "60k+", icon: Linkedin, color: "#0A66C2" },
-  { label: "Años en esto", value: "20+", icon: Calendar, color: "var(--border)" },
-];
-
 const books = [
   {
     title: "Aprendiendo JavaScript",
@@ -108,13 +99,19 @@ function formatStat(n: number | null): string {
 export default async function AboutPage() {
   const siteStats = await getStats();
 
-  const achievementStats: {
+  const allStats: {
     label: string;
     value: string;
     icon: LucideIcon;
     color: string;
     href?: string;
   }[] = [
+    { label: "YouTube", value: "157k", icon: Youtube, color: "#FF0000" },
+    { label: "TikTok", value: "115k", icon: Music2, color: "#000000" },
+    { label: "Instagram", value: "127k", icon: Instagram, color: "#E1306C" },
+    { label: "X / Twitter", value: "80k", icon: Twitter, color: "#1DA1F2" },
+    { label: "LinkedIn", value: "60k+", icon: Linkedin, color: "#0A66C2" },
+    { label: "Años en esto", value: "20+", icon: Calendar, color: "var(--border)" },
     {
       label: "Vídeos en YouTube",
       value: formatStat(siteStats.youtubeVideos),
@@ -289,91 +286,12 @@ export default async function AboutPage() {
             gap: "1rem",
           }}
         >
-          {stats.map((s) => {
-            const Icon = s.icon;
-            return (
-            <div
-              key={s.label}
-              className="neo-card"
-              style={{ padding: "1.25rem", textAlign: "center" }}
-            >
-              <div style={{ marginBottom: "0.6rem", display: "flex", justifyContent: "center" }}>
-                <div style={{
-                  width: "40px",
-                  height: "40px",
-                  background: s.color,
-                  border: "2px solid var(--border)",
-                  borderRadius: "8px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  boxShadow: "2px 2px 0 var(--border)",
-                }}>
-                  <Icon size={20} strokeWidth={2} color="#ffffff" />
-                </div>
-              </div>
-              <div
-                style={{
-                  fontFamily: "'Space Mono', monospace",
-                  fontWeight: 800,
-                  fontSize: "1.6rem",
-                  color: "var(--text)",
-                  lineHeight: 1,
-                  marginBottom: "0.3rem",
-                }}
-              >
-                {s.value}
-              </div>
-              <div
-                style={{
-                  fontFamily: "'Space Mono', monospace",
-                  fontSize: "0.75rem",
-                  fontWeight: 700,
-                  textTransform: "uppercase",
-                  color: "var(--text-muted)",
-                  letterSpacing: "0.5px",
-                }}
-              >
-                {s.label}
-              </div>
-            </div>
-          );
-          })}
-        </div>
-
-        {/* Achievements: contenido y código */}
-        <h3
-          style={{
-            fontFamily: "'Space Mono', monospace",
-            fontWeight: 700,
-            fontSize: "0.8rem",
-            textTransform: "uppercase",
-            letterSpacing: "1px",
-            color: "var(--text-muted)",
-            marginTop: "2rem",
-            marginBottom: "1rem",
-          }}
-        >
-          Contenido &amp; Código
-        </h3>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))",
-            gap: "1rem",
-          }}
-        >
-          {achievementStats.map((s) => {
+          {allStats.map((s) => {
             const Icon = s.icon;
             const card = (
               <div
                 className="neo-card"
-                style={{
-                  padding: "1.25rem",
-                  textAlign: "center",
-                  background: "var(--accent)",
-                  cursor: s.href ? "pointer" : "default",
-                }}
+                style={{ padding: "1.25rem", textAlign: "center" }}
               >
                 <div style={{ marginBottom: "0.6rem", display: "flex", justifyContent: "center" }}>
                   <div style={{
@@ -408,9 +326,8 @@ export default async function AboutPage() {
                     fontSize: "0.75rem",
                     fontWeight: 700,
                     textTransform: "uppercase",
-                    color: "var(--text)",
+                    color: "var(--text-muted)",
                     letterSpacing: "0.5px",
-                    opacity: 0.7,
                   }}
                 >
                   {s.label}
