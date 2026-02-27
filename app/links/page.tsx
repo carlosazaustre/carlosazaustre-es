@@ -66,8 +66,9 @@ export default async function LinksPage() {
           boxShadow: "4px 4px 0 #1A1A1A", overflow: "hidden", background: "#fff" }}>
           {[
             { value: "640k", label: "seguidores" },
-            { value: "20+", label: "años" },
+            { value: "15+", label: "años de experiencia" },
             { value: "GDE", label: "Google" },
+            { value: "MVP", label: "Microsoft" },
           ].map((s, i) => (
             <div key={s.label} style={{ flex: 1, textAlign: "center", padding: "0.6rem 0.5rem",
               borderLeft: i > 0 ? "3px solid #1A1A1A" : "none" }}>
