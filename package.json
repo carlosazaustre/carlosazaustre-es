@@ -6,7 +6,9 @@
     "dev": "next dev",
     "dev:rss": "node scripts/watch-rss.mjs",
     "generate:rss": "node scripts/generate-rss.mjs",
-    "prebuild": "node scripts/generate-rss.mjs",
+    "generate:llms": "node scripts/generate-llms.mjs",
+    "generate:all": "node scripts/generate-rss.mjs && node scripts/generate-llms.mjs",
+    "prebuild": "node scripts/generate-rss.mjs && node scripts/generate-llms.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

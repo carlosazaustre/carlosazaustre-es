@@ -55,8 +55,42 @@ export default async function BlogPostPage({ params }: Props) {
 
   if (!post) notFound();
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: new Date(post.date).toISOString(),
+    dateModified: new Date(post.date).toISOString(),
+    url: `https://carlosazaustre.es/blog/${post.slug}`,
+    image: `https://carlosazaustre.es/api/og?title=${encodeURIComponent(post.title)}`,
+    author: {
+      "@type": "Person",
+      name: "Carlos Azaustre",
+      url: "https://carlosazaustre.es",
+    },
+    publisher: {
+      "@type": "Person",
+      name: "Carlos Azaustre",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://carlosazaustre.es/carlos-azaustre.jpg",
+      },
+    },
+    keywords: post.tags.join(", "),
+    inLanguage: "es",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://carlosazaustre.es/blog/${post.slug}`,
+    },
+  };
+
   return (
     <>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
     <ReadingProgress />
     <div style={{ maxWidth: "960px", margin: "0 auto", padding: "3rem 1.5rem" }}>
       <article>
