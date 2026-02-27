@@ -31,7 +31,7 @@ export default function Navbar() {
       <nav className="navbar">
         <div
           style={{
-            maxWidth: "1200px",
+            maxWidth: "960px",
             margin: "0 auto",
             padding: "0 1.5rem",
             display: "flex",
