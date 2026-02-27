@@ -137,6 +137,9 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* Newsletter */}
+      <SubscribeNewsletter />
+
       {/* Books */}
       <section style={{ marginBottom: "4rem" }}>
         <h2
@@ -348,9 +351,6 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Newsletter */}
-      <SubscribeNewsletter />
 
       {/* Recent posts */}
       {recentPosts.length > 0 && (
