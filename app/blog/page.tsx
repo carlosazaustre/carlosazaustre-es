@@ -37,7 +37,7 @@ export default function BlogPage() {
             boxShadow: "var(--shadow-sm)",
           }}
         >
-          Blog
+          /blog
         </div>
         <h1
           style={{
