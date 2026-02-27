@@ -177,6 +177,8 @@ export default async function LinksPage() {
         <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", marginBottom: "2rem" }}>
 
           {/* Elgato */}
+          <a href="http://e.lga.to/carlosazaustre" target="_blank" rel="noopener noreferrer"
+            className="links-btn" style={{ display: "block", textDecoration: "none" }}>
           <div style={{
             background: "#fff", border: "3px solid #1A1A1A", borderRadius: "4px",
             boxShadow: "4px 4px 0 #1A1A1A", padding: "1rem 1.125rem",
@@ -214,6 +216,7 @@ export default async function LinksPage() {
               </span>
             </div>
           </div>
+          </a>
 
           {/* LEAP */}
           <a
