@@ -399,75 +399,86 @@ export default function UsesPage() {
   return (
     <div style={{ maxWidth: "900px", margin: "0 auto", padding: "3rem 1.5rem" }}>
       {/* Header */}
-      <div style={{ marginBottom: "3rem" }}>
-        <div
-          style={{
-            display: "inline-block",
-            background: "var(--accent)",
-            border: "3px solid var(--border)",
-            borderRadius: "4px",
-            padding: "4px 12px",
-            marginBottom: "1.25rem",
-            fontFamily: "'Space Mono', monospace",
-            fontSize: "0.8rem",
-            fontWeight: 700,
-            textTransform: "uppercase",
-            letterSpacing: "1px",
-            boxShadow: "2px 2px 0 var(--border)",
-          }}
-        >
-          /uses
-        </div>
-        <h1
-          style={{
-            fontFamily: "'Space Grotesk', sans-serif",
-            fontWeight: 800,
-            fontSize: "clamp(2rem, 4vw, 3rem)",
-            lineHeight: 1.1,
-            marginBottom: "1rem",
-          }}
-        >
-          Mi setup
-        </h1>
-        <p
-          style={{
-            color: "var(--text-secondary)",
-            fontSize: "1.05rem",
-            lineHeight: 1.75,
-            maxWidth: "600px",
-          }}
-        >
-          Hardware, software y herramientas que uso a diario para desarrollar,
-          grabar vídeos y crear contenido. Inspirado en{" "}
-          <a
-            href="https://uses.tech"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "var(--text)", borderBottom: "2px solid var(--accent)" }}
-          >
-            uses.tech
-          </a>
-          .
-        </p>
-      </div>
-
-      {/* Setup photo */}
       <div style={{
+        display: "flex",
+        alignItems: "flex-start",
+        gap: "2.5rem",
+        flexWrap: "wrap",
         marginBottom: "3rem",
-        border: "3px solid var(--border)",
-        borderRadius: "8px",
-        boxShadow: "6px 6px 0 var(--border)",
-        overflow: "hidden",
-        lineHeight: 0,
+        borderBottom: "3px solid var(--border)",
+        paddingBottom: "3rem",
       }}>
-        <Image
-          src="/setup.jpg"
-          alt="Mi setup — escritorio con monitores, teclado mecánico y accesorios Elgato"
-          width={1200}
-          height={900}
-          style={{ display: "block", width: "100%", height: "auto" }}
-          priority
-        />
+        {/* Left: text */}
+        <div style={{ flex: "1 1 280px", minWidth: 0 }}>
+          <div
+            style={{
+              display: "inline-block",
+              background: "var(--accent)",
+              border: "3px solid var(--border)",
+              borderRadius: "4px",
+              padding: "4px 12px",
+              marginBottom: "1.25rem",
+              fontFamily: "'Space Mono', monospace",
+              fontSize: "0.8rem",
+              fontWeight: 700,
+              textTransform: "uppercase",
+              letterSpacing: "1px",
+              boxShadow: "2px 2px 0 var(--border)",
+            }}
+          >
+            /uses
+          </div>
+          <h1
+            style={{
+              fontFamily: "'Space Grotesk', sans-serif",
+              fontWeight: 800,
+              fontSize: "clamp(2rem, 4vw, 3rem)",
+              lineHeight: 1.1,
+              marginBottom: "1rem",
+            }}
+          >
+            Mi setup
+          </h1>
+          <p
+            style={{
+              color: "var(--text-secondary)",
+              fontSize: "1.05rem",
+              lineHeight: 1.75,
+            }}
+          >
+            Hardware, software y herramientas que uso a diario para desarrollar,
+            grabar vídeos y crear contenido. Inspirado en{" "}
+            <a
+              href="https://uses.tech"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "var(--text)", borderBottom: "2px solid var(--accent)" }}
+            >
+              uses.tech
+            </a>
+            .
+          </p>
+        </div>
+
+        {/* Right: photo */}
+        <div style={{ flex: "1 1 340px", minWidth: 0 }}>
+          <div style={{
+            border: "3px solid var(--border)",
+            borderRadius: "8px",
+            boxShadow: "6px 6px 0 var(--border)",
+            overflow: "hidden",
+            lineHeight: 0,
+          }}>
+            <Image
+              src="/setup.jpg"
+              alt="Mi setup — escritorio con monitores, teclado mecánico y accesorios Elgato"
+              width={1200}
+              height={900}
+              style={{ display: "block", width: "100%", height: "auto" }}
+              priority
+            />
+          </div>
+        </div>
       </div>
 
       {/* Categories */}
