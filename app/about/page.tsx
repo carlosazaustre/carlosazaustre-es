@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
-import { Youtube, Instagram, Twitter, Linkedin, Music2, Calendar } from "lucide-react";
+import { Youtube, Instagram, Twitter, Linkedin, Music2, Calendar, PlayCircle, Eye, PenLine, Star, Github } from "lucide-react";
+import { getStats } from "@/lib/stats";
 
 export const metadata: Metadata = {
   title: "Sobre mí",
@@ -96,7 +97,54 @@ const books = [
   },
 ];
 
-export default function AboutPage() {
+function formatStat(n: number | null): string {
+  if (n === null || n === 0) return "—";
+  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
+  if (n >= 10_000) return `${Math.round(n / 1_000)}k`;
+  if (n >= 1_000) return `${(n / 1_000).toFixed(1)}k`;
+  return n.toLocaleString("es-ES");
+}
+
+export default async function AboutPage() {
+  const siteStats = await getStats();
+
+  const achievementStats: {
+    label: string;
+    value: string;
+    icon: LucideIcon;
+    color: string;
+    href?: string;
+  }[] = [
+    {
+      label: "Vídeos en YouTube",
+      value: formatStat(siteStats.youtubeVideos),
+      icon: PlayCircle,
+      color: "#FF0000",
+      href: "https://youtube.com/@carlosazaustre",
+    },
+    {
+      label: "Visualizaciones",
+      value: formatStat(siteStats.youtubeViews),
+      icon: Eye,
+      color: "#FF4444",
+      href: "https://youtube.com/@carlosazaustre",
+    },
+    {
+      label: "Artículos escritos",
+      value: formatStat(siteStats.blogPosts),
+      icon: PenLine,
+      color: "var(--border)",
+      href: "/blog",
+    },
+    {
+      label: "Estrellas en GitHub",
+      value: formatStat(siteStats.githubStars),
+      icon: Star,
+      color: "#F0A500",
+      href: "https://github.com/carlosazaustre",
+    },
+  ];
+
   return (
     <div style={{ maxWidth: "960px", margin: "0 auto", padding: "3rem 1.5rem" }}>
 
@@ -290,6 +338,99 @@ export default function AboutPage() {
               </div>
             </div>
           );
+          })}
+        </div>
+
+        {/* Achievements: contenido y código */}
+        <h3
+          style={{
+            fontFamily: "'Space Mono', monospace",
+            fontWeight: 700,
+            fontSize: "0.8rem",
+            textTransform: "uppercase",
+            letterSpacing: "1px",
+            color: "var(--text-muted)",
+            marginTop: "2rem",
+            marginBottom: "1rem",
+          }}
+        >
+          Contenido &amp; Código
+        </h3>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))",
+            gap: "1rem",
+          }}
+        >
+          {achievementStats.map((s) => {
+            const Icon = s.icon;
+            const card = (
+              <div
+                className="neo-card"
+                style={{
+                  padding: "1.25rem",
+                  textAlign: "center",
+                  background: "var(--accent)",
+                  cursor: s.href ? "pointer" : "default",
+                }}
+              >
+                <div style={{ marginBottom: "0.6rem", display: "flex", justifyContent: "center" }}>
+                  <div style={{
+                    width: "40px",
+                    height: "40px",
+                    background: s.color,
+                    border: "2px solid var(--border)",
+                    borderRadius: "8px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    boxShadow: "2px 2px 0 var(--border)",
+                  }}>
+                    <Icon size={20} strokeWidth={2} color="#ffffff" />
+                  </div>
+                </div>
+                <div
+                  style={{
+                    fontFamily: "'Space Mono', monospace",
+                    fontWeight: 800,
+                    fontSize: "1.6rem",
+                    color: "var(--text)",
+                    lineHeight: 1,
+                    marginBottom: "0.3rem",
+                  }}
+                >
+                  {s.value}
+                </div>
+                <div
+                  style={{
+                    fontFamily: "'Space Mono', monospace",
+                    fontSize: "0.75rem",
+                    fontWeight: 700,
+                    textTransform: "uppercase",
+                    color: "var(--text)",
+                    letterSpacing: "0.5px",
+                    opacity: 0.7,
+                  }}
+                >
+                  {s.label}
+                </div>
+              </div>
+            );
+
+            return s.href ? (
+              <a
+                key={s.label}
+                href={s.href}
+                target={s.href.startsWith("http") ? "_blank" : undefined}
+                rel={s.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                style={{ textDecoration: "none" }}
+              >
+                {card}
+              </a>
+            ) : (
+              <div key={s.label}>{card}</div>
+            );
           })}
         </div>
       </section>
