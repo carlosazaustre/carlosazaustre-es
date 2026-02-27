@@ -40,16 +40,18 @@ export default async function HomePage() {
           marginBottom: "4rem",
         }}
       >
+        {/* Top row: h1 + photo */}
         <div
           style={{
             display: "flex",
-            alignItems: "center",
+            alignItems: "flex-start",
             gap: "3rem",
             flexWrap: "wrap",
+            marginBottom: "2rem",
           }}
         >
-          {/* Left: text */}
-          <div style={{ flex: "1 1 380px", minWidth: 0 }}>
+          {/* Left: h1 */}
+          <div style={{ flex: "1 1 300px", minWidth: 0 }}>
             <h1
               style={{
                 fontFamily: "'Space Grotesk', sans-serif",
@@ -57,7 +59,7 @@ export default async function HomePage() {
                 fontSize: "clamp(2.2rem, 5vw, 4rem)",
                 lineHeight: 1.05,
                 color: "var(--text)",
-                marginBottom: "1.5rem",
+                margin: 0,
               }}
             >
               Hola, soy{" "}
@@ -79,42 +81,43 @@ export default async function HomePage() {
               <br />
               y creador de contenido educativo.
             </h1>
-
-            <p
-              style={{
-                color: "var(--text-secondary)",
-                fontSize: "1.1rem",
-                lineHeight: 1.7,
-                marginBottom: "2rem",
-              }}
-            >
-              20+ años haciendo webs. Escribo sobre JavaScript, TypeScript,
-              arquitectura de software e inteligencia artificial.{" "}
-              <strong style={{ color: "var(--text)" }}>640k seguidores</strong>{" "}
-              en redes, profesor asociado en la Universidad Europea.
-            </p>
-
-            <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-              <Link href="/blog" className="neo-btn neo-btn-primary">
-                Leer el blog →
-              </Link>
-              <Link href="/about" className="neo-btn">
-                Sobre mí
-              </Link>
-            </div>
           </div>
 
           {/* Right: photo */}
           <div style={{ flex: "0 0 auto" }}>
             <Image
               src="/carlos-azaustre.png"
-              alt="Carlos Azaustre — Ingeniero de Software y Google Developer Expert"
-              width={420}
-              height={420}
+              alt="Carlos Azaustre — Ingeniero de Software y creador de contenido educativo"
+              width={380}
+              height={380}
               style={{ display: "block", maxWidth: "100%", height: "auto" }}
               priority
             />
           </div>
+        </div>
+
+        {/* Bottom: description + buttons (full width) */}
+        <p
+          style={{
+            color: "var(--text-secondary)",
+            fontSize: "1.1rem",
+            lineHeight: 1.7,
+            marginBottom: "2rem",
+          }}
+        >
+          20+ años haciendo webs. Escribo sobre JavaScript, TypeScript,
+          arquitectura de software e inteligencia artificial.{" "}
+          <strong style={{ color: "var(--text)" }}>640k seguidores</strong>{" "}
+          en redes, profesor asociado en la Universidad Europea.
+        </p>
+
+        <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+          <Link href="/blog" className="neo-btn neo-btn-primary">
+            Leer el blog →
+          </Link>
+          <Link href="/about" className="neo-btn">
+            Sobre mí
+          </Link>
         </div>
       </section>
 
