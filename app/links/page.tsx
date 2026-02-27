@@ -170,9 +170,9 @@ export default async function LinksPage() {
           {latestVideo && (
             <LinkButton href={latestVideo.url} bg="#FF0000" emoji="▶" title={latestVideo.title} sub={`Último vídeo · ${new Date(latestVideo.published).toLocaleDateString("es-ES", { day: "numeric", month: "short" })}`} thumbnail={latestVideo.thumbnail} />
           )}
-          <LinkButton href="https://amzn.to/3tDLkMp" bg="#FF9900" textColor="#1A1A1A" emoji="📖" title="Aprendiendo JavaScript" sub="Libro · Amazon España" cover="/book-aprendiendo-javascript.jpg" />
-          <LinkButton href="https://amzn.to/3NQJXj8" bg="#FF9900" textColor="#1A1A1A" emoji="📖" title="Dominando JavaScript" sub="Libro · Amazon España" cover="/book-dominando-javascript.jpg" />
-          <LinkButton href="https://leanpub.com/aprendiendo-react" bg="#61DAFB" textColor="#1A1A1A" emoji="⚛" title="Aprendiendo React" sub="Libro · LeanPub" cover="/book-aprendiendo-react.jpg" />
+          <LinkButton href="https://amzn.to/4tZb96k" bg="#FF9900" textColor="#1A1A1A" emoji="📖" title="Aprendiendo JavaScript" sub="Amazon KDP · ISBN 979-8700179263" cover="/book-aprendiendo-javascript.jpg" />
+          <LinkButton href="https://amzn.to/4aOMxVe" bg="#FF9900" textColor="#1A1A1A" emoji="📖" title="Dominando JavaScript" sub="Amazon KDP · ISBN 979-8338283325" cover="/book-dominando-javascript.jpg" />
+          <LinkButton href="https://amzn.to/4aFSHZ4" bg="#FF9900" textColor="#1A1A1A" emoji="⚛" title="Aprendiendo React" sub="Amazon KDP · ISBN 979-8852737427" cover="/book-aprendiendo-react.jpg" />
         </div>
 
         {/* ── Section: Más ── */}

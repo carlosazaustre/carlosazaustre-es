@@ -76,20 +76,23 @@ const books = [
   {
     title: "Aprendiendo JavaScript",
     desc: "Desde cero hasta ECMAScript 6+. Uno de los libros de JavaScript más vendidos en Amazon España.",
-    url: "https://amzn.to/3tDLkMp",
+    url: "https://amzn.to/4tZb96k",
     cover: "/book-aprendiendo-javascript.jpg",
+    isbn: "979-8700179263",
   },
   {
     title: "Aprendiendo React",
     desc: "Guía para aprender React.js desde cero con ejemplos reales y el ecosistema moderno.",
-    url: "https://leanpub.com/aprendiendo-react",
+    url: "https://amzn.to/4aFSHZ4",
     cover: "/book-aprendiendo-react.jpg",
+    isbn: "979-8852737427",
   },
   {
     title: "Dominando JavaScript",
     desc: "Técnicas avanzadas para el desarrollo web moderno. ES2015+ y buenas prácticas.",
-    url: "https://amzn.to/3NQJXj8",
+    url: "https://amzn.to/4aOMxVe",
     cover: "/book-dominando-javascript.jpg",
+    isbn: "979-8338283325",
   },
 ];
 
@@ -479,6 +482,9 @@ export default function AboutPage() {
               >
                 {book.desc}
               </p>
+              <div style={{ fontFamily: "'Space Mono', monospace", fontSize: "0.62rem", color: "var(--text-muted)", lineHeight: 1.5 }}>
+                Amazon KDP · ISBN {book.isbn}
+              </div>
               <span
                 style={{
                   fontFamily: "'Space Mono', monospace",
