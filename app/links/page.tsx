@@ -211,6 +211,42 @@ export default async function LinksPage() {
             </div>
           </div>
 
+          {/* LEAP */}
+          <a
+            href="https://lp.leap.school/a/carlos?via=youtube"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="links-btn"
+            style={{ display: "block", textDecoration: "none" }}
+          >
+            <div style={{
+              background: "#fff", border: "3px solid #1A1A1A", borderRadius: "4px",
+              boxShadow: "4px 4px 0 #1A1A1A", padding: "1rem 1.125rem",
+            }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.6rem" }}>
+                <div style={{
+                  width: 40, height: 40, background: "#5B4FE8", border: "2px solid #1A1A1A",
+                  borderRadius: "4px", display: "flex", alignItems: "center", justifyContent: "center",
+                  flexShrink: 0, fontSize: "1.1rem",
+                }}>
+                  🇬🇧
+                </div>
+                <div>
+                  <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 800, fontSize: "0.95rem", color: "#1A1A1A" }}>
+                    LEAP School
+                  </div>
+                  <div style={{ fontFamily: "'Space Mono', monospace", fontSize: "0.62rem", color: "#888" }}>
+                    Inglés para programadores
+                  </div>
+                </div>
+                <span style={{ color: "#ccc", fontSize: "0.85rem", marginLeft: "auto" }}>→</span>
+              </div>
+              <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "0.82rem", color: "#444", lineHeight: 1.55, margin: 0 }}>
+                Aprende inglés técnico diseñado para developers. El inglés que realmente necesitas para crecer en tu carrera.
+              </p>
+            </div>
+          </a>
+
         </div>
 
         {/* Footer */}
