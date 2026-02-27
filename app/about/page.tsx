@@ -15,52 +15,87 @@ const timeline = [
   {
     year: "1984",
     title: "Madrid, España",
-    desc: "Nací el 8 de diciembre. Mi primer ordenador fue un PC de 1997 con Pentium a 133 MHz y 16 MB de RAM.",
+    desc: "Nací un 8 de diciembre. Mi primera videoconsola fue una NES (1992). Mi primer ordenador fue un PC de 1997 con Pentium a 133 MHz y 16 MB de RAM.",
+  },
+  {
+    year: "1996",
+    title: "Mis primeras clases de informática",
+    desc: "Informática en el colegio. MS-DOS y Windows 3.11 son mis nuevos amigos.",
+  },
+  {
+    year: "2000",
+    title: "Internet llega a casa",
+    desc: "Termino la ESO e Internet llega a mi casa. Nada volvió a ser igual.",
+  },
+  {
+    year: "2004",
+    title: "FP y la Universidad",
+    desc: "Tras finalizar Bachillerato, me gradúo de FP como Técnico Superior en Desarrollo de Productos Electrónicos y entro en la Universidad Carlos III de Madrid.",
+  },
+  {
+    year: "2005",
+    title: "Paola",
+    desc: "Empiezo mi relación con Paola, compañera de carrera y de vida.",
   },
   {
     year: "2007",
     title: "Pardillos — el webcomic",
-    desc: "Creé Pardillos, una parodia de la serie Lost. Firmaba como Aza. El fanzine Ojodepez ganó el premio al mejor fanzine en los salones de Cómic de Madrid y Barcelona.",
-  },
-  {
-    year: "2009",
-    title: "Premio Mejor Cómic Online",
-    desc: "Pardillos ganó el premio al Mejor Cómic On-Line en Expocómic. En 2010 ya habíamos vendido más de 10.000 copias. En total, más de 30.000 ejemplares en toda España.",
+    desc: "Creé Pardillos, una parodia de la serie Lost que publicaba online. Firmaba como Aza. En 2009 ganaría el Premio al Mejor Webcomic en el Salón del Cómic de Madrid. Lo autopubliqué en formato físico: más de 30.000 copias vendidas en toda España, TOP 1 en Cómics en Fnac y TOP 4 en Libros Generales. Mi primer emprendimiento.",
   },
   {
     year: "2012",
-    title: "Ingeniería en Telemática",
-    desc: "Terminé la carrera de Ingeniería Técnica en Telecomunicaciones (Telemática) en la Universidad Carlos III de Madrid. Más tarde de lo esperado, pero lo conseguí.",
+    title: "Ingeniero en Telemática",
+    desc: "Me gradúo como Ingeniero en Telemática por la Universidad Carlos III de Madrid.",
   },
   {
     year: "2013",
-    title: "Ingeniero de Software",
-    desc: "Empecé a trabajar profesionalmente como desarrollador web. JavaScript, Node.js, Angular, React... y a crear contenido divulgativo en redes sociales.",
+    title: "Contenido en internet",
+    desc: "Empiezo a crear contenido en internet sobre programación y desarrollo web. Primero en este blog, luego en YouTube y posteriormente en el resto de redes, hasta el día de hoy.",
+  },
+  {
+    year: "2014",
+    title: "Chefly — mi Startup",
+    desc: "Paola y yo cofundamos Chefly y participamos en Tetuan Valley Startup School (Google Campus) y en la Online Startup School de Y Combinator. En paralelo imparto charlas y talleres sobre Web y JavaScript.",
   },
   {
     year: "2016",
-    title: "Eventbrite",
-    desc: "Entré como Ingeniero Frontend en Eventbrite. Cuatro años aprendiendo a escala real.",
+    title: "Mi primera hija y mi primer libro",
+    desc: "Nace mi primera hija y publico el libro \"Aprendiendo JavaScript\".",
   },
   {
     year: "2017",
-    title: "Google Developer Expert",
-    desc: "Google me reconoció como GDE en Web Technologies. Una de las cosas de las que más orgulloso me siento.",
+    title: "Google I/O y Developer Relations",
+    desc: "Viajo al Google I/O de San Francisco y unos meses más tarde entro a trabajar como Developer Relations Engineer en Google, coordinando los programas de comunidad tech.",
   },
   {
-    year: "2018",
-    title: "Microsoft MVP",
-    desc: "También fui reconocido como Microsoft Most Valuable Professional en JavaScript (2018–2021).",
+    year: "2019",
+    title: "IBM Research, GDE y Eventbrite",
+    desc: "Entro a trabajar en remoto con IBM Research como Senior Frontend Engineer y Google me reconoce como GDE en Tecnologías Web. Unos meses más tarde entro a trabajar en Eventbrite y nace mi segundo hijo. Un añito muy completo.",
+  },
+  {
+    year: "2020",
+    title: "El Covid y la casa de campo",
+    desc: "El Covid llega y al finalizar el confinamiento nos mudamos a una casa de campo.",
   },
   {
     year: "2021",
-    title: "100k en YouTube",
-    desc: "El canal Carlos Azaustre - Aprende JavaScript superó los 100.000 suscriptores. Un hito que tardé años en conseguir.",
+    title: "Creador a tiempo completo",
+    desc: "Dejo mi trabajo de programador y me dedico a la creación de contenido tecnológico y educativo. Al finalizar el año, la ansiedad me colapsa y entro en depresión.",
+  },
+  {
+    year: "2022",
+    title: "Un año de altibajos",
+    desc: "Tras un inicio de año fatídico, consigo recuperar la energía y volver a compartir contenido. Llego a 100K en Instagram, a 100K en YouTube y Microsoft me premia como MVP. Pero nuestra perrita Kara nos deja...",
+  },
+  {
+    year: "2023",
+    title: "Universidad Europea y San Francisco",
+    desc: "Empiezo a trabajar como profesor en la Universidad Europea: primero en el Máster en Desarrollo de Aplicaciones Web y más adelante en el Grado de Ingeniería Informática. Publico \"Aprendiendo React\" y viajo de nuevo a San Francisco para el Bootcamp de GDEs.",
   },
   {
     year: "Hoy",
     title: "Profesor, creador y freelance",
-    desc: "Profesor Asociado en la Universidad Europea de Madrid. Más de 640k seguidores entre todas las redes. Sigo escribiendo código, grabando vídeos y compartiendo todo lo que aprendo.",
+    desc: "Sigo como Profesor Asociado en la Universidad Europea de Madrid. Colaboro con la UOC y Big School creando contenido académico. Ya son más de 640k seguidores entre todas las redes. Sigo escribiendo código, grabando vídeos y compartiendo todo lo que aprendo.",
   },
 ];
 
