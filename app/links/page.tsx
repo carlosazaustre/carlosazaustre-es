@@ -70,15 +70,25 @@ export default async function LinksPage() {
           {[
             { value: "640k", label: "seguidores" },
             { value: "15+", label: "años exp." },
-            { value: "GDE", label: "Google" },
-            { value: "MVP", label: "Microsoft" },
-          ].map((s, i) => (
-            <div key={s.label} style={{ flex: 1, textAlign: "center", padding: "0.6rem 0.5rem",
-              borderLeft: i > 0 ? "3px solid #1A1A1A" : "none" }}>
-              <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 800, fontSize: "1rem", color: "#1A1A1A" }}>{s.value}</div>
-              <div style={{ fontFamily: "'Space Mono', monospace", fontSize: "0.6rem", color: "#666", marginTop: "1px" }}>{s.label}</div>
-            </div>
-          ))}
+            { value: "GDE", label: "Google", href: "https://developers.google.com/profile/u/100430812332226968766?hl=es-419" },
+            { value: "MVP", label: "Microsoft", href: "https://mvp.microsoft.com/es-ES/mvp/profile/8a271c60-7b0d-ed11-b83f-000d3a1036b3" },
+          ].map((s, i) => {
+            const inner = (
+              <>
+                <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 800, fontSize: "1rem", color: "#1A1A1A" }}>{s.value}</div>
+                <div style={{ fontFamily: "'Space Mono', monospace", fontSize: "0.6rem", color: "#666", marginTop: "1px" }}>{s.label}</div>
+              </>
+            );
+            const cellStyle = { flex: 1, textAlign: "center" as const, padding: "0.6rem 0.5rem", borderLeft: i > 0 ? "3px solid #1A1A1A" : "none" };
+            return s.href ? (
+              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
+                style={{ ...cellStyle, textDecoration: "none", display: "block", background: "transparent" }}>
+                {inner}
+              </a>
+            ) : (
+              <div key={s.label} style={cellStyle}>{inner}</div>
+            );
+          })}
         </div>
 
         {/* Bio */}
