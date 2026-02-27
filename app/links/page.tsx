@@ -103,9 +103,9 @@ export default async function LinksPage() {
           {latestVideo && (
             <LinkButton href={latestVideo.url} bg="#FF0000" emoji="▶" title={latestVideo.title} sub={`Último vídeo · ${new Date(latestVideo.published).toLocaleDateString("es-ES", { day: "numeric", month: "short" })}`} thumbnail={latestVideo.thumbnail} />
           )}
-          <LinkButton href="https://amzn.to/3tDLkMp" bg="#FF9900" textColor="#1A1A1A" emoji="📖" title="Aprendiendo JavaScript" sub="Libro · Amazon España" />
-          <LinkButton href="https://amzn.to/3NQJXj8" bg="#FF9900" textColor="#1A1A1A" emoji="📖" title="Dominando JavaScript" sub="Libro · Amazon España" />
-          <LinkButton href="https://leanpub.com/aprendiendo-react" bg="#61DAFB" textColor="#1A1A1A" emoji="⚛" title="Aprendiendo React" sub="Libro · LeanPub" />
+          <LinkButton href="https://amzn.to/3tDLkMp" bg="#FF9900" textColor="#1A1A1A" emoji="📖" title="Aprendiendo JavaScript" sub="Libro · Amazon España" cover="/book-aprendiendo-javascript.jpg" />
+          <LinkButton href="https://amzn.to/3NQJXj8" bg="#FF9900" textColor="#1A1A1A" emoji="📖" title="Dominando JavaScript" sub="Libro · Amazon España" cover="/book-dominando-javascript.jpg" />
+          <LinkButton href="https://leanpub.com/aprendiendo-react" bg="#61DAFB" textColor="#1A1A1A" emoji="⚛" title="Aprendiendo React" sub="Libro · LeanPub" cover="/book-aprendiendo-react.jpg" />
         </div>
 
         {/* ── Section: Más ── */}
@@ -140,19 +140,20 @@ function SectionHeader({ children }: { children: React.ReactNode }) {
 }
 
 function LinkButton({
-  href, bg, textColor = "#fff", emoji, title, sub, thumbnail, accent, isInternal,
+  href, bg, textColor = "#fff", emoji, title, sub, thumbnail, cover, accent, isInternal,
 }: {
   href: string; bg: string; textColor?: string; emoji: string;
-  title: string; sub: string; thumbnail?: string; accent?: boolean; isInternal?: boolean;
+  title: string; sub: string; thumbnail?: string; cover?: string; accent?: boolean; isInternal?: boolean;
 }) {
+  const hasMedia = thumbnail || cover;
   const inner = (
     <div style={{ display: "flex", alignItems: "center", gap: "0.875rem",
-      padding: thumbnail ? "0.6rem 0.875rem 0.6rem 0.6rem" : "0.75rem 0.875rem",
+      padding: hasMedia ? "0.6rem 0.875rem 0.6rem 0.6rem" : "0.75rem 0.875rem",
       background: "#fff", border: "3px solid #1A1A1A", borderRadius: "4px",
       boxShadow: `4px 4px 0 ${accent ? "#FFCC00" : "#1A1A1A"}`,
       textDecoration: "none", width: "100%", boxSizing: "border-box" as const }}>
 
-      {/* Icon / Thumbnail */}
+      {/* Icon / Thumbnail / Cover */}
       {thumbnail ? (
         <div style={{ position: "relative", width: 56, height: 36, flexShrink: 0,
           borderRadius: "3px", overflow: "hidden", border: "2px solid #1A1A1A" }}>
@@ -162,6 +163,12 @@ function LinkButton({
               <span style={{ color: "#fff", fontSize: "0.4rem", marginLeft: "1px" }}>▶</span>
             </div>
           </div>
+        </div>
+      ) : cover ? (
+        <div style={{ width: 32, height: 44, flexShrink: 0, border: "2px solid #1A1A1A",
+          borderRadius: "2px", overflow: "hidden", lineHeight: 0, boxShadow: "2px 2px 0 #1A1A1A" }}>
+          <Image src={cover} alt={title} width={32} height={44}
+            style={{ display: "block", width: "100%", height: "100%", objectFit: "cover" }} />
         </div>
       ) : (
         <div style={{ width: 40, height: 40, background: bg, border: "2px solid #1A1A1A",
