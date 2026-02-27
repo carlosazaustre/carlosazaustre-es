@@ -84,6 +84,18 @@ export default async function LinksPage() {
           Ingeniero de software, profesor asociado en la Universidad Europea y creador de contenido educativo sobre JavaScript, arquitectura de software e IA.
         </p>
 
+        {/* ── Section: Comunidad ── */}
+        <SectionHeader>Comunidad</SectionHeader>
+        <div style={{ display: "flex", flexDirection: "column", gap: "0.625rem", marginBottom: "1rem" }}>
+          <LinkButton href="https://t.me/+rJz-Xkb2xlg2M2Nk" bg="#2AABEE" emoji="✈" title="Canal de Telegram" sub="Noticias y recursos sobre JavaScript e IA" />
+        </div>
+
+        {/* ── Section: Newsletter ── */}
+        <SectionHeader>Newsletter</SectionHeader>
+        <div style={{ marginBottom: "1.75rem" }}>
+          <LinksSubscribeForm />
+        </div>
+
         {/* ── Section: Aprende ── */}
         <SectionHeader>Aprende</SectionHeader>
         <div style={{ display: "flex", flexDirection: "column", gap: "0.625rem", marginBottom: "1.75rem" }}>
@@ -96,16 +108,9 @@ export default async function LinksPage() {
           <LinkButton href="https://leanpub.com/aprendiendo-react" bg="#61DAFB" textColor="#1A1A1A" emoji="⚛" title="Aprendiendo React" sub="Libro · LeanPub" />
         </div>
 
-        {/* ── Section: Newsletter ── */}
-        <SectionHeader>Newsletter</SectionHeader>
-        <div style={{ marginBottom: "1.75rem" }}>
-          <LinksSubscribeForm />
-        </div>
-
         {/* ── Section: Más ── */}
         <SectionHeader>Más</SectionHeader>
         <div style={{ display: "flex", flexDirection: "column", gap: "0.625rem", marginBottom: "2rem" }}>
-          <LinkButton href="https://t.me/+rJz-Xkb2xlg2M2Nk" bg="#2AABEE" emoji="✈" title="Canal de Telegram" sub="Noticias y recursos sobre JavaScript e IA" />
           <LinkButton href="/uses" bg="#1A1A1A" emoji="⚙" title="/uses — Mi setup" sub="Hardware, software y herramientas que uso" isInternal />
           <LinkButton href="/blog" bg="#1A1A1A" emoji="✍" title="/blog — Artículos" sub="Tutoriales y reflexiones sobre desarrollo web" isInternal />
         </div>
