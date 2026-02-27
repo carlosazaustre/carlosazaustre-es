@@ -100,110 +100,120 @@ export default function AboutPage() {
       {/* Hero */}
       <section
         style={{
-          display: "flex",
-          alignItems: "center",
-          gap: "3rem",
-          flexWrap: "wrap",
           borderBottom: "3px solid var(--border)",
           paddingBottom: "3rem",
           marginBottom: "4rem",
         }}
       >
-        <div style={{ flex: "1 1 340px", minWidth: 0 }}>
-          <div
-            style={{
-              display: "inline-block",
-              background: "var(--accent)",
-              border: "3px solid var(--border)",
-              borderRadius: "4px",
-              padding: "4px 12px",
-              marginBottom: "1.25rem",
-              fontFamily: "'Space Mono', monospace",
-              fontSize: "0.8rem",
-              fontWeight: 700,
-              textTransform: "uppercase",
-              letterSpacing: "1px",
-              boxShadow: "2px 2px 0 var(--border)",
-            }}
-          >
-            Sobre mí
+        {/* Top row: h1 + photo */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "flex-start",
+            gap: "3rem",
+            flexWrap: "wrap",
+            marginBottom: "2rem",
+          }}
+        >
+          {/* Left: badge + h1 */}
+          <div style={{ flex: "1 1 300px", minWidth: 0 }}>
+            <div
+              style={{
+                display: "inline-block",
+                background: "var(--accent)",
+                border: "3px solid var(--border)",
+                borderRadius: "4px",
+                padding: "4px 12px",
+                marginBottom: "1.25rem",
+                fontFamily: "'Space Mono', monospace",
+                fontSize: "0.8rem",
+                fontWeight: 700,
+                textTransform: "uppercase",
+                letterSpacing: "1px",
+                boxShadow: "2px 2px 0 var(--border)",
+              }}
+            >
+              /about
+            </div>
+
+            <h1
+              style={{
+                fontFamily: "'Space Grotesk', sans-serif",
+                fontWeight: 800,
+                fontSize: "clamp(2rem, 4vw, 3.2rem)",
+                lineHeight: 1.1,
+                color: "var(--text)",
+                margin: 0,
+              }}
+            >
+              Hola, soy Carlos.<br />
+              Llevo más de 20 años<br />
+              haciendo cosas en internet.
+            </h1>
           </div>
 
-          <h1
-            style={{
-              fontFamily: "'Space Grotesk', sans-serif",
-              fontWeight: 800,
-              fontSize: "clamp(2rem, 4vw, 3.2rem)",
-              lineHeight: 1.1,
-              color: "var(--text)",
-              marginBottom: "1.25rem",
-            }}
-          >
-            Hola, soy Carlos.<br />
-            Llevo más de 20 años<br />
-            haciendo cosas en internet.
-          </h1>
-
-          <p
-            style={{
-              color: "var(--text-secondary)",
-              fontSize: "1.1rem",
-              lineHeight: 1.75,
-              marginBottom: "1rem",
-            }}
-          >
-            Ingeniero en Telemática por la Universidad Carlos III de Madrid.
-            Trabajo como desarrollador web, creador de contenido y profesor asociado
-            en la Universidad Europea.
-          </p>
-          <p
-            style={{
-              color: "var(--text-secondary)",
-              fontSize: "1.1rem",
-              lineHeight: 1.75,
-              marginBottom: "2rem",
-            }}
-          >
-            Antes de todo eso, dibujé cómics. Mi serie{" "}
-            <strong style={{ color: "var(--text)" }}>Pardillos</strong> vendió más de
-            30.000 ejemplares en España y ganó el premio al Mejor Cómic Online en
-            Expocómic 2009. Firmaba como Aza.
-          </p>
-
-          <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-            <Link href="/blog" className="neo-btn neo-btn-primary">
-              Leer el blog →
-            </Link>
-            <a
-              href="https://youtube.com/@carlosazaustre"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="neo-btn"
+          {/* Right: photo */}
+          <div style={{ flex: "0 0 auto" }}>
+            <div
+              style={{
+                border: "3px solid var(--border)",
+                borderRadius: "8px",
+                boxShadow: "8px 8px 0 var(--border)",
+                overflow: "hidden",
+                lineHeight: 0,
+              }}
             >
-              YouTube
-            </a>
+              <Image
+                src="/carlos-azaustre.jpg"
+                alt="Carlos Azaustre en su setup de streaming"
+                width={380}
+                height={285}
+                style={{ display: "block", maxWidth: "100%", height: "auto" }}
+                priority
+              />
+            </div>
           </div>
         </div>
 
-        <div style={{ flex: "0 0 auto" }}>
-          <div
-            style={{
-              border: "3px solid var(--border)",
-              borderRadius: "8px",
-              boxShadow: "8px 8px 0 var(--border)",
-              overflow: "hidden",
-              lineHeight: 0,
-            }}
+        {/* Bottom: description + buttons (full width) */}
+        <p
+          style={{
+            color: "var(--text-secondary)",
+            fontSize: "1.1rem",
+            lineHeight: 1.75,
+            marginBottom: "1rem",
+          }}
+        >
+          Ingeniero en Telemática por la Universidad Carlos III de Madrid.
+          Trabajo como desarrollador web, creador de contenido y profesor asociado
+          en la Universidad Europea.
+        </p>
+        <p
+          style={{
+            color: "var(--text-secondary)",
+            fontSize: "1.1rem",
+            lineHeight: 1.75,
+            marginBottom: "2rem",
+          }}
+        >
+          Antes de todo eso, dibujé cómics. Mi serie{" "}
+          <strong style={{ color: "var(--text)" }}>Pardillos</strong> vendió más de
+          30.000 ejemplares en España y ganó el premio al Mejor Cómic Online en
+          Expocómic 2009. Firmaba como Aza.
+        </p>
+
+        <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+          <Link href="/blog" className="neo-btn neo-btn-primary">
+            Leer el blog →
+          </Link>
+          <a
+            href="https://youtube.com/@carlosazaustre"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="neo-btn"
           >
-            <Image
-              src="/carlos-azaustre.jpg"
-              alt="Carlos Azaustre en su setup de streaming"
-              width={380}
-              height={285}
-              style={{ display: "block", maxWidth: "100%", height: "auto" }}
-              priority
-            />
-          </div>
+            YouTube
+          </a>
         </div>
       </section>
 
