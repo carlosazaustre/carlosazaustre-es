@@ -776,10 +776,10 @@ body {
 }
 
 /* Links page */
-.links-social-btn {
-  transition: transform 0.1s, box-shadow 0.1s;
+.links-btn > div {
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
 }
-.links-social-btn:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 #FFCC00 !important;
+.links-btn:hover > div {
+  transform: translate(3px, 3px);
+  box-shadow: none !important;
 }
