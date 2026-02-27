@@ -378,6 +378,26 @@ export default async function AboutPage() {
         </div>
       </section>
 
+      {/* Awards photo */}
+      <div
+        style={{
+          marginBottom: "4rem",
+          border: "3px solid var(--border)",
+          borderRadius: "8px",
+          boxShadow: "6px 6px 0 var(--border)",
+          overflow: "hidden",
+          lineHeight: 0,
+        }}
+      >
+        <Image
+          src="/carlos-awards.jpg"
+          alt="Carlos Azaustre con el botón de plata de YouTube (100k suscriptores) y el trofeo Microsoft MVP 2022"
+          width={960}
+          height={720}
+          style={{ display: "block", width: "100%", height: "auto" }}
+        />
+      </div>
+
       {/* Timeline */}
       <section style={{ marginBottom: "4rem" }}>
         <h2
