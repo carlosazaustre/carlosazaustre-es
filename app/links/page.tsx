@@ -179,11 +179,11 @@ export default async function LinksPage() {
           }}>
             <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.6rem" }}>
               <div style={{
-                width: 40, height: 40, background: "#1A1A1A", border: "2px solid #1A1A1A",
+                width: 40, height: 40, background: "#fff", border: "2px solid #1A1A1A",
                 borderRadius: "4px", display: "flex", alignItems: "center", justifyContent: "center",
-                flexShrink: 0, fontSize: "1.1rem",
+                flexShrink: 0, padding: "6px",
               }}>
-                🎙
+                <Image src="/logo-elgato.webp" alt="Elgato" width={28} height={28} style={{ objectFit: "contain", width: "100%", height: "100%" }} />
               </div>
               <div>
                 <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 800, fontSize: "0.95rem", color: "#1A1A1A" }}>
