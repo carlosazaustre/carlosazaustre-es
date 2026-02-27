@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import type { LucideIcon } from "lucide-react";
 import {
   Laptop, PcCase, Cpu, CircuitBoard, Microchip, Radio,
@@ -448,6 +449,25 @@ export default function UsesPage() {
           </a>
           .
         </p>
+      </div>
+
+      {/* Setup photo */}
+      <div style={{
+        marginBottom: "3rem",
+        border: "3px solid var(--border)",
+        borderRadius: "8px",
+        boxShadow: "6px 6px 0 var(--border)",
+        overflow: "hidden",
+        lineHeight: 0,
+      }}>
+        <Image
+          src="/setup.jpg"
+          alt="Mi setup — escritorio con monitores, teclado mecánico y accesorios Elgato"
+          width={1200}
+          height={900}
+          style={{ display: "block", width: "100%", height: "auto" }}
+          priority
+        />
       </div>
 
       {/* Categories */}
