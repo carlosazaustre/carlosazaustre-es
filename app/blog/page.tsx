@@ -12,7 +12,7 @@ export default function BlogPage() {
   const posts = getAllPosts();
 
   return (
-    <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "3rem 1.5rem" }}>
+    <div style={{ maxWidth: "960px", margin: "0 auto", padding: "3rem 1.5rem" }}>
       {/* Header */}
       <div
         style={{

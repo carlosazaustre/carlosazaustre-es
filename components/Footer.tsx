@@ -14,7 +14,7 @@ export default function Footer() {
     >
       <div
         style={{
-          maxWidth: "1200px",
+          maxWidth: "960px",
           margin: "0 auto",
           display: "flex",
           alignItems: "center",

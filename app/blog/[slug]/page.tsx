@@ -57,7 +57,7 @@ export default async function BlogPostPage({ params }: Props) {
   return (
     <>
     <ReadingProgress />
-    <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "3rem 1.5rem" }}>
+    <div style={{ maxWidth: "960px", margin: "0 auto", padding: "3rem 1.5rem" }}>
       <article>
         {/* Header */}
         <header
