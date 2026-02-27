@@ -69,7 +69,7 @@ export default async function LinksPage() {
           boxShadow: "4px 4px 0 #1A1A1A", overflow: "hidden", background: "#fff" }}>
           {[
             { value: "640k", label: "seguidores" },
-            { value: "15+", label: "años de experiencia" },
+            { value: "15+", label: "años experiencia" },
             { value: "GDE", label: "Google" },
             { value: "MVP", label: "Microsoft" },
           ].map((s, i) => (
