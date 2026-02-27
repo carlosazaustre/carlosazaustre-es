@@ -8,7 +8,7 @@ import { getStats } from "@/lib/stats";
 export const metadata: Metadata = {
   title: "Sobre mí",
   description:
-    "Ingeniero de Software, Google Developer Expert, creador de contenido y ex-historietista. Más de 20 años haciendo cosas en internet.",
+    "Ingeniero en Telemática por la UC3M. Google Developer Expert en Web y Firebase, Microsoft MVP. Creador de contenido educativo sobre programación y desarrollo web. Profesor asociado en la Universidad Europea.",
 };
 
 const timeline = [
@@ -232,9 +232,28 @@ export default async function AboutPage() {
             marginBottom: "1rem",
           }}
         >
-          Ingeniero en Telemática por la Universidad Carlos III de Madrid.
-          Trabajo como desarrollador web, creador de contenido y profesor asociado
-          en la Universidad Europea.
+          Ingeniero en Telemática por la Universidad Carlos III de Madrid. He trabajado para{" "}
+          <strong style={{ color: "var(--text)" }}>Google</strong>,{" "}
+          <strong style={{ color: "var(--text)" }}>IBM Research</strong>,{" "}
+          <strong style={{ color: "var(--text)" }}>Eventbrite</strong>, entre otras empresas,
+          además de haber cofundado mi propia Startup y trabajar como Freelance.
+        </p>
+        <p
+          style={{
+            color: "var(--text-secondary)",
+            fontSize: "1.1rem",
+            lineHeight: 1.75,
+            marginBottom: "1rem",
+          }}
+        >
+          Ahora trabajo como <strong style={{ color: "var(--text)" }}>creador de contenido educativo y académico</strong>{" "}
+          sobre programación y desarrollo web, y soy{" "}
+          <strong style={{ color: "var(--text)" }}>profesor asociado en la Universidad Europea</strong>{" "}
+          en el Grado de Ingeniería Informática y en el Máster en Desarrollo de Aplicaciones Web.
+          Estoy reconocido por Google como{" "}
+          <strong style={{ color: "var(--text)" }}>Developer Expert (GDE) en Web y Firebase</strong>{" "}
+          desde 2019 (ya unos cuantos añitos...) y desde 2022 premiado anualmente como{" "}
+          <strong style={{ color: "var(--text)" }}>Microsoft MVP</strong> (Most Valuable Professional).
         </p>
         <p
           style={{
@@ -244,10 +263,17 @@ export default async function AboutPage() {
             marginBottom: "2rem",
           }}
         >
-          Antes de todo eso, dibujé cómics. Mi serie{" "}
-          <strong style={{ color: "var(--text)" }}>Pardillos</strong> vendió más de
-          30.000 ejemplares en España y ganó el premio al Mejor Cómic Online en
-          Expocómic 2009. Firmaba como Aza.
+          Durante los últimos años he publicado varios libros, cursos online e impartido charlas
+          y talleres. También publico contenido en este blog y en mi{" "}
+          <a
+            href="https://youtube.com/@carlosazaustre"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "var(--text)", fontWeight: 700, textDecoration: "underline" }}
+          >
+            canal de YouTube
+          </a>
+          , al que te animo a que te suscribas.
         </p>
 
         <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
