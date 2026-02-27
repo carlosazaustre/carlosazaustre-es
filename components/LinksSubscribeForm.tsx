@@ -67,6 +67,7 @@ export default function LinksSubscribeForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="tu@email.com"
+            suppressHydrationWarning
             style={{
               flex: 1, padding: "0.55rem 0.75rem",
               border: "2px solid #1A1A1A", borderRadius: "4px",

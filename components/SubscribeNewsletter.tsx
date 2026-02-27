@@ -165,6 +165,7 @@ export default function SubscribeNewsletter() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="tu@email.com"
+                  suppressHydrationWarning
                   style={{
                     width: "100%",
                     padding: "0.75rem 1rem",
