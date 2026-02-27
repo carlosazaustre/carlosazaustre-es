@@ -91,8 +91,8 @@ export default async function HomePage() {
             <Image
               src="/carlos-azaustre.png"
               alt="Carlos Azaustre — Ingeniero de Software y creador de contenido educativo"
-              width={380}
-              height={380}
+              width={460}
+              height={460}
               style={{ display: "block", maxWidth: "100%", height: "auto" }}
               priority
             />
