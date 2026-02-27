@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { getLatestVideos } from "@/lib/youtube";
+import LinksSubscribeForm from "@/components/LinksSubscribeForm";
 
 export const metadata: Metadata = {
   title: "Carlos Azaustre — Links",
@@ -83,16 +84,6 @@ export default async function LinksPage() {
           Ingeniero de software, profesor asociado en la Universidad Europea y creador de contenido educativo sobre JavaScript, arquitectura de software e IA.
         </p>
 
-        {/* ── Section: Conecta ── */}
-        <SectionHeader>Conecta</SectionHeader>
-        <div style={{ display: "flex", flexDirection: "column", gap: "0.625rem", marginBottom: "1.75rem" }}>
-          <LinkButton href="https://youtube.com/@carlosazaustre?sub_confirmation=1" bg="#FF0000" emoji="▶" title="YouTube" sub="157k suscriptores · @carlosazaustre" />
-          <LinkButton href="https://instagram.com/carlosazaustre" bg="#E1306C" emoji="◉" title="Instagram" sub="127k seguidores · @carlosazaustre" />
-          <LinkButton href="https://twitter.com/carlosazaustre" bg="#000000" emoji="𝕏" title="X / Twitter" sub="80k seguidores · @carlosazaustre" />
-          <LinkButton href="https://tiktok.com/@carlosazaustre" bg="#010101" emoji="♪" title="TikTok" sub="115k seguidores · @carlosazaustre" />
-          <LinkButton href="https://linkedin.com/in/carlosazaustre" bg="#0A66C2" emoji="in" title="LinkedIn" sub="60k+ seguidores" />
-        </div>
-
         {/* ── Section: Aprende ── */}
         <SectionHeader>Aprende</SectionHeader>
         <div style={{ display: "flex", flexDirection: "column", gap: "0.625rem", marginBottom: "1.75rem" }}>
@@ -103,10 +94,16 @@ export default async function LinksPage() {
           <LinkButton href="https://amzn.to/3tDLkMp" bg="#FF9900" textColor="#1A1A1A" emoji="📖" title="Aprendiendo JavaScript" sub="El libro · Amazon España" />
         </div>
 
+        {/* ── Section: Newsletter ── */}
+        <SectionHeader>Newsletter</SectionHeader>
+        <div style={{ marginBottom: "1.75rem" }}>
+          <LinksSubscribeForm />
+        </div>
+
         {/* ── Section: Más ── */}
         <SectionHeader>Más</SectionHeader>
         <div style={{ display: "flex", flexDirection: "column", gap: "0.625rem", marginBottom: "2rem" }}>
-          <LinkButton href="https://carlosazaustre.substack.com" bg="#FF6719" emoji="✉" title="Newsletter AprendiendoDEV" sub="Substack · JavaScript, IA y arquitectura de software" />
+          <LinkButton href="https://t.me/+rJz-Xkb2xlg2M2Nk" bg="#2AABEE" emoji="✈" title="Canal de Telegram" sub="Noticias y recursos sobre JavaScript e IA" />
           <LinkButton href="/uses" bg="#1A1A1A" emoji="⚙" title="/uses — Mi setup" sub="Hardware, software y herramientas que uso" isInternal />
           <LinkButton href="/blog" bg="#1A1A1A" emoji="✍" title="/blog — Artículos" sub="Tutoriales y reflexiones sobre desarrollo web" isInternal />
         </div>
