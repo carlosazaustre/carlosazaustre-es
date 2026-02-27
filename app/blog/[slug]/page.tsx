@@ -5,6 +5,7 @@ import { getPostBySlug, getAllPosts } from "@/lib/blog";
 import ReadingProgress from "@/components/ReadingProgress";
 import ArticleContent from "@/components/ArticleContent";
 import DisqusComments from "@/components/DisqusComments";
+import SubscribeNewsletter from "@/components/SubscribeNewsletter";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -249,6 +250,11 @@ export default async function BlogPostPage({ params }: Props) {
             Compartir en LinkedIn
           </a>
         </div>
+      </div>
+
+      {/* Newsletter */}
+      <div style={{ marginTop: "3rem" }}>
+        <SubscribeNewsletter />
       </div>
 
       {/* Comentarios Disqus */}
