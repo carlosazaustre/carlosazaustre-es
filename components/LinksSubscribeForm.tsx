@@ -72,7 +72,7 @@ export default function LinksSubscribeForm() {
               flex: 1, padding: "0.55rem 0.75rem",
               border: "2px solid #1A1A1A", borderRadius: "4px",
               fontFamily: "'Space Grotesk', sans-serif", fontSize: "0.875rem",
-              background: "#F7F7F7", color: "#1A1A1A", outline: "none",
+              background: "#EAEAEA", color: "#1A1A1A", outline: "none",
               boxShadow: "2px 2px 0 #1A1A1A",
             }}
           />

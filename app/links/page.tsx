@@ -14,7 +14,7 @@ export default async function LinksPage() {
   const latestVideo = videos[0] ?? null;
 
   return (
-    <div style={{ minHeight: "100vh", background: "#F7F7F7", padding: "2rem 1.25rem 4rem", display: "flex", flexDirection: "column", alignItems: "center" }}>
+    <div style={{ minHeight: "100vh", background: "#EAEAEA", padding: "2rem 1.25rem 4rem", display: "flex", flexDirection: "column", alignItems: "center" }}>
       <div style={{ width: "100%", maxWidth: "440px" }}>
 
         {/* ── Profile ── */}
