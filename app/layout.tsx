@@ -3,6 +3,7 @@ import "./globals.css";
 import SiteShell from "@/components/SiteShell";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://carlosazaustre.es"),
   title: {
     default: "Carlos Azaustre — Desarrollo Web & JavaScript",
     template: "%s | Carlos Azaustre",
