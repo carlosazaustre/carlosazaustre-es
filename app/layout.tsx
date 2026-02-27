@@ -19,6 +19,13 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     creator: "@carlosazaustre",
   },
+  alternates: {
+    types: {
+      "application/rss+xml": [
+        { url: "https://carlosazaustre.es/rss.xml", title: "Carlos Azaustre — Blog RSS" },
+      ],
+    },
+  },
 };
 
 export default function RootLayout({
