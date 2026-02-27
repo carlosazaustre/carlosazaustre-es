@@ -96,7 +96,7 @@ export default async function LinksPage() {
           className="links-btn"
           style={{ display: "block", textDecoration: "none", marginBottom: "1.75rem" }}
         >
-          <div style={{
+          <div className="links-banner-shake" style={{
             background: "#FFCC00",
             border: "3px solid #1A1A1A",
             borderRadius: "4px",

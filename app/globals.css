@@ -783,3 +783,20 @@ body {
   transform: translate(3px, 3px);
   box-shadow: none !important;
 }
+
+/* Links page — banner shake */
+@keyframes links-banner-shake {
+  0%, 9%, 100% { transform: translateX(0) rotate(0deg); }
+  1%            { transform: translateX(-5px) rotate(-1deg); }
+  2%            { transform: translateX(5px) rotate(1deg); }
+  3%            { transform: translateX(-5px) rotate(-1deg); }
+  4%            { transform: translateX(5px) rotate(0.5deg); }
+  5%            { transform: translateX(-3px) rotate(-0.5deg); }
+  6%            { transform: translateX(3px) rotate(0deg); }
+  7%            { transform: translateX(-2px); }
+  8%            { transform: translateX(2px); }
+}
+.links-banner-shake {
+  animation: links-banner-shake 5s ease infinite;
+  transform-origin: center;
+}
