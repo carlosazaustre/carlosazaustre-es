@@ -43,11 +43,14 @@ export default async function LinksPage() {
             {/* Social icon row */}
             <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
               {[
-                { href: "https://youtube.com/@carlosazaustre", label: "YouTube", bg: "#FF0000", char: "▶" },
+                { href: "https://youtube.com/@carlosazaustre?sub_confirmation=1", label: "YouTube", bg: "#FF0000", char: "▶" },
+                { href: "https://linkedin.com/in/carlosazaustre", label: "LinkedIn", bg: "#0A66C2", char: "in" },
                 { href: "https://instagram.com/carlosazaustre", label: "Instagram", bg: "#E1306C", char: "◉" },
                 { href: "https://twitter.com/carlosazaustre", label: "X", bg: "#000", char: "𝕏" },
+                { href: "https://www.threads.net/@carlosazaustre", label: "Threads", bg: "#000", char: "@" },
                 { href: "https://tiktok.com/@carlosazaustre", label: "TikTok", bg: "#010101", char: "♪" },
-                { href: "https://linkedin.com/in/carlosazaustre", label: "LinkedIn", bg: "#0A66C2", char: "in" },
+                { href: "https://carlosazaustre.substack.com", label: "Substack", bg: "#FF6719", char: "S" },
+                { href: "https://github.com/carlosazaustre", label: "GitHub", bg: "#24292E", char: "gh" },
               ].map((s) => (
                 <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" title={s.label}
                   style={{ width: 28, height: 28, background: s.bg, border: "2px solid #1A1A1A", borderRadius: "4px",
