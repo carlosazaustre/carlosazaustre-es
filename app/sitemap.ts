@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getAllPosts } from "@/lib/blog";
+import { getAllPosts, getAllTags } from "@/lib/blog";
 
 const BASE_URL = "https://carlosazaustre.es";
 
@@ -48,5 +48,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...blogPages];
+  // Tag pages
+  const tagPages: MetadataRoute.Sitemap = getAllTags().map(({ tag }) => ({
+    url: `${BASE_URL}/blog/tag/${encodeURIComponent(tag)}`,
+    lastModified: posts.length > 0 ? new Date(posts[0].date) : new Date("2026-01-01"),
+    changeFrequency: "weekly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticPages, ...blogPages, ...tagPages];
 }

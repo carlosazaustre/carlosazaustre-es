@@ -305,9 +305,19 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
   };
 }
 
-export function getAllTags(): string[] {
+export function getAllTags(): { tag: string; count: number }[] {
   const posts = getAllPosts();
-  const tagSet = new Set<string>();
-  posts.forEach((p) => p.tags.forEach((t) => tagSet.add(t)));
-  return Array.from(tagSet).sort();
+  const tagMap = new Map<string, number>();
+  posts.forEach((p) =>
+    p.tags.forEach((t) => tagMap.set(t, (tagMap.get(t) ?? 0) + 1))
+  );
+  return Array.from(tagMap.entries())
+    .map(([tag, count]) => ({ tag, count }))
+    .sort((a, b) => b.count - a.count);
+}
+
+export function getPostsByTag(tag: string): PostMeta[] {
+  return getAllPosts().filter((p) =>
+    p.tags.map((t) => t.toLowerCase()).includes(tag.toLowerCase())
+  );
 }

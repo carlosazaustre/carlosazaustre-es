@@ -18,7 +18,8 @@ import matter from "gray-matter";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const BLOG_DIR = path.join(__dirname, "../public/blog");
-const DELAY_MS = 400;
+const DELAY_MS = 600;
+const MAX_RETRIES = 3;
 
 const GATEWAY_TOKEN = process.env.OPENCLAW_GATEWAY_TOKEN;
 const GATEWAY_PORT = process.env.OPENCLAW_GATEWAY_PORT || "18789";
@@ -32,27 +33,44 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+async function callGateway(body, attempt = 1) {
+  try {
+    const res = await fetch(`http://localhost:${GATEWAY_PORT}/v1/chat/completions`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${GATEWAY_TOKEN}`,
+        Connection: "close",
+      },
+      body: JSON.stringify(body),
+      signal: AbortSignal.timeout(25000),
+    });
+
+    if (!res.ok) {
+      const text = await res.text();
+      throw new Error(`API error ${res.status}: ${text.slice(0, 100)}`);
+    }
+
+    return await res.json();
+  } catch (err) {
+    if (attempt < MAX_RETRIES) {
+      await sleep(2000 * attempt); // backoff: 2s, 4s
+      return callGateway(body, attempt + 1);
+    }
+    throw err;
+  }
+}
+
 async function generateExcerpt(title, content) {
-  const trimmedContent = content.replace(/^#+.*/gm, "").trim().slice(0, 1500);
+  const trimmedContent = content.replace(/^#+.*/gm, "").trim().slice(0, 2500);
 
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 45000);
-
-  const res = await fetch(`http://localhost:${GATEWAY_PORT}/v1/chat/completions`, {
-    method: "POST",
-    signal: controller.signal,
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${GATEWAY_TOKEN}`,
-    },
-    body: JSON.stringify({
-      model: "anthropic/claude-haiku-4-5",
-      max_tokens: 180,
-      stream: false,
-      messages: [
-        {
-          role: "user",
-          content: `Genera un excerpt SEO en español para este artículo de blog técnico.
+  const json = await callGateway({
+    model: "anthropic/claude-haiku-4-5",
+    max_tokens: 180,
+    messages: [
+      {
+        role: "user",
+        content: `Genera un excerpt SEO en español para este artículo de blog técnico.
 Requisitos:
 - Entre 140 y 160 caracteres exactos
 - Descriptivo, con las keywords principales del artículo
@@ -65,19 +83,10 @@ Contenido:
 ${trimmedContent}
 
 Responde SOLO con el texto del excerpt:`,
-        },
-      ],
-    }),
+      },
+    ],
   });
 
-  clearTimeout(timeout);
-
-  if (!res.ok) {
-    const text = await res.text();
-    throw new Error(`API error ${res.status}: ${text.slice(0, 100)}`);
-  }
-
-  const json = await res.json();
   return json.choices[0].message.content.trim();
 }
 

@@ -1,8 +1,12 @@
 ---
-title: "Automatizar tareas en JavaScript con Grunt.js"
-date: "2013-08-01"
-url: "https://carlosazaustre.es/blog/automatizar-tareas-en-javascript-con-grunt-js"
+title: Automatizar tareas en JavaScript con Grunt.js
+date: '2013-08-01'
+url: 'https://carlosazaustre.es/blog/automatizar-tareas-en-javascript-con-grunt-js'
 tags: []
+excerpt: >-
+  Aprende a automatizar tareas en JavaScript con Grunt.js: configura un
+  Gruntfile, instala plugins y optimiza tu flujo de desarrollo con minificación
+  CSS y más.
 ---
 
 # Automatizar tareas en JavaScript con Grunt.js
