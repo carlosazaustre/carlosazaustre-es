@@ -1,8 +1,14 @@
 ---
-title: "Conventional Commits - Especificación para tus mensajes de commit"
-date: "2022-11-29"
-url: "https://carlosazaustre.es/blog/conventional-commits"
-tags: []
+title: Conventional Commits - Especificación para tus mensajes de commit
+date: '2022-11-29'
+url: 'https://carlosazaustre.es/blog/conventional-commits'
+tags:
+  - git
+  - herramientas
+related:
+  - husky-lintstaged
+  - travis-despliegue-integracion-continua
+  - herramientas-utiles-para-desarrolladores
 ---
 
 # Conventional Commits - Especificación para tus mensajes de commit

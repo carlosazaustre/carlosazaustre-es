@@ -1,8 +1,14 @@
 ---
-title: "Los mejores libros recomendados sobre JavaScript y Node.js"
-date: "2013-07-04"
-url: "https://carlosazaustre.es/blog/libros-javascript"
-tags: []
+title: Los mejores libros recomendados sobre JavaScript y Node.js
+date: '2013-07-04'
+url: 'https://carlosazaustre.es/blog/libros-javascript'
+tags:
+  - javascript
+  - nodejs
+related:
+  - el-camino-para-ser-un-pro-en-javascript
+  - ecmascript6
+  - javascript
 ---
 
 # Los mejores libros recomendados sobre JavaScript y Node.js

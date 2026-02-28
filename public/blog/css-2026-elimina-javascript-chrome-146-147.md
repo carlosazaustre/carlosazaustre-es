@@ -1,8 +1,19 @@
 ---
-title: "CSS en 2026: las tres features de Chrome que eliminan JavaScript que llevas años escribiendo"
-date: "2026-02-27"
-url: "https://carlosazaustre.es/blog/css-2026-elimina-javascript-chrome-146-147"
-tags: ["CSS", "JavaScript", "Chrome", "Frontend", "Web Development"]
+title: >-
+  CSS en 2026: las tres features de Chrome que eliminan JavaScript que llevas
+  años escribiendo
+date: '2026-02-27'
+url: 'https://carlosazaustre.es/blog/css-2026-elimina-javascript-chrome-146-147'
+tags:
+  - CSS
+  - JavaScript
+  - Chrome
+  - Frontend
+  - Web Development
+related:
+  - css-grid-layout-css
+  - dynamic-island-html
+  - lazy-loading-image
 ---
 
 # CSS en 2026: las tres features de Chrome que eliminan JavaScript que llevas años escribiendo

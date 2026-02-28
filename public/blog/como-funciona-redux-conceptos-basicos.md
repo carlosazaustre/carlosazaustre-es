@@ -1,8 +1,15 @@
 ---
-title: "¿Cómo funciona Redux? Conceptos básicos"
-date: "2017-03-09"
-url: "https://carlosazaustre.es/blog/como-funciona-redux-conceptos-basicos"
-tags: []
+title: ¿Cómo funciona Redux? Conceptos básicos
+date: '2017-03-09'
+url: 'https://carlosazaustre.es/blog/como-funciona-redux-conceptos-basicos'
+tags:
+  - javascript
+  - react
+  - arquitectura
+related:
+  - como-funciona-flux
+  - empezando-con-react-js-y-ecmascript-6
+  - ejemplo-de-aplicacion-con-react-js-en-ecmascript-6
 ---
 
 # ¿Cómo funciona Redux? Conceptos básicos

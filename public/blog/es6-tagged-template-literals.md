@@ -1,8 +1,13 @@
 ---
-title: "ES6 Tagged Template Literals"
-date: "2018-09-01"
-url: "https://carlosazaustre.es/blog/es6-tagged-template-literals"
-tags: []
+title: ES6 Tagged Template Literals
+date: '2018-09-01'
+url: 'https://carlosazaustre.es/blog/es6-tagged-template-literals'
+tags:
+  - javascript
+related:
+  - ecmascript6
+  - manejando-la-asincronia-en-javascript
+  - javascript
 ---
 
 # ES6 Tagged Template Literals

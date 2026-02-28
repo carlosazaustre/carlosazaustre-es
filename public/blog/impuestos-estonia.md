@@ -1,8 +1,13 @@
 ---
-title: "Impuestos de una empresa en Estonia"
-date: "2018-09-18"
-url: "https://carlosazaustre.es/blog/impuestos-estonia"
-tags: []
+title: Impuestos de una empresa en Estonia
+date: '2018-09-18'
+url: 'https://carlosazaustre.es/blog/impuestos-estonia'
+tags:
+  - carrera
+related:
+  - e-residency
+  - empresa-estonia
+  - ser-autonomo-en-espana-pasos-para-ser-freelance
 ---
 
 # Impuestos de una empresa en Estonia

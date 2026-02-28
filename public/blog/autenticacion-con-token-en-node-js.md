@@ -1,8 +1,15 @@
 ---
-title: "Cómo implementar autenticación basada en token con Node.js"
-date: "2015-02-23"
-url: "https://carlosazaustre.es/blog/autenticacion-con-token-en-node-js"
-tags: []
+title: Cómo implementar autenticación basada en token con Node.js
+date: '2015-02-23'
+url: 'https://carlosazaustre.es/blog/autenticacion-con-token-en-node-js'
+tags:
+  - nodejs
+  - javascript
+  - tutorial
+related:
+  - que-es-la-autenticacion-con-token
+  - autenticacion-con-token-en-angularjs
+  - registro-y-autorizacion-de-usuarios-en-node-js-con-twitter-y-facebook
 ---
 
 # Cómo implementar autenticación basada en token con Node.js

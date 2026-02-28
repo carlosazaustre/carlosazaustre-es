@@ -1,8 +1,12 @@
 ---
-title: "Vue: Single File Components"
-date: "2018-10-10"
-url: "https://carlosazaustre.es/blog/vue-single-file-components"
+title: 'Vue: Single File Components'
+date: '2018-10-10'
+url: 'https://carlosazaustre.es/blog/vue-single-file-components'
 tags: []
+related:
+  - primeros-pasos-en-vue
+  - desarrollo-basado-en-componentes-con-vue-js
+  - que-es-lo-que-me-gusta-de-vue-js
 ---
 
 # Vue: Single File Components

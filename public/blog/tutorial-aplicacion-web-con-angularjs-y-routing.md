@@ -1,8 +1,12 @@
 ---
-title: "Tutorial de AngularJS. Ejemplo de Aplicación web con AngularJS y Routing"
-date: "2014-01-20"
-url: "https://carlosazaustre.es/blog/tutorial-aplicacion-web-con-angularjs-y-routing"
+title: Tutorial de AngularJS. Ejemplo de Aplicación web con AngularJS y Routing
+date: '2014-01-20'
+url: 'https://carlosazaustre.es/blog/tutorial-aplicacion-web-con-angularjs-y-routing'
 tags: []
+related:
+  - empezando-con-angular-js
+  - tutorial-ejemplo-de-aplicacion-web-con-angular-js-y-api-rest-con-node
+  - autenticacion-con-token-en-angularjs
 ---
 
 # Tutorial de AngularJS. Ejemplo de Aplicación web con AngularJS y Routing

@@ -1,8 +1,14 @@
 ---
-title: "Estructura y funcionamiento de un componente en React"
-date: "2016-09-28"
-url: "https://carlosazaustre.es/blog/estructura-de-un-componente-en-react"
-tags: []
+title: Estructura y funcionamiento de un componente en React
+date: '2016-09-28'
+url: 'https://carlosazaustre.es/blog/estructura-de-un-componente-en-react'
+tags:
+  - react
+  - javascript
+related:
+  - formas-de-crear-un-componente-en-react
+  - jsx-para-novatos
+  - empezando-con-react-js-y-ecmascript-6
 ---
 
 # Estructura y funcionamiento de un componente en React

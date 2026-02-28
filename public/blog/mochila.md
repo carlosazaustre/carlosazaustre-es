@@ -1,8 +1,12 @@
 ---
-title: "Un Setup en tu mochila"
-date: "2020-08-09"
-url: "https://carlosazaustre.es/blog/mochila"
+title: Un Setup en tu mochila
+date: '2020-08-09'
+url: 'https://carlosazaustre.es/blog/mochila'
 tags: []
+related:
+  - workspace
+  - el-escritorio-de-un-desarrollador-web
+  - pc-2023
 ---
 
 # Un Setup en tu mochila

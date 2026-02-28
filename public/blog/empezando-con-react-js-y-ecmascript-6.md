@@ -1,8 +1,14 @@
 ---
-title: "Empezando con ReactJS y ECMAScript 6"
-date: "2015-06-22"
-url: "https://carlosazaustre.es/blog/empezando-con-react-js-y-ecmascript-6"
-tags: []
+title: Empezando con ReactJS y ECMAScript 6
+date: '2015-06-22'
+url: 'https://carlosazaustre.es/blog/empezando-con-react-js-y-ecmascript-6'
+tags:
+  - react
+  - javascript
+related:
+  - ejemplo-de-aplicacion-con-react-js-en-ecmascript-6
+  - consumiendo-un-api-rest-desde-react-js-con-ecmascript6
+  - ecmascript6
 ---
 
 # Empezando con ReactJS y ECMAScript 6

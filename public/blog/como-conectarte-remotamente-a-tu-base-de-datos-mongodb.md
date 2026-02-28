@@ -1,8 +1,16 @@
 ---
-title: "Cómo conectarte remótamente a tu base de datos MongoDB"
-date: "2014-12-19"
-url: "https://carlosazaustre.es/blog/como-conectarte-remotamente-a-tu-base-de-datos-mongodb"
-tags: []
+title: Cómo conectarte remótamente a tu base de datos MongoDB
+date: '2014-12-19'
+url: >-
+  https://carlosazaustre.es/blog/como-conectarte-remotamente-a-tu-base-de-datos-mongodb
+tags:
+  - tutorial
+  - nodejs
+  - web
+related:
+  - como-relacionar-tus-modelos-en-mongodb
+  - como-crear-una-api-rest-usando-node-js
+  - como-configurar-tu-servidor-cloud-en-digitalocean
 ---
 
 # Cómo conectarte remótamente a tu base de datos MongoDB

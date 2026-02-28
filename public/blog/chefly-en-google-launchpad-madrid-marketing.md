@@ -1,8 +1,14 @@
 ---
-title: "Tercer día de Chefly en Google Launchpad Madrid: Marketing"
-date: "2015-07-08"
-url: "https://carlosazaustre.es/blog/chefly-en-google-launchpad-madrid-marketing"
-tags: []
+title: 'Tercer día de Chefly en Google Launchpad Madrid: Marketing'
+date: '2015-07-08'
+url: 'https://carlosazaustre.es/blog/chefly-en-google-launchpad-madrid-marketing'
+tags:
+  - carrera
+  - herramientas
+related:
+  - google-launchpad-madrid-dia-1-producto
+  - launchpad-week-madrid-dia-2-ux
+  - google-launchpad-madrid-dia-4-tecnologia
 ---
 
 # Tercer día de Chefly en Google Launchpad Madrid: Marketing

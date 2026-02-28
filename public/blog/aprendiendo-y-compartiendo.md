@@ -1,8 +1,14 @@
 ---
-title: "Aprendiendo y Compartiendo con la Comunidad"
-date: "2016-06-17"
-url: "https://carlosazaustre.es/blog/aprendiendo-y-compartiendo"
-tags: []
+title: Aprendiendo y Compartiendo con la Comunidad
+date: '2016-06-17'
+url: 'https://carlosazaustre.es/blog/aprendiendo-y-compartiendo'
+tags:
+  - carrera
+  - programacion
+related:
+  - '2015'
+  - '2014'
+  - mi-experiencia-como-profesor-en-los-cursos-de-platzi
 ---
 
 # Aprendiendo y Compartiendo con la Comunidad

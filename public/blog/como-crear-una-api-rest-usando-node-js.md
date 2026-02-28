@@ -1,8 +1,16 @@
 ---
-title: "Cómo crear un API REST usando Node.js, Express y MongoDB"
-date: "2017-09-21"
-url: "https://carlosazaustre.es/blog/como-crear-una-api-rest-usando-node-js"
-tags: []
+title: 'Cómo crear un API REST usando Node.js, Express y MongoDB'
+date: '2017-09-21'
+url: 'https://carlosazaustre.es/blog/como-crear-una-api-rest-usando-node-js'
+tags:
+  - nodejs
+  - javascript
+  - tutorial
+  - web
+related:
+  - autenticacion-con-token-en-node-js
+  - como-relacionar-tus-modelos-en-mongodb
+  - como-servir-tu-api-rest-en-node-js-a-traves-de-nginx
 ---
 
 # Cómo crear un API REST usando Node.js, Express y MongoDB

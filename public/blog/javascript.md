@@ -1,8 +1,14 @@
 ---
-title: "JavaScript. Un lenguaje para dominarlos a todos"
-date: "2013-06-17"
-url: "https://carlosazaustre.es/blog/javascript"
-tags: []
+title: JavaScript. Un lenguaje para dominarlos a todos
+date: '2013-06-17'
+url: 'https://carlosazaustre.es/blog/javascript'
+tags:
+  - javascript
+  - web
+related:
+  - el-camino-para-ser-un-pro-en-javascript
+  - ecmascript6
+  - manejando-la-asincronia-en-javascript
 ---
 
 # JavaScript. Un lenguaje para dominarlos a todos

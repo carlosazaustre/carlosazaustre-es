@@ -1,8 +1,13 @@
 ---
-title: "Cómo crear una empresa en Estonia"
-date: "2018-09-24"
-url: "https://carlosazaustre.es/blog/empresa-estonia"
-tags: []
+title: Cómo crear una empresa en Estonia
+date: '2018-09-24'
+url: 'https://carlosazaustre.es/blog/empresa-estonia'
+tags:
+  - carrera
+related:
+  - e-residency
+  - impuestos-estonia
+  - ser-autonomo-en-espana-pasos-para-ser-freelance
 ---
 
 # Cómo crear una empresa en Estonia

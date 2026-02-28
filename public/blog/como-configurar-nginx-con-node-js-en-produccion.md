@@ -1,8 +1,15 @@
 ---
-title: "Cómo configurar Nginx con Node.js en Producción"
-date: "2014-02-26"
-url: "https://carlosazaustre.es/blog/como-configurar-nginx-con-node-js-en-produccion"
-tags: []
+title: Cómo configurar Nginx con Node.js en Producción
+date: '2014-02-26'
+url: 'https://carlosazaustre.es/blog/como-configurar-nginx-con-node-js-en-produccion'
+tags:
+  - nodejs
+  - web
+  - herramientas
+related:
+  - como-servir-tu-api-rest-en-node-js-a-traves-de-nginx
+  - como-instalar-un-servidor-https-en-nginx-desde-cero
+  - aplicacion-node-como-servicio-upstart
 ---
 
 # Cómo configurar Nginx con Node.js en Producción

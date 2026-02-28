@@ -1,8 +1,16 @@
 ---
-title: "Automatizando tu flujo de trabajo en el Frontend con GulpJS"
-date: "2014-07-26"
-url: "https://carlosazaustre.es/blog/automatizando-tu-flujo-de-trabajo-en-el-frontend-con-gulpjs"
-tags: []
+title: Automatizando tu flujo de trabajo en el Frontend con GulpJS
+date: '2014-07-26'
+url: >-
+  https://carlosazaustre.es/blog/automatizando-tu-flujo-de-trabajo-en-el-frontend-con-gulpjs
+tags:
+  - javascript
+  - nodejs
+  - herramientas
+related:
+  - automatizar-tareas-en-javascript-con-grunt-js
+  - primeros-pasos-con-webpack
+  - browserify-desarrollando-tu-frontend-como-en-node-js
 ---
 
 # Automatizando tu flujo de trabajo en el Frontend con GulpJS

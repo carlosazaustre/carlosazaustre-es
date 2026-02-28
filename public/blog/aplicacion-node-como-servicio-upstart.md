@@ -1,8 +1,14 @@
 ---
-title: "Ejecuta tu App NodeJS como un Servicio en Linux"
-date: "2016-03-04"
-url: "https://carlosazaustre.es/blog/aplicacion-node-como-servicio-upstart"
-tags: []
+title: Ejecuta tu App NodeJS como un Servicio en Linux
+date: '2016-03-04'
+url: 'https://carlosazaustre.es/blog/aplicacion-node-como-servicio-upstart'
+tags:
+  - nodejs
+  - tutorial
+related:
+  - como-configurar-nginx-con-node-js-en-produccion
+  - como-servir-tu-api-rest-en-node-js-a-traves-de-nginx
+  - desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean
 ---
 
 # Ejecuta tu App NodeJS como un Servicio en Linux

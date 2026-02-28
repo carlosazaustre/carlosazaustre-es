@@ -1,8 +1,15 @@
 ---
-title: "JSX para novatos"
-date: "2016-09-19"
-url: "https://carlosazaustre.es/blog/jsx-para-novatos"
-tags: []
+title: JSX para novatos
+date: '2016-09-19'
+url: 'https://carlosazaustre.es/blog/jsx-para-novatos'
+tags:
+  - javascript
+  - react
+  - tutorial
+related:
+  - empezando-con-react-js-y-ecmascript-6
+  - estructura-de-un-componente-en-react
+  - formas-de-crear-un-componente-en-react
 ---
 
 # JSX para novatos

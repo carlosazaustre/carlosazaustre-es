@@ -1,8 +1,15 @@
 ---
-title: "Cómo configurar Husky y Lint-Staged en un proyecto"
-date: "2022-11-09"
-url: "https://carlosazaustre.es/blog/husky-lintstaged"
-tags: []
+title: Cómo configurar Husky y Lint-Staged en un proyecto
+date: '2022-11-09'
+url: 'https://carlosazaustre.es/blog/husky-lintstaged'
+tags:
+  - git
+  - herramientas
+  - tutorial
+related:
+  - conventional-commits
+  - travis-despliegue-integracion-continua
+  - automatizando-tu-flujo-de-trabajo-en-el-frontend-con-gulpjs
 ---
 
 # Cómo configurar Husky y Lint-Staged en un proyecto

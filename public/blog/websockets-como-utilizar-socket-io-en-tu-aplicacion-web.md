@@ -1,8 +1,14 @@
 ---
-title: "WebSockets: Cómo utilizar Socket.io en tus aplicaciones web"
-date: "2015-09-24"
-url: "https://carlosazaustre.es/blog/websockets-como-utilizar-socket-io-en-tu-aplicacion-web"
+title: 'WebSockets: Cómo utilizar Socket.io en tus aplicaciones web'
+date: '2015-09-24'
+url: >-
+  https://carlosazaustre.es/blog/websockets-como-utilizar-socket-io-en-tu-aplicacion-web
 tags: []
+related:
+  - como-crear-una-api-rest-usando-node-js
+  - >-
+    primera-aplicacion-web-en-raspberrypi-con-nodejs-cylonjs-controlando-leds-desde-el-movil
+  - desarrollo-full-stack-javascript-tambien-conocido-como-mean
 ---
 
 # WebSockets: Cómo utilizar Socket.io en tus aplicaciones web

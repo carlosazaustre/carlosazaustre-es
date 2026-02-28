@@ -1,8 +1,14 @@
 ---
-title: "11 dispositivos para el espacio de trabajo de un desarrollador web"
-date: "2015-03-12"
-url: "https://carlosazaustre.es/blog/el-escritorio-de-un-desarrollador-web"
-tags: []
+title: 11 dispositivos para el espacio de trabajo de un desarrollador web
+date: '2015-03-12'
+url: 'https://carlosazaustre.es/blog/el-escritorio-de-un-desarrollador-web'
+tags:
+  - herramientas
+  - web
+related:
+  - workspace
+  - mochila
+  - pc-2023
 ---
 
 # 11 dispositivos para el espacio de trabajo de un desarrollador web

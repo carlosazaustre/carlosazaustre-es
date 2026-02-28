@@ -1,8 +1,17 @@
 ---
-title: "Desarrollo Full Stack JavaScript. El conocido como Stack MEAN"
-date: "2014-02-03"
-url: "https://carlosazaustre.es/blog/desarrollo-full-stack-javascript-tambien-conocido-como-mean"
-tags: []
+title: Desarrollo Full Stack JavaScript. El conocido como Stack MEAN
+date: '2014-02-03'
+url: >-
+  https://carlosazaustre.es/blog/desarrollo-full-stack-javascript-tambien-conocido-como-mean
+tags:
+  - javascript
+  - nodejs
+  - angular
+  - web
+related:
+  - como-crear-una-api-rest-usando-node-js
+  - tutorial-ejemplo-de-aplicacion-web-con-angular-js-y-api-rest-con-node
+  - empezando-con-angular-js
 ---
 
 # Desarrollo Full Stack JavaScript. El conocido como Stack MEAN

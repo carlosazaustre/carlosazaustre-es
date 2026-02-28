@@ -1,8 +1,12 @@
 ---
-title: "Subir archivos estáticos en AWS S3 con Node.js y Grunt.js"
-date: "2013-09-19"
-url: "https://carlosazaustre.es/blog/subiendo-archivos-estaticos-aws-s3-con-node"
+title: Subir archivos estáticos en AWS S3 con Node.js y Grunt.js
+date: '2013-09-19'
+url: 'https://carlosazaustre.es/blog/subiendo-archivos-estaticos-aws-s3-con-node'
 tags: []
+related:
+  - automatizar-tareas-en-javascript-con-grunt-js
+  - como-crear-un-servidor-web-con-amazon-web-services
+  - automatizando-tu-flujo-de-trabajo-en-el-frontend-con-gulpjs
 ---
 
 # Subir archivos estáticos en AWS S3 con Node.js y Grunt.js

@@ -1,8 +1,15 @@
 ---
-title: "Desarrollo basado en Componentes con Vue.js"
-date: "2018-10-17"
-url: "https://carlosazaustre.es/blog/desarrollo-basado-en-componentes-con-vue-js"
-tags: []
+title: Desarrollo basado en Componentes con Vue.js
+date: '2018-10-17'
+url: 'https://carlosazaustre.es/blog/desarrollo-basado-en-componentes-con-vue-js'
+tags:
+  - vuejs
+  - tutorial
+  - web
+related:
+  - primeros-pasos-en-vue
+  - vue-single-file-components
+  - que-es-lo-que-me-gusta-de-vue-js
 ---
 
 # Desarrollo basado en Componentes con Vue.js

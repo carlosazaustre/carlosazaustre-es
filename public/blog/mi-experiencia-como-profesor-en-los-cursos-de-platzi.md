@@ -1,8 +1,16 @@
 ---
-title: "Mi experiencia como profesor en los cursos de Platzi"
-date: "2015-02-15"
-url: "https://carlosazaustre.es/blog/mi-experiencia-como-profesor-en-los-cursos-de-platzi"
-tags: []
+title: Mi experiencia como profesor en los cursos de Platzi
+date: '2015-02-15'
+url: >-
+  https://carlosazaustre.es/blog/mi-experiencia-como-profesor-en-los-cursos-de-platzi
+tags:
+  - carrera
+  - tutorial
+  - web
+related:
+  - aprendiendo-y-compartiendo
+  - mi-experiencia-como-mentor-en-google-launchpad-week
+  - el-camino-para-ser-un-pro-en-javascript
 ---
 
 # Mi experiencia como profesor en los cursos de Platzi

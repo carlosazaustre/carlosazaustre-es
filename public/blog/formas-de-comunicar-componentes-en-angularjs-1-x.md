@@ -1,8 +1,16 @@
 ---
-title: "3 formas de comunicar componentes en AngularJS 1.x"
-date: "2016-01-27"
-url: "https://carlosazaustre.es/blog/formas-de-comunicar-componentes-en-angularjs-1-x"
-tags: []
+title: 3 formas de comunicar componentes en AngularJS 1.x
+date: '2016-01-27'
+url: >-
+  https://carlosazaustre.es/blog/formas-de-comunicar-componentes-en-angularjs-1-x
+tags:
+  - angular
+  - javascript
+  - web
+related:
+  - angular-js-directivas-como-componentes
+  - desarrollo-por-componentes-con-angular-1-5-con-es6-es2015
+  - como-pasar-variables-como-atributos-en-directivas-de-angularjs
 ---
 
 # 3 formas de comunicar componentes en AngularJS 1.x

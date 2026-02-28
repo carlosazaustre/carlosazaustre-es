@@ -1,8 +1,13 @@
 ---
-title: "Cómo ser autónomo en Irlanda"
-date: "2013-06-27"
-url: "https://carlosazaustre.es/blog/como-ser-autonomo-en-irlanda"
-tags: []
+title: Cómo ser autónomo en Irlanda
+date: '2013-06-27'
+url: 'https://carlosazaustre.es/blog/como-ser-autonomo-en-irlanda'
+tags:
+  - carrera
+related:
+  - como-ser-autonomo-en-irlanda-registro-en-hacienda
+  - ser-autonomo-en-espana-pasos-para-ser-freelance
+  - empresa-estonia
 ---
 
 # Cómo ser autónomo en Irlanda

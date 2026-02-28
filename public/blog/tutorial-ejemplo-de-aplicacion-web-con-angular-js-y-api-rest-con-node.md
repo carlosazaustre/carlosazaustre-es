@@ -1,8 +1,15 @@
 ---
-title: "Tutorial de AngularJS. Ejemplo de aplicación web conectada a una API REST con Node"
-date: "2014-01-13"
-url: "https://carlosazaustre.es/blog/tutorial-ejemplo-de-aplicacion-web-con-angular-js-y-api-rest-con-node"
+title: >-
+  Tutorial de AngularJS. Ejemplo de aplicación web conectada a una API REST con
+  Node
+date: '2014-01-13'
+url: >-
+  https://carlosazaustre.es/blog/tutorial-ejemplo-de-aplicacion-web-con-angular-js-y-api-rest-con-node
 tags: []
+related:
+  - tutorial-aplicacion-web-con-angularjs-y-routing
+  - como-crear-una-api-rest-usando-node-js
+  - autenticacion-con-token-en-angularjs
 ---
 
 # Tutorial de AngularJS. Ejemplo de aplicación web conectada a una API REST con Node

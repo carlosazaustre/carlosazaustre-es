@@ -1,8 +1,14 @@
 ---
-title: "Principios SOLID en JavaScript"
-date: "2023-10-16"
-url: "https://carlosazaustre.es/blog/javascript-solid"
-tags: []
+title: Principios SOLID en JavaScript
+date: '2023-10-16'
+url: 'https://carlosazaustre.es/blog/javascript-solid'
+tags:
+  - javascript
+  - arquitectura
+related:
+  - el-camino-para-ser-un-pro-en-javascript
+  - ecmascript6
+  - manejando-la-asincronia-en-javascript
 ---
 
 # Principios SOLID en JavaScript

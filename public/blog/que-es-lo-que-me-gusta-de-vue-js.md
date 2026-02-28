@@ -1,8 +1,12 @@
 ---
-title: "Qué es lo que me gusta de Vue.js"
-date: "2017-08-16"
-url: "https://carlosazaustre.es/blog/que-es-lo-que-me-gusta-de-vue-js"
+title: Qué es lo que me gusta de Vue.js
+date: '2017-08-16'
+url: 'https://carlosazaustre.es/blog/que-es-lo-que-me-gusta-de-vue-js'
 tags: []
+related:
+  - primeros-pasos-en-vue
+  - vue-single-file-components
+  - desarrollo-basado-en-componentes-con-vue-js
 ---
 
 # Qué es lo que me gusta de Vue.js

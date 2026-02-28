@@ -1,8 +1,15 @@
 ---
-title: "Cómo programar orientado a Componentes con Directivas de Angular 1.x"
-date: "2015-11-17"
-url: "https://carlosazaustre.es/blog/angular-js-directivas-como-componentes"
-tags: []
+title: Cómo programar orientado a Componentes con Directivas de Angular 1.x
+date: '2015-11-17'
+url: 'https://carlosazaustre.es/blog/angular-js-directivas-como-componentes'
+tags:
+  - angular
+  - javascript
+  - web
+related:
+  - como-pasar-variables-como-atributos-en-directivas-de-angularjs
+  - desarrollo-por-componentes-con-angular-1-5-con-es6-es2015
+  - formas-de-comunicar-componentes-en-angularjs-1-x
 ---
 
 # Cómo programar orientado a Componentes con Directivas de Angular 1.x

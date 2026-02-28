@@ -1,8 +1,14 @@
 ---
-title: "Mi inmersión en React"
-date: "2016-09-13"
-url: "https://carlosazaustre.es/blog/mi-inmersion-en-react"
-tags: []
+title: Mi inmersión en React
+date: '2016-09-13'
+url: 'https://carlosazaustre.es/blog/mi-inmersion-en-react'
+tags:
+  - react
+  - javascript
+related:
+  - empezando-con-react-js-y-ecmascript-6
+  - ejemplo-de-aplicacion-con-react-js-en-ecmascript-6
+  - mi-experiencia-cambiando-de-angularjs-a-reactjs
 ---
 
 # Mi inmersión en React

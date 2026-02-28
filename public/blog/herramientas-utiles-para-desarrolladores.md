@@ -1,8 +1,14 @@
 ---
-title: "15 Herramientas útiles que todo desarrollador web debería conocer"
-date: "2013-06-13"
-url: "https://carlosazaustre.es/blog/herramientas-utiles-para-desarrolladores"
-tags: []
+title: 15 Herramientas útiles que todo desarrollador web debería conocer
+date: '2013-06-13'
+url: 'https://carlosazaustre.es/blog/herramientas-utiles-para-desarrolladores'
+tags:
+  - web
+  - herramientas
+related:
+  - el-escritorio-de-un-desarrollador-web
+  - automatizando-tu-flujo-de-trabajo-en-el-frontend-con-gulpjs
+  - configura-tu-mac-como-un-desarrollador-profesionalque-2
 ---
 
 # 15 Herramientas útiles que todo desarrollador web debería conocer

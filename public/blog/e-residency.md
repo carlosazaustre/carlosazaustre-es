@@ -1,8 +1,14 @@
 ---
-title: "Qué es la e-residency de Estonia y como conseguirla"
-date: "2018-09-12"
-url: "https://carlosazaustre.es/blog/e-residency"
-tags: []
+title: Qué es la e-residency de Estonia y como conseguirla
+date: '2018-09-12'
+url: 'https://carlosazaustre.es/blog/e-residency'
+tags:
+  - carrera
+  - herramientas
+related:
+  - empresa-estonia
+  - impuestos-estonia
+  - ser-autonomo-en-espana-pasos-para-ser-freelance
 ---
 
 # Qué es la e-residency de Estonia y como conseguirla

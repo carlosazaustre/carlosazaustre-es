@@ -1,8 +1,14 @@
 ---
-title: "Formas de manejar la asincronía en JavaScript"
-date: "2016-06-23"
-url: "https://carlosazaustre.es/blog/manejando-la-asincronia-en-javascript"
-tags: []
+title: Formas de manejar la asincronía en JavaScript
+date: '2016-06-23'
+url: 'https://carlosazaustre.es/blog/manejando-la-asincronia-en-javascript'
+tags:
+  - javascript
+  - tutorial
+related:
+  - uso-de-promesas-en-angularjs
+  - ecmascript6
+  - javascript
 ---
 
 # Formas de manejar la asincronía en JavaScript
