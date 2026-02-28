@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --webpack",
     "dev:rss": "node scripts/watch-rss.mjs",
     "generate:rss": "node scripts/generate-rss.mjs",
     "generate:llms": "node scripts/generate-llms.mjs",
