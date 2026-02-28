@@ -9,7 +9,7 @@ import { SectionTitle } from "@/components/SectionTitle";
 export const metadata: Metadata = {
   title: "Sobre mí",
   description:
-    "Ingeniero en Telemática por la UC3M. Google Developer Expert en Web Technologies, Microsoft MVP. Creador de contenido educativo sobre programación. Profesor en la Universidad Europea y BIG School.",
+    "Ingeniero en Telemática por la UC3M. Google Developer Expert en Web Technologies, Microsoft MVP. Creador de contenido educativo sobre programación. Profesor de Programación y Desarrollo Web en la Universidad Europea.",
   openGraph: {
     title: "Sobre mí — Carlos Azaustre",
     description:
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
 
 const experience = [
   {
-    period: "Presente",
-    title: "Profesor Asociado",
+    period: "2023 - Presente",
+    title: "Profesor Universitario",
     org: "Universidad Europea de Madrid",
     desc: "Grado de Ingeniería Informática: POO en Java, Programación con estructuras lineales en C++ y Desarrollo Web. Máster en Desarrollo de Apps Web: HTML & CSS, JavaScript & TypeScript, React y Backend con Node.js.",
   },
@@ -36,11 +36,11 @@ const experience = [
     period: "2025 – Presente",
     title: "Profesor",
     org: "BIG School",
-    desc: "Docencia en el Máster en Desarrollo con IA.",
+    desc: "Docencia en el Máster en Desarrollo con IA. Enseñando Arquitecturas de Software.",
   },
   {
     period: "2022 – Presente",
-    title: "Autor técnico y consultor académico",
+    title: "Autor técnico y Consultor académico",
     org: "Universitat Oberta de Catalunya (UOC)",
     desc: "Revisión y creación de materiales para asignaturas de Programación en JavaScript, Programación Avanzada y la Escuela de Programación (JavaScript Path).",
   },
@@ -80,6 +80,18 @@ const experience = [
     org: "Chefly",
     desc: "Cofundé Chefly junto a Paola. Participamos en Tetuan Valley Startup School (Google Campus) y en la Online Startup School de Y Combinator.",
   },
+  {
+    period: "2011 – 2013",
+    title: "Software Engineer",
+    org: "Autónomo - Deimos Space - Spartanbits",
+    desc: "En este periodo trabajé en un par de empresas tras salir de la Universidad, despues lo compaginé con trabajos freelance diversos. Desarrollo de proyectos de software de manera independiente, colaborando con diversos clientes y empresas en soluciones tecnológicas.",
+  },
+  {
+    period: "2007 – 2011",
+    title: "Autor y Autoeditor",
+    org: "Azacomic",
+    desc: "CAzacomic fue mi primer proyecto de emprendimiento, se basaba en una editorial de comics independiente para publicar mis propias obras como dibujante/autor de cómic. Durante unos 4 años, estuve participando en cada paso de la gestión editorial.",
+  }
 ];
 
 const education = [
