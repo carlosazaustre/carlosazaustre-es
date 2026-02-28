@@ -290,9 +290,8 @@ export default async function AboutPage() {
         >
           Ingeniero en Telemática por la Universidad Carlos III de Madrid. He trabajado para{" "}
           <strong style={{ color: "var(--text)" }}>Google</strong>,{" "}
-          <strong style={{ color: "var(--text)" }}>IBM Research</strong>,{" "}
-          <strong style={{ color: "var(--text)" }}>Eventbrite</strong> y{" "}
-          <strong style={{ color: "var(--text)" }}>CoCircular</strong>, entre otras empresas,
+          <strong style={{ color: "var(--text)" }}>IBM Research</strong> y{" "}
+          <strong style={{ color: "var(--text)" }}>Eventbrite</strong> y{" "} entre otras empresas,
           además de haber cofundado mi propia startup y trabajar como freelance.
         </p>
         <p
