@@ -11,7 +11,7 @@
     "update:stats": "node scripts/update-stats.mjs",
     "generate:excerpts": "node scripts/generate-excerpts.mjs",
     "generate:tags": "node scripts/generate-tags.mjs",
-    "prebuild": "node scripts/generate-excerpts.mjs && node scripts/generate-tags.mjs && node scripts/update-stats.mjs && node scripts/generate-rss.mjs && node scripts/generate-llms.mjs",
+    "prebuild": "node scripts/update-stats.mjs && node scripts/generate-rss.mjs && node scripts/generate-llms.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
