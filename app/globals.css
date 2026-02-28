@@ -26,6 +26,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -34,6 +35,7 @@ body {
   font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 /* ────────────────────────────────────────────
@@ -758,6 +760,14 @@ body {
   }
 }
 
+/* Hero photo */
+.hero-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+}
+
 @media (max-width: 640px) {
   /* Hero titles */
   h1 {
@@ -767,6 +777,20 @@ body {
   /* Book grid: 1 column on very small screens */
   .books-grid {
     grid-template-columns: 1fr !important;
+  }
+
+  /* Hero photo: centered and smaller on mobile */
+  .hero-photo {
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  /* Hero photo container: full width so centering works on mobile */
+  .hero-photo-wrapper {
+    max-width: 100% !important;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
   }
 
   /* Uses grid */

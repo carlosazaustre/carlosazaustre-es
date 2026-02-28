@@ -4,98 +4,108 @@ import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
 import { Youtube, Instagram, Twitter, Linkedin, Music2, Calendar, PlayCircle, Eye, PenLine, Star, Github } from "lucide-react";
 import { getStats } from "@/lib/stats";
+import { SectionTitle } from "@/components/SectionTitle";
 
 export const metadata: Metadata = {
   title: "Sobre mí",
   description:
-    "Ingeniero en Telemática por la UC3M. Google Developer Expert en Web y Firebase, Microsoft MVP. Creador de contenido educativo sobre programación y desarrollo web. Profesor asociado en la Universidad Europea.",
+    "Ingeniero en Telemática por la UC3M. Google Developer Expert en Web Technologies, Microsoft MVP. Creador de contenido educativo sobre programación. Profesor en la Universidad Europea y BIG School.",
+  openGraph: {
+    title: "Sobre mí — Carlos Azaustre",
+    description:
+      "Ingeniero de Software, Google Developer Expert y creador de contenido educativo. 20+ años haciendo cosas en la web.",
+    url: "https://carlosazaustre.es/about",
+    type: "profile",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sobre mí — Carlos Azaustre",
+    description:
+      "Ingeniero de Software, Google Developer Expert y creador de contenido educativo. 20+ años haciendo cosas en la web.",
+  },
 };
 
-const timeline = [
+const experience = [
   {
-    year: "1984",
-    title: "Madrid, España",
-    desc: "Nací un 8 de diciembre. Mi primera videoconsola fue una NES (1992). Mi primer ordenador fue un PC de 1997 con Pentium a 133 MHz y 16 MB de RAM.",
+    period: "Presente",
+    title: "Profesor Asociado",
+    org: "Universidad Europea de Madrid",
+    desc: "Grado de Ingeniería Informática: POO en Java, Programación con estructuras lineales en C++ y Desarrollo Web. Máster en Desarrollo de Apps Web: HTML & CSS, JavaScript & TypeScript, React y Backend con Node.js.",
   },
   {
-    year: "1996",
-    title: "Mis primeras clases de informática",
-    desc: "Informática en el colegio. MS-DOS y Windows 3.11 son mis nuevos amigos.",
+    period: "2025 – Presente",
+    title: "Profesor",
+    org: "BIG School",
+    desc: "Docencia en el Máster en Desarrollo con IA.",
   },
   {
-    year: "2000",
-    title: "Internet llega a casa",
-    desc: "Termino la ESO e Internet llega a mi casa. Nada volvió a ser igual.",
+    period: "2022 – Presente",
+    title: "Autor técnico y consultor académico",
+    org: "Universitat Oberta de Catalunya (UOC)",
+    desc: "Revisión y creación de materiales para asignaturas de Programación en JavaScript, Programación Avanzada y la Escuela de Programación (JavaScript Path).",
   },
   {
-    year: "2004",
-    title: "FP y la Universidad",
-    desc: "Tras finalizar Bachillerato, me gradúo de FP como Técnico Superior en Desarrollo de Productos Electrónicos y entro en la Universidad Carlos III de Madrid.",
+    period: "2013 – Presente",
+    title: "Creador de contenido educativo",
+    org: "carlosazaustre.es · YouTube · Redes",
+    desc: "Blog, canal de YouTube y redes sociales sobre JavaScript, TypeScript, React, arquitectura de software e IA. Más de 640k seguidores. Google Developer Expert en Web Technologies.",
   },
   {
-    year: "2005",
-    title: "Paola",
-    desc: "Empiezo mi relación con Paola, compañera de carrera y de vida.",
+    period: "2022",
+    title: "Senior Frontend Engineer",
+    org: "CoCircular",
+    desc: "Desarrollo frontend en equipo distribuido con React y TypeScript.",
   },
   {
-    year: "2007",
-    title: "Pardillos — el webcomic",
-    desc: "Creé Pardillos, una parodia de la serie Lost que publicaba online. Firmaba como Aza. En 2009 ganaría el Premio al Mejor Webcomic en el Salón del Cómic de Madrid. Lo autopubliqué en formato físico: más de 30.000 copias vendidas en toda España, TOP 1 en Cómics en Fnac y TOP 4 en Libros Generales. Mi primer emprendimiento.",
+    period: "2019 – 2020",
+    title: "Senior Frontend Engineer",
+    org: "Eventbrite",
+    desc: "Ingeniero Frontend en el equipo de producto. Desarrollo con React, TypeScript y arquitectura de componentes a escala.",
   },
   {
-    year: "2012",
-    title: "Ingeniero en Telemática",
-    desc: "Me gradúo como Ingeniero en Telemática por la Universidad Carlos III de Madrid.",
+    period: "2018 – 2019",
+    title: "Senior Frontend Engineer",
+    org: "IBM Research",
+    desc: "Trabajo en remoto con el equipo de investigación de IBM, desarrollando interfaces para proyectos internos de IA y datos.",
   },
   {
-    year: "2013",
-    title: "Contenido en internet",
-    desc: "Empiezo a crear contenido en internet sobre programación y desarrollo web. Primero en este blog, luego en YouTube y posteriormente en el resto de redes, hasta el día de hoy.",
+    period: "2017 – 2018",
+    title: "Developer Relations Engineer",
+    org: "Google",
+    desc: "Contratado a través de Michael Page para el equipo de Developer Relations de Google en Europa. Coordinación de programas de comunidad tech, charlas, talleres y relaciones con desarrolladores.",
   },
   {
-    year: "2014",
-    title: "Chefly — mi Startup",
-    desc: "Paola y yo cofundamos Chefly y participamos en Tetuan Valley Startup School (Google Campus) y en la Online Startup School de Y Combinator. En paralelo imparto charlas y talleres sobre Web y JavaScript.",
+    period: "2013 – 2017",
+    title: "Cofundador & CTO",
+    org: "Chefly",
+    desc: "Cofundé Chefly junto a Paola. Participamos en Tetuan Valley Startup School (Google Campus) y en la Online Startup School de Y Combinator.",
+  },
+];
+
+const education = [
+  {
+    period: "2025 – Presente",
+    title: "Máster en Educación y TIC (eLearning)",
+    org: "Universitat Oberta de Catalunya (UOC)",
+    desc: "Cursando a tiempo parcial. Especialización en tecnología educativa, diseño instruccional y aprendizaje en entornos digitales.",
   },
   {
-    year: "2016",
-    title: "Mi primera hija y mi primer libro",
-    desc: "Nace mi primera hija y publico el libro \"Aprendiendo JavaScript\".",
+    period: "2012",
+    title: "Ingeniería en Telemática",
+    org: "Universidad Carlos III de Madrid",
+    desc: "Titulación superior en Telemática.",
   },
   {
-    year: "2017",
-    title: "Google I/O y Developer Relations",
-    desc: "Viajo al Google I/O de San Francisco y unos meses más tarde entro a trabajar como Developer Relations Engineer en Google, coordinando los programas de comunidad tech.",
+    period: "2012",
+    title: "Ingeniería Técnica de Telecomunicaciones, esp. Telemática",
+    org: "Universidad Carlos III de Madrid",
+    desc: "Titulación técnica con especialización en Telemática.",
   },
   {
-    year: "2019",
-    title: "IBM Research, GDE y Eventbrite",
-    desc: "Entro a trabajar en remoto con IBM Research como Senior Frontend Engineer y Google me reconoce como GDE en Tecnologías Web. Unos meses más tarde entro a trabajar en Eventbrite y nace mi segundo hijo. Un añito muy completo.",
-  },
-  {
-    year: "2020",
-    title: "El Covid y la casa de campo",
-    desc: "El Covid llega y al finalizar el confinamiento nos mudamos a una casa de campo.",
-  },
-  {
-    year: "2021",
-    title: "Creador a tiempo completo",
-    desc: "Dejo mi trabajo de programador y me dedico a la creación de contenido tecnológico y educativo. Al finalizar el año, la ansiedad me colapsa y entro en depresión.",
-  },
-  {
-    year: "2022",
-    title: "Un año de altibajos",
-    desc: "Tras un inicio de año fatídico, consigo recuperar la energía y volver a compartir contenido. Llego a 100K en Instagram, a 100K en YouTube y Microsoft me premia como MVP. Pero nuestra perrita Kara nos deja...",
-  },
-  {
-    year: "2023",
-    title: "Universidad Europea y San Francisco",
-    desc: "Empiezo a trabajar como profesor en la Universidad Europea: primero en el Máster en Desarrollo de Aplicaciones Web y más adelante en el Grado de Ingeniería Informática. Publico \"Aprendiendo React\" y viajo de nuevo a San Francisco para el Bootcamp de GDEs.",
-  },
-  {
-    year: "Hoy",
-    title: "Profesor, creador y freelance",
-    desc: "Sigo como Profesor Asociado en la Universidad Europea de Madrid. Colaboro con la UOC y Big School creando contenido académico. Ya son más de 640k seguidores entre todas las redes. Sigo escribiendo código, grabando vídeos y compartiendo todo lo que aprendo.",
+    period: "2002 – 2004",
+    title: "Técnico Superior en Desarrollo de Productos Electrónicos",
+    org: "Formación Profesional",
+    desc: "Ciclo Formativo de Grado Superior que me introdujo en la electrónica y los sistemas digitales.",
   },
 ];
 
@@ -230,8 +240,7 @@ export default async function AboutPage() {
               }}
             >
               Hola, soy Carlos.<br />
-              Llevo más de 20 años<br />
-              haciendo cosas en internet.
+              Llevo más de 20 años haciendo cosas en internet.
             </h1>
           </div>
 
@@ -270,8 +279,9 @@ export default async function AboutPage() {
           Ingeniero en Telemática por la Universidad Carlos III de Madrid. He trabajado para{" "}
           <strong style={{ color: "var(--text)" }}>Google</strong>,{" "}
           <strong style={{ color: "var(--text)" }}>IBM Research</strong>,{" "}
-          <strong style={{ color: "var(--text)" }}>Eventbrite</strong>, entre otras empresas,
-          además de haber cofundado mi propia Startup y trabajar como Freelance.
+          <strong style={{ color: "var(--text)" }}>Eventbrite</strong> y{" "}
+          <strong style={{ color: "var(--text)" }}>CoCircular</strong>, entre otras empresas,
+          además de haber cofundado mi propia startup y trabajar como freelance.
         </p>
         <p
           style={{
@@ -328,18 +338,7 @@ export default async function AboutPage() {
 
       {/* Stats */}
       <section style={{ marginBottom: "4rem" }}>
-        <h2
-          style={{
-            fontFamily: "'Space Grotesk', sans-serif",
-            fontWeight: 800,
-            fontSize: "1.5rem",
-            marginBottom: "1.5rem",
-            borderBottom: "3px solid var(--border)",
-            paddingBottom: "0.5rem",
-          }}
-        >
-          En números
-        </h2>
+        <SectionTitle>En números</SectionTitle>
         <div
           style={{
             display: "grid",
@@ -433,133 +432,97 @@ export default async function AboutPage() {
         />
       </div>
 
-      {/* Timeline */}
+      {/* Experience + Education */}
       <section style={{ marginBottom: "4rem" }}>
-        <h2
-          style={{
-            fontFamily: "'Space Grotesk', sans-serif",
-            fontWeight: 800,
-            fontSize: "1.5rem",
-            marginBottom: "2.5rem",
-            borderBottom: "3px solid var(--border)",
-            paddingBottom: "0.5rem",
-          }}
-        >
-          Trayectoria
-        </h2>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(440px, 100%), 1fr))", gap: "3rem" }}>
 
-        <div style={{ position: "relative", paddingLeft: "2.5rem" }}>
-          {/* Vertical line */}
-          <div
-            style={{
-              position: "absolute",
-              left: "10px",
-              top: "10px",
-              bottom: "10px",
-              width: "3px",
-              background: "var(--border)",
-            }}
-          />
-
-          {timeline.map((item, i) => {
-            const isLast = i === timeline.length - 1;
-            const isHoy = item.year === "Hoy";
-            return (
-              <div
-                key={i}
-                style={{
-                  position: "relative",
-                  marginBottom: isLast ? 0 : "1.75rem",
-                }}
-              >
-                {/* Dot on the line */}
-                <div
-                  style={{
-                    position: "absolute",
-                    left: "-2.5rem",
-                    top: "14px",
-                    width: "20px",
-                    height: "20px",
-                    borderRadius: "50%",
-                    background: isHoy ? "var(--text)" : "var(--accent)",
-                    border: "3px solid var(--border)",
-                    boxShadow: "2px 2px 0 var(--border)",
-                    zIndex: 1,
-                    transform: isHoy ? "scale(1.2)" : "scale(1)",
-                  }}
-                />
-
-                {/* Card */}
-                <div
-                  className="neo-card"
-                  style={{
-                    padding: "1.1rem 1.25rem",
-                    background: isHoy ? "var(--text)" : "var(--card)",
-                  }}
-                >
-                  {/* Year badge */}
-                  <div style={{ marginBottom: "0.4rem" }}>
-                    <span
-                      style={{
-                        display: "inline-block",
-                        background: isHoy ? "var(--accent)" : "var(--accent)",
-                        color: "var(--text)",
-                        border: "2px solid var(--border)",
-                        borderRadius: "3px",
-                        padding: "1px 8px",
-                        fontFamily: "'Space Mono', monospace",
-                        fontSize: "0.7rem",
-                        fontWeight: 800,
-                        boxShadow: "2px 2px 0 var(--border)",
-                        filter: isHoy ? "invert(0)" : "none",
-                      }}
-                    >
-                      {item.year}
-                    </span>
+          {/* Experiencia */}
+          <div>
+            <SectionTitle>💼 Experiencia</SectionTitle>
+            <div style={{ position: "relative", paddingLeft: "2.5rem" }}>
+              <div style={{ position: "absolute", left: "10px", top: "10px", bottom: "10px", width: "3px", background: "var(--border)" }} />
+              {experience.map((item, i) => {
+                const isFirst = i === 0;
+                const isLast = i === experience.length - 1;
+                return (
+                  <div key={i} style={{ position: "relative", marginBottom: isLast ? 0 : "1.5rem" }}>
+                    <div style={{
+                      position: "absolute", left: "-2.5rem", top: "14px",
+                      width: "20px", height: "20px", borderRadius: "50%",
+                      background: isFirst ? "var(--text)" : "var(--accent)",
+                      border: "3px solid var(--border)", boxShadow: "2px 2px 0 var(--border)", zIndex: 1,
+                    }} />
+                    <div className="neo-card" style={{ padding: "1rem 1.25rem", background: isFirst ? "var(--text)" : "var(--card)" }}>
+                      <span style={{
+                        display: "inline-block", background: "var(--accent)", color: "var(--text)",
+                        border: "2px solid var(--border)", borderRadius: "3px", padding: "1px 8px",
+                        fontFamily: "'Space Mono', monospace", fontSize: "0.65rem", fontWeight: 800,
+                        boxShadow: "2px 2px 0 var(--border)", marginBottom: "0.4rem",
+                      }}>
+                        {item.period}
+                      </span>
+                      <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 800, fontSize: "0.95rem", color: isFirst ? "var(--accent)" : "var(--text)", marginBottom: "0.15rem" }}>
+                        {item.title}
+                      </h3>
+                      <p style={{ fontFamily: "'Space Mono', monospace", fontSize: "0.72rem", fontWeight: 700, color: isFirst ? "#888" : "var(--text-muted)", marginBottom: "0.4rem" }}>
+                        {item.org}
+                      </p>
+                      <p style={{ fontSize: "0.85rem", color: isFirst ? "#aaa" : "var(--text-secondary)", lineHeight: 1.6, margin: 0 }}>
+                        {item.desc}
+                      </p>
+                    </div>
                   </div>
+                );
+              })}
+            </div>
+          </div>
 
-                  <h3
-                    style={{
-                      fontFamily: "'Space Grotesk', sans-serif",
-                      fontWeight: 800,
-                      fontSize: "1rem",
-                      color: isHoy ? "var(--accent)" : "var(--text)",
-                      marginBottom: "0.35rem",
-                    }}
-                  >
-                    {item.title}
-                  </h3>
-                  <p
-                    style={{
-                      fontSize: "0.88rem",
-                      color: isHoy ? "#aaa" : "var(--text-secondary)",
-                      lineHeight: 1.65,
-                      margin: 0,
-                    }}
-                  >
-                    {item.desc}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
+          {/* Educación */}
+          <div>
+            <SectionTitle>🎓 Educación</SectionTitle>
+            <div style={{ position: "relative", paddingLeft: "2.5rem" }}>
+              <div style={{ position: "absolute", left: "10px", top: "10px", bottom: "10px", width: "3px", background: "var(--border)" }} />
+              {education.map((item, i) => {
+                const isLast = i === education.length - 1;
+                return (
+                  <div key={i} style={{ position: "relative", marginBottom: isLast ? 0 : "1.5rem" }}>
+                    <div style={{
+                      position: "absolute", left: "-2.5rem", top: "14px",
+                      width: "20px", height: "20px", borderRadius: "50%",
+                      background: "var(--accent)", border: "3px solid var(--border)",
+                      boxShadow: "2px 2px 0 var(--border)", zIndex: 1,
+                    }} />
+                    <div className="neo-card" style={{ padding: "1rem 1.25rem" }}>
+                      <span style={{
+                        display: "inline-block", background: "var(--accent)", color: "var(--text)",
+                        border: "2px solid var(--border)", borderRadius: "3px", padding: "1px 8px",
+                        fontFamily: "'Space Mono', monospace", fontSize: "0.65rem", fontWeight: 800,
+                        boxShadow: "2px 2px 0 var(--border)", marginBottom: "0.4rem",
+                      }}>
+                        {item.period}
+                      </span>
+                      <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 800, fontSize: "0.95rem", color: "var(--text)", marginBottom: "0.15rem" }}>
+                        {item.title}
+                      </h3>
+                      <p style={{ fontFamily: "'Space Mono', monospace", fontSize: "0.72rem", fontWeight: 700, color: "var(--text-muted)", marginBottom: "0.4rem" }}>
+                        {item.org}
+                      </p>
+                      <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.6, margin: 0 }}>
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
         </div>
       </section>
 
       {/* Books */}
       <section style={{ marginBottom: "4rem" }}>
-        <h2
-          style={{
-            fontFamily: "'Space Grotesk', sans-serif",
-            fontWeight: 800,
-            fontSize: "1.5rem",
-            marginBottom: "1.5rem",
-            borderBottom: "3px solid var(--border)",
-            paddingBottom: "0.5rem",
-          }}
-        >
-          Libros publicados
-        </h2>
+        <SectionTitle>Libros publicados</SectionTitle>
         <div
           style={{
             display: "grid",

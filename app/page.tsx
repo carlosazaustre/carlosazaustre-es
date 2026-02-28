@@ -4,6 +4,7 @@ import { getAllPosts } from "@/lib/blog";
 import BlogCard from "@/components/BlogCard";
 import { getLatestVideos } from "@/lib/youtube";
 import SubscribeNewsletter from "@/components/SubscribeNewsletter";
+import { SectionTitle } from "@/components/SectionTitle";
 
 const books = [
   {
@@ -34,7 +35,7 @@ export default async function HomePage() {
   const videos = await getLatestVideos(4);
 
   return (
-    <div style={{ maxWidth: "960px", margin: "0 auto", padding: "3rem 1.5rem" }}>
+    <div style={{ maxWidth: "960px", margin: "0 auto", padding: "3rem 1.5rem", overflowX: "hidden" }}>
       {/* Hero */}
       <section
         style={{
@@ -87,13 +88,13 @@ export default async function HomePage() {
           </div>
 
           {/* Right: photo */}
-          <div style={{ flex: "0 0 auto" }}>
+          <div className="hero-photo-wrapper" style={{ flex: "0 1 auto", minWidth: 0, maxWidth: "300px", width: "100%" }}>
             <Image
               src="/carlos-azaustre.png"
               alt="Carlos Azaustre — Ingeniero de Software y creador de contenido educativo"
               width={460}
               height={460}
-              style={{ display: "block", maxWidth: "100%", height: "auto" }}
+              className="hero-photo"
               priority
             />
           </div>
@@ -129,16 +130,7 @@ export default async function HomePage() {
 
       {/* Books */}
       <section style={{ marginBottom: "4rem" }}>
-        <h2
-          style={{
-            fontFamily: "'Space Grotesk', sans-serif",
-            fontWeight: 800,
-            fontSize: "1.5rem",
-            marginBottom: "1.5rem",
-          }}
-        >
-          Libros publicados
-        </h2>
+        <SectionTitle>Libros publicados</SectionTitle>
 
         <div
           className="books-grid"
@@ -227,20 +219,17 @@ export default async function HomePage() {
       {/* YouTube */}
       {videos.length > 0 && (
         <section style={{ marginBottom: "4rem" }}>
-          <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", marginBottom: "1.5rem", flexWrap: "wrap", gap: "1rem" }}>
-            <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 800, fontSize: "1.5rem" }}>
-              Últimos vídeos
-            </h2>
+          <SectionTitle action={
             <a
               href="https://youtube.com/@carlosazaustre?sub_confirmation=1"
               target="_blank"
               rel="noopener noreferrer"
               className="neo-btn"
-              style={{ fontSize: "0.85rem", background: "#FF0000", color: "#fff", borderColor: "#1A1A1A" }}
+              style={{ fontSize: "0.85rem", background: "#FF0000", color: "#fff", borderColor: "#1A1A1A", whiteSpace: "nowrap" }}
             >
               Suscribirse ▶
             </a>
-          </div>
+          }>Últimos vídeos</SectionTitle>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: "1.25rem" }}>
             {videos.map((v) => (
               <a
@@ -345,38 +334,16 @@ export default async function HomePage() {
       {/* Recent posts */}
       {recentPosts.length > 0 && (
         <section>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "baseline",
-              justifyContent: "space-between",
-              marginBottom: "1.5rem",
-              flexWrap: "wrap",
-              gap: "1rem",
-            }}
-          >
-            <h2
-              style={{
-                fontFamily: "'Space Grotesk', sans-serif",
-                fontWeight: 800,
-                fontSize: "1.5rem",
-              }}
-            >
-              Últimos artículos
-            </h2>
-            <Link
-              href="/blog"
-              className="neo-btn"
-              style={{ fontSize: "0.85rem" }}
-            >
+          <SectionTitle action={
+            <Link href="/blog" className="neo-btn" style={{ fontSize: "0.85rem", whiteSpace: "nowrap" }}>
               Ver todos →
             </Link>
-          </div>
+          }>Últimos artículos</SectionTitle>
 
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fill, minmax(min(320px, 100%), 1fr))",
               gap: "1.5rem",
             }}
           >

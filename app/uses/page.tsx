@@ -19,6 +19,19 @@ export const metadata: Metadata = {
   title: "Uses — Mi setup",
   description:
     "Todo lo que uso a diario: hardware, software, herramientas de desarrollo y gadgets de mi setup.",
+  openGraph: {
+    title: "Mi setup — Carlos Azaustre",
+    description:
+      "Hardware, software y herramientas que uso a diario para programar y crear contenido.",
+    url: "https://carlosazaustre.es/uses",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mi setup — Carlos Azaustre",
+    description:
+      "Hardware, software y herramientas que uso a diario para programar y crear contenido.",
+  },
 };
 
 type Item = {

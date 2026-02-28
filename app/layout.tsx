@@ -1,6 +1,13 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import SiteShell from "@/components/SiteShell";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://carlosazaustre.es"),
@@ -15,10 +22,16 @@ export const metadata: Metadata = {
     locale: "es_ES",
     url: "https://carlosazaustre.es",
     siteName: "Carlos Azaustre",
+    title: "Carlos Azaustre — Desarrollo Web & JavaScript",
+    description:
+      "Ingeniero de Software, Google Developer Expert y creador de contenido. Aprende JavaScript, React, Node.js y arquitectura de software.",
   },
   twitter: {
     card: "summary_large_image",
     creator: "@carlosazaustre",
+    title: "Carlos Azaustre — Desarrollo Web & JavaScript",
+    description:
+      "Ingeniero de Software, Google Developer Expert y creador de contenido. Aprende JavaScript, React, Node.js y arquitectura de software.",
   },
   alternates: {
     types: {
