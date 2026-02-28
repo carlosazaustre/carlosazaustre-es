@@ -88,7 +88,7 @@ export default async function HomePage() {
           </div>
 
           {/* Right: photo */}
-          <div className="hero-photo-wrapper" style={{ flex: "0 1 auto", minWidth: 0, maxWidth: "300px", width: "100%" }}>
+          <div className="hero-photo-wrapper" style={{ flex: "0 1 auto", minWidth: 0, maxWidth: "390px", width: "100%" }}>
             <Image
               src="/carlos-azaustre.png"
               alt="Carlos Azaustre — Ingeniero de Software y creador de contenido educativo"
@@ -96,6 +96,7 @@ export default async function HomePage() {
               height={460}
               className="hero-photo"
               priority
+              style={{ maxWidth: "390px"}}
             />
           </div>
         </div>
