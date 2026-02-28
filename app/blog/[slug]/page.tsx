@@ -92,7 +92,7 @@ export default async function BlogPostPage({ params }: Props) {
   const bookKey = getBookRecommendation(post);
   const recommendedBook = bookKey ? BOOKS[bookKey] : null;
   const [contentFirst, contentSecond] = splitHtmlAtMidpoint(post.content);
-  const relatedPosts = getRelatedPosts(post.slug, post.tags);
+  const relatedPosts = getRelatedPosts(post.slug, post.tags, post.related);
 
   const jsonLd = {
     "@context": "https://schema.org",

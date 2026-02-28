@@ -1,5 +1,5 @@
 # Carlos Azaustre — Blog completo en Markdown
-> Generado automáticamente: 2026-02-28T20:56:14.443Z
+> Generado automáticamente: 2026-02-28T22:07:21.851Z
 > Fuente: https://carlosazaustre.es/blog
 > Este archivo contiene todos los artículos del blog en formato Markdown limpio,
 > organizado para ser ingestado por modelos de lenguaje (LLMs).

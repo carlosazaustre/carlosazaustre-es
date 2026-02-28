@@ -190,6 +190,7 @@ export interface PostMeta {
   date: string;
   excerpt: string;
   tags: string[];
+  related?: string[];
   readingTime: string;
   coverImage?: string;
 }
@@ -252,6 +253,7 @@ export function getAllPosts(): PostMeta[] {
       date: data.date ? String(data.date) : new Date().toISOString(),
       excerpt: data.excerpt ?? extractExcerpt(content),
       tags: Array.isArray(data.tags) ? data.tags : [],
+      related: Array.isArray(data.related) ? data.related : undefined,
       readingTime: formatReadingTime(content),
       coverImage: data.coverImage ?? null,
     } as PostMeta;
@@ -322,28 +324,41 @@ export function getPostsByTag(tag: string): PostMeta[] {
   );
 }
 
-export function getRelatedPosts(currentSlug: string, currentTags: string[], limit = 3): PostMeta[] {
-  const all = getAllPosts().filter((p) => p.slug !== currentSlug);
+export function getRelatedPosts(
+  currentSlug: string,
+  currentTags: string[],
+  relatedSlugs?: string[],
+  limit = 3
+): PostMeta[] {
+  const all = getAllPosts();
+  const bySlug = new Map(all.map((p) => [p.slug, p]));
 
-  const scored = all.map((post) => {
+  // Option C: use pre-computed slugs from frontmatter if available
+  if (relatedSlugs && relatedSlugs.length > 0) {
+    const resolved = relatedSlugs
+      .map((s) => bySlug.get(s))
+      .filter((p): p is PostMeta => !!p)
+      .slice(0, limit);
+    if (resolved.length > 0) return resolved;
+  }
+
+  // Option A fallback: tag-based scoring
+  const others = all.filter((p) => p.slug !== currentSlug);
+  const scored = others.map((post) => {
     const sharedTags = post.tags.filter((t) =>
       currentTags.map((ct) => ct.toLowerCase()).includes(t.toLowerCase())
     ).length;
     return { post, score: sharedTags };
   });
 
-  // Sort by shared tags desc, then by date desc (newest first for ties)
   scored.sort((a, b) => {
     if (b.score !== a.score) return b.score - a.score;
     return new Date(b.post.date).getTime() - new Date(a.post.date).getTime();
   });
 
-  // Only return posts with at least 1 shared tag, fallback to newest
   const relevant = scored.filter((s) => s.score > 0).slice(0, limit);
   if (relevant.length < limit) {
-    const extra = scored
-      .filter((s) => s.score === 0)
-      .slice(0, limit - relevant.length);
+    const extra = scored.filter((s) => s.score === 0).slice(0, limit - relevant.length);
     return [...relevant, ...extra].map((s) => s.post);
   }
   return relevant.map((s) => s.post);
