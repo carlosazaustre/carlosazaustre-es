@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getPostBySlug, getAllPosts } from "@/lib/blog";
+import { getPostBySlug, getAllPosts, getRelatedPosts } from "@/lib/blog";
 import ReadingProgress from "@/components/ReadingProgress";
 import ArticleContent from "@/components/ArticleContent";
 import DisqusComments from "@/components/DisqusComments";
 import SubscribeNewsletter from "@/components/SubscribeNewsletter";
 import BookBanner from "@/components/BookBanner";
+import RelatedPosts from "@/components/RelatedPosts";
 import { getBookRecommendation, BOOKS } from "@/lib/book-recommendation";
 
 /**
@@ -91,6 +92,7 @@ export default async function BlogPostPage({ params }: Props) {
   const bookKey = getBookRecommendation(post);
   const recommendedBook = bookKey ? BOOKS[bookKey] : null;
   const [contentFirst, contentSecond] = splitHtmlAtMidpoint(post.content);
+  const relatedPosts = getRelatedPosts(post.slug, post.tags);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -304,6 +306,9 @@ export default async function BlogPostPage({ params }: Props) {
           <BookBanner book={recommendedBook} />
         </div>
       )}
+
+      {/* Related posts */}
+      <RelatedPosts posts={relatedPosts} />
 
       {/* Newsletter */}
       <div style={{ marginTop: "3rem" }}>

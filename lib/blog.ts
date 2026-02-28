@@ -321,3 +321,30 @@ export function getPostsByTag(tag: string): PostMeta[] {
     p.tags.map((t) => t.toLowerCase()).includes(tag.toLowerCase())
   );
 }
+
+export function getRelatedPosts(currentSlug: string, currentTags: string[], limit = 3): PostMeta[] {
+  const all = getAllPosts().filter((p) => p.slug !== currentSlug);
+
+  const scored = all.map((post) => {
+    const sharedTags = post.tags.filter((t) =>
+      currentTags.map((ct) => ct.toLowerCase()).includes(t.toLowerCase())
+    ).length;
+    return { post, score: sharedTags };
+  });
+
+  // Sort by shared tags desc, then by date desc (newest first for ties)
+  scored.sort((a, b) => {
+    if (b.score !== a.score) return b.score - a.score;
+    return new Date(b.post.date).getTime() - new Date(a.post.date).getTime();
+  });
+
+  // Only return posts with at least 1 shared tag, fallback to newest
+  const relevant = scored.filter((s) => s.score > 0).slice(0, limit);
+  if (relevant.length < limit) {
+    const extra = scored
+      .filter((s) => s.score === 0)
+      .slice(0, limit - relevant.length);
+    return [...relevant, ...extra].map((s) => s.post);
+  }
+  return relevant.map((s) => s.post);
+}

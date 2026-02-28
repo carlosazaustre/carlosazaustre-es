@@ -5,6 +5,9 @@ url: 'https://carlosazaustre.es/blog/libros-javascript'
 tags:
   - javascript
   - nodejs
+excerpt: >-
+  Descubre los mejores libros para aprender JavaScript y Node.js: desde
+  fundamentos hasta patrones de diseño y buenas prácticas para desarrolladores.
 ---
 
 # Los mejores libros recomendados sobre JavaScript y Node.js

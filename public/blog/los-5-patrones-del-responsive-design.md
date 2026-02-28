@@ -6,6 +6,9 @@ tags:
   - css
   - html
   - web
+excerpt: >-
+  Aprende los 5 patrones del Responsive Design con Flexbox: Tiny Tweaks, Mostly
+  Fluid, Column Drop, Layout Shifter y Off Canvas con ejemplos en HTML y CSS
 ---
 
 # Los 5 patrones del Responsive Design con Flexbox
