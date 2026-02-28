@@ -10,6 +10,9 @@ tags:
   - herramientas
   - tutorial
   - web
+excerpt: >-
+  Aprende a desplegar una API REST con Node.js y MongoDB en contenedores Docker
+  sobre DigitalOcean usando Docker Compose y Docker Machine paso a paso
 ---
 
 # Desplegando contenedores en DigitalOcean con Docker, Docker Compose y Docker Machine

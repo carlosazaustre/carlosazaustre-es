@@ -5,6 +5,10 @@ url: 'https://carlosazaustre.es/blog/frameworks-de-javascript'
 tags:
   - javascript
   - web
+excerpt: >-
+  Descubre qué framework o librería de JavaScript elegir para tu proyecto web:
+  vanilla JS, jQuery y más. Una guía clara para no perderte en el ecosistema
+  frontend
 ---
 
 # ¿Qué framework o librería de JavaScript elegir para mis desarrollos?

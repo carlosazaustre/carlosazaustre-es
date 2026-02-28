@@ -9,6 +9,9 @@ tags:
   - firebase
   - tutorial
   - web
+excerpt: >-
+  Aprende a desplegar apps con Server-Side Rendering en Next.js usando el nuevo
+  Firebase Hosting. Tutorial práctico con todos los pasos en español
 ---
 
 # Cómo desplegar una app Server-Side Rendering con Next.js en el nuevo Firebase Hosting

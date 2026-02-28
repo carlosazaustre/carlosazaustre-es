@@ -6,6 +6,10 @@ tags:
   - nodejs
   - web
   - herramientas
+excerpt: >-
+  Aprende a configurar Nginx como reverse proxy con Node.js en producción en
+  Amazon EC2. Gestiona múltiples procesos y puertos en tu VPS de forma
+  eficiente.
 ---
 
 # Cómo configurar Nginx con Node.js en Producción

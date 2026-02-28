@@ -5,6 +5,10 @@ url: 'https://carlosazaustre.es/blog/ecmascript6'
 tags:
   - javascript
   - tutorial
+excerpt: >-
+  Aprende ECMAScript 6 (ES6 o ES2015), el nuevo estándar de JavaScript.
+  Historia, novedades y características que cambiaron la forma de programar en
+  JS.
 ---
 
 # Aprende ECMAScript 6 (ES6 o ES2015), el nuevo estándar de JavaScript

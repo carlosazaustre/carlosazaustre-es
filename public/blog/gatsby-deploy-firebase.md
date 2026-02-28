@@ -7,6 +7,10 @@ tags:
   - tutorial
   - web
   - herramientas
+excerpt: >-
+  Aprende a desplegar tu sitio Gatsby en Firebase Hosting con integración
+  continua usando Travis CI. Automatiza tus deploys y olvídate de hacerlo
+  manualmente.
 ---
 
 # Cómo desplegar tu sitio en Gatsby a Firebase Hosting

@@ -4,6 +4,9 @@ date: '2018-09-18'
 url: 'https://carlosazaustre.es/blog/impuestos-estonia'
 tags:
   - carrera
+excerpt: >-
+  Descubre qué impuestos tiene una empresa en Estonia: sociedades, IVA y gastos
+  deducibles. Guía para e-residentes con negocios online internacionales.
 ---
 
 # Impuestos de una empresa en Estonia

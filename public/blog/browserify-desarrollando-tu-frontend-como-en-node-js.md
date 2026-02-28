@@ -8,6 +8,10 @@ tags:
   - nodejs
   - herramientas
   - web
+excerpt: >-
+  Aprende a usar Browserify para desarrollar tu frontend como en Node.js: usa
+  require(), module.exports y NPM para gestionar módulos JavaScript en el
+  cliente.
 ---
 
 # Browserify. Desarrollando tu Frontend como en Node.js

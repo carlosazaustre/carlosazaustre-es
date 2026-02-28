@@ -6,6 +6,10 @@ url: >-
 tags:
   - web
   - programacion
+excerpt: >-
+  Aprende a conectarte remotamente a tu base de datos MongoDB con seguridad.
+  Configura autenticación, usuarios y permisos para proteger tu entorno de
+  producción.
 ---
 
 # Cómo conectarte remótamente a tu base de datos MongoDB

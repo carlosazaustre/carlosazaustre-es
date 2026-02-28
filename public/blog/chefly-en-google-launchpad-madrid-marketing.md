@@ -5,6 +5,9 @@ url: 'https://carlosazaustre.es/blog/chefly-en-google-launchpad-madrid-marketing
 tags:
   - carrera
   - herramientas
+excerpt: >-
+  Tercer día de Chefly en Google Launchpad Madrid: aprendemos sobre Marketing
+  Digital y Growth Hacking con estrategias de bajo coste para startups.
 ---
 
 # Tercer día de Chefly en Google Launchpad Madrid: Marketing

@@ -7,6 +7,10 @@ tags:
   - javascript
   - web
   - tutorial
+excerpt: >-
+  Aprende qué es AngularJS, el framework MVC de JavaScript para crear
+  aplicaciones SPA. Descubre sus ventajas frente a otros frameworks y da tus
+  primeros pasos.
 ---
 
 # ¿Qué es AngularJS? Primeros pasos para aprenderlo

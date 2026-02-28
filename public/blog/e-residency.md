@@ -5,6 +5,9 @@ url: 'https://carlosazaustre.es/blog/e-residency'
 tags:
   - carrera
   - web
+excerpt: >-
+  La e-residency de Estonia te convierte en residente digital: cómo solicitarla,
+  firmar documentos oficiales y gestionar trámites online desde cualquier lugar
 ---
 
 # Qué es la e-residency de Estonia y como conseguirla

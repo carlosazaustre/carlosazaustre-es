@@ -7,6 +7,9 @@ tags:
   - javascript
   - nodejs
   - web
+excerpt: >-
+  Aprende qué es el stack MEAN: MongoDB, Express, AngularJS y Node.js para
+  desarrollar aplicaciones web Full Stack en JavaScript de principio a fin.
 ---
 
 # Desarrollo Full Stack JavaScript. El conocido como Stack MEAN

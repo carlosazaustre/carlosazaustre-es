@@ -8,6 +8,10 @@ tags:
   - git
   - tutorial
   - web
+excerpt: >-
+  Aprende a desplegar una API REST con Node.js e IO.js en DigitalOcean.
+  Configuración del servidor, despliegue con Git y puesta en producción
+  incluidos.
 ---
 
 # Desplegando nuestro API REST Node/IO.js en la nube con Digital Ocean

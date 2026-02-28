@@ -7,6 +7,9 @@ tags:
   - web
   - tutorial
   - herramientas
+excerpt: >-
+  Aprende a desplegar tu primera aplicación Node.js en Google Cloud Run usando
+  Cloud Build y Docker. Guía paso a paso desde cero con ejemplos prácticos.
 ---
 
 # Cómo lanzar una aplicación web en Google Cloud Run con Cloud Build

@@ -6,6 +6,9 @@ tags:
   - git
   - herramientas
   - tutorial
+excerpt: >-
+  Configura Husky y Lint-Staged en tu proyecto Node.js para ejecutar Git Hooks
+  antes de cada commit, verificar el linter y asegurar la calidad del código.
 ---
 
 # Cómo configurar Husky y Lint-Staged en un proyecto

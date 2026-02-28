@@ -5,6 +5,10 @@ url: 'https://carlosazaustre.es/blog/launchpad-week-madrid-dia-2-ux'
 tags:
   - carrera
   - web
+excerpt: >-
+  Segundo día de Google Launchpad Week Madrid centrado en UX, usabilidad y
+  diseño. Descubre lo que aprendimos de experiencia de usuario en startups como
+  Chefly.
 ---
 
 # Launchpad Week Madrid. Día 2: UX

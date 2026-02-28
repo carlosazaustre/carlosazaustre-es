@@ -6,6 +6,9 @@ url: >-
 tags:
   - react
   - javascript
+excerpt: >-
+  Aprende a consumir un API REST desde React.js usando ECMAScript6. Peticiones
+  AJAX con fetch en lugar de XMLHttpRequest y datos JSON en tiempo real.
 ---
 
 # Consumiendo un API REST desde React.js con ECMAScript6

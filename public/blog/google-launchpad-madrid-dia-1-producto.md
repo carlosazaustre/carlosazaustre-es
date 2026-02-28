@@ -5,6 +5,9 @@ url: 'https://carlosazaustre.es/blog/google-launchpad-madrid-dia-1-producto'
 tags:
   - carrera
   - web
+excerpt: >-
+  Descubre cómo fue el primer día de Google Launchpad Week en Madrid, el evento
+  de Google para startups con mentores expertos en producto y estrategia.
 ---
 
 # Google Launchpad Week Madrid. Día 1: Producto

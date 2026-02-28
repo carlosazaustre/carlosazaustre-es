@@ -7,6 +7,10 @@ tags:
   - react
   - javascript
   - tutorial
+excerpt: >-
+  Aprende a crear una aplicación web con React.js y ECMAScript 6. Usamos
+  componentes reutilizables, Browserify y Babel para transpilar ES6 a JavaScript
+  estándar.
 ---
 
 # Ejemplo de aplicación con React.js en ECMAScript 6

@@ -7,6 +7,9 @@ tags:
   - angular
   - javascript
   - tutorial
+excerpt: >-
+  Descubre cómo usar el método .component() de Angular 1.5 con ES6/ES2015 para
+  crear aplicaciones basadas en componentes y prepararte para Angular 2.
 ---
 
 # Desarrollo por componentes con Angular 1.5 y ES6/ES2015

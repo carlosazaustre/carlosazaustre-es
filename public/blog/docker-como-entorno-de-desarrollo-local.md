@@ -5,6 +5,9 @@ url: 'https://carlosazaustre.es/blog/docker-como-entorno-de-desarrollo-local'
 tags:
   - herramientas
   - web
+excerpt: >-
+  Aprende a configurar Docker como entorno de desarrollo local con LiveReload
+  automático. Contenedores para Node.js en Mac, Windows y Linux sin Vagrant.
 ---
 
 # Docker como entorno de desarrollo local

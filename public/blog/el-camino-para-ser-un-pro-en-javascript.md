@@ -6,6 +6,9 @@ tags:
   - javascript
   - carrera
   - tutorial
+excerpt: >-
+  Descubre los 7 pasos para convertirte en profesional de JavaScript: desde
+  Node.js hasta dominar el lenguaje más demandado del desarrollo web moderno.
 ---
 
 # 7 Pasos para ser un profesional en JavaScript

@@ -6,6 +6,10 @@ url: >-
 tags:
   - angular
   - tutorial
+excerpt: >-
+  Aprende las 3 formas de comunicar componentes en AngularJS 1.x: servicios,
+  eventos y scope. Guía práctica con ejemplos para estructurar mejor tu
+  aplicación.
 ---
 
 # 3 formas de comunicar componentes en AngularJS 1.x

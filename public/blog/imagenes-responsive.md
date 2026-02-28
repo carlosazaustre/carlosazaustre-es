@@ -6,6 +6,9 @@ tags:
   - html
   - web
   - performance
+excerpt: >-
+  Aprende a usar srcset para mostrar imágenes responsive según el dispositivo y
+  resolución. Optimiza la carga con Mobile First y mejora el rendimiento web.
 ---
 
 # Cómo hacer que tus imágenes sean Responsive

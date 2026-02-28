@@ -4,22 +4,22 @@
  * Recorre todos los posts de /public/blog/*.md y genera un excerpt SEO
  * usando Claude Haiku (vía OpenClaw gateway) para aquellos que no lo tienen.
  *
- * Uso manual (todos los posts):
- *   node scripts/generate-excerpts.mjs
- *
- * El prebuild lo ejecuta automáticamente — solo procesa posts nuevos sin excerpt.
- * Requiere OPENCLAW_GATEWAY_TOKEN y OPENCLAW_GATEWAY_PORT en el entorno.
+ * Uso manual:  node scripts/generate-excerpts.mjs
+ * Prebuild:    se ejecuta automáticamente (solo procesa posts sin excerpt)
  */
 
 import fs from "fs";
 import path from "path";
+import os from "os";
 import { fileURLToPath } from "url";
+import { execFileSync } from "child_process";
 import matter from "gray-matter";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const BLOG_DIR = path.join(__dirname, "../public/blog");
-const DELAY_MS = 600;
-const MAX_RETRIES = 3;
+const DELAY_MS = 2000;
+const MAX_RETRIES = 4;
+const TMP_PAYLOAD = path.join(os.tmpdir(), "excerpt-payload.json");
 
 const GATEWAY_TOKEN = process.env.OPENCLAW_GATEWAY_TOKEN;
 const GATEWAY_PORT = process.env.OPENCLAW_GATEWAY_PORT || "18789";
@@ -33,38 +33,10 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function callGateway(body, attempt = 1) {
-  try {
-    const res = await fetch(`http://localhost:${GATEWAY_PORT}/v1/chat/completions`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${GATEWAY_TOKEN}`,
-        Connection: "close",
-      },
-      body: JSON.stringify(body),
-      signal: AbortSignal.timeout(25000),
-    });
+async function generateExcerpt(title, content, attempt = 1) {
+  const trimmedContent = content.replace(/^#+.*/gm, "").trim().slice(0, 1200);
 
-    if (!res.ok) {
-      const text = await res.text();
-      throw new Error(`API error ${res.status}: ${text.slice(0, 100)}`);
-    }
-
-    return await res.json();
-  } catch (err) {
-    if (attempt < MAX_RETRIES) {
-      await sleep(2000 * attempt); // backoff: 2s, 4s
-      return callGateway(body, attempt + 1);
-    }
-    throw err;
-  }
-}
-
-async function generateExcerpt(title, content) {
-  const trimmedContent = content.replace(/^#+.*/gm, "").trim().slice(0, 2500);
-
-  const json = await callGateway({
+  const payload = {
     model: "anthropic/claude-haiku-4-5",
     max_tokens: 180,
     messages: [
@@ -85,9 +57,35 @@ ${trimmedContent}
 Responde SOLO con el texto del excerpt:`,
       },
     ],
-  });
+  };
 
-  return json.choices[0].message.content.trim();
+  fs.writeFileSync(TMP_PAYLOAD, JSON.stringify(payload), "utf-8");
+
+  try {
+    const result = execFileSync(
+      "curl",
+      [
+        "-s",
+        "--max-time", "25",
+        "-X", "POST",
+        `http://localhost:${GATEWAY_PORT}/v1/chat/completions`,
+        "-H", "Content-Type: application/json",
+        "-H", `Authorization: Bearer ${GATEWAY_TOKEN}`,
+        "-d", `@${TMP_PAYLOAD}`,
+      ],
+      { encoding: "utf-8", timeout: 30000 }
+    );
+
+    const json = JSON.parse(result);
+    if (json.error) throw new Error(json.error.message || JSON.stringify(json.error));
+    return json.choices[0].message.content.trim();
+  } catch (err) {
+    if (attempt < MAX_RETRIES) {
+      await sleep(2000 * attempt);
+      return generateExcerpt(title, content, attempt + 1);
+    }
+    throw err;
+  }
 }
 
 async function main() {
@@ -126,7 +124,7 @@ async function main() {
       console.log(`✓ (${excerpt.length} chars)`);
       updated++;
     } catch (err) {
-      console.log(`✗ ${err.message}`);
+      console.log(`✗ ${String(err.message).slice(0, 60)}`);
       errors++;
     }
 
@@ -135,10 +133,7 @@ async function main() {
 
   console.log("");
   console.log(`✅ Completado: ${updated} actualizados, ${errors} errores`);
-
-  if (updated > 0) {
-    console.log("💡 Recuerda hacer commit de los cambios en public/blog/");
-  }
+  if (updated > 0) console.log("💡 Recuerda hacer commit de los cambios en public/blog/");
 }
 
 main().catch((err) => {

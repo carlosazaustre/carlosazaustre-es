@@ -5,6 +5,9 @@ url: 'https://carlosazaustre.es/blog/conectando-firebase-a-react'
 tags:
   - firebase
   - react
+excerpt: >-
+  Aprende a conectar Firebase a React paso a paso. Usa la base de datos Realtime
+  de Google en tu app React con este tutorial práctico para desarrolladores web.
 ---
 
 # Cómo conectar Firebase a una aplicación React

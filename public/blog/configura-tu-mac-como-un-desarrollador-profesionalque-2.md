@@ -6,6 +6,9 @@ url: >-
 tags:
   - herramientas
   - web
+excerpt: >-
+  Aprende a configurar tu terminal de Mac como un desarrollador profesional con
+  iTerm2: hotkeys, colores y ajustes para mejorar tu productividad.
 ---
 
 # Configura tu terminal de Mac como un desarrollador profesional

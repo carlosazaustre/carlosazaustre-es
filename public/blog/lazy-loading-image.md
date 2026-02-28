@@ -5,6 +5,10 @@ url: 'https://carlosazaustre.es/blog/lazy-loading-image'
 tags:
   - html
   - web
+excerpt: >-
+  El atributo loading para imágenes e iframes ya forma parte del estándar HTML.
+  Aprende a implementar lazy loading nativo con polyfill para todos los
+  navegadores.
 ---
 
 # Lazy loading de imágenes ya forma parte del estándar HTML

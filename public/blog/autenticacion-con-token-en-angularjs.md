@@ -6,6 +6,9 @@ tags:
   - angular
   - javascript
   - tutorial
+excerpt: >-
+  Aprende a implementar autenticación basada en token en AngularJS usando
+  Satellizer. Guía paso a paso para el lado del cliente con soporte OAuth.
 ---
 
 # Cómo hacer autenticación basada en token con AngularJS

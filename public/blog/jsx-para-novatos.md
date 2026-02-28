@@ -6,6 +6,9 @@ tags:
   - react
   - javascript
   - tutorial
+excerpt: >-
+  Aprende qué es JSX, la extensión de JavaScript de React creada por Facebook.
+  Descubre cómo simplifica la creación de componentes con sintaxis HTML en JS.
 ---
 
 # JSX para novatos
