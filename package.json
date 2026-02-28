@@ -9,12 +9,14 @@
     "generate:llms": "node scripts/generate-llms.mjs",
     "generate:all": "node scripts/generate-rss.mjs && node scripts/generate-llms.mjs",
     "update:stats": "node scripts/update-stats.mjs",
-    "prebuild": "node scripts/update-stats.mjs && node scripts/generate-rss.mjs && node scripts/generate-llms.mjs",
+    "generate:excerpts": "node scripts/generate-excerpts.mjs",
+    "prebuild": "node scripts/generate-excerpts.mjs && node scripts/update-stats.mjs && node scripts/generate-rss.mjs && node scripts/generate-llms.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.78.0",
     "@fontsource/space-grotesk": "^5.2.10",
     "disqus-react": "^1.1.7",
     "gray-matter": "^4.0.3",
