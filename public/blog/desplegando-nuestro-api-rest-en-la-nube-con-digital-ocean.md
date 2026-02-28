@@ -1,17 +1,8 @@
 ---
-title: Desplegando nuestro API REST Node/IO.js en la nube con Digital Ocean
-date: '2015-07-01'
-url: >-
-  https://carlosazaustre.es/blog/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean
-tags:
-  - nodejs
-  - git
-  - tutorial
-  - web
-excerpt: >-
-  Aprende a desplegar una API REST con Node.js e IO.js en DigitalOcean.
-  Configuración del servidor, despliegue con Git y puesta en producción
-  incluidos.
+title: "Desplegando nuestro API REST Node/IO.js en la nube con Digital Ocean"
+date: "2015-07-01"
+url: "https://carlosazaustre.es/blog/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean"
+tags: []
 ---
 
 # Desplegando nuestro API REST Node/IO.js en la nube con Digital Ocean

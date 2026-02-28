@@ -1,13 +1,8 @@
 ---
-title: 4 Formas de crear un Componente en React
-date: '2017-01-24'
-url: 'https://carlosazaustre.es/blog/formas-de-crear-un-componente-en-react'
-tags:
-  - react
-  - javascript
-excerpt: >-
-  Descubre las 4 formas de crear componentes en React: createClass, clases ES6,
-  funciones stateless y arrow functions. Aprende cuándo usar cada una.
+title: "4 Formas de crear un Componente en React"
+date: "2017-01-24"
+url: "https://carlosazaustre.es/blog/formas-de-crear-un-componente-en-react"
+tags: []
 ---
 
 # 4 Formas de crear un Componente en React

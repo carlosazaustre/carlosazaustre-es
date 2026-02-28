@@ -1,11 +1,8 @@
 ---
-title: Cómo iniciar un proyecto React con Vite
-date: '2022-10-26'
-url: 'https://carlosazaustre.es/blog/react-vite'
-tags:
-  - react
-  - javascript
-  - herramientas
+title: "Cómo iniciar un proyecto React con Vite"
+date: "2022-10-26"
+url: "https://carlosazaustre.es/blog/react-vite"
+tags: []
 ---
 
 # Cómo iniciar un proyecto React con Vite

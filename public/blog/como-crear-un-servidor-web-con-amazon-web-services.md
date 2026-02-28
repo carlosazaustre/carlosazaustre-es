@@ -1,14 +1,8 @@
 ---
-title: Cómo configurar un servidor web con Amazon Web Services
-date: '2013-07-23'
-url: >-
-  https://carlosazaustre.es/blog/como-crear-un-servidor-web-con-amazon-web-services
-tags:
-  - web
-  - herramientas
-excerpt: >-
-  Aprende a configurar un servidor web en Amazon Web Services con una instancia
-  EC2 gratis durante 1 año. Monta un entorno LAMP en la nube paso a paso
+title: "Cómo configurar un servidor web con Amazon Web Services"
+date: "2013-07-23"
+url: "https://carlosazaustre.es/blog/como-crear-un-servidor-web-con-amazon-web-services"
+tags: []
 ---
 
 # Cómo configurar un servidor web con Amazon Web Services

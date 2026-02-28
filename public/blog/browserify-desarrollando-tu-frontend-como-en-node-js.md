@@ -1,17 +1,8 @@
 ---
-title: Browserify. Desarrollando tu Frontend como en Node.js
-date: '2015-03-12'
-url: >-
-  https://carlosazaustre.es/blog/browserify-desarrollando-tu-frontend-como-en-node-js
-tags:
-  - javascript
-  - nodejs
-  - herramientas
-  - web
-excerpt: >-
-  Aprende a usar Browserify para desarrollar tu frontend como en Node.js: usa
-  require(), module.exports y NPM para gestionar módulos JavaScript en el
-  cliente.
+title: "Browserify. Desarrollando tu Frontend como en Node.js"
+date: "2015-03-12"
+url: "https://carlosazaustre.es/blog/browserify-desarrollando-tu-frontend-como-en-node-js"
+tags: []
 ---
 
 # Browserify. Desarrollando tu Frontend como en Node.js

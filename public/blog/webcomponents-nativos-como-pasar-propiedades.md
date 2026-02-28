@@ -1,10 +1,8 @@
 ---
-title: 'WebComponents Nativos: Cómo pasar propiedades'
-date: '2018-08-31'
-url: 'https://carlosazaustre.es/blog/webcomponents-nativos-como-pasar-propiedades'
-tags:
-  - javascript
-  - web
+title: "WebComponents Nativos: Cómo pasar propiedades"
+date: "2018-08-31"
+url: "https://carlosazaustre.es/blog/webcomponents-nativos-como-pasar-propiedades"
+tags: []
 ---
 
 # WebComponents Nativos: Cómo pasar propiedades

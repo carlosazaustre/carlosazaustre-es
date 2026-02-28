@@ -1,15 +1,8 @@
 ---
-title: Desarrollo Full Stack JavaScript. El conocido como Stack MEAN
-date: '2014-02-03'
-url: >-
-  https://carlosazaustre.es/blog/desarrollo-full-stack-javascript-tambien-conocido-como-mean
-tags:
-  - javascript
-  - nodejs
-  - web
-excerpt: >-
-  Aprende qué es el stack MEAN: MongoDB, Express, AngularJS y Node.js para
-  desarrollar aplicaciones web Full Stack en JavaScript de principio a fin.
+title: "Desarrollo Full Stack JavaScript. El conocido como Stack MEAN"
+date: "2014-02-03"
+url: "https://carlosazaustre.es/blog/desarrollo-full-stack-javascript-tambien-conocido-como-mean"
+tags: []
 ---
 
 # Desarrollo Full Stack JavaScript. El conocido como Stack MEAN

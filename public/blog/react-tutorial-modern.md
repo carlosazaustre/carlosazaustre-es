@@ -1,12 +1,8 @@
 ---
-title: >-
-  Tutorial React: Cómo crear una aplicación web con React desde cero con
-  librerías modernas
-date: '2023-09-29'
-url: 'https://carlosazaustre.es/blog/react-tutorial-modern'
-tags:
-  - react
-  - tutorial
+title: "Tutorial React: Cómo crear una aplicación web con React desde cero con librerías modernas"
+date: "2023-09-29"
+url: "https://carlosazaustre.es/blog/react-tutorial-modern"
+tags: []
 ---
 
 # Tutorial React: Cómo crear una aplicación web con React desde cero con librerías modernas

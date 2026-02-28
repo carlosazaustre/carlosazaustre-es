@@ -1,16 +1,8 @@
 ---
-title: Ejemplo de aplicación con React.js en ECMAScript 6
-date: '2015-06-23'
-url: >-
-  https://carlosazaustre.es/blog/ejemplo-de-aplicacion-con-react-js-en-ecmascript-6
-tags:
-  - react
-  - javascript
-  - tutorial
-excerpt: >-
-  Aprende a crear una aplicación web con React.js y ECMAScript 6. Usamos
-  componentes reutilizables, Browserify y Babel para transpilar ES6 a JavaScript
-  estándar.
+title: "Ejemplo de aplicación con React.js en ECMAScript 6"
+date: "2015-06-23"
+url: "https://carlosazaustre.es/blog/ejemplo-de-aplicacion-con-react-js-en-ecmascript-6"
+tags: []
 ---
 
 # Ejemplo de aplicación con React.js en ECMAScript 6

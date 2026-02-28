@@ -1,15 +1,8 @@
 ---
-title: Desarrollo por componentes con Angular 1.5 y ES6/ES2015
-date: '2016-07-04'
-url: >-
-  https://carlosazaustre.es/blog/desarrollo-por-componentes-con-angular-1-5-con-es6-es2015
-tags:
-  - angular
-  - javascript
-  - tutorial
-excerpt: >-
-  Descubre cómo usar el método .component() de Angular 1.5 con ES6/ES2015 para
-  crear aplicaciones basadas en componentes y prepararte para Angular 2.
+title: "Desarrollo por componentes con Angular 1.5 y ES6/ES2015"
+date: "2016-07-04"
+url: "https://carlosazaustre.es/blog/desarrollo-por-componentes-con-angular-1-5-con-es6-es2015"
+tags: []
 ---
 
 # Desarrollo por componentes con Angular 1.5 y ES6/ES2015

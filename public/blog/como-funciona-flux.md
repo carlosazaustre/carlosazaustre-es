@@ -1,12 +1,8 @@
 ---
-title: ¿Qué es Flux? Entendiendo su arquitectura
-date: '2018-05-25'
-url: 'https://carlosazaustre.es/blog/como-funciona-flux'
+title: "¿Qué es Flux? Entendiendo su arquitectura"
+date: "2018-05-25"
+url: "https://carlosazaustre.es/blog/como-funciona-flux"
 tags: []
-excerpt: >-
-  Flux es la arquitectura de Facebook para gestionar el flujo de datos en
-  aplicaciones Front-End de forma unidireccional, reemplazando el patrón MVC
-  tradicional.
 ---
 
 # ¿Qué es Flux? Entendiendo su arquitectura

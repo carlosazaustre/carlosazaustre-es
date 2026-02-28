@@ -1,11 +1,8 @@
 ---
-title: 'Cómo hacer la Dynamic Island del iPhone 14 con HTML, CSS y JavaScript'
-date: '2022-11-06'
-url: 'https://carlosazaustre.es/blog/dynamic-island-html'
-tags:
-  - html
-  - css
-  - javascript
+title: "Cómo hacer la Dynamic Island del iPhone 14 con HTML, CSS y JavaScript"
+date: "2022-11-06"
+url: "https://carlosazaustre.es/blog/dynamic-island-html"
+tags: []
 ---
 
 # Cómo hacer la Dynamic Island del iPhone 14 con HTML, CSS y JavaScript

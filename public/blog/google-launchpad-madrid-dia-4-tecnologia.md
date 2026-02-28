@@ -1,14 +1,8 @@
 ---
-title: 'Google Launchpad Madrid, Día 4: Tecnología'
-date: '2015-07-09'
-url: 'https://carlosazaustre.es/blog/google-launchpad-madrid-dia-4-tecnologia'
-tags:
-  - carrera
-  - web
-excerpt: >-
-  Día 4 de Google Launchpad Madrid: charlas sobre tecnología mobile para
-  startups. Aprende cómo Android domina el mercado y por qué iOS lidera la
-  monetización.
+title: "Google Launchpad Madrid, Día 4: Tecnología"
+date: "2015-07-09"
+url: "https://carlosazaustre.es/blog/google-launchpad-madrid-dia-4-tecnologia"
+tags: []
 ---
 
 # Google Launchpad Madrid, Día 4: Tecnología

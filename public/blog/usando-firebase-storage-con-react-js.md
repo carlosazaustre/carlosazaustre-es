@@ -1,11 +1,8 @@
 ---
-title: Usando Firebase Storage con React.js
-date: '2016-10-13'
-url: 'https://carlosazaustre.es/blog/usando-firebase-storage-con-react-js'
-tags:
-  - firebase
-  - react
-  - javascript
+title: "Usando Firebase Storage con React.js"
+date: "2016-10-13"
+url: "https://carlosazaustre.es/blog/usando-firebase-storage-con-react-js"
+tags: []
 ---
 
 # Usando Firebase Storage con React.js

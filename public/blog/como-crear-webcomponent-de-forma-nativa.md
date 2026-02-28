@@ -1,12 +1,8 @@
 ---
-title: Cómo crear un WebComponent de forma nativa
-date: '2017-02-01'
-url: 'https://carlosazaustre.es/blog/como-crear-webcomponent-de-forma-nativa'
+title: "Cómo crear un WebComponent de forma nativa"
+date: "2017-02-01"
+url: "https://carlosazaustre.es/blog/como-crear-webcomponent-de-forma-nativa"
 tags: []
-excerpt: >-
-  Aprende a crear un WebComponent nativo con Custom Elements v1 usando solo
-  JavaScript, HTML y CSS, sin librerías externas. Crea tus propios tags HTML
-  desde cero.
 ---
 
 # Cómo crear un WebComponent de forma nativa

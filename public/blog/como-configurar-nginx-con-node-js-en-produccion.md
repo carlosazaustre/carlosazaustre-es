@@ -1,15 +1,8 @@
 ---
-title: Cómo configurar Nginx con Node.js en Producción
-date: '2014-02-26'
-url: 'https://carlosazaustre.es/blog/como-configurar-nginx-con-node-js-en-produccion'
-tags:
-  - nodejs
-  - web
-  - herramientas
-excerpt: >-
-  Aprende a configurar Nginx como reverse proxy con Node.js en producción en
-  Amazon EC2. Gestiona múltiples procesos y puertos en tu VPS de forma
-  eficiente.
+title: "Cómo configurar Nginx con Node.js en Producción"
+date: "2014-02-26"
+url: "https://carlosazaustre.es/blog/como-configurar-nginx-con-node-js-en-produccion"
+tags: []
 ---
 
 # Cómo configurar Nginx con Node.js en Producción

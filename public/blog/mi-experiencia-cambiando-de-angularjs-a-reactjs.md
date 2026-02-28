@@ -1,10 +1,8 @@
 ---
-title: Mi experiencia cambiando de AngularJS a ReactJS
-date: '2017-03-17'
-url: 'https://carlosazaustre.es/blog/mi-experiencia-cambiando-de-angularjs-a-reactjs'
-tags:
-  - angular
-  - react
+title: "Mi experiencia cambiando de AngularJS a ReactJS"
+date: "2017-03-17"
+url: "https://carlosazaustre.es/blog/mi-experiencia-cambiando-de-angularjs-a-reactjs"
+tags: []
 ---
 
 # Mi experiencia cambiando de AngularJS a ReactJS

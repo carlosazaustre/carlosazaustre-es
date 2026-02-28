@@ -1,14 +1,8 @@
 ---
-title: Cómo hacer que tus imágenes sean Responsive
-date: '2015-10-21'
-url: 'https://carlosazaustre.es/blog/imagenes-responsive'
-tags:
-  - html
-  - web
-  - performance
-excerpt: >-
-  Aprende a usar srcset para mostrar imágenes responsive según el dispositivo y
-  resolución. Optimiza la carga con Mobile First y mejora el rendimiento web.
+title: "Cómo hacer que tus imágenes sean Responsive"
+date: "2015-10-21"
+url: "https://carlosazaustre.es/blog/imagenes-responsive"
+tags: []
 ---
 
 # Cómo hacer que tus imágenes sean Responsive

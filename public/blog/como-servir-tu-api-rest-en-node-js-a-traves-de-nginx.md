@@ -1,14 +1,8 @@
 ---
-title: Cómo servir tu API REST en Node.js a través de Nginx
-date: '2015-03-10'
-url: >-
-  https://carlosazaustre.es/blog/como-servir-tu-api-rest-en-node-js-a-traves-de-nginx
-tags:
-  - nodejs
-  - web
-excerpt: >-
-  Aprende a configurar Nginx como proxy inverso para servir tu API REST en
-  Node.js desde tu propio dominio, separando frontend y backend en producción.
+title: "Cómo servir tu API REST en Node.js a través de Nginx"
+date: "2015-03-10"
+url: "https://carlosazaustre.es/blog/como-servir-tu-api-rest-en-node-js-a-traves-de-nginx"
+tags: []
 ---
 
 # Cómo servir tu API REST en Node.js a través de Nginx

@@ -1,14 +1,8 @@
 ---
-title: Cómo configurar Husky y Lint-Staged en un proyecto
-date: '2022-11-09'
-url: 'https://carlosazaustre.es/blog/husky-lintstaged'
-tags:
-  - git
-  - herramientas
-  - tutorial
-excerpt: >-
-  Configura Husky y Lint-Staged en tu proyecto Node.js para ejecutar Git Hooks
-  antes de cada commit, verificar el linter y asegurar la calidad del código.
+title: "Cómo configurar Husky y Lint-Staged en un proyecto"
+date: "2022-11-09"
+url: "https://carlosazaustre.es/blog/husky-lintstaged"
+tags: []
 ---
 
 # Cómo configurar Husky y Lint-Staged en un proyecto

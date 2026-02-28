@@ -1,15 +1,8 @@
 ---
-title: Cómo pasar variables como atributos en directivas de AngularJS
-date: '2015-06-15'
-url: >-
-  https://carlosazaustre.es/blog/como-pasar-variables-como-atributos-en-directivas-de-angularjs
-tags:
-  - angular
-  - javascript
-  - tutorial
-excerpt: >-
-  Aprende a pasar variables dinámicas como atributos en directivas de AngularJS
-  para crear componentes reutilizables en tus aplicaciones Angular paso a paso.
+title: "Cómo pasar variables como atributos en directivas de AngularJS"
+date: "2015-06-15"
+url: "https://carlosazaustre.es/blog/como-pasar-variables-como-atributos-en-directivas-de-angularjs"
+tags: []
 ---
 
 # Cómo pasar variables como atributos en directivas de AngularJS

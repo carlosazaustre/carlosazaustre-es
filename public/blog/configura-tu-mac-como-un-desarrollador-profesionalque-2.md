@@ -1,14 +1,8 @@
 ---
-title: Configura tu terminal de Mac como un desarrollador profesional
-date: '2015-01-10'
-url: >-
-  https://carlosazaustre.es/blog/configura-tu-mac-como-un-desarrollador-profesionalque-2
-tags:
-  - herramientas
-  - web
-excerpt: >-
-  Aprende a configurar tu terminal de Mac como un desarrollador profesional con
-  iTerm2: hotkeys, colores y ajustes para mejorar tu productividad.
+title: "Configura tu terminal de Mac como un desarrollador profesional"
+date: "2015-01-10"
+url: "https://carlosazaustre.es/blog/configura-tu-mac-como-un-desarrollador-profesionalque-2"
+tags: []
 ---
 
 # Configura tu terminal de Mac como un desarrollador profesional

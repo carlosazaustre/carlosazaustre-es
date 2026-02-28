@@ -1,15 +1,8 @@
 ---
-title: 3 formas de comunicar componentes en AngularJS 1.x
-date: '2016-01-27'
-url: >-
-  https://carlosazaustre.es/blog/formas-de-comunicar-componentes-en-angularjs-1-x
-tags:
-  - angular
-  - tutorial
-excerpt: >-
-  Aprende las 3 formas de comunicar componentes en AngularJS 1.x: servicios,
-  eventos y scope. Guía práctica con ejemplos para estructurar mejor tu
-  aplicación.
+title: "3 formas de comunicar componentes en AngularJS 1.x"
+date: "2016-01-27"
+url: "https://carlosazaustre.es/blog/formas-de-comunicar-componentes-en-angularjs-1-x"
+tags: []
 ---
 
 # 3 formas de comunicar componentes en AngularJS 1.x

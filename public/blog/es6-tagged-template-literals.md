@@ -1,13 +1,8 @@
 ---
-title: ES6 Tagged Template Literals
-date: '2018-09-01'
-url: 'https://carlosazaustre.es/blog/es6-tagged-template-literals'
-tags:
-  - javascript
-excerpt: >-
-  Aprende qué son los ES6 Tagged Template Literals en JavaScript, una potente
-  característica de ECMAScript 6 para manipular template strings de forma
-  avanzada
+title: "ES6 Tagged Template Literals"
+date: "2018-09-01"
+url: "https://carlosazaustre.es/blog/es6-tagged-template-literals"
+tags: []
 ---
 
 # ES6 Tagged Template Literals

@@ -1,10 +1,8 @@
 ---
-title: Ser autónomo en España. Pasos para ser Freelance
-date: '2015-05-05'
-url: 'https://carlosazaustre.es/blog/ser-autonomo-en-espana-pasos-para-ser-freelance'
-tags:
-  - carrera
-  - web
+title: "Ser autónomo en España. Pasos para ser Freelance"
+date: "2015-05-05"
+url: "https://carlosazaustre.es/blog/ser-autonomo-en-espana-pasos-para-ser-freelance"
+tags: []
 ---
 
 # Ser autónomo en España. Pasos para ser Freelance

@@ -1,11 +1,8 @@
 ---
-title: Primeros pasos con Webpack
-date: '2016-09-22'
-url: 'https://carlosazaustre.es/blog/primeros-pasos-con-webpack'
-tags:
-  - javascript
-  - herramientas
-  - web
+title: "Primeros pasos con Webpack"
+date: "2016-09-22"
+url: "https://carlosazaustre.es/blog/primeros-pasos-con-webpack"
+tags: []
 ---
 
 # Primeros pasos con Webpack

@@ -1,12 +1,8 @@
 ---
-title: Programando en Node.js con RaspberryPi. Primeros pasos
-date: '2014-07-15'
-url: >-
-  https://carlosazaustre.es/blog/programando-en-node-js-con-raspberrypi-primeros-pasos
-tags:
-  - nodejs
-  - javascript
-  - tutorial
+title: "Programando en Node.js con RaspberryPi. Primeros pasos"
+date: "2014-07-15"
+url: "https://carlosazaustre.es/blog/programando-en-node-js-con-raspberrypi-primeros-pasos"
+tags: []
 ---
 
 # Programando en Node.js con RaspberryPi. Primeros pasos

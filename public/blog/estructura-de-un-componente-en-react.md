@@ -1,14 +1,8 @@
 ---
-title: Estructura y funcionamiento de un componente en React
-date: '2016-09-28'
-url: 'https://carlosazaustre.es/blog/estructura-de-un-componente-en-react'
-tags:
-  - react
-  - javascript
-excerpt: >-
-  Aprende a crear componentes en React con clases ES2015 y JSX. Descubre el
-  método render, el constructor y cómo estructurar tus componentes
-  correctamente.
+title: "Estructura y funcionamiento de un componente en React"
+date: "2016-09-28"
+url: "https://carlosazaustre.es/blog/estructura-de-un-componente-en-react"
+tags: []
 ---
 
 # Estructura y funcionamiento de un componente en React

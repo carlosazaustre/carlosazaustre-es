@@ -2,12 +2,10 @@
 title: 'Angular 2: Rutas y Componentes'
 date: '2015-11-11'
 url: 'https://carlosazaustre.es/blog/angular-2-rutas-y-componentes'
-tags:
-  - angular
-  - tutorial
+tags: []
 excerpt: >-
-  Aprende a implementar rutas basadas en componentes en Angular 2. Tutorial con
-  RouteConfig, ROUTER_DIRECTIVES y HashLocationStrategy paso a paso.
+  Aprende a implementar rutas basadas en componentes en Angular 2. Tutorial
+  práctico con RouteConfig, ROUTER_DIRECTIVES y configuración del módulo Router.
 ---
 
 # Angular 2: Rutas y Componentes

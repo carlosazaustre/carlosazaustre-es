@@ -1,14 +1,8 @@
 ---
-title: Cómo relacionar tus modelos en MongoDB
-date: '2015-01-18'
-url: 'https://carlosazaustre.es/blog/como-relacionar-tus-modelos-en-mongodb'
-tags:
-  - nodejs
-  - javascript
-  - web
-excerpt: >-
-  Descubre cómo usar referencias y populate en MongoDB con Mongoose para
-  relacionar modelos en Node.js, similar a las relaciones de bases de datos SQL.
+title: "Cómo relacionar tus modelos en MongoDB"
+date: "2015-01-18"
+url: "https://carlosazaustre.es/blog/como-relacionar-tus-modelos-en-mongodb"
+tags: []
 ---
 
 # Cómo relacionar tus modelos en MongoDB

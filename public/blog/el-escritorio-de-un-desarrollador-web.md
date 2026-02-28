@@ -1,14 +1,8 @@
 ---
-title: 11 dispositivos para el espacio de trabajo de un desarrollador web
-date: '2015-03-12'
-url: 'https://carlosazaustre.es/blog/el-escritorio-de-un-desarrollador-web'
-tags:
-  - herramientas
-  - web
-excerpt: >-
-  Descubre los 11 accesorios esenciales para el escritorio de un desarrollador
-  web: monitor externo, teclado, silla ergonómica y más para mejorar tu
-  productividad
+title: "11 dispositivos para el espacio de trabajo de un desarrollador web"
+date: "2015-03-12"
+url: "https://carlosazaustre.es/blog/el-escritorio-de-un-desarrollador-web"
+tags: []
 ---
 
 # 11 dispositivos para el espacio de trabajo de un desarrollador web

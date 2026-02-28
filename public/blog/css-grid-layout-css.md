@@ -1,11 +1,8 @@
 ---
-title: El futuro de CSS Grid Layout
-date: '2015-12-28'
-url: 'https://carlosazaustre.es/blog/css-grid-layout-css'
-tags:
-  - css
-  - tutorial
-  - web
+title: "El futuro de CSS Grid Layout"
+date: "2015-12-28"
+url: "https://carlosazaustre.es/blog/css-grid-layout-css"
+tags: []
 ---
 
 # El futuro de CSS Grid Layout

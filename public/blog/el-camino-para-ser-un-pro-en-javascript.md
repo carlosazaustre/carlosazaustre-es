@@ -1,14 +1,8 @@
 ---
-title: 7 Pasos para ser un profesional en JavaScript
-date: '2015-02-17'
-url: 'https://carlosazaustre.es/blog/el-camino-para-ser-un-pro-en-javascript'
-tags:
-  - javascript
-  - carrera
-  - tutorial
-excerpt: >-
-  Descubre los 7 pasos para convertirte en profesional de JavaScript: desde
-  Node.js hasta dominar el lenguaje más demandado del desarrollo web moderno.
+title: "7 Pasos para ser un profesional en JavaScript"
+date: "2015-02-17"
+url: "https://carlosazaustre.es/blog/el-camino-para-ser-un-pro-en-javascript"
+tags: []
 ---
 
 # 7 Pasos para ser un profesional en JavaScript

@@ -1,15 +1,8 @@
 ---
-title: Cómo conectarte remótamente a tu base de datos MongoDB
-date: '2014-12-19'
-url: >-
-  https://carlosazaustre.es/blog/como-conectarte-remotamente-a-tu-base-de-datos-mongodb
-tags:
-  - web
-  - programacion
-excerpt: >-
-  Aprende a conectarte remotamente a tu base de datos MongoDB con seguridad.
-  Configura autenticación, usuarios y permisos para proteger tu entorno de
-  producción.
+title: "Cómo conectarte remótamente a tu base de datos MongoDB"
+date: "2014-12-19"
+url: "https://carlosazaustre.es/blog/como-conectarte-remotamente-a-tu-base-de-datos-mongodb"
+tags: []
 ---
 
 # Cómo conectarte remótamente a tu base de datos MongoDB

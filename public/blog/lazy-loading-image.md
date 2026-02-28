@@ -1,14 +1,8 @@
 ---
-title: Lazy loading de imágenes ya forma parte del estándar HTML
-date: '2020-02-25'
-url: 'https://carlosazaustre.es/blog/lazy-loading-image'
-tags:
-  - html
-  - web
-excerpt: >-
-  El atributo loading para imágenes e iframes ya forma parte del estándar HTML.
-  Aprende a implementar lazy loading nativo con polyfill para todos los
-  navegadores.
+title: "Lazy loading de imágenes ya forma parte del estándar HTML"
+date: "2020-02-25"
+url: "https://carlosazaustre.es/blog/lazy-loading-image"
+tags: []
 ---
 
 # Lazy loading de imágenes ya forma parte del estándar HTML

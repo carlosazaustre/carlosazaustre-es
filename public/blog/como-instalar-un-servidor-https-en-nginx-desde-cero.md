@@ -1,14 +1,8 @@
 ---
-title: Cómo instalar un Servidor HTTPS en Nginx desde cero
-date: '2014-06-16'
-url: >-
-  https://carlosazaustre.es/blog/como-instalar-un-servidor-https-en-nginx-desde-cero
-tags:
-  - web
-  - tutorial
-excerpt: >-
-  Aprende a instalar un servidor HTTPS en Nginx con certificado SSL en Ubuntu y
-  AWS. Guía paso a paso para proteger tu aplicación web con cifrado seguro.
+title: "Cómo instalar un Servidor HTTPS en Nginx desde cero"
+date: "2014-06-16"
+url: "https://carlosazaustre.es/blog/como-instalar-un-servidor-https-en-nginx-desde-cero"
+tags: []
 ---
 
 # Cómo instalar un Servidor HTTPS en Nginx desde cero

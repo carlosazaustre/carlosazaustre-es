@@ -1,15 +1,8 @@
 ---
-title: Cómo hacer un acortador de URLs con Next.js y Prisma
-date: '2021-07-16'
-url: 'https://carlosazaustre.es/blog/acortador-urls'
-tags:
-  - nextjs
-  - react
-  - tutorial
-excerpt: >-
-  Aprende a crear un acortador de URLs desde cero con Next.js, Prisma y
-  PostgreSQL. Tutorial paso a paso para construir tu propio servicio como bit.ly
-  con React.
+title: "Cómo hacer un acortador de URLs con Next.js y Prisma"
+date: "2021-07-16"
+url: "https://carlosazaustre.es/blog/acortador-urls"
+tags: []
 ---
 
 # Cómo hacer un acortador de URLs con Next.js y Prisma

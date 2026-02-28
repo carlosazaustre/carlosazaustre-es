@@ -1,12 +1,8 @@
 ---
-title: 'Tessel, el microcontrolador programable en JavaScript'
-date: '2013-09-06'
-url: >-
-  https://carlosazaustre.es/blog/tessel-el-microcontrolador-programable-en-javascript
-tags:
-  - javascript
-  - web
-  - programacion
+title: "Tessel, el microcontrolador programable en JavaScript"
+date: "2013-09-06"
+url: "https://carlosazaustre.es/blog/tessel-el-microcontrolador-programable-en-javascript"
+tags: []
 ---
 
 # Tessel, el microcontrolador programable en JavaScript

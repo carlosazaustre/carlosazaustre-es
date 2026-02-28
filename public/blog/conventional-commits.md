@@ -1,14 +1,8 @@
 ---
-title: Conventional Commits - Especificación para tus mensajes de commit
-date: '2022-11-29'
-url: 'https://carlosazaustre.es/blog/conventional-commits'
-tags:
-  - git
-  - herramientas
-excerpt: >-
-  Aprende a usar Conventional Commits para dar significado a tus mensajes de
-  commit. Especificación compatible con SemVer para proyectos y equipos de
-  desarrollo.
+title: "Conventional Commits - Especificación para tus mensajes de commit"
+date: "2022-11-29"
+url: "https://carlosazaustre.es/blog/conventional-commits"
+tags: []
 ---
 
 # Conventional Commits - Especificación para tus mensajes de commit

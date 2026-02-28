@@ -1,15 +1,8 @@
 ---
-title: Cómo configurar tu servidor cloud en DigitalOcean
-date: '2014-07-31'
-url: >-
-  https://carlosazaustre.es/blog/como-configurar-tu-servidor-cloud-en-digitalocean
-tags:
-  - web
-  - herramientas
-excerpt: >-
-  Aprende a configurar tu primer servidor cloud en DigitalOcean paso a paso.
-  Crea un droplet Linux desde 5$ al mes y despliega tus aplicaciones web
-  fácilmente.
+title: "Cómo configurar tu servidor cloud en DigitalOcean"
+date: "2014-07-31"
+url: "https://carlosazaustre.es/blog/como-configurar-tu-servidor-cloud-en-digitalocean"
+tags: []
 ---
 
 # Cómo configurar tu servidor cloud en DigitalOcean

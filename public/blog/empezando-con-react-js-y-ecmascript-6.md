@@ -1,14 +1,8 @@
 ---
-title: Empezando con ReactJS y ECMAScript 6
-date: '2015-06-22'
-url: 'https://carlosazaustre.es/blog/empezando-con-react-js-y-ecmascript-6'
-tags:
-  - react
-  - javascript
-excerpt: >-
-  Aprende a empezar con ReactJS y ECMAScript 6. Descubre cómo funciona JSX, el
-  sistema de renderizado de vistas de Facebook y por qué React domina el
-  frontend.
+title: "Empezando con ReactJS y ECMAScript 6"
+date: "2015-06-22"
+url: "https://carlosazaustre.es/blog/empezando-con-react-js-y-ecmascript-6"
+tags: []
 ---
 
 # Empezando con ReactJS y ECMAScript 6
