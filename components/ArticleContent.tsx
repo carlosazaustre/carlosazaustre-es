@@ -8,6 +8,16 @@ export default function ArticleContent({ html }: { html: string }) {
   useEffect(() => {
     if (!ref.current) return;
 
+    // Wrap tables in a scrollable container
+    const tables = ref.current.querySelectorAll<HTMLElement>("table");
+    tables.forEach((table) => {
+      if (table.parentElement?.classList.contains("table-wrapper")) return;
+      const wrapper = document.createElement("div");
+      wrapper.className = "table-wrapper";
+      table.parentNode?.insertBefore(wrapper, table);
+      wrapper.appendChild(table);
+    });
+
     const windows = ref.current.querySelectorAll<HTMLElement>(".code-window");
 
     windows.forEach((win) => {

@@ -539,18 +539,23 @@ body {
    TABLES (inside blog posts)
 ──────────────────────────────────────────── */
 
+.prose-neo .table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 2rem 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 3px solid var(--border);
+  padding: 6px;
+}
+
 .prose-neo table {
   width: 100%;
   border-collapse: collapse;
   border: 3px solid var(--border);
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  overflow: hidden;
-  margin: 2rem 0;
   font-size: 0.9rem;
-  display: block;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  overflow: hidden;
 }
 
 .prose-neo thead {

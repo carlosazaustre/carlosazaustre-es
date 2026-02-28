@@ -242,7 +242,9 @@ export default async function BlogPostPage({ params }: Props) {
 
         {/* Banner libro en el interior del artículo (~mitad del texto) */}
         {recommendedBook && contentSecond && (
-          <BookBanner book={recommendedBook} />
+          <div style={{ maxWidth: "72ch", fontSize: "1.1rem" }}>
+            <BookBanner book={recommendedBook} />
+          </div>
         )}
 
         {/* Main content — segunda mitad */}
@@ -297,7 +299,11 @@ export default async function BlogPostPage({ params }: Props) {
       </div>
 
       {/* Libro recomendado — fallback para artículos cortos (sin segunda mitad) */}
-      {recommendedBook && !contentSecond && <BookBanner book={recommendedBook} />}
+      {recommendedBook && !contentSecond && (
+        <div style={{ maxWidth: "72ch", fontSize: "1.1rem" }}>
+          <BookBanner book={recommendedBook} />
+        </div>
+      )}
 
       {/* Newsletter */}
       <div style={{ marginTop: "3rem" }}>
