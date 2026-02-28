@@ -1,8 +1,10 @@
 ---
-title: "Google Launchpad Madrid, Día 4: Tecnología"
-date: "2015-07-09"
-url: "https://carlosazaustre.es/blog/google-launchpad-madrid-dia-4-tecnologia"
-tags: []
+title: 'Google Launchpad Madrid, Día 4: Tecnología'
+date: '2015-07-09'
+url: 'https://carlosazaustre.es/blog/google-launchpad-madrid-dia-4-tecnologia'
+tags:
+  - carrera
+  - web
 ---
 
 # Google Launchpad Madrid, Día 4: Tecnología

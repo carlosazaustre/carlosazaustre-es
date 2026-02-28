@@ -1,8 +1,12 @@
 ---
-title: "Registro y autorización de usuarios en Node.js con Twitter y Facebook"
-date: "2014-03-22"
-url: "https://carlosazaustre.es/blog/registro-y-autorizacion-de-usuarios-en-node-js-con-twitter-y-facebook"
-tags: []
+title: Registro y autorización de usuarios en Node.js con Twitter y Facebook
+date: '2014-03-22'
+url: >-
+  https://carlosazaustre.es/blog/registro-y-autorizacion-de-usuarios-en-node-js-con-twitter-y-facebook
+tags:
+  - nodejs
+  - javascript
+  - tutorial
 ---
 
 # Registro y autorización de usuarios en Node.js con Twitter y Facebook

@@ -2,7 +2,9 @@
 title: Aprendiendo y Compartiendo con la Comunidad
 date: '2016-06-17'
 url: 'https://carlosazaustre.es/blog/aprendiendo-y-compartiendo'
-tags: []
+tags:
+  - carrera
+  - programacion
 excerpt: >-
   Resumen de mi charla Ignite en PlatziConf Madrid 2016 sobre aprender
   programación en internet y la importancia de compartir con la comunidad tech.

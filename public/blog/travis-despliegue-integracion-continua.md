@@ -1,8 +1,12 @@
 ---
-title: "Cómo configurar Travis como herramienta para Integración y Despliegue continuo"
-date: "2020-02-29"
-url: "https://carlosazaustre.es/blog/travis-despliegue-integracion-continua"
-tags: []
+title: Cómo configurar Travis como herramienta para Integración y Despliegue continuo
+date: '2020-02-29'
+url: 'https://carlosazaustre.es/blog/travis-despliegue-integracion-continua'
+tags:
+  - herramientas
+  - git
+  - testing
+  - tutorial
 ---
 
 # Cómo configurar Travis como herramienta para Integración y Despliegue continuo

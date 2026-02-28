@@ -1,8 +1,10 @@
 ---
-title: "Cómo conectar Firebase a una aplicación React"
-date: "2016-10-04"
-url: "https://carlosazaustre.es/blog/conectando-firebase-a-react"
-tags: []
+title: Cómo conectar Firebase a una aplicación React
+date: '2016-10-04'
+url: 'https://carlosazaustre.es/blog/conectando-firebase-a-react'
+tags:
+  - firebase
+  - react
 ---
 
 # Cómo conectar Firebase a una aplicación React

@@ -1,8 +1,10 @@
 ---
-title: "¿Cómo funciona Redux? Conceptos básicos"
-date: "2017-03-09"
-url: "https://carlosazaustre.es/blog/como-funciona-redux-conceptos-basicos"
-tags: []
+title: ¿Cómo funciona Redux? Conceptos básicos
+date: '2017-03-09'
+url: 'https://carlosazaustre.es/blog/como-funciona-redux-conceptos-basicos'
+tags:
+  - javascript
+  - react
 ---
 
 # ¿Cómo funciona Redux? Conceptos básicos

@@ -1,8 +1,11 @@
 ---
-title: "¿Es tu web realmente Mobile First?"
-date: "2015-10-14"
-url: "https://carlosazaustre.es/blog/es-tu-web-realmente-mobile-first"
-tags: []
+title: ¿Es tu web realmente Mobile First?
+date: '2015-10-14'
+url: 'https://carlosazaustre.es/blog/es-tu-web-realmente-mobile-first'
+tags:
+  - css
+  - web
+  - performance
 ---
 
 # ¿Es tu web realmente Mobile First?

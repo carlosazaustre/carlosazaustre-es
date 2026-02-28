@@ -1,8 +1,10 @@
 ---
-title: "Docker como entorno de desarrollo local"
-date: "2018-09-01"
-url: "https://carlosazaustre.es/blog/docker-como-entorno-de-desarrollo-local"
-tags: []
+title: Docker como entorno de desarrollo local
+date: '2018-09-01'
+url: 'https://carlosazaustre.es/blog/docker-como-entorno-de-desarrollo-local'
+tags:
+  - herramientas
+  - web
 ---
 
 # Docker como entorno de desarrollo local

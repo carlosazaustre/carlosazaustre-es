@@ -1,8 +1,11 @@
 ---
-title: "Los 5 patrones del Responsive Design con Flexbox"
-date: "2015-11-04"
-url: "https://carlosazaustre.es/blog/los-5-patrones-del-responsive-design"
-tags: []
+title: Los 5 patrones del Responsive Design con Flexbox
+date: '2015-11-04'
+url: 'https://carlosazaustre.es/blog/los-5-patrones-del-responsive-design'
+tags:
+  - css
+  - html
+  - web
 ---
 
 # Los 5 patrones del Responsive Design con Flexbox

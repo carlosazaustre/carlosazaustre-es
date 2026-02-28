@@ -1,8 +1,11 @@
 ---
-title: "3 formas de comunicar componentes en AngularJS 1.x"
-date: "2016-01-27"
-url: "https://carlosazaustre.es/blog/formas-de-comunicar-componentes-en-angularjs-1-x"
-tags: []
+title: 3 formas de comunicar componentes en AngularJS 1.x
+date: '2016-01-27'
+url: >-
+  https://carlosazaustre.es/blog/formas-de-comunicar-componentes-en-angularjs-1-x
+tags:
+  - angular
+  - tutorial
 ---
 
 # 3 formas de comunicar componentes en AngularJS 1.x

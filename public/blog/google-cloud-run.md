@@ -1,8 +1,12 @@
 ---
-title: "Cómo lanzar una aplicación web en Google Cloud Run con Cloud Build"
-date: "2019-07-08"
-url: "https://carlosazaustre.es/blog/google-cloud-run"
-tags: []
+title: Cómo lanzar una aplicación web en Google Cloud Run con Cloud Build
+date: '2019-07-08'
+url: 'https://carlosazaustre.es/blog/google-cloud-run'
+tags:
+  - nodejs
+  - web
+  - tutorial
+  - herramientas
 ---
 
 # Cómo lanzar una aplicación web en Google Cloud Run con Cloud Build

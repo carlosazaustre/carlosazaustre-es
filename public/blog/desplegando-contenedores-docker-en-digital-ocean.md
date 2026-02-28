@@ -1,8 +1,15 @@
 ---
-title: "Desplegando contenedores en DigitalOcean con Docker, Docker Compose y Docker Machine"
-date: "2015-07-02"
-url: "https://carlosazaustre.es/blog/desplegando-contenedores-docker-en-digital-ocean"
-tags: []
+title: >-
+  Desplegando contenedores en DigitalOcean con Docker, Docker Compose y Docker
+  Machine
+date: '2015-07-02'
+url: >-
+  https://carlosazaustre.es/blog/desplegando-contenedores-docker-en-digital-ocean
+tags:
+  - nodejs
+  - herramientas
+  - tutorial
+  - web
 ---
 
 # Desplegando contenedores en DigitalOcean con Docker, Docker Compose y Docker Machine

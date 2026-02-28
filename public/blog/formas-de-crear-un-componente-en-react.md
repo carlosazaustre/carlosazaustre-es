@@ -1,8 +1,10 @@
 ---
-title: "4 Formas de crear un Componente en React"
-date: "2017-01-24"
-url: "https://carlosazaustre.es/blog/formas-de-crear-un-componente-en-react"
-tags: []
+title: 4 Formas de crear un Componente en React
+date: '2017-01-24'
+url: 'https://carlosazaustre.es/blog/formas-de-crear-un-componente-en-react'
+tags:
+  - react
+  - javascript
 ---
 
 # 4 Formas de crear un Componente en React

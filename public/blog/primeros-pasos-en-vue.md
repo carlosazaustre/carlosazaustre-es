@@ -1,8 +1,11 @@
 ---
-title: "Primeros pasos en Vue"
-date: "2018-10-01"
-url: "https://carlosazaustre.es/blog/primeros-pasos-en-vue"
-tags: []
+title: Primeros pasos en Vue
+date: '2018-10-01'
+url: 'https://carlosazaustre.es/blog/primeros-pasos-en-vue'
+tags:
+  - vuejs
+  - javascript
+  - tutorial
 ---
 
 # Primeros pasos en Vue

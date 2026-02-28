@@ -1,8 +1,10 @@
 ---
-title: "Mi experiencia cómo mentor en Google Launchpad Week"
-date: "2016-10-26"
-url: "https://carlosazaustre.es/blog/mi-experiencia-como-mentor-en-google-launchpad-week"
-tags: []
+title: Mi experiencia cómo mentor en Google Launchpad Week
+date: '2016-10-26'
+url: >-
+  https://carlosazaustre.es/blog/mi-experiencia-como-mentor-en-google-launchpad-week
+tags:
+  - carrera
 ---
 
 # Mi experiencia cómo mentor en Google Launchpad Week

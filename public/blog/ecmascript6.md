@@ -1,8 +1,10 @@
 ---
-title: "Aprende ECMAScript 6 (ES6 o ES2015), el nuevo estándar de JavaScript"
-date: "2018-10-24"
-url: "https://carlosazaustre.es/blog/ecmascript6"
-tags: []
+title: 'Aprende ECMAScript 6 (ES6 o ES2015), el nuevo estándar de JavaScript'
+date: '2018-10-24'
+url: 'https://carlosazaustre.es/blog/ecmascript6'
+tags:
+  - javascript
+  - tutorial
 ---
 
 # Aprende ECMAScript 6 (ES6 o ES2015), el nuevo estándar de JavaScript

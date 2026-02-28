@@ -1,8 +1,10 @@
 ---
-title: "JavaScript Promises. Uso de promesas en AngularJS"
-date: "2015-04-27"
-url: "https://carlosazaustre.es/blog/uso-de-promesas-en-angularjs"
-tags: []
+title: JavaScript Promises. Uso de promesas en AngularJS
+date: '2015-04-27'
+url: 'https://carlosazaustre.es/blog/uso-de-promesas-en-angularjs'
+tags:
+  - javascript
+  - angular
 ---
 
 # JavaScript Promises. Uso de promesas en AngularJS

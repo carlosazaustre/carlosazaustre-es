@@ -1,8 +1,12 @@
 ---
-title: "¿Qué es AngularJS? Primeros pasos para aprenderlo"
-date: "2013-09-09"
-url: "https://carlosazaustre.es/blog/empezando-con-angular-js"
-tags: []
+title: ¿Qué es AngularJS? Primeros pasos para aprenderlo
+date: '2013-09-09'
+url: 'https://carlosazaustre.es/blog/empezando-con-angular-js'
+tags:
+  - angular
+  - javascript
+  - web
+  - tutorial
 ---
 
 # ¿Qué es AngularJS? Primeros pasos para aprenderlo

@@ -1,8 +1,11 @@
 ---
-title: "7 Pasos para ser un profesional en JavaScript"
-date: "2015-02-17"
-url: "https://carlosazaustre.es/blog/el-camino-para-ser-un-pro-en-javascript"
-tags: []
+title: 7 Pasos para ser un profesional en JavaScript
+date: '2015-02-17'
+url: 'https://carlosazaustre.es/blog/el-camino-para-ser-un-pro-en-javascript'
+tags:
+  - javascript
+  - carrera
+  - tutorial
 ---
 
 # 7 Pasos para ser un profesional en JavaScript

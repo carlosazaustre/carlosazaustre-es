@@ -1,8 +1,12 @@
 ---
-title: "Desarrollo Full Stack JavaScript. El conocido como Stack MEAN"
-date: "2014-02-03"
-url: "https://carlosazaustre.es/blog/desarrollo-full-stack-javascript-tambien-conocido-como-mean"
-tags: []
+title: Desarrollo Full Stack JavaScript. El conocido como Stack MEAN
+date: '2014-02-03'
+url: >-
+  https://carlosazaustre.es/blog/desarrollo-full-stack-javascript-tambien-conocido-como-mean
+tags:
+  - javascript
+  - nodejs
+  - web
 ---
 
 # Desarrollo Full Stack JavaScript. El conocido como Stack MEAN

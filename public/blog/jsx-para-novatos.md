@@ -1,8 +1,11 @@
 ---
-title: "JSX para novatos"
-date: "2016-09-19"
-url: "https://carlosazaustre.es/blog/jsx-para-novatos"
-tags: []
+title: JSX para novatos
+date: '2016-09-19'
+url: 'https://carlosazaustre.es/blog/jsx-para-novatos'
+tags:
+  - react
+  - javascript
+  - tutorial
 ---
 
 # JSX para novatos

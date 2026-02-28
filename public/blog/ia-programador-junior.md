@@ -1,8 +1,12 @@
 ---
-title: "El problema de la Inteligencia Artificial y los Programadores Junior"
-date: "2024-05-11"
-url: "https://carlosazaustre.es/blog/ia-programador-junior"
-tags: []
+title: El problema de la Inteligencia Artificial y los Programadores Junior
+date: '2024-05-11'
+url: 'https://carlosazaustre.es/blog/ia-programador-junior'
+tags:
+  - ia
+  - carrera
+  - programacion
+  - herramientas
 ---
 
 # El problema de la Inteligencia Artificial y los Programadores Junior

@@ -1,8 +1,12 @@
 ---
-title: "Ejemplo de aplicación con React.js en ECMAScript 6"
-date: "2015-06-23"
-url: "https://carlosazaustre.es/blog/ejemplo-de-aplicacion-con-react-js-en-ecmascript-6"
-tags: []
+title: Ejemplo de aplicación con React.js en ECMAScript 6
+date: '2015-06-23'
+url: >-
+  https://carlosazaustre.es/blog/ejemplo-de-aplicacion-con-react-js-en-ecmascript-6
+tags:
+  - react
+  - javascript
+  - tutorial
 ---
 
 # Ejemplo de aplicación con React.js en ECMAScript 6

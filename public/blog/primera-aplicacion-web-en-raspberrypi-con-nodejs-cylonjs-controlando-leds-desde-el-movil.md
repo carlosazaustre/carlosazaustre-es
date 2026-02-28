@@ -1,8 +1,15 @@
 ---
-title: "Primera aplicación web en RaspberryPi con NodeJS + CylonJS. Controlando LEDs desde el móvil"
-date: "2014-07-16"
-url: "https://carlosazaustre.es/blog/primera-aplicacion-web-en-raspberrypi-con-nodejs-cylonjs-controlando-leds-desde-el-movil"
-tags: []
+title: >-
+  Primera aplicación web en RaspberryPi con NodeJS + CylonJS. Controlando LEDs
+  desde el móvil
+date: '2014-07-16'
+url: >-
+  https://carlosazaustre.es/blog/primera-aplicacion-web-en-raspberrypi-con-nodejs-cylonjs-controlando-leds-desde-el-movil
+tags:
+  - nodejs
+  - javascript
+  - tutorial
+  - web
 ---
 
 # Primera aplicación web en RaspberryPi con NodeJS + CylonJS. Controlando LEDs desde el móvil

@@ -1,8 +1,10 @@
 ---
-title: "Google Launchpad Week Madrid. Día 1: Producto"
-date: "2015-07-06"
-url: "https://carlosazaustre.es/blog/google-launchpad-madrid-dia-1-producto"
-tags: []
+title: 'Google Launchpad Week Madrid. Día 1: Producto'
+date: '2015-07-06'
+url: 'https://carlosazaustre.es/blog/google-launchpad-madrid-dia-1-producto'
+tags:
+  - carrera
+  - web
 ---
 
 # Google Launchpad Week Madrid. Día 1: Producto

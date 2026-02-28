@@ -1,8 +1,13 @@
 ---
-title: "Browserify. Desarrollando tu Frontend como en Node.js"
-date: "2015-03-12"
-url: "https://carlosazaustre.es/blog/browserify-desarrollando-tu-frontend-como-en-node-js"
-tags: []
+title: Browserify. Desarrollando tu Frontend como en Node.js
+date: '2015-03-12'
+url: >-
+  https://carlosazaustre.es/blog/browserify-desarrollando-tu-frontend-como-en-node-js
+tags:
+  - javascript
+  - nodejs
+  - herramientas
+  - web
 ---
 
 # Browserify. Desarrollando tu Frontend como en Node.js

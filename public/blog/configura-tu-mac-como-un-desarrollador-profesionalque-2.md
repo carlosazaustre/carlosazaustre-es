@@ -1,8 +1,11 @@
 ---
-title: "Configura tu terminal de Mac como un desarrollador profesional"
-date: "2015-01-10"
-url: "https://carlosazaustre.es/blog/configura-tu-mac-como-un-desarrollador-profesionalque-2"
-tags: []
+title: Configura tu terminal de Mac como un desarrollador profesional
+date: '2015-01-10'
+url: >-
+  https://carlosazaustre.es/blog/configura-tu-mac-como-un-desarrollador-profesionalque-2
+tags:
+  - herramientas
+  - web
 ---
 
 # Configura tu terminal de Mac como un desarrollador profesional

@@ -1,8 +1,10 @@
 ---
-title: "Launchpad Week Madrid. Día 2: UX"
-date: "2015-07-07"
-url: "https://carlosazaustre.es/blog/launchpad-week-madrid-dia-2-ux"
-tags: []
+title: 'Launchpad Week Madrid. Día 2: UX'
+date: '2015-07-07'
+url: 'https://carlosazaustre.es/blog/launchpad-week-madrid-dia-2-ux'
+tags:
+  - carrera
+  - web
 ---
 
 # Launchpad Week Madrid. Día 2: UX

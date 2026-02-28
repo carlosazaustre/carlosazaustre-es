@@ -1,8 +1,11 @@
 ---
-title: "Cómo hacer que tus imágenes sean Responsive"
-date: "2015-10-21"
-url: "https://carlosazaustre.es/blog/imagenes-responsive"
-tags: []
+title: Cómo hacer que tus imágenes sean Responsive
+date: '2015-10-21'
+url: 'https://carlosazaustre.es/blog/imagenes-responsive'
+tags:
+  - html
+  - web
+  - performance
 ---
 
 # Cómo hacer que tus imágenes sean Responsive

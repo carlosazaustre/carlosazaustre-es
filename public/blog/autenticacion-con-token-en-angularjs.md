@@ -1,8 +1,11 @@
 ---
-title: "Cómo hacer autenticación basada en token con AngularJS"
-date: "2015-02-26"
-url: "https://carlosazaustre.es/blog/autenticacion-con-token-en-angularjs"
-tags: []
+title: Cómo hacer autenticación basada en token con AngularJS
+date: '2015-02-26'
+url: 'https://carlosazaustre.es/blog/autenticacion-con-token-en-angularjs'
+tags:
+  - angular
+  - javascript
+  - tutorial
 ---
 
 # Cómo hacer autenticación basada en token con AngularJS

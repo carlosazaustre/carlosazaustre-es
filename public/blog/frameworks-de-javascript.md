@@ -1,8 +1,10 @@
 ---
-title: "¿Qué framework o librería de JavaScript elegir para mis desarrollos?"
-date: "2015-10-19"
-url: "https://carlosazaustre.es/blog/frameworks-de-javascript"
-tags: []
+title: ¿Qué framework o librería de JavaScript elegir para mis desarrollos?
+date: '2015-10-19'
+url: 'https://carlosazaustre.es/blog/frameworks-de-javascript'
+tags:
+  - javascript
+  - web
 ---
 
 # ¿Qué framework o librería de JavaScript elegir para mis desarrollos?

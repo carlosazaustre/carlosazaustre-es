@@ -1,8 +1,12 @@
 ---
-title: "Desarrollo por componentes con Angular 1.5 y ES6/ES2015"
-date: "2016-07-04"
-url: "https://carlosazaustre.es/blog/desarrollo-por-componentes-con-angular-1-5-con-es6-es2015"
-tags: []
+title: Desarrollo por componentes con Angular 1.5 y ES6/ES2015
+date: '2016-07-04'
+url: >-
+  https://carlosazaustre.es/blog/desarrollo-por-componentes-con-angular-1-5-con-es6-es2015
+tags:
+  - angular
+  - javascript
+  - tutorial
 ---
 
 # Desarrollo por componentes con Angular 1.5 y ES6/ES2015

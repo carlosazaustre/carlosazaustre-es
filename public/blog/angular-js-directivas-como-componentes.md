@@ -2,7 +2,10 @@
 title: Cómo programar orientado a Componentes con Directivas de Angular 1.x
 date: '2015-11-17'
 url: 'https://carlosazaustre.es/blog/angular-js-directivas-como-componentes'
-tags: []
+tags:
+  - angular
+  - javascript
+  - web
 excerpt: >-
   Aprende a programar con AngularJS usando directivas como componentes y buenas
   prácticas con controller as, preparando tu código para Angular 2.0

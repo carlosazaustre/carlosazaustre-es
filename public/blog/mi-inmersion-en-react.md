@@ -1,8 +1,10 @@
 ---
-title: "Mi inmersión en React"
-date: "2016-09-13"
-url: "https://carlosazaustre.es/blog/mi-inmersion-en-react"
-tags: []
+title: Mi inmersión en React
+date: '2016-09-13'
+url: 'https://carlosazaustre.es/blog/mi-inmersion-en-react'
+tags:
+  - react
+  - javascript
 ---
 
 # Mi inmersión en React

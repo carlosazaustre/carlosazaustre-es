@@ -1,8 +1,13 @@
 ---
-title: "WebSockets: Cómo utilizar Socket.io en tus aplicaciones web"
-date: "2015-09-24"
-url: "https://carlosazaustre.es/blog/websockets-como-utilizar-socket-io-en-tu-aplicacion-web"
-tags: []
+title: 'WebSockets: Cómo utilizar Socket.io en tus aplicaciones web'
+date: '2015-09-24'
+url: >-
+  https://carlosazaustre.es/blog/websockets-como-utilizar-socket-io-en-tu-aplicacion-web
+tags:
+  - nodejs
+  - javascript
+  - web
+  - tutorial
 ---
 
 # WebSockets: Cómo utilizar Socket.io en tus aplicaciones web

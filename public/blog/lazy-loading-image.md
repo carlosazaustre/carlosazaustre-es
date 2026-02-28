@@ -1,8 +1,10 @@
 ---
-title: "Lazy loading de imágenes ya forma parte del estándar HTML"
-date: "2020-02-25"
-url: "https://carlosazaustre.es/blog/lazy-loading-image"
-tags: []
+title: Lazy loading de imágenes ya forma parte del estándar HTML
+date: '2020-02-25'
+url: 'https://carlosazaustre.es/blog/lazy-loading-image'
+tags:
+  - html
+  - web
 ---
 
 # Lazy loading de imágenes ya forma parte del estándar HTML

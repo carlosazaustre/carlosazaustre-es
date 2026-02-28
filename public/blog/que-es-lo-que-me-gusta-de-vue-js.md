@@ -1,8 +1,11 @@
 ---
-title: "Qué es lo que me gusta de Vue.js"
-date: "2017-08-16"
-url: "https://carlosazaustre.es/blog/que-es-lo-que-me-gusta-de-vue-js"
-tags: []
+title: Qué es lo que me gusta de Vue.js
+date: '2017-08-16'
+url: 'https://carlosazaustre.es/blog/que-es-lo-que-me-gusta-de-vue-js'
+tags:
+  - vuejs
+  - javascript
+  - web
 ---
 
 # Qué es lo que me gusta de Vue.js

@@ -1,8 +1,12 @@
 ---
-title: "¿Qué es la autenticación basada en Token?"
-date: "2015-02-19"
-url: "https://carlosazaustre.es/blog/que-es-la-autenticacion-con-token"
-tags: []
+title: ¿Qué es la autenticación basada en Token?
+date: '2015-02-19'
+url: 'https://carlosazaustre.es/blog/que-es-la-autenticacion-con-token'
+tags:
+  - web
+  - javascript
+  - tutorial
+  - programacion
 ---
 
 # ¿Qué es la autenticación basada en Token?

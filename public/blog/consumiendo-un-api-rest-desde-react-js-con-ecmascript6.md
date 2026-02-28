@@ -1,8 +1,11 @@
 ---
-title: "Consumiendo un API REST desde React.js con ECMAScript6"
-date: "2015-06-25"
-url: "https://carlosazaustre.es/blog/consumiendo-un-api-rest-desde-react-js-con-ecmascript6"
-tags: []
+title: Consumiendo un API REST desde React.js con ECMAScript6
+date: '2015-06-25'
+url: >-
+  https://carlosazaustre.es/blog/consumiendo-un-api-rest-desde-react-js-con-ecmascript6
+tags:
+  - react
+  - javascript
 ---
 
 # Consumiendo un API REST desde React.js con ECMAScript6

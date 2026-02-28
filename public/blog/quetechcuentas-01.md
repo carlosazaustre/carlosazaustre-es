@@ -1,8 +1,10 @@
 ---
-title: "Qué TECH Cuentas - Ep.01, con Pau Garcia-Milà"
-date: "2023-10-30"
-url: "https://carlosazaustre.es/blog/quetechcuentas-01"
-tags: []
+title: 'Qué TECH Cuentas - Ep.01, con Pau Garcia-Milà'
+date: '2023-10-30'
+url: 'https://carlosazaustre.es/blog/quetechcuentas-01'
+tags:
+  - carrera
+  - ia
 ---
 
 # Qué TECH Cuentas - Ep.01, con Pau Garcia-Milà

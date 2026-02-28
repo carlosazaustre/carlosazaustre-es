@@ -2,7 +2,10 @@
 title: Ejecuta tu App NodeJS como un Servicio en Linux
 date: '2016-03-04'
 url: 'https://carlosazaustre.es/blog/aplicacion-node-como-servicio-upstart'
-tags: []
+tags:
+  - nodejs
+  - herramientas
+  - web
 excerpt: >-
   Aprende a ejecutar tu aplicación Node.js como un servicio en Linux con
   Upstart. La solución más elegante para producción en Ubuntu, con reinicio

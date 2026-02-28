@@ -2,7 +2,10 @@
 title: Angular 2. Primeros pasos empleando Browserify y Babel
 date: '2015-11-09'
 url: 'https://carlosazaustre.es/blog/angular-2-primeros-pasos'
-tags: []
+tags:
+  - angular
+  - javascript
+  - tutorial
 excerpt: >-
   Aprende a configurar Angular 2 sin TypeScript usando Browserify, Babel y Gulp.
   Tutorial paso a paso para preparar tu entorno con ES6 desde cero.

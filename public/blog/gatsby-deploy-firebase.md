@@ -1,8 +1,12 @@
 ---
-title: "Cómo desplegar tu sitio en Gatsby a Firebase Hosting"
-date: "2020-02-13"
-url: "https://carlosazaustre.es/blog/gatsby-deploy-firebase"
-tags: []
+title: Cómo desplegar tu sitio en Gatsby a Firebase Hosting
+date: '2020-02-13'
+url: 'https://carlosazaustre.es/blog/gatsby-deploy-firebase'
+tags:
+  - firebase
+  - tutorial
+  - web
+  - herramientas
 ---
 
 # Cómo desplegar tu sitio en Gatsby a Firebase Hosting

@@ -1,8 +1,10 @@
 ---
-title: "Empezando con ReactJS y ECMAScript 6"
-date: "2015-06-22"
-url: "https://carlosazaustre.es/blog/empezando-con-react-js-y-ecmascript-6"
-tags: []
+title: Empezando con ReactJS y ECMAScript 6
+date: '2015-06-22'
+url: 'https://carlosazaustre.es/blog/empezando-con-react-js-y-ecmascript-6'
+tags:
+  - react
+  - javascript
 ---
 
 # Empezando con ReactJS y ECMAScript 6
