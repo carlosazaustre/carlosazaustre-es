@@ -5,7 +5,10 @@ title: >-
 date: '2014-01-13'
 url: >-
   https://carlosazaustre.es/blog/tutorial-ejemplo-de-aplicacion-web-con-angular-js-y-api-rest-con-node
-tags: []
+tags:
+  - angular
+  - nodejs
+  - tutorial
 related:
   - tutorial-aplicacion-web-con-angularjs-y-routing
   - como-crear-una-api-rest-usando-node-js

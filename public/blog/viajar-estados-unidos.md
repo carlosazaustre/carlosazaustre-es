@@ -2,7 +2,8 @@
 title: Viajar a Estados Unidos de forma barata. Nuestra experiencia
 date: '2018-08-18'
 url: 'https://carlosazaustre.es/blog/viajar-estados-unidos'
-tags: []
+tags:
+  - carrera
 related:
   - mochila
   - banco-online-sin-comisiones

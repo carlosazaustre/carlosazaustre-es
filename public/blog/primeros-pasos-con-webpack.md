@@ -2,7 +2,9 @@
 title: Primeros pasos con Webpack
 date: '2016-09-22'
 url: 'https://carlosazaustre.es/blog/primeros-pasos-con-webpack'
-tags: []
+tags:
+  - javascript
+  - herramientas
 related:
   - automatizando-tu-flujo-de-trabajo-en-el-frontend-con-gulpjs
   - browserify-desarrollando-tu-frontend-como-en-node-js

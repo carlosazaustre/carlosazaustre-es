@@ -2,7 +2,10 @@
 title: ¿Qué es la autenticación basada en Token?
 date: '2015-02-19'
 url: 'https://carlosazaustre.es/blog/que-es-la-autenticacion-con-token'
-tags: []
+tags:
+  - web
+  - javascript
+  - arquitectura
 related:
   - autenticacion-con-token-en-angularjs
   - autenticacion-con-token-en-node-js

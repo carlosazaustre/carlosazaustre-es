@@ -2,7 +2,9 @@
 title: JavaScript Promises. Uso de promesas en AngularJS
 date: '2015-04-27'
 url: 'https://carlosazaustre.es/blog/uso-de-promesas-en-angularjs'
-tags: []
+tags:
+  - javascript
+  - angular
 related:
   - manejando-la-asincronia-en-javascript
   - tutorial-ejemplo-de-aplicacion-web-con-angular-js-y-api-rest-con-node

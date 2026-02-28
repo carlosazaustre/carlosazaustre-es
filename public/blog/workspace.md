@@ -2,7 +2,9 @@
 title: Mi Setup 2022 - Trabajo en Remoto y desde casa
 date: '2022-01-27'
 url: 'https://carlosazaustre.es/blog/workspace'
-tags: []
+tags:
+  - herramientas
+  - carrera
 related:
   - el-escritorio-de-un-desarrollador-web
   - mochila

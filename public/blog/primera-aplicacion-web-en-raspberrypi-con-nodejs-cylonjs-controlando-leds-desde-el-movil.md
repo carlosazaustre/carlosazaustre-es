@@ -5,7 +5,11 @@ title: >-
 date: '2014-07-16'
 url: >-
   https://carlosazaustre.es/blog/primera-aplicacion-web-en-raspberrypi-con-nodejs-cylonjs-controlando-leds-desde-el-movil
-tags: []
+tags:
+  - nodejs
+  - javascript
+  - tutorial
+  - web
 related:
   - programando-en-node-js-con-raspberrypi-primeros-pasos
   - tessel-el-microcontrolador-programable-en-javascript

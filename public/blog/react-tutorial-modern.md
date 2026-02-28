@@ -4,7 +4,9 @@ title: >-
   librerías modernas
 date: '2023-09-29'
 url: 'https://carlosazaustre.es/blog/react-tutorial-modern'
-tags: []
+tags:
+  - react
+  - tutorial
 related:
   - empezando-con-react-js-y-ecmascript-6
   - react-vite

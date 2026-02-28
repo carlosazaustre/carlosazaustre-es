@@ -2,7 +2,9 @@
 title: Un Setup en tu mochila
 date: '2020-08-09'
 url: 'https://carlosazaustre.es/blog/mochila'
-tags: []
+tags:
+  - herramientas
+  - carrera
 related:
   - workspace
   - el-escritorio-de-un-desarrollador-web

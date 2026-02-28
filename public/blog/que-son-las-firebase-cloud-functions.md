@@ -2,7 +2,10 @@
 title: ¿Qué son las Firebase Cloud Functions?
 date: '2017-06-19'
 url: 'https://carlosazaustre.es/blog/que-son-las-firebase-cloud-functions'
-tags: []
+tags:
+  - firebase
+  - javascript
+  - nodejs
 related:
   - conectando-firebase-a-react
   - usando-firebase-storage-con-react-js

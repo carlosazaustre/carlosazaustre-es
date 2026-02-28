@@ -2,7 +2,10 @@
 title: Cómo configurar Travis como herramienta para Integración y Despliegue continuo
 date: '2020-02-29'
 url: 'https://carlosazaustre.es/blog/travis-despliegue-integracion-continua'
-tags: []
+tags:
+  - git
+  - herramientas
+  - tutorial
 related:
   - automatizando-tu-flujo-de-trabajo-en-el-frontend-con-gulpjs
   - automatizar-tareas-en-javascript-con-grunt-js

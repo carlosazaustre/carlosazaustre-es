@@ -2,7 +2,9 @@
 title: 'Qué TECH Cuentas - Ep.01, con Pau Garcia-Milà'
 date: '2023-10-30'
 url: 'https://carlosazaustre.es/blog/quetechcuentas-01'
-tags: []
+tags:
+  - carrera
+  - ia
 related:
   - aprendiendo-y-compartiendo
   - mi-experiencia-como-mentor-en-google-launchpad-week

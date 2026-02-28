@@ -2,7 +2,10 @@
 title: Primeros pasos en Vue
 date: '2018-10-01'
 url: 'https://carlosazaustre.es/blog/primeros-pasos-en-vue'
-tags: []
+tags:
+  - vuejs
+  - javascript
+  - tutorial
 related:
   - desarrollo-basado-en-componentes-con-vue-js
   - que-es-lo-que-me-gusta-de-vue-js
