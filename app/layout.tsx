@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import "./globals.css";
 import SiteShell from "@/components/SiteShell";
 
@@ -122,6 +123,12 @@ export default function RootLayout({
       </head>
       <body>
         <SiteShell>{children}</SiteShell>
+        <Script
+          defer
+          src="https://analytics.cazaustre.dev/script.js"
+          data-website-id="ac38a716-3ba9-4d80-ae3f-b9cff6612237"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

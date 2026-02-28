@@ -8,7 +8,7 @@
     <link>https://carlosazaustre.es/blog</link>
     <description>Artículos sobre JavaScript, React, Node.js, arquitectura de software e inteligencia artificial.</description>
     <language>es</language>
-    <lastBuildDate>Sat, 11 May 2024 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 27 Feb 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://carlosazaustre.es/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://carlosazaustre.es/carlos-azaustre.jpg</url>
@@ -17,6 +17,18 @@
     </image>
     <copyright>© 2026 Carlos Azaustre</copyright>
     <managingEditor>cazaustre@gmail.com (Carlos Azaustre)</managingEditor>
+  <item>
+    <title>CSS en 2026: las tres features de Chrome que eliminan JavaScript que llevas años escribiendo</title>
+    <link>https://carlosazaustre.es/blog/css-2026-elimina-javascript-chrome-146-147</link>
+    <guid isPermaLink="true">https://carlosazaustre.es/blog/css-2026-elimina-javascript-chrome-146-147</guid>
+    <description>CSS en 2026: las tres features de Chrome que eliminan JavaScript que llevas años escribiendo Llevo años escribiendo el mismo bloque de código. Tú también, probablemente. El  para animar elementos…</description>
+    <pubDate>Fri, 27 Feb 2026 00:00:00 GMT</pubDate>
+    <category>CSS</category>
+    <category>JavaScript</category>
+    <category>Chrome</category>
+    <category>Frontend</category>
+    <category>Web Development</category>
+  </item>
   <item>
     <title>El problema de la Inteligencia Artificial y los Programadores Junior</title>
     <link>https://carlosazaustre.es/blog/ia-programador-junior</link>
@@ -407,14 +419,6 @@
     <guid isPermaLink="true">https://carlosazaustre.es/blog/aprendiendo-y-compartiendo</guid>
     <description>Esto es un resumen de la charla Ignite que di en la PlatziConf Madrid 2016 organizada por Platzi en el Campus Madrid de Google. Una charla Ignite son 5 minutos de duración y sin control de las slides,…</description>
     <pubDate>Fri, 17 Jun 2016 00:00:00 GMT</pubDate>
-
-  </item>
-  <item>
-    <title>Ejecuta tu App NodeJS como un Servicio en Linux</title>
-    <link>https://carlosazaustre.es/blog/aplicacion-node-como-servicio-upstart</link>
-    <guid isPermaLink="true">https://carlosazaustre.es/blog/aplicacion-node-como-servicio-upstart</guid>
-    <description>Imagina que tienes una App escrita en Node.js y necesitas desplegarla en producción. Ya sabes que con el comando  no es una buena opción, ya que si la aplicación se cae no hay manera de volverlo a…</description>
-    <pubDate>Fri, 04 Mar 2016 00:00:00 GMT</pubDate>
 
   </item>
   </channel>

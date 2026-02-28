@@ -2,7 +2,7 @@
   "_comment": "Generado por scripts/update-stats.mjs. Para YouTube stats, configura YOUTUBE_API_KEY en .env.local",
   "_updatedAt": "2026-02-28",
   "youtubeVideos": 603,
-  "youtubeViews": 11782549,
-  "blogPosts": 106,
-  "githubStars": 2974
+  "youtubeViews": 11789680,
+  "blogPosts": 107,
+  "githubStars": 2988
 }
