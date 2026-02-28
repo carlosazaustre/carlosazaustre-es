@@ -4,9 +4,22 @@ import { getAllPosts } from "@/lib/blog";
 import BlogCard from "@/components/BlogCard";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Blog — JavaScript, React, TypeScript y Arquitectura de Software",
   description:
-    "Artículos sobre JavaScript, TypeScript, arquitectura de software e inteligencia artificial.",
+    "Artículos y tutoriales sobre JavaScript, TypeScript, React, Node.js, arquitectura de software e inteligencia artificial. Por Carlos Azaustre, Google Developer Expert.",
+  openGraph: {
+    title: "Blog — Carlos Azaustre",
+    description:
+      "Artículos y tutoriales sobre JavaScript, TypeScript, React, Node.js, arquitectura de software e inteligencia artificial.",
+    url: "https://carlosazaustre.es/blog",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog — Carlos Azaustre",
+    description:
+      "Artículos y tutoriales sobre JavaScript, TypeScript, React y arquitectura de software.",
+  },
 };
 
 export default function BlogPage() {

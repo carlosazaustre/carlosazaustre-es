@@ -10,31 +10,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: BASE_URL,
-      lastModified: new Date(),
+      lastModified: posts.length > 0 ? new Date(posts[0].date) : new Date("2026-01-01"),
       changeFrequency: "weekly",
       priority: 1.0,
     },
     {
       url: `${BASE_URL}/about`,
-      lastModified: new Date(),
+      lastModified: new Date("2025-06-01"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${BASE_URL}/blog`,
-      lastModified: new Date(),
-      changeFrequency: "daily",
+      lastModified: posts.length > 0 ? new Date(posts[0].date) : new Date("2026-01-01"),
+      changeFrequency: "weekly",
       priority: 0.9,
     },
     {
       url: `${BASE_URL}/uses`,
-      lastModified: new Date(),
+      lastModified: new Date("2025-10-01"),
       changeFrequency: "monthly",
       priority: 0.6,
     },
     {
       url: `${BASE_URL}/links`,
-      lastModified: new Date(),
+      lastModified: new Date("2026-01-01"),
       changeFrequency: "weekly",
       priority: 0.5,
     },
