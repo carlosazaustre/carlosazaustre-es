@@ -259,7 +259,7 @@ export function getAllPosts(): PostMeta[] {
       tags: Array.isArray(data.tags) ? data.tags : [],
       related: Array.isArray(data.related) ? data.related : undefined,
       readingTime: formatReadingTime(content),
-      coverImage: data.coverImage ?? null,
+      coverImage: data.coverImage ?? `/api/og?title=${encodeURIComponent(data.title ?? "")}`,
     } as PostMeta;
   });
 
@@ -308,7 +308,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     excerpt: data.excerpt ?? extractExcerpt(content),
     tags: Array.isArray(data.tags) ? data.tags : [],
     readingTime: formatReadingTime(content),
-    coverImage: data.coverImage ?? null,
+    coverImage: data.coverImage ?? `/api/og?title=${encodeURIComponent(data.title ?? "")}`,
     content: processed.toString(),
   };
 }

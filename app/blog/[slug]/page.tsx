@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { getPostBySlug, getAllPosts, getRelatedPosts } from "@/lib/blog";
 import ReadingProgress from "@/components/ReadingProgress";
 import ArticleContent from "@/components/ArticleContent";
@@ -111,7 +112,7 @@ export default async function BlogPostPage({ params }: Props) {
     datePublished: new Date(post.date).toISOString(),
     dateModified: new Date(post.updatedAt ?? post.date).toISOString(),
     url: `https://carlosazaustre.es/blog/${post.slug}`,
-    image: `https://carlosazaustre.es/api/og?title=${encodeURIComponent(post.title)}`,
+    image: post.coverImage?.startsWith("http") ? post.coverImage : `https://carlosazaustre.es${post.coverImage ?? `/api/og?title=${encodeURIComponent(post.title)}`}`,
     author: {
       "@type": "Person",
       name: "Carlos Azaustre",
@@ -227,6 +228,28 @@ export default async function BlogPostPage({ params }: Props) {
             )}
           </div>
         </header>
+
+        {/* Cover image */}
+        {post.coverImage && (
+          <div style={{
+            border: "3px solid var(--border)",
+            borderRadius: "4px",
+            overflow: "hidden",
+            marginBottom: "2rem",
+            boxShadow: "var(--shadow)",
+            maxWidth: "72ch",
+          }}>
+            <Image
+              src={post.coverImage}
+              alt={post.title}
+              width={1200}
+              height={630}
+              style={{ width: "100%", height: "auto", display: "block" }}
+              priority
+              unoptimized={post.coverImage.startsWith("/api/")}
+            />
+          </div>
+        )}
 
         {/* Excerpt highlight */}
         {post.excerpt && (
