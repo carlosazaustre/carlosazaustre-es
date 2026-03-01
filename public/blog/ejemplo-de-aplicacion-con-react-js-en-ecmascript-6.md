@@ -13,11 +13,15 @@ Hoy vamos a ver un pequeño ejemplo de aplicación web empleando [React.js](/emp
 
 Vamos a ser una aplicación muy sencilla, sin mucha interacción, simplemente representaremos datos, más adelante veremos cosas más completas.
 
+## La aplicación a desarrollar
+
 Esto será lo que vamos a hacer. He delimitado con recuadros lo que yo consideraría como un componente, y por tanto un elemento de React.
 
 ![Aplicación desglosada en componentes](/images/ejemplo-de-aplicacion-con-react-js-en-ecmascript-6/react-components.jpg)
 
 Tendremos un `EmpleadoAvatar` (recuadro rojo), un `EmpleadoRow` (recuadro verde) y por último un `EmpleadoList` (recuadro azul).
+
+## Estructura del proyecto
 
 La estructura de directorios y ficheros que voy a utilizar será la siguiente:
 
@@ -50,6 +54,8 @@ En `node_modules` estarán nuestras dependencias tanto para desarrollo como fina
 $ npm install --save react
 ```
 
+## Componente EmpleadoAvatar
+
 Despues ya podemos implementar nuestros componentes. Empezamos por `EmpleadoAvatar`. Veamos su código en `empleado-avatar/index.jsx`
 
 ```javascript
@@ -75,6 +81,8 @@ export default EmpleadoAvatar;
 Creamos un componente que hereda de React.Component y va devolver una vista con un `figure` y un `img`, sus atributos o `props` van a ser únicamente la URL de la imagen que contiene la foto del empleado. Exportamos el módulo como `EmpleadoAvatar` para poder utilizarlo en otra parte de nuestra aplicación, como por ejemplo en el `EmpleadoRow`.
 
 Voy a emplear Bootstrap para los estilos. Si tuviesemos estilos específicos de cada componente, podrían ir en su carpeta junto con el `index.jsx` y posteriormente con una tarea de Gulp, los preprocesaríamos y tendríamos un único fichero `.css` para producción.
+
+## Componente EmpleadoRow
 
 Ahora pasemos a ver el código del siguiente componente, `empleado-row/index.jsx`:
 
@@ -109,6 +117,8 @@ Importamos de nuevo la librería `React` y el componente que hemos creado en el 
 ```
 
 Porque `picture` es una `prop` de `EmpleadoAvatar` y lo que le pasamos en una `prop` del componente que estamos creando, por eso le pasamos `this.props.picture`.
+
+## Componente EmpleadoList
 
 El siguiente componente sería el listado de emplados, veamos su código `empleado-list/index.jsx`
 
@@ -231,11 +241,11 @@ Es el momento de crear el `index.html` principal de la aplicación. Lo hacemos e
     />
   </head>
 
-  <body>
+<body>
     <h1>Listado de Empleados</h1>
     <div id="application"></div>
 
-    <script src="/js/bundle.js"></script>
+<script src="/js/bundle.js"></script>
   </body>
 </html>
 ```

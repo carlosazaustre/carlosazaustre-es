@@ -13,6 +13,8 @@ Hace unos días vimos [como crear una simple page application con Angular JS par
 
 ![Angular JS tutorial](/images/tutorial-aplicacion-web-con-angularjs-y-routing/square-300x3001_scxhwx.png)
 
+## Estructura de archivos del proyecto
+
 Lo primero, al igual que la otra vez, veamos cual será la estructura de archivos de la aplicación:
 
 ```shell
@@ -27,6 +29,8 @@ index.html
 - **`main.js`** contiene el código JavaScript de la aplicación, aquí manejaremos las rutas y los controladores
 - **`index.html`** es la página principal donde inyectaremos las vistas
 - **`pages`** es un directorio donde estarán las plantillas que serán inyectadas en index.html como vistas
+
+## Configuración del módulo y rutas en main.js
 
 Veamos que tenemos que poner en `main.js`
 
@@ -74,6 +78,8 @@ Con esto ya podemos crear rutas que como podéis ver se llaman con el método `w
 
 Después hemos añadido los controladores en los que únicamente ponemos un mensaje dentro del ámbito del controlador que será diferente para cada página que se cargue.
 
+## La vista principal: index.html
+
 Ahora pasemos a ver el `index.html`
 
 ```html
@@ -109,6 +115,8 @@ Ahora pasemos a ver el `index.html`
 
 Al igual que el anterior ejemplo, indicamos a todo el HTML que utilizaremos la aplicación `angularRoutingApp` con la directiva **`ng-app`**, los controladores con **`ng-controller`** en el body y lo más importante, la directiva **`ng-view`** es donde indicamos en que parte del HTML vamos a inyectar las vistas.
 
+## Plantillas de las páginas
+
 Por último nos quedan las plantillas que no son más que unas sencillas lineas de HTML que usamos para inyectar contenido. Estas son las 3 que hemos creado para el ejemplo:
 
 ```html
@@ -129,6 +137,8 @@ Por último nos quedan las plantillas que no son más que unas sencillas lineas 
 ```
 
 Todas tienen la variable `message` cuyo valor es diferente en cada una debido a los controladores que hemos escrito en **`main.js`**
+
+## Resultado final
 
 Y con esto ya tenemos una sencilla aplicación web con rutas que no refresca la página con cada enlace. Muy diferente a aquellos tiempos oscuros cuando se usaba _PHP Include_ o Iframes para mostrar diferentes secciones.
 

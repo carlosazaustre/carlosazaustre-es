@@ -1,5 +1,5 @@
 # Carlos Azaustre — Blog completo en Markdown
-> Generado automáticamente: 2026-03-01T17:48:10.189Z
+> Generado automáticamente: 2026-03-01T18:12:06.527Z
 > Fuente: https://carlosazaustre.es/blog
 > Este archivo contiene todos los artículos del blog en formato Markdown limpio,
 > organizado para ser ingestado por modelos de lenguaje (LLMs).
@@ -9455,6 +9455,8 @@ Para poder utilizar JSX, necesitarías añadir una librería extra a tu HTML, pe
 **Fecha:** 2016-09-13
 _Antes de nada quiero aclarar que AngularJS me gusta (por si no se nota de mis anteriores posts :P)._
 
+## Mi relación con AngularJS
+
 Aposté por Angular cuando mucha gente todavía renegaba de JavaScript y del [stack MEAN](/desarrollo-full-stack-javascript-tambien-conocido-como-mean/). He aprendido mucho utilizando este framework en mis desarrollos, de patrones de diseño, de programación básica y avanzada, etc...
 
 He trabajado con las versiones de la v1.2 a la v1.5, y me parece excelente como ha evolucionado y como se ha ido integrando poco a poco con ECMAScript 6 (ES2015) y ha ido abandonando Bower para utilizar NPM.
@@ -9472,6 +9474,8 @@ Sin embargo, siempre me gusta explorar nuevas cosas y no quedarme estancado. Sen
 </blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+## El camino hacia React
+
 Antes del verano empecé a utilizar [yo-yo.js](https://github.com/maxogden/yo-yo), una librería para renderizar HTML (al estilo React, pero más ligera) que conocí gracias a un [curso en Platzi](https://platzi.com/cursos/javascript/). Empecé a seguir este patrón y para el estado de la aplicación utilicé [store-emitter](https://github.com/sethvincent/store-emitter) (algo parecido a _Redux_), [page.js](https://visionmedia.github.io/page.js/) para las rutas, y [request-promise](https://www.npmjs.com/package/request-promise) para realizar peticiones HTTP (o el propio [fetch de ES2015](/ejemplo-de-aplicacion-con-react-js-en-ecmascript-6/)).
 
 Me encantó esta forma de trabajar, pudiendo utilizar lo que quisiera para armar una web app.
@@ -9481,6 +9485,8 @@ Con esta experiencia, me animé este verano a profundizar en React, que [ya lo h
 He descubierto que aunque React es una librería que se encarga del tema de renderizado de las vistas (y lo hace realmente bien), tiene un ecosistema y comunidad enormes.
 
 ![React, Redux, GraphQL](/images/mi-inmersion-en-react/react-redux-graphql-1.png)
+
+## React vs Angular: por qué cambié
 
 Mi problema con Angular es que yo me quedaría en la v1.5 (o en la v1.6 que próximamente lanzarán), aunque sea algo complicado utilizar ECMAScript 6 (que me encanta) con ello. Se puede hacer, pero se enrevesa mucho el código, sobre todo a la hora de crear módulos.
 
@@ -9493,6 +9499,8 @@ El resto de cosas que hace el framework las puedes encontrar en el ecosistema de
 Con React también puedes crear aplicaciones isomórficas o universales junto con Express y Node.js. Con Angular2 también se va a poder, pero ya digo que _Ng2_ no me gusta mucho su sintaxis, la veo muy complicada (para mi gusto).
 
 Y ya lo último es React Native. Si, es una librería diferente, pero si sabes programar con React y Redux, puedes crear una aplicación nativa (no un WebView, una aplicación nativa) para iOS y Android con JavaScript. En el mundo Angular tenemos _ionic_, pero no dejar de ser un _WebView_. También tenemos NativeScript pero no puedo hablar porque no lo conozco mucho. Conozco React Native porque lo he probado y es realmente poderoso.
+
+## Conclusión y próximos pasos
 
 En resumen, mi cambio a React no se debe a una moda (React lleva en el mercado alrededor de 2 años) pero siento que es una librería muy madura, permite usar otras librerías con ella y hacer tu aplicación más modular, se integra muy bien con ECMAScript 6 y tiene un gran ecosistema y muchas cosas por venir (No he hablando aún de GraphQL...)
 
@@ -10310,6 +10318,8 @@ En la charla quise compartir mi experiencia de aprendizaje en los últimos años
 > 📺 [Ver vídeo en YouTube](https://www.youtube.com/watch?v=PO5igRZtlEU)
 />
 
+## Atrapado en la rueda del hámster
+
 **Hace unos años era como el _Señor Anderson_ en _Matrix_.** Trabajé en varias empresas
 _grises_ que no me aportaban nada. Trabajando siempre con tecnologías para mi gusto "rancias", sin opción
 de elegir ni de poder decidir nada.
@@ -10319,6 +10329,8 @@ Siempre lo mismo. Me sentía girando en una _rueda de hamster_, dónde la socied
 Llegaba a casa agotado. Sabía que tenía que haber algo mejor afuera, pero no tenía tiempo ni fuerzas para investigarlo, hasta que un día desperté.
 
 ![Elegimos nuestra pastilla roja](/images/aprendiendo-y-compartiendo/eligiendo-nuestra-pastilla-roja.jpg)
+
+## La pastilla roja: la decisión que lo cambió todo
 
 Cansado de esta situación, mi pareja y yo tomamos una decisión. Dejar nuestros trabajos "estables" y dar un cambio. **Elegimos la pastilla roja** y optamos por salir de España y **emigrar a Irlanda**.
 
@@ -10332,6 +10344,8 @@ lo suelen pintar los _gurús del emprendimiento_.
 
 > El mundo real al emprender no es un camino de rosas.
 
+## Una nueva vida, nuevas posibilidades
+
 En nuestra nueva vida, como _Freelancers_ nos dimos cuenta de la **cantidad de tiempo que ganábamos sin tener que desplazarnos a una oficina**, haciendo todas las gestiones online, y disfrutando de los proyectos que elegíamos a través de varias plataformas para "freelancers".
 
 ![La tecnología a nuestro alcance](/images/aprendiendo-y-compartiendo/la-tecnologia-a-tu-alcance.jpg)
@@ -10343,6 +10357,8 @@ En nuestra nueva vida, como _Freelancers_ nos dimos cuenta de la **cantidad de t
 Libros técnicos (en inglés), probando tecnologías, librerías y frameworks que por aquel entonces estaban empezando a despegar como **AngularJS** y **Node.js**. Y muchos cursos online, entre ellos los de [Platzi](https://platzi.com/r/carlos.azaustre/) en español y algunos en inglés en plataformas como [Coursera](http://coursera.org) o [CodeSchool](http://codeschool.com).
 
 ![Animación sobre aprendizaje en plataformas online como Coursera y CodeSchool](/images/aprendiendo-y-compartiendo/0X48aG.gif)
+
+## La experiencia como mejor maestra
 
 Pero no por estar todo el conocimiento a nuestro alcance lo vamos a aprender de forma automática. No es tan fácil y esto le cuesta a veces a la gente le frustra.
 
@@ -10356,6 +10372,8 @@ En el mundo del desarrollo web, qué es dónde me suelo mover habitualmente, ten
 La mejor manera de aprender es ir poco a poco. Probado y aprendiendo de los errores. No te van
 a salir las cosas que quieres a la primera. Te darás muchos golpes, pero es con ellos con los que
 aprenderás que es lo mejor y peor. En mi caso, cuando aprendía algo nuevo, escribía un tutorial, resumiendo paso a paso como lo había logrado. Estos tutoriales los he ido publicado en mi blog que abrí hace ya más de 3 años.
+
+## Compartir lo aprendido con la comunidad
 
 Si me sirven a mi, pueden servirle a mucha gente más.
 
@@ -13305,9 +13323,13 @@ server.listen(8080, function () {
 **Fecha:** 2015-07-09
 Llegó el primer día dedicado a la **tecnología** en la semana de [Google Launchpad](/google-launchpad-week-dia-1-producto/) en [Campus Madrid](http://campus.co/madrid), donde [Paola](http://twitter.com/ggarciapaola) y yo estamos aprendiendo como mejorar [**Chefly**](https://chefly.co)
 
+## Las charlas del día
+
 Hoy hemos contado con dos grandes charlas impartidas por [Andrés L. Martínez](http://twitter.com/davilagrau) (más conocido como _Almo_) y [Jorge Barroso](http://twitter.com/flipper83) (más conocido como _Flipper83_)
 
 ![Almo y Flipper83 durante la sesión de tecnología en Google Launchpad Madrid](/images/google-launchpad-madrid-dia-4-tecnologiaIMG_20150709_100654.jpg)
+
+## Almo: El mercado mobile en cifras
 
 _Almo_ nos ha presentado las cifras del mercado _mobile_, muy interesantes, quedando como resumen que casi el 80% de la población utiliza Android, pero la monetización de las apps llega más de la parte de iOS.
 
@@ -13316,6 +13338,8 @@ _Almo_ nos ha presentado las cifras del mercado _mobile_, muy interesantes, qued
 ![Sesión de tecnología en Google Launchpad Madrid 2015 con participantes y ponentes](/images/google-launchpad-madrid-dia-4-tecnologiaIMG_20150709_101251.jpg)
 
 Fuente: [Developer Economics](http://developereconomics.com/go)
+
+## Flipper83: Mobile Developer for Startups
 
 Después _Flipper_ nos ha contado su experiencia como "Mobile Developer for Startups" que puede aplicarse a cualquier tipo de App, incluidas las webs.
 
@@ -13348,6 +13372,8 @@ Y la **más útil** para mi:
 > From STUPID to SOLID code
 
 La mejor clase de programación que he escuchado y en sólo 5 minutos. Os recomiendo que [leais sobre ello](http://williamdurand.fr/2013/07/30/from-stupid-to-solid-code/).
+
+## Las mentorías
 
 A continuación hemos tenido las mentorías. Más relajadas que los días anteriores, pero no por ello menos interesantes y útiles. Hoy hemos tenido menos mentorías que otros días, y nuestros mentores han sido [Javier Lafora](https://twitter.com/eLafo), [Ricardo Varela](https://twitter.com/phobeo) e [Ismael Faro](https://twitter.com/ismaelfaro). Mil gracias por su tiempo de nuevo y por las ideas aportadas!
 
@@ -13421,6 +13447,8 @@ Continuo con mi serie de post sobre [Google Launchpad Week Madrid](/google-launc
 
 **Llevamos ya tres días** y parecen tres semanas de la cantidad de información, feedback y tips que estamos recibiendo. Nos pidieron por favor que redactaramos los puntos de situación y acción que vayamos definiendo y descubriendo día a día para los casos de uso de las _Startups_ que pasan por _Launchpad_, y la verdad es que hicieron bien, porque si no hiciera esta pequeña reflexión día a día al llegar a casa, no podría acordarme de todo lo que vemos de un día para otro y perdería una información valiosísima.
 
+## La sesión de Marketing Digital
+
 Hoy ha tocado el tema del **Marketing Digital**, como vender tu producto. Algo que, como técnicos que somos, necesitamos mucho y que con el _Máster intensivo_ que hemos tenido hoy nos ha hecho crecer el cerebro :D
 
 La charla del día ha sido impartida por [Jorge Galido](http://twitter.com/Jorge__Galindo), Jefe de Producto en [47Degrees](http://www.47deg.com/) Que nos ha contado la estrategia que siguieron cuando lanzaron un aplicación Launcher para Android, llamada 9cards. Comunmente se le llama Growth Hacking, pero me gusta más el nombre que Jorge ha empleado, _Marketing pa' tiesos_.
@@ -13429,7 +13457,11 @@ La charla del día ha sido impartida por [Jorge Galido](http://twitter.com/Jorge
 
 Cómo con una cantidad no demasiado grande de dinero, invertirla en publicidad y seguir una estrategia inteligente para conseguir el mismo rendimiento que si no aplicasemos ninguna estrategia y gastasemos 50 veces más.
 
+## Mentorías con expertos
+
 Después hemos pasado a las mentorías, donde [David Alayón](https://twitter.com/DavidAlayon) ha repetido con nosotros, y también hemos podido disfrutar del tiempo y la experiencia de [Vanesa Gallego](https://twitter.com/vanesagm), [Jose Manrique](https://twitter.com/jsmanrique), [Julio Rodríguez Cruz](https://twitter.com/thisjrodriguez) y [Tommaso Canonici](https://twitter.com/tcanonici). Muchísimas gracias por vuestro tiempo y feedback. Habéis llenado nuestra cabeza de ideas. Tenemos trabajo por delante :)
+
+## El Wrap Up: reflexiones sobre Chefly
 
 La última hora la dedicamos a realizar un _Wrap Up_ dónde exponemos lo que estamos aprendiendo cada _Startup_. **Hoy nos ha tocado** a nosotros compartir lo que estamos aprendiendo en _Launchpad_ y el mejor resumen lo ha dado Paola
 
@@ -13444,6 +13476,8 @@ Foto por [@TetuanValley](http://twitter.com/tetuanvalley)
 No estamos comunicando bien la idea que tenemos de [Chefly](http://chefly.co). En nuestra cabeza si está, pero lo que la gente ve en la web no es lo mismo. Nos estamos comunicando mal, pero **creemos que tenemos la solución**, y eso **nos está motivando** mucho más :)
 
 De nuevo, de cara a los casos de uso, estos son nuestros puntos de situación y puntos de acción que tomaremos:
+
+## Puntos de situación y acción
 
 - **Puntos de Situación**:
 
@@ -13490,6 +13524,8 @@ Está siendo una gran experiencia. El día de ayer fue dedicado a **Producto** y
 
 ![Asistentes en la sesión de UX de Launchpad Week Madrid 2015](/images/launchpad-week-madrid-dia-2-ux/2015/07/IMG_20150707_101355.jpg)
 
+## La charla inaugural: «El UX lo es todo»
+
 El día de hoy ha comenzado con una charla titulada "El UX lo es todo" de [Eusebio Reyero](https://twitter.com/ereyero), CEO de [Hackity](http://hackity.com) que ha sido muy interesante y nos ha abierto mucho los ojos. Os dejo con una serie de _links_ que nos ha compartido en su presentación para todo aquel que quiera mejorar el UX de sus aplicaciones:
 
 - [http://hackdesign.org/lessons/9](http://hackdesign.org/lessons/9)
@@ -13513,9 +13549,13 @@ Como desarrolladores tendemos a hacer lo que más nos gusta, programar. Implemen
 ![Grupos de profesionales colaborando en un taller de UX durante la Launchpad Week Madrid](/images/launchpad-week-madrid-dia-2-ux/CJUg_1cWwAAkvlB-jpg-large.jpeg)
 Foto por [@TetuanValley](http://twitter.com/tetuanvalley)
 
+## Los demás mentores del día
+
 Los demás mentores que nos han prestado su tiempo han sido [Marc Borràs](https://twitter.com/marcborras), [Silvia Pérez](https://www.linkedin.com/profile/view?id=45043302&authType=NAME_SEARCH&authToken=gO3T&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2Cidx%3A1-1-1%2CtarId%3A1436299910184%2Ctas%3Asilvia%20p%C3%A9rez%20felipe), [Nacho Rodríguez](https://www.linkedin.com/profile/view?id=4417489&authType=NAME_SEARCH&authToken=btCy&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2Cidx%3A1-1-1%2CtarId%3A1436299995808%2Ctas%3Anacho%20rod) y [David Alayón](https://twitter.com/DavidAlayon). Gente muy inteligente y profesional en su campo que nos ha dado muchos tips, consejos y visión que nos ayudarán a mejorar Chefly. Muchas gracias por vuestro tiempo.
 
 [Johan Feito](https://www.linkedin.com/in/johanfeito) y [Jaime Novoa](https://www.linkedin.com/in/jaimegnovoa) se encargan desde [Google Launchpad](https://developers.google.com/startups/) a recopilar los casos de uso que las _Startups_ participantes les entregamos a fin de compartirlo con la comunidad. Por eso, comparto también por éste canal lo que estamos aprendiendo para todo aquél emprendedor que se encuentre en una situación similar le sirva de ayuda.
+
+## Puntos de Situación
 
 - **Puntos de Situación**
 
@@ -13534,6 +13574,8 @@ Partiendo del punto anterior, donde definimos o clarificamos el producto, hace q
 - Problemas con algunos textos que confunden, se leen mal y no aportan valor. Algunos iconos generan confusión y algunos botones, por su color y tamaño confunden
 
 - No medimos datos clave como son el flujo de navegación del usuario en la página y dónde abandona.
+
+## Puntos de Acción
 
 * **Puntos de Acción**
 
@@ -13568,6 +13610,8 @@ Esta semana se [celebra en Madrid](https://events.withgoogle.com/launchpad-week-
 
 ![Google Launchpad](/images/google-launchpad-madrid-dia-1-producto/Screen-Shot-2015-07-06-at-23-03-45.png)
 
+## ¿Qué es el Google Launchpad Week?
+
 En **España ya se han celebrado 3 ediciones**, [2 en Barcelona](https://www.youtube.com/watch?v=69j2BJtPCzc) y ésta es [la primera en Madrid](https://events.withgoogle.com/launchpad-week-mad/). En otras ciudades del mundo, como en Tel-Aviv (Israel) llevan ya más de 30 ediciones.
 
 ![Participantes en el Google Launchpad Week Madrid durante la jornada de producto](/images/google-launchpad-madrid-dia-1-producto/CJN357UWgAAqoS5-jpg-large.jpeg)
@@ -13577,7 +13621,11 @@ Para participar tienes que ser seleccionado a través de una aceleradora, incuba
 
 [![Launchpad Badge](/images/google-launchpad-madrid-dia-1-producto/CJN0dwNWIAAijgV.jpg)](http://chefly.co)
 
+## Cómo llegamos al Launchpad
+
 Nosotros, con **[Chefly](http://chefly.co)**, al pertenecer a la comunidad de [Tetuan Valley](http://tetuanvalley.com), en su 10a edición, hemos podido acceder a esta edición de Launchpad junto con nuestros compañeros "Tetuaneros" de [TieDots](http://tiedots.co) y [Teltoo](http://teltoo.com).
+
+## El formato de la semana
 
 Cada día de la semana está dedicado a un elemento concreto. El primer día es sobre **Producto**, el segundo **UX**, después **Marketing** y los dos últimos días son dedicados a **Tecnología**.
 
@@ -13586,10 +13634,14 @@ Cada día sigue el siguiente _Schedule_, primero un desayuno-networking de 9:10 
 ![Participantes de startups haciendo networking al final del primer día de Google Launchpad Madrid](/images/google-launchpad-madrid-dia-1-producto/CJPddp5UkAA26jw-jpg-large.jpeg)
 Foto por [@TetuanValley](http://twitter.com/tetuanvalley)
 
+## La sesión de Producto
+
 **Hoy hemos tenido la primera sesión**, dedicada a la definición de Producto y vamos a compartir con la comunidad un poco los puntos más importantes que hemos aprendido, problemas encontrados y puntos de acción a realizar. Así si estás creando tu Startup, quizá te sirva de orientación y ayuda :)
 
 Nuestros **Mentores** del día han sido:  
 [Anna Bofill Bert](https://twitter.com/AnnaBofillBert), [Claudio Cossio](https://twitter.com/ccossio), [Eduardo Fernández](https://twitter.com/edufernandez), [Israel Alcázar](https://twitter.com/ialcazar) y [Enrique Penichet](https://twitter.com/enriquepenichet). Muchas gracias a todos por vuestro tiempo y por las ideas aportadas :)
+
+## Diagnóstico y puntos de acción
 
 **Punto de Situación:**
 
@@ -13611,7 +13663,7 @@ A partir de los problemas que hemos identificado, estos serían nuestros puntos 
 
 - **Target**: Definir un segmento de mercado al que atacar. Para ello, elaborar una lista de todos los posibles segmentos, comprobar cuál es su tamaño de mercado de cada uno y dirigir toda la comunicación a ese target.
 
-  Testear este segmento durante 2-3 semanas y analizar los resultados. Si no son los deseados, iterar al siguiente segmento hasta dar con el _Market-Fit_. Estas iteraciones han de hacerse durante máximo 18-20 meses, que el tiempo de vida medio de una Startup.
+Testear este segmento durante 2-3 semanas y analizar los resultados. Si no son los deseados, iterar al siguiente segmento hasta dar con el _Market-Fit_. Estas iteraciones han de hacerse durante máximo 18-20 meses, que el tiempo de vida medio de una Startup.
 
 - **Categorizar**: Establecer filtros, los más importantes: por coste (no todos los usuarios buscan platos baratos ni tampoco caros, eso define el segmento) y por disponibilidad (De inmediato, Para comer hoy/mañana/pasado, para cenar hoy/mañana/pasado).
 
@@ -13982,6 +14034,8 @@ En los [anteriores](/empezando-con-react-js-y-ecmascript-6/) [artículos vimos c
 
 En el ejemplo de hoy vamos a llamar un API REST que nos devuelve la información de los empleados en formato JSON, y en nuestra aplicación React vamos a consumirlos usando nuevas funciones presentes en ECMAScript6 que después traduciremos a ES5 para que los navegadores que aún no soportan el nuevo estándar puedan correr la aplicación.
 
+## Peticiones AJAX en ES5 con XMLHttpRequest
+
 En ES5 si queríamos hacer una petición AJAX de manera nativa (Sin utilizar jQuery o un framework tipo AngularJS) usábamos el objeto `XMLHttpRequest`, de esta manera:
 
 ```js
@@ -13996,6 +14050,8 @@ xhr.onReadyStateChange = function () {
   }
 };
 ```
+
+## La función fetch en ECMAScript6
 
 Con ECMAScript6 tenemos acceso a una nueva función llamada `fetch` que a través de _Promesas_ nos simplifica y facilita el realizar una petición AJAX de forma nativa. Sería algo así:
 
@@ -14029,6 +14085,8 @@ es lo mismo que esto:
 
 Pasamos al código de verdad. En el [siguiente enlace de **github está el repositorio** que he usado para este ejemplo](https://github.com/carlosazaustre/react-fetch). Imaginemos que la siguiente URL: `http://taller-angular.carlosazaustre.es/empleados` me devuelve un JSON compuesto de un array de objetos _Empleado_ que quiero llamar desde mi aplicación web con React.
 
+## Estructura del componente con States
+
 Vamos a retomar el código del ejemplo anterior, pero cambiando algunas cosas. En primer lugar vamos a crear un nuevo componente `EmpleadoApp` que será el encargado de realizar la petición AJAX.
 
 En este componente vamos a utilizar los `states` de React. Los `props` se definen cuando se crean los componentes, es como una inicialización del componente. Los `states` en cambio hay que pensar en ellos como una colección de datos internos que afectan al renderizado del componente. Por lo tanto, el array de objetos _Empleado_ es un buen candidato para un `state`.
@@ -14049,6 +14107,8 @@ class EmpleadoApp extends React.Component {
 ```
 
 Hemos definido el objeto `empleados` dentro del `state` del componente, como un array vacío de inicio. Después se rellenará con la llamada AJAX.
+
+## Métodos del ciclo de vida en React
 
 Además de los `states`, cada componente tiene una serie de funciones o métodos pertenecientes a su ciclo de vida que podemos implementar, son los siguientes:
 
@@ -14074,6 +14134,8 @@ componentWillMount() {
 En la respuesta con los datos, la segunda promesa, _seteamos_ el `state` empleados con los datos recibidos. Vamos ahora a implementar el método Render.
 
 Como la llamada AJAX es asíncrona, tendremos un pequeño retardo hasta recibir los datos, y por tanto podemos mostrar un mensaje de _Cargando empleados..._ mientras se produce. Esto lo podemos realizar en la función `render()` con una sencilla comprobación del `state`:
+
+## Renderizado condicional mientras carga la API
 
 ```js
 render() {
@@ -14104,7 +14166,7 @@ class EmpleadoApp extends React.Component {
     this.state = { empleados: [] };
   }
 
-  componentWillMount() {
+componentWillMount() {
     fetch("http://taller-angular.carlosazaustre.es/empleados")
       .then((response) => {
         return response.json();
@@ -14114,7 +14176,7 @@ class EmpleadoApp extends React.Component {
       });
   }
 
-  render() {
+render() {
     if (this.state.empleados.length > 0) {
       return (
         <div className="container-fluid">
@@ -14157,11 +14219,15 @@ Hoy vamos a ver un pequeño ejemplo de aplicación web empleando [React.js](/emp
 
 Vamos a ser una aplicación muy sencilla, sin mucha interacción, simplemente representaremos datos, más adelante veremos cosas más completas.
 
+## La aplicación a desarrollar
+
 Esto será lo que vamos a hacer. He delimitado con recuadros lo que yo consideraría como un componente, y por tanto un elemento de React.
 
 ![Aplicación desglosada en componentes](/images/ejemplo-de-aplicacion-con-react-js-en-ecmascript-6/react-components.jpg)
 
 Tendremos un `EmpleadoAvatar` (recuadro rojo), un `EmpleadoRow` (recuadro verde) y por último un `EmpleadoList` (recuadro azul).
+
+## Estructura del proyecto
 
 La estructura de directorios y ficheros que voy a utilizar será la siguiente:
 
@@ -14194,6 +14260,8 @@ En `node_modules` estarán nuestras dependencias tanto para desarrollo como fina
 $ npm install --save react
 ```
 
+## Componente EmpleadoAvatar
+
 Despues ya podemos implementar nuestros componentes. Empezamos por `EmpleadoAvatar`. Veamos su código en `empleado-avatar/index.jsx`
 
 ```javascript
@@ -14219,6 +14287,8 @@ export default EmpleadoAvatar;
 Creamos un componente que hereda de React.Component y va devolver una vista con un `figure` y un `img`, sus atributos o `props` van a ser únicamente la URL de la imagen que contiene la foto del empleado. Exportamos el módulo como `EmpleadoAvatar` para poder utilizarlo en otra parte de nuestra aplicación, como por ejemplo en el `EmpleadoRow`.
 
 Voy a emplear Bootstrap para los estilos. Si tuviesemos estilos específicos de cada componente, podrían ir en su carpeta junto con el `index.jsx` y posteriormente con una tarea de Gulp, los preprocesaríamos y tendríamos un único fichero `.css` para producción.
+
+## Componente EmpleadoRow
 
 Ahora pasemos a ver el código del siguiente componente, `empleado-row/index.jsx`:
 
@@ -14253,6 +14323,8 @@ Importamos de nuevo la librería `React` y el componente que hemos creado en el 
 ```
 
 Porque `picture` es una `prop` de `EmpleadoAvatar` y lo que le pasamos en una `prop` del componente que estamos creando, por eso le pasamos `this.props.picture`.
+
+## Componente EmpleadoList
 
 El siguiente componente sería el listado de emplados, veamos su código `empleado-list/index.jsx`
 
@@ -14375,11 +14447,11 @@ Es el momento de crear el `index.html` principal de la aplicación. Lo hacemos e
     />
   </head>
 
-  <body>
+<body>
     <h1>Listado de Empleados</h1>
     <div id="application"></div>
 
-    <script src="/js/bundle.js"></script>
+<script src="/js/bundle.js"></script>
   </body>
 </html>
 ```
@@ -14598,6 +14670,8 @@ Una de las cosas que suele ser algo complicada de implementar es cuando en nuest
 
 En este artículo vamos a ver como hacerlo con un pequeño ejemplo.
 
+## Ejemplo: una directiva de caja de búsqueda
+
 Imaginemos que queremos implementar una directiva que sea una caja de búsqueda. Y lo queremos programar como directiva porque lo vamos a usar en más partes de nuestra aplicación y ese es su objetivo, que las directivas sean reutilizables. Queremos que sea algo así:
 
 ```html
@@ -14617,15 +14691,17 @@ Esta directiva tendrá el siguiente código HTML por debajo:
 </div>
 ```
 
+## Cómo pasar el atributo a la plantilla
+
 ¿Cómo hacemos para pasar el contenido del atributo `busqueda` al atributo `value` del `input` dentro de nuestra directiva? Veamos el código _JavaScript_ de la directiva, suponiendo que pertenezca a un módulo `myApp`.
 
 ```javascript
 (function () {
   "use strict";
 
-  angular.module("myApp").directive("searchBar", searchBar);
+angular.module("myApp").directive("searchBar", searchBar);
 
-  function searchBar() {
+function searchBar() {
     return {
       restrict: "E",
       scope: {
@@ -14647,6 +14723,8 @@ Veamos que hemos hecho aquí. Hemos pasado el contenido de la directiva como un 
 
 En la plantilla hemos indicado que el `value` del `input` sea `value={{busqueda}}`. Es decir, le pasamos como variable el contenido del atributo `busqueda` de la directiva.
 
+## Vinculación unidireccional con @
+
 Para poder hacer esto, y tambien, si el contenido que pasamos no es fijo, si no que viene de una variable, tipo:
 
 ```html
@@ -14665,6 +14743,8 @@ Indicándole `@` le estamos diciendo de manera unidireccional que el valor del a
 
 Usar `@` tiene un problema, al ser unidireccional, si queremos cambiar el valor de la propiedad `busqueda` del _scope_ de la directiva, no se cambia la propiedad en el controlador que estemos utilizando, y nos obloga a usar siempre la doble llave `{{ }}` si queremos enlazar la propiedad al controlador.
 
+## Vinculación bidireccional con =
+
 Para solucionar esto, podemos usar el caracter `=` que indica que la propiedad `busqueda` del _scope_ de la directiva sea exactamente la propiedad del _scope_ del controlador que estemos utilizando y tenga un atributo búsqueda.
 
 Con estos cambios quedaría así la definición:
@@ -14673,9 +14753,9 @@ Con estos cambios quedaría así la definición:
 (function () {
   "use strict";
 
-  angular.module("myApp").directive("searchBar", searchBar);
+angular.module("myApp").directive("searchBar", searchBar);
 
-  function searchBar() {
+function searchBar() {
     return {
       restrict: "E",
       scope: {
@@ -15187,6 +15267,8 @@ Las promesas son **objetos de JavaScript** que sustituyen de alguna manera a los
 
 Hay que indicar que una **Promesa** no nos sustituye el hecho de utilizar callbacks para leer su valor, pero lo que nos evita es caer en el temido _Callback Hell_.
 
+## Sintaxis de las promesas
+
 ```javascript
 obj.metodo1(data, function (data1) {
   obj.metodo2(data1, function (data2) {
@@ -15210,6 +15292,8 @@ obj
  ...
 ```
 
+## Uso de promesas en AngularJS
+
 Un uso adecuado para ello es en los servicios en AngularJS, usando la directiva o servicio del core de Angular `$q`, que contiene toda la funcionalidad de las promesas. Veamos un ejemplo.
 
 Por ejemplo, supongamos que tenemos un controlador `myController` de una vista de nuestra aplicación angular que llame a un recurso a través de un API con el método `GET`:
@@ -15221,6 +15305,8 @@ function MyController($scope, $http) {
   });
 }
 ```
+
+## Separación de conceptos: servicios con $q
 
 Por buenas prácticas y por separación de conceptos y también para hacer nuestro código más mantenible y escalable, debemos separar la lógica de nuestra aplicación (la llamada `$http`) en un servicio y el controlador dejarlo sólo para la conexión entre nuestros servicios y la vista HTML.
 
@@ -15261,11 +15347,11 @@ function dataService($http, $q) {
     getAll: getAll,
   };
 
-  function getAll() {
+function getAll() {
     var defered = $q.defer();
     var promise = defered.promise;
 
-    $http
+$http
       .get("http://midominio.com/recursos.json")
       .success(function (data) {
         defered.resolve(data);
@@ -15274,10 +15360,12 @@ function dataService($http, $q) {
         defered.reject(err);
       });
 
-    return promise;
+return promise;
   }
 }
 ```
+
+## Consumir el servicio desde el controlador
 
 Solamente nos queda inyectar ese servicio en nuestro controlador y llamar a la función `getAll()` y tratar la promesa con los métodos `then()` y `catch()` que se llaman cuando finalice la petición o se produzca un error:
 
@@ -15295,6 +15383,8 @@ function myController (dataService) {
 ```
 
 De esta manera tenemos separados los conceptos y las funcionalidades en nuestra aplicación Angular y utilizando promesas para devolver el resultado de nuestras peticiones.
+
+## Recursos adicionales
 
 Para ampliar más esta información, puedes visitar:
 
@@ -16560,7 +16650,11 @@ MongoDB es una base de datos no relacional, es decir no es como las típicas bas
 
 Imaginemos una base de datos de libros. Tendríamos una tabla con los títulos de los libros y otra con los datos de los autores. El campo `autor` en la tabla de libros, apuntaría a un ID o clave primaria de un autor de la tabla autores.
 
+## Referencias y relaciones en MongoDB
+
 En MongoDB podemos hacer algo parecido, por medio de referencias y el [método `populate` de MongoDB](http://mongoosejs.com/docs/populate.html).
+
+## Creando los modelos con Mongoose
 
 Sigamos con el ejemplo anterior. Un modelo `autor` en Node.js usando `mongoose` sería tal que así:
 
@@ -16596,6 +16690,8 @@ module.exports = mongoose.model("Libro", libroSchema);
 ```
 
 Si nos fijamos, para el campo `autor` en el modelo `libro` hemos usado el tipo `Schema.ObjectId` y la referencia al modelo `Autor`. Esto nos permitirá establecer la relación entre un campo de una tabla y otra.
+
+## Consultando libros con sus autores
 
 Pero si no tenemos consultas SQL, y pedimos una lista de todos los libros en la base de datos ¿Qué datos nos llegarán?
 
@@ -16639,6 +16735,8 @@ y si tenemos varios libros registrados en la base de datos, nos devolvería un `
 ```
 
 En el campo `autor` obtenemos la referencia en formato `ObjectID` del autor, pero no su ficha completa. ¿Qué pasa si queremos mostrar en un sólo `JSON` toda la información para poder pintarla de una sola llamada en nuestra webapp? Para eso necesitamos hacer uso del método `populate` de MongoDB que también implementa la librería `mongoose`.
+
+## Usando populate para resolver las referencias
 
 En nuestro controlador anterior, debemos ampliarlo con lo siguiente:
 
@@ -17127,9 +17225,13 @@ También es mejor [el precio](https://www.digitalocean.com/pricing/), puedes ten
 
 En este tutorial voy a explicar como [registrarse en DigitalOcean](https://www.digitalocean.com/?refcode=f716de9860aa) y configurar nuestro primer servidor Linux en el que poder desplegar nuestras aplicaciones Web.
 
+## Registro en DigitalOcean
+
 Nos dirigimos a la página web de [DigitalOcean y nos registramos con un email y una contraseña](https://www.digitalocean.com/?refcode=f716de9860aa). En el siguiente paso nos pedirán nuestros datos (nombre, apellidos, dirección y un número de tarjeta de crédito/débito) los añadimos y ya tenemos nuestra cuenta en [DigitalOcean](https://www.digitalocean.com/?refcode=f716de9860aa). Nos llegará un correo de confirmación a nuestro email, pinchamos en el link para confirmar y listo.
 
 [![Screen Shot 2014-07-27 at 23.34.55](/images/como-configurar-tu-servidor-cloud-en-digitalocean/Screen-Shot-2014-07-27-at-23_34_55_blcekh.png)](https://www.digitalocean.com/?refcode=f716de9860aa)
+
+## Configuración del Droplet
 
 Ahora elegimos que máquina queremos, en mi caso elijo la más barata que para empezar nos sobra. 512 Mb de RAM, 1 CPU, 20GB de Disco SSD y 1TB de transferencia mensual (si lo superas, el GB adicional cuesta 0,02$)
 
@@ -17143,9 +17245,13 @@ Ya podemos acceder a nuestro panel de control y en el tendremos que configurar q
 
 ![Screen Shot 2014-07-27 at 23.04.44](/images/como-configurar-tu-servidor-cloud-en-digitalocean/Screen-Shot-2014-07-27-at-23_04_44_fd9a3f.png)
 
+## Instalación de aplicaciones
+
 Podemos instalar aplicaciones adicionales, como Ruby, Django, PHP, etc… En mi caso elijo instalar Node para ahorrarme instalarlo via terminal, pero si queremos podemos hacerlo más adelante por SSH.
 
 ![Screen Shot 2014-07-27 at 23.05.59](/images/como-configurar-tu-servidor-cloud-en-digitalocean/Screen-Shot-2014-07-27-at-23_05_59_vhxnbq.png)
+
+## Configurar acceso SSH
 
 Ya tenemos todo, lo único que nos queda es poder acceder via SSH por terminal para poder configurar nuestro servidor, realizar despliegues, etc… Para ello primero necesitamos importar nuestra clave RSA pública o crear una nueva. En Mac OS se realiza así:
 
@@ -17166,6 +17272,8 @@ Ejecutamos `cat ~./.ssh/id_rsa.pub` para ver el contenido de nuestra clave públ
 
 ![Screen Shot 2014-07-28 at 00.03.02](/images/como-configurar-tu-servidor-cloud-en-digitalocean/Screen-Shot-2014-07-28-at-00_03_02_u05x6a-1.png)
 
+## Conectar al servidor vía SSH
+
 ¿Cómo accedemos vía SSH? En nuestro panel de control vemos[ nuestra lista de Droplets](https://cloud.digitalocean.com/droplets) y en ella podemos ver la IP de nuestro servidor, en este caso, por ejemplo, aquí sería la `178.140.2.2`
 ![Screen Shot 2014-07-28 at 00.08.04](/images/como-configurar-tu-servidor-cloud-en-digitalocean/Screen-Shot-2014-07-28-at-00_08_04_tuvmnj.png)
 
@@ -17176,16 +17284,16 @@ $ ssh root@178.140.2.2
 root@178.140.2.2's password:
 Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-24-generic x86_64)
 
- * Documentation:  https://help.ubuntu.com/
+* Documentation:  https://help.ubuntu.com/
 
-  System information as of Sun Jul 27 17:16:56 EDT 2014
+System information as of Sun Jul 27 17:16:56 EDT 2014
 
-  System load:  0.0               Processes:           67
+System load:  0.0               Processes:           67
   Usage of /:   7.2% of 19.56GB   Users logged in:     0
   Memory usage: 10%               IP address for eth0: 178.62.36.77
   Swap usage:   0%
 
-  Graph this data and manage this system at:
+Graph this data and manage this system at:
 
 https://landscape.canonical.com/
 
@@ -17212,6 +17320,8 @@ Con esto ya tenemos nuestro propio servidor en la nube y ahora ya solo queda ins
 
 En este artículo mostraré un _Gulpfile_ básico en el que declararemos varias tareas habituales que solemos hacer en el Frontend (minificar CSS, JS, etc…) que nos solucionarán la vida. Si aún no has probado un automatizador de tareas, prepárate para descubrir un mundo nuevo :D
 
+## Instalación y configuración
+
 El fichero de configuración de tareas debe llamarse `Gulpfile.js` y estar situado en el directorio raíz de nuestro proyecto. Para poder ejecutrar gulp en nuestro equipo, debemos tener instalado [Node.js](http://nodejs.org/) y las siguientes dependencias de manera global
 
 ```shell
@@ -17219,6 +17329,8 @@ $ npm install -g gulp
 ```
 
 Pensemos que tareas solemos hacer normalmente en nuestros desarrollos frontend. Lo más habitual es que usemos un preprocesador de CSS (Sass, Less, Stylus,…) para realizar el diseño de la web. Esto nos lleva a tener varios archivos y necesitamos que se conviertan en uno solo y con formato CSS. Esto lo podemos hacer con la siguiente tarea configurada en nuestro _Gulpfile_
+
+## Compilando CSS con Stylus
 
 ```js
 var gulp = require('gulp');
@@ -17233,6 +17345,8 @@ gulp.src('./styles/**/*.styl')
 ```
 
 Esta tarea recoge los ficheros `.styl` (de Stylus) que se encuentren en la carpeta _styles_ del proyecto, los preprocesa a CSS, los minifica en un solo fichero y lo deja en la carpeta _css_
+
+## Concatenando y minificando JavaScript
 
 Imaginemos ahora que tenemos varios ficheros JS, y los vamos añadiendo en nuestro HTML con las etiquetas `script`. Sería genial que un programa nos leyera esas referencias y se encargara de concatenarlas en un único fichero JS e incluso minificarlo. ¿Es posible? Si lo es:
 
@@ -17266,6 +17380,8 @@ Esta tarea toma de nuestro `index.html` que sería de esta forma:
 
 Gulp recoge el contenido entre las etiquetas de comentario en HTML, y concatena todos esos archivos JS en uno solo, en este caso `vendor.min.js`
 
+## Optimizando imágenes
+
 También podemos trabajar con imágenes. Aunque con Photoshop o cualquier otro programa las hayamos optimizado para la web, siempre pueden ser comprimidas mucho más con un optimizador de imágenes. También podemos hacer esto con Gulp:
 
 ```js
@@ -17288,6 +17404,8 @@ gulp.task("images", function () {
 ```
 
 Esta tarea toma las imágenes en formato `PNG`, `JPG`, `GIF` y `SVG` que se encuentren en la carpeta ‘static’ y las comprime y optmiza depositándolas en la carpeta `dist/static`
+
+## Watch y servidor de desarrollo en vivo
 
 Estas tareas son geniales, pero ¿No sería aún mejor que se ejecutaran cada vez que hiciesemos un cambio en los ficheros CSS y JS? Eso lo conseguimos con la tarea `watch`
 
@@ -17724,12 +17842,16 @@ Para el proyecto que estamos llevando a cabo mi compañera [Paola](http://twitte
 
 En nuestro caso, nuestro servidor es una instancia **EC2 en Amazon Web Services** con **Ubuntu 14.04 LTS**, y como servidor web/proxy utilizamos **Nginx**.
 
+## Crear la clave privada
+
 Lo primero que necesitamos es **crear una clave privada** en nuestro servidor:
 
 ```shell
 $ cd /etc/ssl/
 $ sudo openssl genrsa -des3 -out server.key 2048
 ```
+
+## Generar el Certificate Signing Request (CSR)
 
 Con nuestra clave privada generada, creamos un **Certificate Signing Request (CSR)** para solicitar nuestro certificado SSL a una entidad de autorización reconocida, en nuestro caso optamos por [RapidSSL](http://www.rapidssl.com/).
 
@@ -17747,6 +17869,8 @@ Este proceso nos pedirá una serie de datos que son importantes para solicitar e
 
 Esto nos generará un archivo `CSR` que debemos subir a RapidSSL cuando solicitemos y compremos un certificado SSL. Una vez comprado, RapidSSL nos enviará a nuestro email el certificado, que deberemos copiar y pegar en un fichero de texto con el nombre `SSL.crt` para seguir la nomenclatura de Nginx.
 
+## Obtener e instalar el certificado SSL
+
 Desde la página de RapidSSL necesitamos también descargarnos un [certificado intermedio](https://knowledge.rapidssl.com/support/ssl-certificate-support/index?page=content&id=AR1549), lo guardamos como `intermediate.crt` y debemos concatenar al anterior
 
 ```shell
@@ -17754,6 +17878,8 @@ $ sudo cat SSL.crt intermediate.crt >> SSL.crt
 ```
 
 Con esto ya tenemos lo necesario para que nuestro servidor web, acepte HTTPS, solo tenemos que **configurar Nginx para que escuche en el puerto 443** (el de HTTPS) indicándole los ficheros.
+
+## Configurar Nginx para HTTPS
 
 Editamos el fichero default de configuración con lo siguiente:
 
@@ -17766,14 +17892,14 @@ server {
   listen 443;
   server_name tudominio.com;
 
-  root /usr/share/nginx/html; # Directorio donde están nuestros archivos estáticos
+root /usr/share/nginx/html; # Directorio donde están nuestros archivos estáticos
   index index.html index.htm
 
-  ssl on;
+ssl on;
   ssl_certificate /etc/ssl/SSL.crt
   ssl_certificate_key /etc/ssl/server.key
 
-  access_log /var/log/nginx/nginx.vhost.access.log
+access_log /var/log/nginx/nginx.vhost.access.log
   error_log /var/log/nginx/nginx.vhost.error.log
 ```
 
@@ -17782,6 +17908,8 @@ Reiniciamos nginx y nos aseguramos que en nuestro DNS, `tudominio.com` apunta a 
 ```shell
 sudo service nginx restart
 ```
+
+## Redirigir HTTP a HTTPS
 
 Con todo esto si accedemos a `https://tudominio.com` funcionará, pero ¿Y si entramos desde `http://tudominio.com`? No nos redirije al HTTPS, ¿Y si escribimos `www.tudominio.com`? aunque lo tengamos definido en nuestro DNS, no nos redirije al HTTPS. ¿Cómo arreglamos esto? Añadiendo más reglas a nuestro archivo de configuración de Nginx:
 
@@ -17832,10 +17960,14 @@ El tema que elegimos fue como implementar un **sistema de login de usuarios util
 
 Y a continuación explico a modo de tutorial los pasos para implementar este sistema en un proyecto que tengamos.
 
+## Requisitos previos
+
 Lo primero de todo, necesitamos tener **Node.js** y **MongoDB** instalados en nuestro equipo. Node es el backend que utlizaremos y MongoDB es una base de datos no relacional, basada en documentos JSON. Podemos utlizar cualquier otra base de datos (por ejemplo, MySQL o cualquier otra). Yo lo hago con Mongo porque me parece más sencillo y porque esta basada en JavaScript del cual soy un _talifán_ :P
 
 - [http://nodejs.org/download/](http://nodejs.org/download/)
 - [https://www.mongodb.org/downloads](https://www.mongodb.org/downloads)
+
+## Estructura base del proyecto con Express
 
 A continuación creamos una estructura base de aplicación con el framework _Express_. De esta forma nos crea un “esqueleto” con archivos y carpetas de una especie de “hola mundo” con Express.
 
@@ -17857,6 +17989,8 @@ $ npm install --save passport-twitter
 $ npm install --save passport-facebook
 ```
 
+## Modelo de usuario con Mongoose
+
 Creamos un **modelo usuario** `/models/user.js` donde indicaremos que datos vamos a querer almacenar en la base de datos para nuestros usuarios. En este ejemplo **vamos a salvar el nombre, el proveedor, un ID, la foto del usuario y un campo dónde almacenaremos la fecha en la que el usuario se registró en nuestra aplicación**.
 
 ```JavaScript
@@ -17874,6 +18008,8 @@ var UserSchema = new Schema({
 var User = mongoose.model('User', UserSchema);
 ```
 
+## Configuración de Passport y estrategias OAuth
+
 Configuramos **Passport** `/passport.js*` importando las librerías que utilizamos y las funciones que nos permiten el login.
 
 Con `seriealizeUser` y `deserializeUser` logramos que el objeto usuario quede almacenado en la sesión de la aplicación y asi poder utilizarlo a lo largo de ella.
@@ -17888,11 +18024,11 @@ var FacebookStrategy = require('passport-facebook').Strategy;
 
 module.exports = function(passport) {
 
-     passport.serializeUser(function(user, done) {
+passport.serializeUser(function(user, done) {
 		done(null, user);
 	});
 
-     passport.deserializeUser(function(obj, done) {
+passport.deserializeUser(function(obj, done) {
 		done(null, obj);
 	});
      passport.use(new TwitterStrategy({
@@ -17904,7 +18040,7 @@ module.exports = function(passport) {
 			if(err) throw(err);
 			if(!err && user!= null) return done(null, user);
 
-			var user = new User({
+var user = new User({
 				provider_id: profile.id,
 				provider: profile.provider,
 				name: profile.displayName,
@@ -17925,7 +18061,7 @@ module.exports = function(passport) {
 			if(err) throw(err);
 			if(!err && user!= null) return done(null, user);
 
-			var user = new User({
+var user = new User({
 				provider_id: profile.id,
 				provider: profile.provider,
 				name: profile.displayName,
@@ -17938,6 +18074,8 @@ module.exports = function(passport) {
 		});
 	}));
 ```
+
+## Gestión de API Keys y configuración
 
 Una buena práctica es **mantener las API Keys separadas del código fuente que subimos al repositorio**, en un archivo `config.js` (o en las variables de entorno) que luego importamos desde donde lo necesitemos.
 
@@ -18289,6 +18427,8 @@ Hace unos días vimos [como crear una simple page application con Angular JS par
 
 ![Angular JS tutorial](/images/tutorial-aplicacion-web-con-angularjs-y-routing/square-300x3001_scxhwx.png)
 
+## Estructura de archivos del proyecto
+
 Lo primero, al igual que la otra vez, veamos cual será la estructura de archivos de la aplicación:
 
 ```shell
@@ -18303,6 +18443,8 @@ index.html
 - **`main.js`** contiene el código JavaScript de la aplicación, aquí manejaremos las rutas y los controladores
 - **`index.html`** es la página principal donde inyectaremos las vistas
 - **`pages`** es un directorio donde estarán las plantillas que serán inyectadas en index.html como vistas
+
+## Configuración del módulo y rutas en main.js
 
 Veamos que tenemos que poner en `main.js`
 
@@ -18350,6 +18492,8 @@ Con esto ya podemos crear rutas que como podéis ver se llaman con el método `w
 
 Después hemos añadido los controladores en los que únicamente ponemos un mensaje dentro del ámbito del controlador que será diferente para cada página que se cargue.
 
+## La vista principal: index.html
+
 Ahora pasemos a ver el `index.html`
 
 ```html
@@ -18385,6 +18529,8 @@ Ahora pasemos a ver el `index.html`
 
 Al igual que el anterior ejemplo, indicamos a todo el HTML que utilizaremos la aplicación `angularRoutingApp` con la directiva **`ng-app`**, los controladores con **`ng-controller`** en el body y lo más importante, la directiva **`ng-view`** es donde indicamos en que parte del HTML vamos a inyectar las vistas.
 
+## Plantillas de las páginas
+
 Por último nos quedan las plantillas que no son más que unas sencillas lineas de HTML que usamos para inyectar contenido. Estas son las 3 que hemos creado para el ejemplo:
 
 ```html
@@ -18405,6 +18551,8 @@ Por último nos quedan las plantillas que no son más que unas sencillas lineas 
 ```
 
 Todas tienen la variable `message` cuyo valor es diferente en cada una debido a los controladores que hemos escrito en **`main.js`**
+
+## Resultado final
 
 Y con esto ya tenemos una sencilla aplicación web con rutas que no refresca la página con cada enlace. Muy diferente a aquellos tiempos oscuros cuando se usaba _PHP Include_ o Iframes para mostrar diferentes secciones.
 
@@ -19010,9 +19158,13 @@ A veces necesitamos de un servidor web para _testing_ y no nos sirve con nuestro
 
 La forma antigua de hacer esto era tener un hosting web y subir los archivos por FTP al host y y con la URL del dominio que habíamos comprado ya teníamos un entorno que poder enseñar. Esto, hoy en día, se considera un poco “cutre”, pudiendo hacer uso de las tecnologías Cloud de las que disponemos. A continuación cuento como registrarse en Amazon Web Services y montar un servidor LAMP en una instancia.
 
+## ¿Por qué usar Amazon Web Services?
+
 La que más recomiendo para “trastear” es abrirse una cuenta en [Amazon Web Services (AWS)](http://aws.amazon.com/) y lanzar una instancia [Elastic Compute Cloud (EC2)](http://aws.amazon.com/ec2/) que básicamente consiste en una máquina virtual Linux con al que podemos hacer lo que queramos, y lo más importante, **Amazon te da 1 año gratis para usarlo**, después del año te cobrará por horas de uso y almacenamiento, pero la instancia puedes pararla y terminarla cuando desees. En caso de que quieras dejarla siempre corriendo, puedes llegar a pagar unos 16€ al mes.
 
 ![Panel de control de Amazon Web Services para gestionar una instancia EC2](/images/como-crear-un-servidor-web-con-amazon-web-services/amazon_com_web_services_qepgql.jpg)
+
+## Crear una cuenta en AWS
 
 El primer paso como digo es hacerse una cuenta en Amazon Web Services, si tienes cuenta en la tienda de Amazon te sirve la misma. Para ello vamos a [aws.amazon.com](http://aws.amazon.com) y pulsamos en **Get Started for free - Launch virtual machines and apps in minutes**
 
@@ -19030,6 +19182,8 @@ Una vez verificada la cuenta, te llegará un email de que la activación está c
 
 ![AWS Dashboard](/images/como-crear-un-servidor-web-con-amazon-web-services/Screen-Shot-2013-07-25-at-16_55_07_hdmpd1.png)
 
+## Lanzar una instancia EC2
+
 Ahí vamos a EC2 y en el panel de control damos a lanzar nueva instancia. Lanzamos el _Quick Launch Wizard_, elegimos crear un _New Key Pair_ y como maquina virtual elegiremos **Ubuntu Server 12.04.2 LTS** que es gratuita para el `t1.micro`. Nos descargamos el fichero `.pem` con la clave privada que hemos generado para poder acceder a la máquina virtual y damos a siguiente.
 
 ![Elige una mÃ¡quina virtual en AWS](/images/como-crear-un-servidor-web-con-amazon-web-services/Screen-Shot-2013-07-25-at-16_59_34_x0w3vu.png)
@@ -19037,6 +19191,8 @@ Ahí vamos a EC2 y en el panel de control damos a lanzar nueva instancia. Lanzam
 Una vez realizados los pasos anteriores ya tendremos nuestra instancia corriendo como vemos en el dashboard
 
 ![Instancia EC2 en AWS](/images/como-crear-un-servidor-web-con-amazon-web-services/Screen-Shot-2013-07-25-at-17_04_38_pdjo8h.png)
+
+## Conectarse al servidor vía SSH
 
 Ahora para poder acceder via terminal a nuestra máquina virtual tenemos la clave privada `.pem` que hemos descargado y una URL del tipo `ec2-50-19-140-229.compute-1.amazonaws.com` que apunta a la IP de nuestra instancia. Para poder acceder vía SSH de una manera más comoda haremos lo siguiente.
 
@@ -19064,6 +19220,8 @@ De esta manera siempre que queramos acceder a nuestra máquina vía SSH sólo te
 ```shell
 $ ssh awshost1
 ```
+
+## Instalar el entorno LAMP
 
 Ya estamos dentro de la instacia Linux de AWS, para tenerla actualizada es una buena opción hacer lo siguiente
 
@@ -19109,9 +19267,13 @@ _Actualizado: Agosto 2018_
 
 Por suerte vivimos en un momento en el que podemos encontrar multitud de tutoriales, documentación y ejemplos para aprender cualquier lenguaje que nos interese.
 
+## Para iniciarse en JavaScript
+
 Si quieres iniciarte en JavaScript y lo único que conoces de él es que sirve para poner bonitas las páginas web, te recomiendo los siguientes recursos, libros y tutoriales que te harán cambiar de opinión.
 
 > Si nunca has usado Javascript, te recomiendo que sigas [este “track” de Codeacademy](http://www.codecademy.com/tracks/javascript). Es una buena forma de aprender a programar utilizando JavaScript como lenguaje. A través de sencillos ejercicios muy dinámicos y con una interfaz muy cuidada, aprendes lo básico en programación: funciones, bucles, estructuras de datos, objectos, etc… Lo tienes en [inglés](http://www.codecademy.com/tracks/javascript) y en [español](http://www.codecademy.com/es/tracks/javascript-latinamerica). (Yo recomiendo el inglés).
+
+## Para profundizar en JavaScript
 
 Si ya estás familiarizado con el lenguaje y quieres profundizar en patrones de diseño y buenas prácticas de JavaScript (algo que es bastante recomendable) estos libros puedes servirte de ayuda. No he encontrado traducción al español, pero si sabes un poco de inglés, son fáciles de seguir y muy buenos.
 
@@ -19136,6 +19298,8 @@ Una colección que no puede faltar en tu biblioteca (digital o no) técnica son 
 > [**JavaScript Patterns**](http://www.amazon.es/gp/product/B0046RERXE/ref=as_li_tf_tl?ie=UTF8&camp=3626&creative=24790&creativeASIN=B0046RERXE&linkCode=as2&tag=pa0f-21) (Stoyan Stefanov)
 
 Este libro es algo más denso que el anterior y mucho más técnico. Aborda las buenas prácticas que deben seguirse en JavaScript así como patrones de programación. Como programar bucles de una manera más eficiente, convenciones en el uso de nombres, uso de módulos, _prototype_, patrones de diseño (_Singleton_, _Iterator_, etc) y patrones de lectura del DOM. Interesante y recomendado cuando ya se tiene soltura con el lenguaje.
+
+## Libros sobre Node.js
 
 > [![cat-2](/images/libros-javascript/cat-2_v4iv9h.gif)](http://www.amazon.es/gp/product/B007XF8PJS/ref=as_li_tf_tl?ie=UTF8&camp=3626&creative=24790&creativeASIN=B007XF8PJS&linkCode=as2&tag=pa0f-21)
 
@@ -19162,6 +19326,8 @@ Muy completo y recomendado.
 > [**Building Node Applications with MongoDB and Backbone**](http://www.amazon.es/gp/product/B00AMT35TC/ref=as_li_tf_tl?ie=UTF8&camp=3626&creative=24790&creativeASIN=B00AMT35TC&linkCode=as2&tag=pa0f-21) (Mike Wilson)
 
 Y ya para rematar, el último libro recomendado. Escrito por uno de los autores de “[Node Up and Running](http://www.amazon.es/gp/product/B007XF8PJS/ref=as_li_tf_tl?ie=UTF8&camp=3626&creative=24790&creativeASIN=B007XF8PJS&linkCode=as2&tag=pa0f-21)” explica en 200 páginas con un ejemplo práctico de “Full-Stack JavaScript” el desarrollo de una red social empleando Node para el Servidor, MongoDB para la base de datos y Backbone como framework para la parte cliente.
+
+## Mi libro recomendado
 
 > [![aprendiendo-javascript-1](/images/libros-javascript/aprendiendo-javascript-1.png)](https://leanpub.com/aprendiendo-javascript) >[**Aprendiendo JavaScript**](https://leanpub.com/aprendiendo-javascript) (Carlos Azaustre)
 

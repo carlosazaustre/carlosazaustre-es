@@ -13,7 +13,11 @@ MongoDB es una base de datos no relacional, es decir no es como las típicas bas
 
 Imaginemos una base de datos de libros. Tendríamos una tabla con los títulos de los libros y otra con los datos de los autores. El campo `autor` en la tabla de libros, apuntaría a un ID o clave primaria de un autor de la tabla autores.
 
+## Referencias y relaciones en MongoDB
+
 En MongoDB podemos hacer algo parecido, por medio de referencias y el [método `populate` de MongoDB](http://mongoosejs.com/docs/populate.html).
+
+## Creando los modelos con Mongoose
 
 Sigamos con el ejemplo anterior. Un modelo `autor` en Node.js usando `mongoose` sería tal que así:
 
@@ -49,6 +53,8 @@ module.exports = mongoose.model("Libro", libroSchema);
 ```
 
 Si nos fijamos, para el campo `autor` en el modelo `libro` hemos usado el tipo `Schema.ObjectId` y la referencia al modelo `Autor`. Esto nos permitirá establecer la relación entre un campo de una tabla y otra.
+
+## Consultando libros con sus autores
 
 Pero si no tenemos consultas SQL, y pedimos una lista de todos los libros en la base de datos ¿Qué datos nos llegarán?
 
@@ -92,6 +98,8 @@ y si tenemos varios libros registrados en la base de datos, nos devolvería un `
 ```
 
 En el campo `autor` obtenemos la referencia en formato `ObjectID` del autor, pero no su ficha completa. ¿Qué pasa si queremos mostrar en un sólo `JSON` toda la información para poder pintarla de una sola llamada en nuestra webapp? Para eso necesitamos hacer uso del método `populate` de MongoDB que también implementa la librería `mongoose`.
+
+## Usando populate para resolver las referencias
 
 En nuestro controlador anterior, debemos ampliarlo con lo siguiente:
 

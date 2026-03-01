@@ -11,9 +11,13 @@ tags: []
 
 Llegó el primer día dedicado a la **tecnología** en la semana de [Google Launchpad](/google-launchpad-week-dia-1-producto/) en [Campus Madrid](http://campus.co/madrid), donde [Paola](http://twitter.com/ggarciapaola) y yo estamos aprendiendo como mejorar [**Chefly**](https://chefly.co)
 
+## Las charlas del día
+
 Hoy hemos contado con dos grandes charlas impartidas por [Andrés L. Martínez](http://twitter.com/davilagrau) (más conocido como _Almo_) y [Jorge Barroso](http://twitter.com/flipper83) (más conocido como _Flipper83_)
 
 ![Almo y Flipper83 durante la sesión de tecnología en Google Launchpad Madrid](/images/google-launchpad-madrid-dia-4-tecnologiaIMG_20150709_100654.jpg)
+
+## Almo: El mercado mobile en cifras
 
 _Almo_ nos ha presentado las cifras del mercado _mobile_, muy interesantes, quedando como resumen que casi el 80% de la población utiliza Android, pero la monetización de las apps llega más de la parte de iOS.
 
@@ -22,6 +26,8 @@ _Almo_ nos ha presentado las cifras del mercado _mobile_, muy interesantes, qued
 ![Sesión de tecnología en Google Launchpad Madrid 2015 con participantes y ponentes](/images/google-launchpad-madrid-dia-4-tecnologiaIMG_20150709_101251.jpg)
 
 Fuente: [Developer Economics](http://developereconomics.com/go)
+
+## Flipper83: Mobile Developer for Startups
 
 Después _Flipper_ nos ha contado su experiencia como "Mobile Developer for Startups" que puede aplicarse a cualquier tipo de App, incluidas las webs.
 
@@ -54,6 +60,8 @@ Y la **más útil** para mi:
 > From STUPID to SOLID code
 
 La mejor clase de programación que he escuchado y en sólo 5 minutos. Os recomiendo que [leais sobre ello](http://williamdurand.fr/2013/07/30/from-stupid-to-solid-code/).
+
+## Las mentorías
 
 A continuación hemos tenido las mentorías. Más relajadas que los días anteriores, pero no por ello menos interesantes y útiles. Hoy hemos tenido menos mentorías que otros días, y nuestros mentores han sido [Javier Lafora](https://twitter.com/eLafo), [Ricardo Varela](https://twitter.com/phobeo) e [Ismael Faro](https://twitter.com/ismaelfaro). Mil gracias por su tiempo de nuevo y por las ideas aportadas!
 

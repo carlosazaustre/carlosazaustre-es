@@ -17,6 +17,8 @@ Está siendo una gran experiencia. El día de ayer fue dedicado a **Producto** y
 
 ![Asistentes en la sesión de UX de Launchpad Week Madrid 2015](/images/launchpad-week-madrid-dia-2-ux/2015/07/IMG_20150707_101355.jpg)
 
+## La charla inaugural: «El UX lo es todo»
+
 El día de hoy ha comenzado con una charla titulada "El UX lo es todo" de [Eusebio Reyero](https://twitter.com/ereyero), CEO de [Hackity](http://hackity.com) que ha sido muy interesante y nos ha abierto mucho los ojos. Os dejo con una serie de _links_ que nos ha compartido en su presentación para todo aquel que quiera mejorar el UX de sus aplicaciones:
 
 - [http://hackdesign.org/lessons/9](http://hackdesign.org/lessons/9)
@@ -40,9 +42,13 @@ Como desarrolladores tendemos a hacer lo que más nos gusta, programar. Implemen
 ![Grupos de profesionales colaborando en un taller de UX durante la Launchpad Week Madrid](/images/launchpad-week-madrid-dia-2-ux/CJUg_1cWwAAkvlB-jpg-large.jpeg)
 Foto por [@TetuanValley](http://twitter.com/tetuanvalley)
 
+## Los demás mentores del día
+
 Los demás mentores que nos han prestado su tiempo han sido [Marc Borràs](https://twitter.com/marcborras), [Silvia Pérez](https://www.linkedin.com/profile/view?id=45043302&authType=NAME_SEARCH&authToken=gO3T&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2Cidx%3A1-1-1%2CtarId%3A1436299910184%2Ctas%3Asilvia%20p%C3%A9rez%20felipe), [Nacho Rodríguez](https://www.linkedin.com/profile/view?id=4417489&authType=NAME_SEARCH&authToken=btCy&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2Cidx%3A1-1-1%2CtarId%3A1436299995808%2Ctas%3Anacho%20rod) y [David Alayón](https://twitter.com/DavidAlayon). Gente muy inteligente y profesional en su campo que nos ha dado muchos tips, consejos y visión que nos ayudarán a mejorar Chefly. Muchas gracias por vuestro tiempo.
 
 [Johan Feito](https://www.linkedin.com/in/johanfeito) y [Jaime Novoa](https://www.linkedin.com/in/jaimegnovoa) se encargan desde [Google Launchpad](https://developers.google.com/startups/) a recopilar los casos de uso que las _Startups_ participantes les entregamos a fin de compartirlo con la comunidad. Por eso, comparto también por éste canal lo que estamos aprendiendo para todo aquél emprendedor que se encuentre en una situación similar le sirva de ayuda.
+
+## Puntos de Situación
 
 - **Puntos de Situación**
 
@@ -61,6 +67,8 @@ Partiendo del punto anterior, donde definimos o clarificamos el producto, hace q
 - Problemas con algunos textos que confunden, se leen mal y no aportan valor. Algunos iconos generan confusión y algunos botones, por su color y tamaño confunden
 
 - No medimos datos clave como son el flujo de navegación del usuario en la página y dónde abandona.
+
+## Puntos de Acción
 
 * **Puntos de Acción**
 

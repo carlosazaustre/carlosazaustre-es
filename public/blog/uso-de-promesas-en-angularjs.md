@@ -13,6 +13,8 @@ Las promesas son **objetos de JavaScript** que sustituyen de alguna manera a los
 
 Hay que indicar que una **Promesa** no nos sustituye el hecho de utilizar callbacks para leer su valor, pero lo que nos evita es caer en el temido _Callback Hell_.
 
+## Sintaxis de las promesas
+
 ```javascript
 obj.metodo1(data, function (data1) {
   obj.metodo2(data1, function (data2) {
@@ -36,6 +38,8 @@ obj
  ...
 ```
 
+## Uso de promesas en AngularJS
+
 Un uso adecuado para ello es en los servicios en AngularJS, usando la directiva o servicio del core de Angular `$q`, que contiene toda la funcionalidad de las promesas. Veamos un ejemplo.
 
 Por ejemplo, supongamos que tenemos un controlador `myController` de una vista de nuestra aplicación angular que llame a un recurso a través de un API con el método `GET`:
@@ -47,6 +51,8 @@ function MyController($scope, $http) {
   });
 }
 ```
+
+## Separación de conceptos: servicios con $q
 
 Por buenas prácticas y por separación de conceptos y también para hacer nuestro código más mantenible y escalable, debemos separar la lógica de nuestra aplicación (la llamada `$http`) en un servicio y el controlador dejarlo sólo para la conexión entre nuestros servicios y la vista HTML.
 
@@ -87,11 +93,11 @@ function dataService($http, $q) {
     getAll: getAll,
   };
 
-  function getAll() {
+function getAll() {
     var defered = $q.defer();
     var promise = defered.promise;
 
-    $http
+$http
       .get("http://midominio.com/recursos.json")
       .success(function (data) {
         defered.resolve(data);
@@ -100,10 +106,12 @@ function dataService($http, $q) {
         defered.reject(err);
       });
 
-    return promise;
+return promise;
   }
 }
 ```
+
+## Consumir el servicio desde el controlador
 
 Solamente nos queda inyectar ese servicio en nuestro controlador y llamar a la función `getAll()` y tratar la promesa con los métodos `then()` y `catch()` que se llaman cuando finalice la petición o se produzca un error:
 
@@ -121,6 +129,8 @@ function myController (dataService) {
 ```
 
 De esta manera tenemos separados los conceptos y las funcionalidades en nuestra aplicación Angular y utilizando promesas para devolver el resultado de nuestras peticiones.
+
+## Recursos adicionales
 
 Para ampliar más esta información, puedes visitar:
 

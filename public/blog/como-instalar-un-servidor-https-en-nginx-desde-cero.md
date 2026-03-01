@@ -17,12 +17,16 @@ Para el proyecto que estamos llevando a cabo mi compañera [Paola](http://twitte
 
 En nuestro caso, nuestro servidor es una instancia **EC2 en Amazon Web Services** con **Ubuntu 14.04 LTS**, y como servidor web/proxy utilizamos **Nginx**.
 
+## Crear la clave privada
+
 Lo primero que necesitamos es **crear una clave privada** en nuestro servidor:
 
 ```shell
 $ cd /etc/ssl/
 $ sudo openssl genrsa -des3 -out server.key 2048
 ```
+
+## Generar el Certificate Signing Request (CSR)
 
 Con nuestra clave privada generada, creamos un **Certificate Signing Request (CSR)** para solicitar nuestro certificado SSL a una entidad de autorización reconocida, en nuestro caso optamos por [RapidSSL](http://www.rapidssl.com/).
 
@@ -40,6 +44,8 @@ Este proceso nos pedirá una serie de datos que son importantes para solicitar e
 
 Esto nos generará un archivo `CSR` que debemos subir a RapidSSL cuando solicitemos y compremos un certificado SSL. Una vez comprado, RapidSSL nos enviará a nuestro email el certificado, que deberemos copiar y pegar en un fichero de texto con el nombre `SSL.crt` para seguir la nomenclatura de Nginx.
 
+## Obtener e instalar el certificado SSL
+
 Desde la página de RapidSSL necesitamos también descargarnos un [certificado intermedio](https://knowledge.rapidssl.com/support/ssl-certificate-support/index?page=content&id=AR1549), lo guardamos como `intermediate.crt` y debemos concatenar al anterior
 
 ```shell
@@ -47,6 +53,8 @@ $ sudo cat SSL.crt intermediate.crt >> SSL.crt
 ```
 
 Con esto ya tenemos lo necesario para que nuestro servidor web, acepte HTTPS, solo tenemos que **configurar Nginx para que escuche en el puerto 443** (el de HTTPS) indicándole los ficheros.
+
+## Configurar Nginx para HTTPS
 
 Editamos el fichero default de configuración con lo siguiente:
 
@@ -59,14 +67,14 @@ server {
   listen 443;
   server_name tudominio.com;
 
-  root /usr/share/nginx/html; # Directorio donde están nuestros archivos estáticos
+root /usr/share/nginx/html; # Directorio donde están nuestros archivos estáticos
   index index.html index.htm
 
-  ssl on;
+ssl on;
   ssl_certificate /etc/ssl/SSL.crt
   ssl_certificate_key /etc/ssl/server.key
 
-  access_log /var/log/nginx/nginx.vhost.access.log
+access_log /var/log/nginx/nginx.vhost.access.log
   error_log /var/log/nginx/nginx.vhost.error.log
 ```
 
@@ -75,6 +83,8 @@ Reiniciamos nginx y nos aseguramos que en nuestro DNS, `tudominio.com` apunta a 
 ```shell
 sudo service nginx restart
 ```
+
+## Redirigir HTTP a HTTPS
 
 Con todo esto si accedemos a `https://tudominio.com` funcionará, pero ¿Y si entramos desde `http://tudominio.com`? No nos redirije al HTTPS, ¿Y si escribimos `www.tudominio.com`? aunque lo tengamos definido en nuestro DNS, no nos redirije al HTTPS. ¿Cómo arreglamos esto? Añadiendo más reglas a nuestro archivo de configuración de Nginx:
 

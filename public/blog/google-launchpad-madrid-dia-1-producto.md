@@ -13,6 +13,8 @@ Esta semana se [celebra en Madrid](https://events.withgoogle.com/launchpad-week-
 
 ![Google Launchpad](/images/google-launchpad-madrid-dia-1-producto/Screen-Shot-2015-07-06-at-23-03-45.png)
 
+## ¿Qué es el Google Launchpad Week?
+
 En **España ya se han celebrado 3 ediciones**, [2 en Barcelona](https://www.youtube.com/watch?v=69j2BJtPCzc) y ésta es [la primera en Madrid](https://events.withgoogle.com/launchpad-week-mad/). En otras ciudades del mundo, como en Tel-Aviv (Israel) llevan ya más de 30 ediciones.
 
 ![Participantes en el Google Launchpad Week Madrid durante la jornada de producto](/images/google-launchpad-madrid-dia-1-producto/CJN357UWgAAqoS5-jpg-large.jpeg)
@@ -22,7 +24,11 @@ Para participar tienes que ser seleccionado a través de una aceleradora, incuba
 
 [![Launchpad Badge](/images/google-launchpad-madrid-dia-1-producto/CJN0dwNWIAAijgV.jpg)](http://chefly.co)
 
+## Cómo llegamos al Launchpad
+
 Nosotros, con **[Chefly](http://chefly.co)**, al pertenecer a la comunidad de [Tetuan Valley](http://tetuanvalley.com), en su 10a edición, hemos podido acceder a esta edición de Launchpad junto con nuestros compañeros "Tetuaneros" de [TieDots](http://tiedots.co) y [Teltoo](http://teltoo.com).
+
+## El formato de la semana
 
 Cada día de la semana está dedicado a un elemento concreto. El primer día es sobre **Producto**, el segundo **UX**, después **Marketing** y los dos últimos días son dedicados a **Tecnología**.
 
@@ -31,10 +37,14 @@ Cada día sigue el siguiente _Schedule_, primero un desayuno-networking de 9:10 
 ![Participantes de startups haciendo networking al final del primer día de Google Launchpad Madrid](/images/google-launchpad-madrid-dia-1-producto/CJPddp5UkAA26jw-jpg-large.jpeg)
 Foto por [@TetuanValley](http://twitter.com/tetuanvalley)
 
+## La sesión de Producto
+
 **Hoy hemos tenido la primera sesión**, dedicada a la definición de Producto y vamos a compartir con la comunidad un poco los puntos más importantes que hemos aprendido, problemas encontrados y puntos de acción a realizar. Así si estás creando tu Startup, quizá te sirva de orientación y ayuda :)
 
 Nuestros **Mentores** del día han sido:  
 [Anna Bofill Bert](https://twitter.com/AnnaBofillBert), [Claudio Cossio](https://twitter.com/ccossio), [Eduardo Fernández](https://twitter.com/edufernandez), [Israel Alcázar](https://twitter.com/ialcazar) y [Enrique Penichet](https://twitter.com/enriquepenichet). Muchas gracias a todos por vuestro tiempo y por las ideas aportadas :)
+
+## Diagnóstico y puntos de acción
 
 **Punto de Situación:**
 
@@ -56,7 +66,7 @@ A partir de los problemas que hemos identificado, estos serían nuestros puntos 
 
 - **Target**: Definir un segmento de mercado al que atacar. Para ello, elaborar una lista de todos los posibles segmentos, comprobar cuál es su tamaño de mercado de cada uno y dirigir toda la comunicación a ese target.
 
-  Testear este segmento durante 2-3 semanas y analizar los resultados. Si no son los deseados, iterar al siguiente segmento hasta dar con el _Market-Fit_. Estas iteraciones han de hacerse durante máximo 18-20 meses, que el tiempo de vida medio de una Startup.
+Testear este segmento durante 2-3 semanas y analizar los resultados. Si no son los deseados, iterar al siguiente segmento hasta dar con el _Market-Fit_. Estas iteraciones han de hacerse durante máximo 18-20 meses, que el tiempo de vida medio de una Startup.
 
 - **Categorizar**: Establecer filtros, los más importantes: por coste (no todos los usuarios buscan platos baratos ni tampoco caros, eso define el segmento) y por disponibilidad (De inmediato, Para comer hoy/mañana/pasado, para cenar hoy/mañana/pasado).
 

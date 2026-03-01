@@ -13,6 +13,8 @@ tags: []
 
 En este artículo mostraré un _Gulpfile_ básico en el que declararemos varias tareas habituales que solemos hacer en el Frontend (minificar CSS, JS, etc…) que nos solucionarán la vida. Si aún no has probado un automatizador de tareas, prepárate para descubrir un mundo nuevo :D
 
+## Instalación y configuración
+
 El fichero de configuración de tareas debe llamarse `Gulpfile.js` y estar situado en el directorio raíz de nuestro proyecto. Para poder ejecutrar gulp en nuestro equipo, debemos tener instalado [Node.js](http://nodejs.org/) y las siguientes dependencias de manera global
 
 ```shell
@@ -20,6 +22,8 @@ $ npm install -g gulp
 ```
 
 Pensemos que tareas solemos hacer normalmente en nuestros desarrollos frontend. Lo más habitual es que usemos un preprocesador de CSS (Sass, Less, Stylus,…) para realizar el diseño de la web. Esto nos lleva a tener varios archivos y necesitamos que se conviertan en uno solo y con formato CSS. Esto lo podemos hacer con la siguiente tarea configurada en nuestro _Gulpfile_
+
+## Compilando CSS con Stylus
 
 ```js
 var gulp = require('gulp');
@@ -34,6 +38,8 @@ gulp.src('./styles/**/*.styl')
 ```
 
 Esta tarea recoge los ficheros `.styl` (de Stylus) que se encuentren en la carpeta _styles_ del proyecto, los preprocesa a CSS, los minifica en un solo fichero y lo deja en la carpeta _css_
+
+## Concatenando y minificando JavaScript
 
 Imaginemos ahora que tenemos varios ficheros JS, y los vamos añadiendo en nuestro HTML con las etiquetas `script`. Sería genial que un programa nos leyera esas referencias y se encargara de concatenarlas en un único fichero JS e incluso minificarlo. ¿Es posible? Si lo es:
 
@@ -67,6 +73,8 @@ Esta tarea toma de nuestro `index.html` que sería de esta forma:
 
 Gulp recoge el contenido entre las etiquetas de comentario en HTML, y concatena todos esos archivos JS en uno solo, en este caso `vendor.min.js`
 
+## Optimizando imágenes
+
 También podemos trabajar con imágenes. Aunque con Photoshop o cualquier otro programa las hayamos optimizado para la web, siempre pueden ser comprimidas mucho más con un optimizador de imágenes. También podemos hacer esto con Gulp:
 
 ```js
@@ -89,6 +97,8 @@ gulp.task("images", function () {
 ```
 
 Esta tarea toma las imágenes en formato `PNG`, `JPG`, `GIF` y `SVG` que se encuentren en la carpeta ‘static’ y las comprime y optmiza depositándolas en la carpeta `dist/static`
+
+## Watch y servidor de desarrollo en vivo
 
 Estas tareas son geniales, pero ¿No sería aún mejor que se ejecutaran cada vez que hiciesemos un cambio en los ficheros CSS y JS? Eso lo conseguimos con la tarea `watch`
 

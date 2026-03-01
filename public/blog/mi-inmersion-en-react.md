@@ -11,6 +11,8 @@ tags: []
 
 _Antes de nada quiero aclarar que AngularJS me gusta (por si no se nota de mis anteriores posts :P)._
 
+## Mi relación con AngularJS
+
 Aposté por Angular cuando mucha gente todavía renegaba de JavaScript y del [stack MEAN](/desarrollo-full-stack-javascript-tambien-conocido-como-mean/). He aprendido mucho utilizando este framework en mis desarrollos, de patrones de diseño, de programación básica y avanzada, etc...
 
 He trabajado con las versiones de la v1.2 a la v1.5, y me parece excelente como ha evolucionado y como se ha ido integrando poco a poco con ECMAScript 6 (ES2015) y ha ido abandonando Bower para utilizar NPM.
@@ -28,6 +30,8 @@ Sin embargo, siempre me gusta explorar nuevas cosas y no quedarme estancado. Sen
 </blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+## El camino hacia React
+
 Antes del verano empecé a utilizar [yo-yo.js](https://github.com/maxogden/yo-yo), una librería para renderizar HTML (al estilo React, pero más ligera) que conocí gracias a un [curso en Platzi](https://platzi.com/cursos/javascript/). Empecé a seguir este patrón y para el estado de la aplicación utilicé [store-emitter](https://github.com/sethvincent/store-emitter) (algo parecido a _Redux_), [page.js](https://visionmedia.github.io/page.js/) para las rutas, y [request-promise](https://www.npmjs.com/package/request-promise) para realizar peticiones HTTP (o el propio [fetch de ES2015](/ejemplo-de-aplicacion-con-react-js-en-ecmascript-6/)).
 
 Me encantó esta forma de trabajar, pudiendo utilizar lo que quisiera para armar una web app.
@@ -37,6 +41,8 @@ Con esta experiencia, me animé este verano a profundizar en React, que [ya lo h
 He descubierto que aunque React es una librería que se encarga del tema de renderizado de las vistas (y lo hace realmente bien), tiene un ecosistema y comunidad enormes.
 
 ![React, Redux, GraphQL](/images/mi-inmersion-en-react/react-redux-graphql-1.png)
+
+## React vs Angular: por qué cambié
 
 Mi problema con Angular es que yo me quedaría en la v1.5 (o en la v1.6 que próximamente lanzarán), aunque sea algo complicado utilizar ECMAScript 6 (que me encanta) con ello. Se puede hacer, pero se enrevesa mucho el código, sobre todo a la hora de crear módulos.
 
@@ -49,6 +55,8 @@ El resto de cosas que hace el framework las puedes encontrar en el ecosistema de
 Con React también puedes crear aplicaciones isomórficas o universales junto con Express y Node.js. Con Angular2 también se va a poder, pero ya digo que _Ng2_ no me gusta mucho su sintaxis, la veo muy complicada (para mi gusto).
 
 Y ya lo último es React Native. Si, es una librería diferente, pero si sabes programar con React y Redux, puedes crear una aplicación nativa (no un WebView, una aplicación nativa) para iOS y Android con JavaScript. En el mundo Angular tenemos _ionic_, pero no dejar de ser un _WebView_. También tenemos NativeScript pero no puedo hablar porque no lo conozco mucho. Conozco React Native porque lo he probado y es realmente poderoso.
+
+## Conclusión y próximos pasos
 
 En resumen, mi cambio a React no se debe a una moda (React lleva en el mercado alrededor de 2 años) pero siento que es una librería muy madura, permite usar otras librerías con ella y hacer tu aplicación más modular, se integra muy bien con ECMAScript 6 y tiene un gran ecosistema y muchas cosas por venir (No he hablando aún de GraphQL...)
 

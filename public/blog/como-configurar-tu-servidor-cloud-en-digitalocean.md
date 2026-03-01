@@ -15,9 +15,13 @@ También es mejor [el precio](https://www.digitalocean.com/pricing/), puedes ten
 
 En este tutorial voy a explicar como [registrarse en DigitalOcean](https://www.digitalocean.com/?refcode=f716de9860aa) y configurar nuestro primer servidor Linux en el que poder desplegar nuestras aplicaciones Web.
 
+## Registro en DigitalOcean
+
 Nos dirigimos a la página web de [DigitalOcean y nos registramos con un email y una contraseña](https://www.digitalocean.com/?refcode=f716de9860aa). En el siguiente paso nos pedirán nuestros datos (nombre, apellidos, dirección y un número de tarjeta de crédito/débito) los añadimos y ya tenemos nuestra cuenta en [DigitalOcean](https://www.digitalocean.com/?refcode=f716de9860aa). Nos llegará un correo de confirmación a nuestro email, pinchamos en el link para confirmar y listo.
 
 [![Screen Shot 2014-07-27 at 23.34.55](/images/como-configurar-tu-servidor-cloud-en-digitalocean/Screen-Shot-2014-07-27-at-23_34_55_blcekh.png)](https://www.digitalocean.com/?refcode=f716de9860aa)
+
+## Configuración del Droplet
 
 Ahora elegimos que máquina queremos, en mi caso elijo la más barata que para empezar nos sobra. 512 Mb de RAM, 1 CPU, 20GB de Disco SSD y 1TB de transferencia mensual (si lo superas, el GB adicional cuesta 0,02$)
 
@@ -31,9 +35,13 @@ Ya podemos acceder a nuestro panel de control y en el tendremos que configurar q
 
 ![Screen Shot 2014-07-27 at 23.04.44](/images/como-configurar-tu-servidor-cloud-en-digitalocean/Screen-Shot-2014-07-27-at-23_04_44_fd9a3f.png)
 
+## Instalación de aplicaciones
+
 Podemos instalar aplicaciones adicionales, como Ruby, Django, PHP, etc… En mi caso elijo instalar Node para ahorrarme instalarlo via terminal, pero si queremos podemos hacerlo más adelante por SSH.
 
 ![Screen Shot 2014-07-27 at 23.05.59](/images/como-configurar-tu-servidor-cloud-en-digitalocean/Screen-Shot-2014-07-27-at-23_05_59_vhxnbq.png)
+
+## Configurar acceso SSH
 
 Ya tenemos todo, lo único que nos queda es poder acceder via SSH por terminal para poder configurar nuestro servidor, realizar despliegues, etc… Para ello primero necesitamos importar nuestra clave RSA pública o crear una nueva. En Mac OS se realiza así:
 
@@ -54,6 +62,8 @@ Ejecutamos `cat ~./.ssh/id_rsa.pub` para ver el contenido de nuestra clave públ
 
 ![Screen Shot 2014-07-28 at 00.03.02](/images/como-configurar-tu-servidor-cloud-en-digitalocean/Screen-Shot-2014-07-28-at-00_03_02_u05x6a-1.png)
 
+## Conectar al servidor vía SSH
+
 ¿Cómo accedemos vía SSH? En nuestro panel de control vemos[ nuestra lista de Droplets](https://cloud.digitalocean.com/droplets) y en ella podemos ver la IP de nuestro servidor, en este caso, por ejemplo, aquí sería la `178.140.2.2`
 ![Screen Shot 2014-07-28 at 00.08.04](/images/como-configurar-tu-servidor-cloud-en-digitalocean/Screen-Shot-2014-07-28-at-00_08_04_tuvmnj.png)
 
@@ -64,16 +74,16 @@ $ ssh root@178.140.2.2
 root@178.140.2.2's password:
 Welcome to Ubuntu 14.04 LTS (GNU/Linux 3.13.0-24-generic x86_64)
 
- * Documentation:  https://help.ubuntu.com/
+* Documentation:  https://help.ubuntu.com/
 
-  System information as of Sun Jul 27 17:16:56 EDT 2014
+System information as of Sun Jul 27 17:16:56 EDT 2014
 
-  System load:  0.0               Processes:           67
+System load:  0.0               Processes:           67
   Usage of /:   7.2% of 19.56GB   Users logged in:     0
   Memory usage: 10%               IP address for eth0: 178.62.36.77
   Swap usage:   0%
 
-  Graph this data and manage this system at:
+Graph this data and manage this system at:
 
 https://landscape.canonical.com/
 

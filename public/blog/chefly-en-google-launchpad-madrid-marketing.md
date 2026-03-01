@@ -13,6 +13,8 @@ Continuo con mi serie de post sobre [Google Launchpad Week Madrid](/google-launc
 
 **Llevamos ya tres días** y parecen tres semanas de la cantidad de información, feedback y tips que estamos recibiendo. Nos pidieron por favor que redactaramos los puntos de situación y acción que vayamos definiendo y descubriendo día a día para los casos de uso de las _Startups_ que pasan por _Launchpad_, y la verdad es que hicieron bien, porque si no hiciera esta pequeña reflexión día a día al llegar a casa, no podría acordarme de todo lo que vemos de un día para otro y perdería una información valiosísima.
 
+## La sesión de Marketing Digital
+
 Hoy ha tocado el tema del **Marketing Digital**, como vender tu producto. Algo que, como técnicos que somos, necesitamos mucho y que con el _Máster intensivo_ que hemos tenido hoy nos ha hecho crecer el cerebro :D
 
 La charla del día ha sido impartida por [Jorge Galido](http://twitter.com/Jorge__Galindo), Jefe de Producto en [47Degrees](http://www.47deg.com/) Que nos ha contado la estrategia que siguieron cuando lanzaron un aplicación Launcher para Android, llamada 9cards. Comunmente se le llama Growth Hacking, pero me gusta más el nombre que Jorge ha empleado, _Marketing pa' tiesos_.
@@ -21,7 +23,11 @@ La charla del día ha sido impartida por [Jorge Galido](http://twitter.com/Jorge
 
 Cómo con una cantidad no demasiado grande de dinero, invertirla en publicidad y seguir una estrategia inteligente para conseguir el mismo rendimiento que si no aplicasemos ninguna estrategia y gastasemos 50 veces más.
 
+## Mentorías con expertos
+
 Después hemos pasado a las mentorías, donde [David Alayón](https://twitter.com/DavidAlayon) ha repetido con nosotros, y también hemos podido disfrutar del tiempo y la experiencia de [Vanesa Gallego](https://twitter.com/vanesagm), [Jose Manrique](https://twitter.com/jsmanrique), [Julio Rodríguez Cruz](https://twitter.com/thisjrodriguez) y [Tommaso Canonici](https://twitter.com/tcanonici). Muchísimas gracias por vuestro tiempo y feedback. Habéis llenado nuestra cabeza de ideas. Tenemos trabajo por delante :)
+
+## El Wrap Up: reflexiones sobre Chefly
 
 La última hora la dedicamos a realizar un _Wrap Up_ dónde exponemos lo que estamos aprendiendo cada _Startup_. **Hoy nos ha tocado** a nosotros compartir lo que estamos aprendiendo en _Launchpad_ y el mejor resumen lo ha dado Paola
 
@@ -36,6 +42,8 @@ Foto por [@TetuanValley](http://twitter.com/tetuanvalley)
 No estamos comunicando bien la idea que tenemos de [Chefly](http://chefly.co). En nuestra cabeza si está, pero lo que la gente ve en la web no es lo mismo. Nos estamos comunicando mal, pero **creemos que tenemos la solución**, y eso **nos está motivando** mucho más :)
 
 De nuevo, de cara a los casos de uso, estos son nuestros puntos de situación y puntos de acción que tomaremos:
+
+## Puntos de situación y acción
 
 - **Puntos de Situación**:
 

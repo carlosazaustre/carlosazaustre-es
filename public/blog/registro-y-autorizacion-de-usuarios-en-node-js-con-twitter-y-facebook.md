@@ -18,10 +18,14 @@ El tema que elegimos fue como implementar un **sistema de login de usuarios util
 
 Y a continuación explico a modo de tutorial los pasos para implementar este sistema en un proyecto que tengamos.
 
+## Requisitos previos
+
 Lo primero de todo, necesitamos tener **Node.js** y **MongoDB** instalados en nuestro equipo. Node es el backend que utlizaremos y MongoDB es una base de datos no relacional, basada en documentos JSON. Podemos utlizar cualquier otra base de datos (por ejemplo, MySQL o cualquier otra). Yo lo hago con Mongo porque me parece más sencillo y porque esta basada en JavaScript del cual soy un _talifán_ :P
 
 - [http://nodejs.org/download/](http://nodejs.org/download/)
 - [https://www.mongodb.org/downloads](https://www.mongodb.org/downloads)
+
+## Estructura base del proyecto con Express
 
 A continuación creamos una estructura base de aplicación con el framework _Express_. De esta forma nos crea un “esqueleto” con archivos y carpetas de una especie de “hola mundo” con Express.
 
@@ -43,6 +47,8 @@ $ npm install --save passport-twitter
 $ npm install --save passport-facebook
 ```
 
+## Modelo de usuario con Mongoose
+
 Creamos un **modelo usuario** `/models/user.js` donde indicaremos que datos vamos a querer almacenar en la base de datos para nuestros usuarios. En este ejemplo **vamos a salvar el nombre, el proveedor, un ID, la foto del usuario y un campo dónde almacenaremos la fecha en la que el usuario se registró en nuestra aplicación**.
 
 ```JavaScript
@@ -60,6 +66,8 @@ var UserSchema = new Schema({
 var User = mongoose.model('User', UserSchema);
 ```
 
+## Configuración de Passport y estrategias OAuth
+
 Configuramos **Passport** `/passport.js*` importando las librerías que utilizamos y las funciones que nos permiten el login.
 
 Con `seriealizeUser` y `deserializeUser` logramos que el objeto usuario quede almacenado en la sesión de la aplicación y asi poder utilizarlo a lo largo de ella.
@@ -74,11 +82,11 @@ var FacebookStrategy = require('passport-facebook').Strategy;
 
 module.exports = function(passport) {
 
-     passport.serializeUser(function(user, done) {
+passport.serializeUser(function(user, done) {
 		done(null, user);
 	});
 
-     passport.deserializeUser(function(obj, done) {
+passport.deserializeUser(function(obj, done) {
 		done(null, obj);
 	});
      passport.use(new TwitterStrategy({
@@ -90,7 +98,7 @@ module.exports = function(passport) {
 			if(err) throw(err);
 			if(!err && user!= null) return done(null, user);
 
-			var user = new User({
+var user = new User({
 				provider_id: profile.id,
 				provider: profile.provider,
 				name: profile.displayName,
@@ -111,7 +119,7 @@ module.exports = function(passport) {
 			if(err) throw(err);
 			if(!err && user!= null) return done(null, user);
 
-			var user = new User({
+var user = new User({
 				provider_id: profile.id,
 				provider: profile.provider,
 				name: profile.displayName,
@@ -124,6 +132,8 @@ module.exports = function(passport) {
 		});
 	}));
 ```
+
+## Gestión de API Keys y configuración
 
 Una buena práctica es **mantener las API Keys separadas del código fuente que subimos al repositorio**, en un archivo `config.js` (o en las variables de entorno) que luego importamos desde donde lo necesitemos.
 

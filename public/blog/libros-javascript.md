@@ -15,9 +15,13 @@ _Actualizado: Agosto 2018_
 
 Por suerte vivimos en un momento en el que podemos encontrar multitud de tutoriales, documentación y ejemplos para aprender cualquier lenguaje que nos interese.
 
+## Para iniciarse en JavaScript
+
 Si quieres iniciarte en JavaScript y lo único que conoces de él es que sirve para poner bonitas las páginas web, te recomiendo los siguientes recursos, libros y tutoriales que te harán cambiar de opinión.
 
 > Si nunca has usado Javascript, te recomiendo que sigas [este “track” de Codeacademy](http://www.codecademy.com/tracks/javascript). Es una buena forma de aprender a programar utilizando JavaScript como lenguaje. A través de sencillos ejercicios muy dinámicos y con una interfaz muy cuidada, aprendes lo básico en programación: funciones, bucles, estructuras de datos, objectos, etc… Lo tienes en [inglés](http://www.codecademy.com/tracks/javascript) y en [español](http://www.codecademy.com/es/tracks/javascript-latinamerica). (Yo recomiendo el inglés).
+
+## Para profundizar en JavaScript
 
 Si ya estás familiarizado con el lenguaje y quieres profundizar en patrones de diseño y buenas prácticas de JavaScript (algo que es bastante recomendable) estos libros puedes servirte de ayuda. No he encontrado traducción al español, pero si sabes un poco de inglés, son fáciles de seguir y muy buenos.
 
@@ -42,6 +46,8 @@ Una colección que no puede faltar en tu biblioteca (digital o no) técnica son 
 > [**JavaScript Patterns**](http://www.amazon.es/gp/product/B0046RERXE/ref=as_li_tf_tl?ie=UTF8&camp=3626&creative=24790&creativeASIN=B0046RERXE&linkCode=as2&tag=pa0f-21) (Stoyan Stefanov)
 
 Este libro es algo más denso que el anterior y mucho más técnico. Aborda las buenas prácticas que deben seguirse en JavaScript así como patrones de programación. Como programar bucles de una manera más eficiente, convenciones en el uso de nombres, uso de módulos, _prototype_, patrones de diseño (_Singleton_, _Iterator_, etc) y patrones de lectura del DOM. Interesante y recomendado cuando ya se tiene soltura con el lenguaje.
+
+## Libros sobre Node.js
 
 > [![cat-2](/images/libros-javascript/cat-2_v4iv9h.gif)](http://www.amazon.es/gp/product/B007XF8PJS/ref=as_li_tf_tl?ie=UTF8&camp=3626&creative=24790&creativeASIN=B007XF8PJS&linkCode=as2&tag=pa0f-21)
 
@@ -68,6 +74,8 @@ Muy completo y recomendado.
 > [**Building Node Applications with MongoDB and Backbone**](http://www.amazon.es/gp/product/B00AMT35TC/ref=as_li_tf_tl?ie=UTF8&camp=3626&creative=24790&creativeASIN=B00AMT35TC&linkCode=as2&tag=pa0f-21) (Mike Wilson)
 
 Y ya para rematar, el último libro recomendado. Escrito por uno de los autores de “[Node Up and Running](http://www.amazon.es/gp/product/B007XF8PJS/ref=as_li_tf_tl?ie=UTF8&camp=3626&creative=24790&creativeASIN=B007XF8PJS&linkCode=as2&tag=pa0f-21)” explica en 200 páginas con un ejemplo práctico de “Full-Stack JavaScript” el desarrollo de una red social empleando Node para el Servidor, MongoDB para la base de datos y Backbone como framework para la parte cliente.
+
+## Mi libro recomendado
 
 > [![aprendiendo-javascript-1](/images/libros-javascript/aprendiendo-javascript-1.png)](https://leanpub.com/aprendiendo-javascript) >[**Aprendiendo JavaScript**](https://leanpub.com/aprendiendo-javascript) (Carlos Azaustre)
 

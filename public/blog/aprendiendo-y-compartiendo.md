@@ -18,6 +18,8 @@ En la charla quise compartir mi experiencia de aprendizaje en los últimos años
 > 📺 [Ver vídeo en YouTube](https://www.youtube.com/watch?v=PO5igRZtlEU)
 />
 
+## Atrapado en la rueda del hámster
+
 **Hace unos años era como el _Señor Anderson_ en _Matrix_.** Trabajé en varias empresas
 _grises_ que no me aportaban nada. Trabajando siempre con tecnologías para mi gusto "rancias", sin opción
 de elegir ni de poder decidir nada.
@@ -27,6 +29,8 @@ Siempre lo mismo. Me sentía girando en una _rueda de hamster_, dónde la socied
 Llegaba a casa agotado. Sabía que tenía que haber algo mejor afuera, pero no tenía tiempo ni fuerzas para investigarlo, hasta que un día desperté.
 
 ![Elegimos nuestra pastilla roja](/images/aprendiendo-y-compartiendo/eligiendo-nuestra-pastilla-roja.jpg)
+
+## La pastilla roja: la decisión que lo cambió todo
 
 Cansado de esta situación, mi pareja y yo tomamos una decisión. Dejar nuestros trabajos "estables" y dar un cambio. **Elegimos la pastilla roja** y optamos por salir de España y **emigrar a Irlanda**.
 
@@ -40,6 +44,8 @@ lo suelen pintar los _gurús del emprendimiento_.
 
 > El mundo real al emprender no es un camino de rosas.
 
+## Una nueva vida, nuevas posibilidades
+
 En nuestra nueva vida, como _Freelancers_ nos dimos cuenta de la **cantidad de tiempo que ganábamos sin tener que desplazarnos a una oficina**, haciendo todas las gestiones online, y disfrutando de los proyectos que elegíamos a través de varias plataformas para "freelancers".
 
 ![La tecnología a nuestro alcance](/images/aprendiendo-y-compartiendo/la-tecnologia-a-tu-alcance.jpg)
@@ -51,6 +57,8 @@ En nuestra nueva vida, como _Freelancers_ nos dimos cuenta de la **cantidad de t
 Libros técnicos (en inglés), probando tecnologías, librerías y frameworks que por aquel entonces estaban empezando a despegar como **AngularJS** y **Node.js**. Y muchos cursos online, entre ellos los de [Platzi](https://platzi.com/r/carlos.azaustre/) en español y algunos en inglés en plataformas como [Coursera](http://coursera.org) o [CodeSchool](http://codeschool.com).
 
 ![Animación sobre aprendizaje en plataformas online como Coursera y CodeSchool](/images/aprendiendo-y-compartiendo/0X48aG.gif)
+
+## La experiencia como mejor maestra
 
 Pero no por estar todo el conocimiento a nuestro alcance lo vamos a aprender de forma automática. No es tan fácil y esto le cuesta a veces a la gente le frustra.
 
@@ -64,6 +72,8 @@ En el mundo del desarrollo web, qué es dónde me suelo mover habitualmente, ten
 La mejor manera de aprender es ir poco a poco. Probado y aprendiendo de los errores. No te van
 a salir las cosas que quieres a la primera. Te darás muchos golpes, pero es con ellos con los que
 aprenderás que es lo mejor y peor. En mi caso, cuando aprendía algo nuevo, escribía un tutorial, resumiendo paso a paso como lo había logrado. Estos tutoriales los he ido publicado en mi blog que abrí hace ya más de 3 años.
+
+## Compartir lo aprendido con la comunidad
 
 Si me sirven a mi, pueden servirle a mucha gente más.
 

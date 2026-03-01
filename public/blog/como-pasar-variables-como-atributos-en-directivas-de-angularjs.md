@@ -17,6 +17,8 @@ Una de las cosas que suele ser algo complicada de implementar es cuando en nuest
 
 En este artículo vamos a ver como hacerlo con un pequeño ejemplo.
 
+## Ejemplo: una directiva de caja de búsqueda
+
 Imaginemos que queremos implementar una directiva que sea una caja de búsqueda. Y lo queremos programar como directiva porque lo vamos a usar en más partes de nuestra aplicación y ese es su objetivo, que las directivas sean reutilizables. Queremos que sea algo así:
 
 ```html
@@ -36,15 +38,17 @@ Esta directiva tendrá el siguiente código HTML por debajo:
 </div>
 ```
 
+## Cómo pasar el atributo a la plantilla
+
 ¿Cómo hacemos para pasar el contenido del atributo `busqueda` al atributo `value` del `input` dentro de nuestra directiva? Veamos el código _JavaScript_ de la directiva, suponiendo que pertenezca a un módulo `myApp`.
 
 ```javascript
 (function () {
   "use strict";
 
-  angular.module("myApp").directive("searchBar", searchBar);
+angular.module("myApp").directive("searchBar", searchBar);
 
-  function searchBar() {
+function searchBar() {
     return {
       restrict: "E",
       scope: {
@@ -66,6 +70,8 @@ Veamos que hemos hecho aquí. Hemos pasado el contenido de la directiva como un 
 
 En la plantilla hemos indicado que el `value` del `input` sea `value={{busqueda}}`. Es decir, le pasamos como variable el contenido del atributo `busqueda` de la directiva.
 
+## Vinculación unidireccional con @
+
 Para poder hacer esto, y tambien, si el contenido que pasamos no es fijo, si no que viene de una variable, tipo:
 
 ```html
@@ -84,6 +90,8 @@ Indicándole `@` le estamos diciendo de manera unidireccional que el valor del a
 
 Usar `@` tiene un problema, al ser unidireccional, si queremos cambiar el valor de la propiedad `busqueda` del _scope_ de la directiva, no se cambia la propiedad en el controlador que estemos utilizando, y nos obloga a usar siempre la doble llave `{{ }}` si queremos enlazar la propiedad al controlador.
 
+## Vinculación bidireccional con =
+
 Para solucionar esto, podemos usar el caracter `=` que indica que la propiedad `busqueda` del _scope_ de la directiva sea exactamente la propiedad del _scope_ del controlador que estemos utilizando y tenga un atributo búsqueda.
 
 Con estos cambios quedaría así la definición:
@@ -92,9 +100,9 @@ Con estos cambios quedaría así la definición:
 (function () {
   "use strict";
 
-  angular.module("myApp").directive("searchBar", searchBar);
+angular.module("myApp").directive("searchBar", searchBar);
 
-  function searchBar() {
+function searchBar() {
     return {
       restrict: "E",
       scope: {

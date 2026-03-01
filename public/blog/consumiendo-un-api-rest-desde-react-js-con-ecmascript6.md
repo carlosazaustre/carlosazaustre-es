@@ -13,6 +13,8 @@ En los [anteriores](/empezando-con-react-js-y-ecmascript-6/) [artículos vimos c
 
 En el ejemplo de hoy vamos a llamar un API REST que nos devuelve la información de los empleados en formato JSON, y en nuestra aplicación React vamos a consumirlos usando nuevas funciones presentes en ECMAScript6 que después traduciremos a ES5 para que los navegadores que aún no soportan el nuevo estándar puedan correr la aplicación.
 
+## Peticiones AJAX en ES5 con XMLHttpRequest
+
 En ES5 si queríamos hacer una petición AJAX de manera nativa (Sin utilizar jQuery o un framework tipo AngularJS) usábamos el objeto `XMLHttpRequest`, de esta manera:
 
 ```js
@@ -27,6 +29,8 @@ xhr.onReadyStateChange = function () {
   }
 };
 ```
+
+## La función fetch en ECMAScript6
 
 Con ECMAScript6 tenemos acceso a una nueva función llamada `fetch` que a través de _Promesas_ nos simplifica y facilita el realizar una petición AJAX de forma nativa. Sería algo así:
 
@@ -60,6 +64,8 @@ es lo mismo que esto:
 
 Pasamos al código de verdad. En el [siguiente enlace de **github está el repositorio** que he usado para este ejemplo](https://github.com/carlosazaustre/react-fetch). Imaginemos que la siguiente URL: `http://taller-angular.carlosazaustre.es/empleados` me devuelve un JSON compuesto de un array de objetos _Empleado_ que quiero llamar desde mi aplicación web con React.
 
+## Estructura del componente con States
+
 Vamos a retomar el código del ejemplo anterior, pero cambiando algunas cosas. En primer lugar vamos a crear un nuevo componente `EmpleadoApp` que será el encargado de realizar la petición AJAX.
 
 En este componente vamos a utilizar los `states` de React. Los `props` se definen cuando se crean los componentes, es como una inicialización del componente. Los `states` en cambio hay que pensar en ellos como una colección de datos internos que afectan al renderizado del componente. Por lo tanto, el array de objetos _Empleado_ es un buen candidato para un `state`.
@@ -80,6 +86,8 @@ class EmpleadoApp extends React.Component {
 ```
 
 Hemos definido el objeto `empleados` dentro del `state` del componente, como un array vacío de inicio. Después se rellenará con la llamada AJAX.
+
+## Métodos del ciclo de vida en React
 
 Además de los `states`, cada componente tiene una serie de funciones o métodos pertenecientes a su ciclo de vida que podemos implementar, son los siguientes:
 
@@ -105,6 +113,8 @@ componentWillMount() {
 En la respuesta con los datos, la segunda promesa, _seteamos_ el `state` empleados con los datos recibidos. Vamos ahora a implementar el método Render.
 
 Como la llamada AJAX es asíncrona, tendremos un pequeño retardo hasta recibir los datos, y por tanto podemos mostrar un mensaje de _Cargando empleados..._ mientras se produce. Esto lo podemos realizar en la función `render()` con una sencilla comprobación del `state`:
+
+## Renderizado condicional mientras carga la API
 
 ```js
 render() {
@@ -135,7 +145,7 @@ class EmpleadoApp extends React.Component {
     this.state = { empleados: [] };
   }
 
-  componentWillMount() {
+componentWillMount() {
     fetch("http://taller-angular.carlosazaustre.es/empleados")
       .then((response) => {
         return response.json();
@@ -145,7 +155,7 @@ class EmpleadoApp extends React.Component {
       });
   }
 
-  render() {
+render() {
     if (this.state.empleados.length > 0) {
       return (
         <div className="container-fluid">
