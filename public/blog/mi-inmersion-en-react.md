@@ -9,6 +9,10 @@ related:
   - empezando-con-react-js-y-ecmascript-6
   - ejemplo-de-aplicacion-con-react-js-en-ecmascript-6
   - mi-experiencia-cambiando-de-angularjs-a-reactjs
+excerpt: >-
+  Experiencia personal aprendiendo React: componentes, estado, props y el
+  ecosistema. Reflexiones sobre la curva de aprendizaje y por qué React cambió
+  mi forma de hacer frontend.
 ---
 
 # Mi inmersión en React

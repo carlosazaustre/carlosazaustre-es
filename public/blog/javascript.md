@@ -9,6 +9,10 @@ related:
   - el-camino-para-ser-un-pro-en-javascript
   - ecmascript6
   - manejando-la-asincronia-en-javascript
+excerpt: >-
+  Guía completa de JavaScript: fundamentos del lenguaje, tipos de datos,
+  funciones, asincronía y las novedades de ES6+. El recurso definitivo para
+  aprender JS desde cero.
 ---
 
 # JavaScript. Un lenguaje para dominarlos a todos

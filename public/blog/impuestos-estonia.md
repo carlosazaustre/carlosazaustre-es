@@ -8,6 +8,9 @@ related:
   - e-residency
   - empresa-estonia
   - ser-autonomo-en-espana-pasos-para-ser-freelance
+excerpt: >-
+  Guía práctica sobre el sistema fiscal de Estonia para autónomos digitales:
+  cómo funciona el impuesto de sociedades, IVA y las ventajas de la e-Residency.
 ---
 
 # Impuestos de una empresa en Estonia

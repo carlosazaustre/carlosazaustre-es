@@ -14,6 +14,9 @@ related:
   - programando-en-node-js-con-raspberrypi-primeros-pasos
   - tessel-el-microcontrolador-programable-en-javascript
   - aplicacion-node-como-servicio-upstart
+excerpt: >-
+  Crea tu primera aplicación IoT con Raspberry Pi, Node.js y Cylon.js. Controla
+  LEDs desde el móvil mediante una interfaz web en tiempo real con Socket.io.
 ---
 
 # Primera aplicación web en RaspberryPi con NodeJS + CylonJS. Controlando LEDs desde el móvil

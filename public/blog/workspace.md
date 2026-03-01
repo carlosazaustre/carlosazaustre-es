@@ -9,6 +9,10 @@ related:
   - el-escritorio-de-un-desarrollador-web
   - mochila
   - pc-2023
+excerpt: >-
+  Mi setup de trabajo como desarrollador: escritorio elevable, monitor, teclado,
+  ratón, aplicaciones y herramientas que uso a diario para programar y crear
+  contenido.
 ---
 
 # Mi Setup 2022 - Trabajo en Remoto y desde casa

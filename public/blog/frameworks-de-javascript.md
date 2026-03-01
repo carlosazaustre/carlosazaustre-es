@@ -9,6 +9,10 @@ related:
   - mi-experiencia-cambiando-de-angularjs-a-reactjs
   - desarrollo-basado-en-componentes-con-vue-js
   - empezando-con-angular-js
+excerpt: >-
+  Comparativa de los principales frameworks de JavaScript: Angular, React y Vue.
+  Aprende sus diferencias, casos de uso y cuál elegir para tu próximo proyecto
+  web.
 ---
 
 # ¿Qué framework o librería de JavaScript elegir para mis desarrollos?

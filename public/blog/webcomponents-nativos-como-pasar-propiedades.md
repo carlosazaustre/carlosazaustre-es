@@ -9,6 +9,9 @@ related:
   - como-crear-webcomponent-de-forma-nativa
   - novedades-en-el-ecosistema-de-webcomponents-gracias-a-polymer-3-0
   - como-pasar-variables-como-atributos-en-directivas-de-angularjs
+excerpt: >-
+  Aprende a pasar propiedades a Web Components nativos usando atributos HTML y
+  la API customElements. Tutorial práctico sin frameworks, solo JavaScript puro.
 ---
 
 # WebComponents Nativos: Cómo pasar propiedades

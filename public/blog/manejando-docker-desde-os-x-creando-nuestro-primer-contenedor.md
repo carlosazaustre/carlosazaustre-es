@@ -11,6 +11,9 @@ related:
   - docker-como-entorno-de-desarrollo-local
   - desplegando-contenedores-docker-en-digital-ocean
   - aplicacion-node-como-servicio-upstart
+excerpt: >-
+  Primeros pasos con Docker en macOS: cómo instalar Docker, crear tu primer
+  contenedor y entender los conceptos básicos de imágenes, volúmenes y redes.
 ---
 
 # Manejando Docker desde OS X. Creando nuestro primer contenedor de NodeJS
