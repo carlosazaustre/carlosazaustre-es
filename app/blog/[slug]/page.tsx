@@ -56,13 +56,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const ogImage = `/api/og?title=${encodeURIComponent(post.title)}`;
 
+  const canonicalUrl = `https://carlosazaustre.es/blog/${slug}`;
+
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: {
+      canonical: canonicalUrl,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: "article",
+      url: canonicalUrl,
       publishedTime: post.date,
       images: [{ url: ogImage, width: 1200, height: 630, alt: post.title }],
     },

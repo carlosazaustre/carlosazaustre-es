@@ -23,6 +23,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${decoded} — Blog`,
     description: `${posts.length} artículo${posts.length !== 1 ? "s" : ""} sobre ${decoded}. JavaScript, React, TypeScript, arquitectura de software y más por Carlos Azaustre.`,
+    alternates: {
+      canonical: `https://carlosazaustre.es/blog/tag/${tag}`,
+    },
     openGraph: {
       title: `${decoded} — Carlos Azaustre`,
       description: `${posts.length} artículo${posts.length !== 1 ? "s" : ""} sobre ${decoded} en el blog de Carlos Azaustre.`,

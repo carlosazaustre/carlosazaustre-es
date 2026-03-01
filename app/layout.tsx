@@ -35,6 +35,7 @@ export const metadata: Metadata = {
       "Ingeniero de Software, Google Developer Expert y creador de contenido. Aprende JavaScript, React, Node.js y arquitectura de software.",
   },
   alternates: {
+    canonical: "https://carlosazaustre.es",
     types: {
       "application/rss+xml": [
         { url: "https://carlosazaustre.es/rss.xml", title: "Carlos Azaustre — Blog RSS" },

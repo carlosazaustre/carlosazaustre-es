@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     description:
       "Ingeniero de Software, Google Developer Expert y creador de contenido educativo. 20+ años haciendo cosas en la web.",
   },
+  alternates: {
+    canonical: "https://carlosazaustre.es/about",
+  },
 };
 
 const experience = [

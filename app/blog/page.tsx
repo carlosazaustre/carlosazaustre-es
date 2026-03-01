@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     description:
       "Artículos y tutoriales sobre JavaScript, TypeScript, React y arquitectura de software.",
   },
+  alternates: {
+    canonical: "https://carlosazaustre.es/blog",
+  },
 };
 
 export default function BlogPage() {

@@ -32,6 +32,9 @@ export const metadata: Metadata = {
     description:
       "Hardware, software y herramientas que uso a diario para programar y crear contenido.",
   },
+  alternates: {
+    canonical: "https://carlosazaustre.es/uses",
+  },
 };
 
 type Item = {

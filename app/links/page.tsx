@@ -7,6 +7,13 @@ import LinksSubscribeForm from "@/components/LinksSubscribeForm";
 export const metadata: Metadata = {
   title: "Carlos Azaustre — Links",
   description: "Todos mis links en un solo lugar.",
+  alternates: {
+    canonical: "https://carlosazaustre.es/links",
+  },
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default async function LinksPage() {
