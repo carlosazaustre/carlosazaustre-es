@@ -50,7 +50,7 @@ En nuestra nueva vida, como _Freelancers_ nos dimos cuenta de la **cantidad de t
 
 Libros técnicos (en inglés), probando tecnologías, librerías y frameworks que por aquel entonces estaban empezando a despegar como **AngularJS** y **Node.js**. Y muchos cursos online, entre ellos los de [Platzi](https://platzi.com/r/carlos.azaustre/) en español y algunos en inglés en plataformas como [Coursera](http://coursera.org) o [CodeSchool](http://codeschool.com).
 
-![](/images/aprendiendo-y-compartiendo/0X48aG.gif)
+![Animación sobre aprendizaje en plataformas online como Coursera y CodeSchool](/images/aprendiendo-y-compartiendo/0X48aG.gif)
 
 Pero no por estar todo el conocimiento a nuestro alcance lo vamos a aprender de forma automática. No es tan fácil y esto le cuesta a veces a la gente le frustra.
 

@@ -155,11 +155,11 @@ Y para verificar que si se cambia el atributo, se refleja en el interior del `te
 ```
 
 De esta forma, al cargar la página tendremos esto:
-![](/images/webcomponents-nativos-como-pasar-propiedades/Screen-Shot-2017-03-22-at-13.15.40.png)
+![Captura de pantalla de un WebComponent renderizado en el navegador mostrando texto dinámico vía setA](/images/webcomponents-nativos-como-pasar-propiedades/Screen-Shot-2017-03-22-at-13.15.40.png)
 
 Y después, tras cambiar el valor de `text` por el texto: "Lo quiero ahora!" tendríamos esto:
 
-![](/images/webcomponents-nativos-como-pasar-propiedades/Screen-Shot-2017-03-22-at-13.15.44.png)
+![Web Component renderizado mostrando el texto Lo quiero ahora tras actualizar la propiedad text](/images/webcomponents-nativos-como-pasar-propiedades/Screen-Shot-2017-03-22-at-13.15.44.png)
 
 Puedes ver esto en funcionamiento en el siguiente **[CodePen](https://codepen.io/carlosazaustre/project/editor/ArjknA/)**
 
@@ -348,11 +348,11 @@ Si en nuestro `index.html` modificamos el componente con el nuevo atributo, tend
 <sell-button intro="Oferta" text="Comprar Ahora"></sell-button>
 ```
 
-![](/images/webcomponents-nativos-como-pasar-propiedades/Screen-Shot-2017-03-22-at-17.41.05.png)
+![Resultado visual del componente sell-button con atributos intro y text renderizados en el navegador](/images/webcomponents-nativos-como-pasar-propiedades/Screen-Shot-2017-03-22-at-17.41.05.png)
 
 Y si hacemos como con el ejemplo anterior, una función de _timeout_ que cambie las propiedades pasados 2 segundos, tendremos el nuevo resultado:
 
-![](/images/webcomponents-nativos-como-pasar-propiedades/Screen-Shot-2017-03-23-at-09.18.08.png)
+![Captura del resultado tras aplicar un timeout que actualiza las propiedades de un WebComponent](/images/webcomponents-nativos-como-pasar-propiedades/Screen-Shot-2017-03-23-at-09.18.08.png)
 
 En el mismo [CodePen](https://codepen.io/carlosazaustre/project/editor/ArjknA/) tienes el código y demo de este ejemplo (En este caso en el archivo `sell-button-copy.html`.
 

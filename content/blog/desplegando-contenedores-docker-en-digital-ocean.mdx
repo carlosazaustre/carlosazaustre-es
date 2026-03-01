@@ -172,7 +172,7 @@ $ docker-compose up
 
 Si probamos el API en `http://dockerhost:3000/employees` veremos que funciona:
 
-![](/images/desplegando-contenedores-docker-en-digital-ocean/Screen-Shot-2015-06-30-at-10-39-15.png)
+![Respuesta del API REST en dockerhost:3000/employees tras ejecutar docker-compose up](/images/desplegando-contenedores-docker-en-digital-ocean/Screen-Shot-2015-06-30-at-10-39-15.png)
 
 ---
 
@@ -184,7 +184,7 @@ De nuevo vamos a usar [DigitalOcean](https://www.digitalocean.com/?refcode=f716d
 
 Para poder crear servidores con [DigitalOcean](https://www.digitalocean.com/?refcode=f716de9860aa) necesitamos un token que nos dé acceso a su API. Lo podemos conseguir clickando en el menu API dentro de nuestra cuenta.
 
-![](/images/desplegando-contenedores-docker-en-digital-ocean/Screen-Shot-2015-06-30-at-10-59-39.png)
+![Captura de pantalla del menú API en DigitalOcean para obtener el token de acceso](/images/desplegando-contenedores-docker-en-digital-ocean/Screen-Shot-2015-06-30-at-10-59-39.png)
 Será un número parecido a este: `7ghr3247fg98429jhd5dufhwg325de9ff1ab`. Lo copiamos (Ten cuidado de no compartir este número con nadie, o tendrán acceso a tu cuenta)
 
 Ahora desde la linea de comandos, gracias al _Access Token_ de Digital Ocean y su driver podemos crear un droplet con el nombre `iojsapi_DO` con el comando `docker-machine create`:
@@ -213,7 +213,7 @@ $ docker-compose up
 
 Podemos ir a un navegador o hacer uso de la aplicación _Postman_ para probar nuestra API que estará corriendo en la IP que DigitalOcean nos ha proporcionado y el puerto `3000`. En mi caso en `http://45.55.195.22:3000`
 
-![](/images/desplegando-contenedores-docker-en-digital-ocean/Screen-Shot-2015-06-30-at-11-23-32.png)
+![Captura de pantalla de la API respondiendo en el puerto 3000 de DigitalOcean](/images/desplegando-contenedores-docker-en-digital-ocean/Screen-Shot-2015-06-30-at-11-23-32.png)
 
 ¿Notas como tu cerebro ha crecido un poco? :)
 

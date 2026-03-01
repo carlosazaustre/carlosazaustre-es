@@ -13,9 +13,13 @@ Si seguimos los pasos del [desarrollo web moderno](http://www.slideshare.net/Car
 
 Una opción es [usar Nginx](/como-configurar-nginx-con-node-js-en-produccion/), no solo como servidor web o balanceador de carga, si no también como Proxy inverso para redirigir las peticiones según la URL.
 
+## El escenario: Frontend y API en el mismo dominio
+
 Imaginemos que nuestra aplicación frontend está almacenada en el directorio de nuestro servidor `/var/www/` y que tenemos nuestra API en Node.js corriendo en `localhost:3000`
 
 Ahora lo que queremos que la parte cliente y todas las rutas del frontend (que pueden ser servidas con AngularJS) se sirvan a través de la ruta `/`. Y que nuestra API en Node.js se sirva a través de la ruta `/api`, en plan que si escribimos `http://midominio.com/` sirva el frontend y `http://midominio.com/api` sirva el API y podamos hacer las peticiones AJAX a esa URL.
+
+## Configuración de Nginx como proxy inverso
 
 Esto lo conseguimos con el siguiente fichero de configuración de Nginx:
 
@@ -57,11 +61,15 @@ server {
 
 Es importante, además de indicar para cada URL, que ruta tomar, los siguientes campos:
 
+### try_files y compatibilidad con HTML5 Pushstate
+
 ```shell
 try_files $uri $uri/ /index.html =404;
 ```
 
 Esto nos permite que el HTML5Pushstate que en ocasiones usamos en AngularJS, nos funcione. De otra manera es posible que tengamos fallos y errores cuando sirvamos las vistas del Frontend en Angular.js
+
+### Habilitando CORS para la API
 
 ```shell
 proxy_set_header 'Access-Control-Allow-Origin' 'http://midominio.com';
@@ -69,14 +77,4 @@ proxy_set_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS, PUT, DELETE
 proxy_set_header 'Access-Control-Allow-Headers' 'X-Requested-With,Accept,Content-Type, Origin';
 ```
 
-Esto habilita CORS para nuestro API. Aunque lo tengamos habilitado en nuestra configuración de Express dentro de Node, es conveniente configurarlo en NGINX, ya que es la primera barrera que pasan nuestras peticiones HTTP y así no entramos en conflicto
-
-```shell
-proxy_redirect off;
-proxy_buffering on;
-proxy_set_header	origin	'http://midominio.com';
-```
-
-También es importante declarar estos campos, ya que si no nuestro API puede no funcionar correctamente, con `redirect` a `off` y `buffering` a `on` nos evitamos sustos.
-
-Por último indicar la cabecera `origin` con la URL de nuestro dominio, para que el Cross-Origin no se vea afectado.
+Esto habilita CORS para nuestro API. Aunque lo tengamos habilitado en nuestra configuración de Express dentro de Node, es conveniente configurarlo en NGINX, ya que es

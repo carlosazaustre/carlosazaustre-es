@@ -18,10 +18,10 @@ Como Docker utiliza como base el sistema operativo Linux, en OS X no podemos uti
 Para ejemplificar la estructura de cómo está organizado Docker en nuestro sistema operativo, estas imágenes sacadas de la documentación oficial de Docker nos resultan de ayuda.
 
 Si nuestro equipo fuera Linux, esta sería la organización:
-![](/images/manejando-docker-desde-os-x-creando-nuestro-primer-contenedor/linux_docker_host.png)
+![Diagrama de arquitectura del Docker Host en un sistema Linux](/images/manejando-docker-desde-os-x-creando-nuestro-primer-contenedor/linux_docker_host.png)
 
 Y en el caso de un equipo Mac con OS X, es ésta:
-![](/images/manejando-docker-desde-os-x-creando-nuestro-primer-contenedor/mac_docker_host.png)
+![Diagrama de arquitectura Docker en un equipo Mac con OS X y su Docker Host](/images/manejando-docker-desde-os-x-creando-nuestro-primer-contenedor/mac_docker_host.png)
 
 La diferencia es que en Linux, nuestro Host es el mismo sistema operativo. Y en OSX, el Host es la máquina virtual que tiene Linux. Lo complicado aquí es el acceso, las IPs y el mapeo de los puertos, pero en este post vamos a explicar como solucionar esto y utilizarlo de manera que la máquin virtual no _de guerra_ ;)
 

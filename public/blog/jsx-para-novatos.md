@@ -13,9 +13,13 @@ tags: []
 
 De primeras te puede parecer que estás mezclando código HTML dentro de tus ficheros JavaScript, pero nada más lejos de la realidad. A continuación te lo explico.
 
+## Por qué React necesita crear elementos
+
 React al basar el desarrollo de apps en componentes, necesitamos crear elementos HTML que definan nuestro componente, por ejemplo `<div>`, `<p>`, `<img>`, etc...
 
 También necesitaremos indicar cuando se trata de componentes creados por nosotros con React, como puede ser un ``, ``, etc...
+
+## Creando elementos con JavaScript puro
 
 Todo esto podemos hacerlo con JavaScript con los métodos que nos ofrece React como `React.createElement`. Veamos un ejemplo:
 
@@ -69,6 +73,8 @@ Si tuviésemos el siguiente CSS:
 El resultado en el navegador sería así:
 ![resultado react jsx](/images/jsx-para-novatos/ejemplo-jsx.png)
 
+## El mismo ejemplo con sintaxis JSX
+
 Ahora veamos como se haría lo mismo pero empleando sintaxis JSX:
 
 ```javascript
@@ -83,12 +89,14 @@ ReactDOM.render(Icon, document.getElementById("app"));
 
 Como puedes ver es mucho más práctico y legible esta sintaxis. Es prácticamente como escribir HTML pero no estás escribiendo HTML, es JavaScript.
 
+## Cosas a tener en cuenta
+
 Lo único que has de tener en cuenta es que hay algunas palabras reservadas en JavaScript y JSX te obliga a nombrar algunos atributos de otra manera, como es el caso de las `class` que para definir clases de CSS que con JSX debemos escribir `className`.
 
 A medida que nuestra aplicación va creciendo y tenemos componentes más grandes, que manejan distintos eventos, esta forma de usar JSX nos va a ayudar mucho a agilizar nuestros desarrollos.
 
 Recuerda, no es escribir HTML dentro de JS, es una forma de crear JS de una manera más práctica ;)
 
-Para poder utilizar JSX, necesitarías añadir una librería extra a tu HTML, pero es más aconsejable utilizar un _bundler_ integrado en tu entorno de desarrollo, como puede ser WebPack o [Browserify](/browserify-desarrollando-tu-frontend-como-en-node-js/), y que éste le aplique la transformación antes de publicar tu código en producción. De esto hablaré en próximas entradas.
+## Cómo utilizar JSX en tu proyecto
 
-Si quieres **profundizar más sobre JSX**, tienes este [tutorial interactivo](http://buildwithreact.com/tutorial/jsx) y también la [documentación oficial de Facebook](https://facebook.github.io/react/docs/jsx-in-depth.html).
+Para poder utilizar JSX, necesitarías añadir una librería extra a tu HTML, pero es más aconsejable utilizar un _bundler_ integrado en tu entorno de desarrollo, como puede ser WebPack o [Browserify](/browserify-desarrollando-tu-frontend-como-en-node-js/), y que éste le aplique la transformación antes de publicar

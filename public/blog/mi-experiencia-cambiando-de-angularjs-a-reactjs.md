@@ -41,7 +41,7 @@ El problema llegó cuando JavaScript evolucionó y la llegada del [nuevo estánd
 
 ## JavaScript evoluciona: ES6
 
-![](/images/mi-experiencia-cambiando-de-angularjs-a-reactjs/ecmascript-6.png)
+![Logotipo de ECMAScript 6 con el número 6 destacado sobre fondo amarillo](/images/mi-experiencia-cambiando-de-angularjs-a-reactjs/ecmascript-6.png)
 Ahora tenemos gestión de módulos de forma nativa (No es soportado actualmente pero está ahi). Tenemos [Promesas](/manejando-la-asincronia-en-javascript/) también de forma nativa, el [API de Fetch](/consumiendo-un-api-rest-desde-react-js-con-ecmascript6/), etc... Un montón de nuevas funcionalidades de las que no necesitamos ninguna librería o framework para ayudarnos (Salvo _Babel_ para transpilar código).
 
 Si quieres usar ES6 en Angular 1x, la cosa se complica bastante. Angular tiene su propio sistema de módulos y si quieres utilizar los de ES6 (o utilizar `require` con Browserify) Tienes que meter prácticamente cada controlador en un módulo de Angular, y luego exportarlo con ES6, etc...
@@ -52,7 +52,7 @@ Si ES6 te facilita la vida a la hora de programar en JavaScript, unirlo con Angu
 
 ## El nacimiento de los WebComponents y Angular 2
 
-![](/images/mi-experiencia-cambiando-de-angularjs-a-reactjs/web-components.png)
+![Diagrama explicativo sobre Web Components y su influencia en Angular 2](/images/mi-experiencia-cambiando-de-angularjs-a-reactjs/web-components.png)
 Paralelamente al desarrollo de Angular, se propuso la especificación de los [WebComponents](/como-crear-webcomponent-de-forma-nativa/) y fue el inicio de la programación orientada a componentes. Polymer y React seguían esa arquitectura y en Angular 1x se podía conseguir, [utilizando directivas como componentes](/angular-js-directivas-como-componentes/). Al final una directiva de Angular es un componente (tiene un tag HTML) y encapsula una plantilla HTML y un controlador con JavaScript.
 
 De hecho a partir de la versión 1.5 aparece la función `component()` que permite hacer justo eso, transformar una directiva en componente.
@@ -69,7 +69,7 @@ Durante todo ese tiempo, React fue una de las librerías que más despegó y emp
 
 ## Mis primeros pasos con React
 
-![](/images/mi-experiencia-cambiando-de-angularjs-a-reactjs/react-first-steps.png)
+![Primeros pasos con React tras migrar desde AngularJS](/images/mi-experiencia-cambiando-de-angularjs-a-reactjs/react-first-steps.png)
 Entonces, poco antes del verano de 2016, [empecé a probar React](/mi-inmersion-en-react/), vi lo mucho que había evolucionado desde la primera vez que lo vi en 2015. Pude ver lo bien que se integraba con el nuevo estándar de JavaScript y la sencillez con la que se podían hacer las cosas.
 
 Las únicas pegas que encontré en inicio, eran la [sintáxis JSX](/jsx-para-novatos/). Al principio crees que es HTML y claro, añadir HTML a código JavaScript no es lo que se debe hacer, pero luego comprendes que no es HTML, es código JavaScript pero escrito de una forma más sencilla de programar y de entender.

@@ -11,13 +11,21 @@ tags: []
 
 ![tessel-logo-horizontal](/images/tessel-el-microcontrolador-programable-en-javascript/tessel-logo-horizontal_ci3qhl.png)
 
+## ¿Qué es Tessel?
+
 Tessel, también conocido como [Technical.io](http://technical.io), es un proyecto de Hardware _Open-Source_ que consiste en un micro-controlador, del estilo a [Arduino](http://www.arduino.cc/), pero programable con JavaScript, demostrando una vez más la versatilidad de este [lenguaje de programación ya presente en todas las partes del desarrollo web](/javascript/).
 
 ![teardown2](/images/tessel-el-microcontrolador-programable-en-javascript/teardown2_mc3p3f.png)
 
+## Módulos y características
+
 Además de la placa y la MicroSD, se han desarrollado diferentes módulos para añadirle mas funcionalidad como son el acelerómetro, un chip RFID, audio, bluetooth, un servo-motor, relés, y sensores de temperatura y humedad. Puede programarse directamente desde un USB, sin necesidad de utilizar cables ethernet, WiFi, teclados externos y pantallas externas como pasa con el mini-ordenador [RaspberryPi](http://www.raspberrypi.org/)
 
+## Campaña de crowdfunding
+
 Ayer, día 5 de septiembre [lanzaron su campaña de crowdfunding para conseguir 50.000$](http://www.dragoninnovation.com/projects/22-tessel) y así poder poner en producción el prototipo y sacarlo a la venta por un precio razonable y en solo 3 horas tras el lanzamiento de la campaña superaron el 100% de la financiación necesaria.
+
+## Mi pedido
 
 Yo por mi parte me apunté a la lista de correo y ya he pre-pedido mi Tessel, la versión básica con un módulo de clase A, posiblemente pida el acelerómetro o el sensor de temperatura. El _Master pack_ también está muy interesante ya que incluye todos los sensores, pero me parecía un precio demasiado elevado.
 

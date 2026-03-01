@@ -15,7 +15,7 @@ Si [leístes el último post](/google-launchpad-week-dia-1-producto/), sabrás q
 
 Está siendo una gran experiencia. El día de ayer fue dedicado a **Producto** y hoy ha sido dedicado a la **UX**, usabilidad y diseño en general de nuestras aplicaciones. Sólo han pasado dos días y ya parece que llevamos más de una semana debido a la intensidad y la cantidad de información, feedback y orientación.
 
-![](/images/launchpad-week-madrid-dia-2-ux/2015/07/IMG_20150707_101355.jpg)
+![Asistentes en la sesión de UX de Launchpad Week Madrid 2015](/images/launchpad-week-madrid-dia-2-ux/2015/07/IMG_20150707_101355.jpg)
 
 El día de hoy ha comenzado con una charla titulada "El UX lo es todo" de [Eusebio Reyero](https://twitter.com/ereyero), CEO de [Hackity](http://hackity.com) que ha sido muy interesante y nos ha abierto mucho los ojos. Os dejo con una serie de _links_ que nos ha compartido en su presentación para todo aquel que quiera mejorar el UX de sus aplicaciones:
 
@@ -37,7 +37,7 @@ Después nos ha mentorizado y nos ha enseñando muchas más cosas que UX, hemos 
 
 Como desarrolladores tendemos a hacer lo que más nos gusta, programar. Implementamos funcionalidades sin probarlas y diseñamos nuestras webs en base a nuestros gustos. Es importante **medir** lo que hacen nuestros usuarios, que son los que mandan, son los que usan nuestra aplicación. **Analizar** los datos obtenidos y **decidir** nuestros diseños e iteracciones en base a ello.
 
-![](/images/launchpad-week-madrid-dia-2-ux/CJUg_1cWwAAkvlB-jpg-large.jpeg)
+![Grupos de profesionales colaborando en un taller de UX durante la Launchpad Week Madrid](/images/launchpad-week-madrid-dia-2-ux/CJUg_1cWwAAkvlB-jpg-large.jpeg)
 Foto por [@TetuanValley](http://twitter.com/tetuanvalley)
 
 Los demás mentores que nos han prestado su tiempo han sido [Marc Borràs](https://twitter.com/marcborras), [Silvia Pérez](https://www.linkedin.com/profile/view?id=45043302&authType=NAME_SEARCH&authToken=gO3T&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2Cidx%3A1-1-1%2CtarId%3A1436299910184%2Ctas%3Asilvia%20p%C3%A9rez%20felipe), [Nacho Rodríguez](https://www.linkedin.com/profile/view?id=4417489&authType=NAME_SEARCH&authToken=btCy&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2Cidx%3A1-1-1%2CtarId%3A1436299995808%2Ctas%3Anacho%20rod) y [David Alayón](https://twitter.com/DavidAlayon). Gente muy inteligente y profesional en su campo que nos ha dado muchos tips, consejos y visión que nos ayudarán a mejorar Chefly. Muchas gracias por vuestro tiempo.

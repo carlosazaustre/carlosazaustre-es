@@ -17,7 +17,7 @@ Primero de todo, decir que trabajo normalmente en un [MacBook Air 13″](http://
 
 #### Herramientas habituales
 
-![](/images/herramientas-utiles-para-desarrolladores/8251028685_c9f6cd4f72_z_cqdwwj.jpg)
+![Conjunto de herramientas habituales utilizadas por desarrolladores web](/images/herramientas-utiles-para-desarrolladores/8251028685_c9f6cd4f72_z_cqdwwj.jpg)
 
 - **Editor de texto**: [Sublime Text 2](http://www.sublimetext.com/), Multiplataforma. Escrito en Python. Muy rápido, y ligero. Contiene numerosos paquetes y funcionalidades que lo hacen ser EL EDITOR. Bien es cierto que si programas en Objective-C te es más útil XCode, y si lo haces para Android te sea mejor (aunque sea un dolor) utilizar Eclipse. Pero si te dedicas al desarrollo web, es lo mejor.
 

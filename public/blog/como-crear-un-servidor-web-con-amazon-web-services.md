@@ -15,7 +15,7 @@ La forma antigua de hacer esto era tener un hosting web y subir los archivos por
 
 La que más recomiendo para “trastear” es abrirse una cuenta en [Amazon Web Services (AWS)](http://aws.amazon.com/) y lanzar una instancia [Elastic Compute Cloud (EC2)](http://aws.amazon.com/ec2/) que básicamente consiste en una máquina virtual Linux con al que podemos hacer lo que queramos, y lo más importante, **Amazon te da 1 año gratis para usarlo**, después del año te cobrará por horas de uso y almacenamiento, pero la instancia puedes pararla y terminarla cuando desees. En caso de que quieras dejarla siempre corriendo, puedes llegar a pagar unos 16€ al mes.
 
-![](/images/como-crear-un-servidor-web-con-amazon-web-services/amazon_com_web_services_qepgql.jpg)
+![Panel de control de Amazon Web Services para gestionar una instancia EC2](/images/como-crear-un-servidor-web-con-amazon-web-services/amazon_com_web_services_qepgql.jpg)
 
 El primer paso como digo es hacerse una cuenta en Amazon Web Services, si tienes cuenta en la tienda de Amazon te sirve la misma. Para ello vamos a [aws.amazon.com](http://aws.amazon.com) y pulsamos en **Get Started for free - Launch virtual machines and apps in minutes**
 

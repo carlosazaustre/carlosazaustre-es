@@ -27,28 +27,28 @@ En éste artículo veremos como desplegarla en producción, con Git y [DigitalOc
 Vamos a utilizar [Digital Ocean](https://www.digitalocean.com/?refcode=f716de9860aa) como IaaS (**I**nfrastructure **a**s **a** **S**ervice) por su facilidad de uso y configuración. Además si te registras con este [link, **consigues 10$ gratis**](https://www.digitalocean.com/?refcode=f716de9860aa), lo que suponen 2 meses de uso continuado de la instancia más pequeña.
 
 Despues de registrarnos, creamos un Droplet.
-![](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-27-at-23-13-18.png)
+![Pantalla de creación de un Droplet en el panel de control de DigitalOcean](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-27-at-23-13-18.png)
 
 Si tienes problemas a la hora de configurar DigitalOcean, puedes seguir [éste post](/como-configurar-tu-servidor-cloud-en-digitalocean/) que escribí hace un tiempo.
 
 Le ponemos un nombre, por ejemplo `iojs-api` y elegimos el tamaño más pequeño (5$ al mes) que para este ejemplo nos sirve más que de sobra.
 
-![](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-27-at-23-38-03.png)
+![Captura del panel de Digital Ocean seleccionando el plan de 5$ para crear un Droplet](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-27-at-23-38-03.png)
 
 vamos a **elegir Ubuntu 14.04 como distribución del sistema** y en la región por defecto que es Nueva York:
 
-![](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-27-at-23-52-27.png)
+![Selección de Ubuntu 14.04 como sistema operativo y región Nueva York en DigitalOcean](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-27-at-23-52-27.png)
 
 No se te olvide crear una clave SSH para poder acceder al servidor desde la terminal sin tener que usar una contraseña. Así es más seguro y más cómodo. [Aquí](https://help.github.com/articles/generating-ssh-keys/) y [aquí](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2) puedes ver como [generar una clave RSA para SSH](https://help.github.com/articles/generating-ssh-keys/).
 
-![](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-27-at-23-52-49.png)
+![Captura de pantalla del proceso de generación de claves SSH RSA en terminal](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-27-at-23-52-49.png)
 
 ---
 
 ### Instalación del entorno
 
 Una vez esté creado el droplet podemos acceder desde la terminal vía SSH, donde `45.55.66.47` es la IP de nuestro servidor
-![](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-28-at-00-17-42.png)
+![Terminal SSH conectada a un droplet de Digital Ocean mostrando la IP del servidor](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-28-at-00-17-42.png)
 
 ```shell
 $ ssh root@45.55.66.47
@@ -90,7 +90,7 @@ ssh-rsa AAAAB3N[...]lGEr root@iojs-api
 ```
 
 la copiamos en GitHub, en las preferencias del repositorio. Ya entonces podremos hacer **pulls** e incluso cambios al repositorio.
-![](https://carlosazaustre.es/blog/content/images/2015/06/Screen-Shot-2015-06-28-at-11-31-32.png)
+![La imagen no está disponible (404), pero por el contexto —`root@iojs-api`, SSH key copiada a las pre](https://carlosazaustre.es/blog/content/images/2015/06/Screen-Shot-2015-06-28-at-11-31-32.png)
 
 Clonamos el proyecto. En mi caso lo tengo en la url: `git@github.com:carlosazaustre/iojs-api-example.git`
 Y posteriormente hacemos `npm install` para instalar las dependencias definidas en el `package.json` del proyecto
@@ -116,14 +116,14 @@ con `start index.js` iniciamos el API, y con `--next-gen-js --interpreter iojs` 
 
 Si ahora vamos a un navegador a la URL `http://45.55.66.47:3000/employees` o a la IP que te haya asignado Digital Ocean, podemos ver el siguiente resultado.
 
-![](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-28-at-11-38-44.png)
+![Respuesta JSON del endpoint /employees en el navegador con IP de Digital Ocean](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-28-at-11-38-44.png)
 
 Si hacemos pruebas, como un `POST` con un objeto empleado y luego de nuevo un `GET` tendríamos un resultado como el siguiente:
 
-![](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-28-at-12-03-58.png)
+![Resultado de pruebas POST y GET en la API REST desplegada en Digital Ocean](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-28-at-12-03-58.png)
 
 Y con un `GET` específico
-![](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-28-at-12-04-14.png)
+![Respuesta de petición GET específica a la API REST en Digital Ocean](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-28-at-12-04-14.png)
 
 Ya tenemos nuestro API disponible, si queremos camuflar el puerto y la IP de nuestro servidor, podemos utilizar un dominio propio o un subdominio (por ejemplo: `api.midominio.com`) y seguir este [post de cómo configurar un proxy inverso con Nginx](/como-servir-tu-api-rest-en-node-js-a-traves-de-nginx/).
 

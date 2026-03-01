@@ -13,19 +13,19 @@ Llegó el primer día dedicado a la **tecnología** en la semana de [Google Laun
 
 Hoy hemos contado con dos grandes charlas impartidas por [Andrés L. Martínez](http://twitter.com/davilagrau) (más conocido como _Almo_) y [Jorge Barroso](http://twitter.com/flipper83) (más conocido como _Flipper83_)
 
-![](/images/google-launchpad-madrid-dia-4-tecnologiaIMG_20150709_100654.jpg)
+![Almo y Flipper83 durante la sesión de tecnología en Google Launchpad Madrid](/images/google-launchpad-madrid-dia-4-tecnologiaIMG_20150709_100654.jpg)
 
 _Almo_ nos ha presentado las cifras del mercado _mobile_, muy interesantes, quedando como resumen que casi el 80% de la población utiliza Android, pero la monetización de las apps llega más de la parte de iOS.
 
-![](/images/google-launchpad-madrid-dia-4-tecnologiaIMG_20150709_101925.jpg)
-![](/images/google-launchpad-madrid-dia-4-tecnologiaIMG_20150709_102256.jpg)
-![](/images/google-launchpad-madrid-dia-4-tecnologiaIMG_20150709_101251.jpg)
+![Diapositiva con estadísticas de uso Android vs iOS y monetización de apps en Google Launchpad Madrid](/images/google-launchpad-madrid-dia-4-tecnologiaIMG_20150709_101925.jpg)
+![Presentación sobre monetización de apps iOS y Android en Google Launchpad Madrid 2015](/images/google-launchpad-madrid-dia-4-tecnologiaIMG_20150709_102256.jpg)
+![Sesión de tecnología en Google Launchpad Madrid 2015 con participantes y ponentes](/images/google-launchpad-madrid-dia-4-tecnologiaIMG_20150709_101251.jpg)
 
 Fuente: [Developer Economics](http://developereconomics.com/go)
 
 Después _Flipper_ nos ha contado su experiencia como "Mobile Developer for Startups" que puede aplicarse a cualquier tipo de App, incluidas las webs.
 
-![](/images/google-launchpad-madrid-dia-4-tecnologiaIMG_20150709_110552.jpg)
+![Ponente compartiendo su experiencia como Mobile Developer for Startups en Google Launchpad Madrid](/images/google-launchpad-madrid-dia-4-tecnologiaIMG_20150709_110552.jpg)
 
 De él hemos sacado varias cosas importantes, como:
 
@@ -65,7 +65,7 @@ Javier nos ha recomendado unas cuantas herramientas muy útiles para el análisi
 
 Ricardo nos ha dado un buen tip sobre el manejo de ramas en Git y realizar despliegues, utilizando la teoría del _Patrón Tofu_.
 
-![](/images/google-launchpad-madrid-dia-4-tecnologiagit-workflow-release-cycle-2feature.png)
+![Diagrama de flujo Git con ciclo de releases y ramas de features según el patrón Tofu](/images/google-launchpad-madrid-dia-4-tecnologiagit-workflow-release-cycle-2feature.png)
 Fuente: [Atlassian](https://www.atlassian.com/pt/git/workflows#!workflow-gitflow)
 
 Básicamente consiste en que las ramas "superiores" se encuentre el código o versión más estable, y en las "inferiores" la más sujeta a cambios. Por ejemplo, la rama de producción siempre por encima de "Staging" y esta de "Development". De esta manera siempre podemos volver a versiones anteriores fácilmente y tener versiones estables fácilmente localizables.

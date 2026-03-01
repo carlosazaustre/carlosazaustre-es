@@ -17,7 +17,7 @@ Hoy ha tocado el tema del **Marketing Digital**, como vender tu producto. Algo q
 
 La charla del día ha sido impartida por [Jorge Galido](http://twitter.com/Jorge__Galindo), Jefe de Producto en [47Degrees](http://www.47deg.com/) Que nos ha contado la estrategia que siguieron cuando lanzaron un aplicación Launcher para Android, llamada 9cards. Comunmente se le llama Growth Hacking, pero me gusta más el nombre que Jorge ha empleado, _Marketing pa' tiesos_.
 
-![](/images/chefly-en-google-launchpad-madrid-marketing/IMG_20150708_102933.jpg)
+![Sesión de marketing en Google Launchpad Madrid con el equipo de Chefly](/images/chefly-en-google-launchpad-madrid-marketing/IMG_20150708_102933.jpg)
 
 Cómo con una cantidad no demasiado grande de dinero, invertirla en publicidad y seguir una estrategia inteligente para conseguir el mismo rendimiento que si no aplicasemos ninguna estrategia y gastasemos 50 veces más.
 

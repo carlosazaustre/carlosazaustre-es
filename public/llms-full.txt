@@ -1,5 +1,5 @@
 # Carlos Azaustre — Blog completo en Markdown
-> Generado automáticamente: 2026-03-01T17:20:13.640Z
+> Generado automáticamente: 2026-03-01T17:48:10.189Z
 > Fuente: https://carlosazaustre.es/blog
 > Este archivo contiene todos los artículos del blog en formato Markdown limpio,
 > organizado para ser ingestado por modelos de lenguaje (LLMs).
@@ -4754,6 +4754,8 @@ Sin embargo esa forma, aunque es la más sencilla y práctica, no es la más esc
 > 📺 [Ver vídeo en YouTube](https://www.youtube.com/watch?v=b0ozkpDiplU)
 />
 
+## ¿Qué es un Single File Component?
+
 Para solventar esto, existe una solución que junto con Webpack y un módulo (`vue-loader`) nos permite tener en un único fichero la vista (template), el diseño (css) y la lógica (javascript). Estos ficheros tienen una extensión `.vue` y tienen la siguiente forma:
 
 ```html
@@ -4769,6 +4771,8 @@ Para solventar esto, existe una solución que junto con Webpack y un módulo (`v
   /* Estilos CSS */
 </style>
 ```
+
+## Versatilidad con preprocesadores y lenguajes alternativos
 
 Lo bueno de éste fichero, es que al no ser un fichero final de producción, es un fichero de desarrollo que luego Webpack interpreta y extrae las diferentes partes a sus ficheros correspondientes, nos da mucha versatilidad, por ejemplo:
 
@@ -4787,6 +4791,8 @@ Lo único que tienes que hacer es indicar en cada _tag_ que tipo estás utilizan
 ```
 
 Esto lo hace muy versátil y práctico para equipos de trabajo dónde haya personas dedicadas al diseño y maquetación, y otras personas encargadas del código. De esta manera, la persona dedicada al CSS puede utilizar el preprocesador que prefiera, el desarrollador utilizar TypeScript si lo prefiere, etc...
+
+## Convirtiendo un componente a Single File Component
 
 Entonces para este ejemplo vamos a tomar el componente que hicimos en el anterior post, que tenía esta pinta:
 
@@ -4829,17 +4835,11 @@ Y lo traducimos a un Vue Single File Component:
 </style>
 ```
 
+### La sección script
+
 En la parte `<script>` utilizamos sintáxis de ES6, ya que con Webpack y Babel se realizará el _transpiling_ aunque el navegador ya empieza a implementar éstas novedades.
 
-Exporta por defecto un objeto JavaScript que contiene varias propiedades. En este ejemplo le indicamos con `name` que el componente se llamará `<movie-card>` y con `props` las propiedades que podemos pasarle y el tipo que tienen éstas.
-
-Por supuesto, un Vue Component tiene muchas más propiedades, cómo datos de estado internos, metódos, eventos, etc... pero para este ejemplo hemos utilizado un componente más sencillo.
-
-Para el estilo tenemos algo muy interesante y es que si usamos el atributo `scoped` como he puesto en el ejemplo, lo que nos permite es aislar los estilos del resto de componentes y de la aplicación.
-
-De esta manera no tenemos que preocuparnos de nombres de clases o de estilar elementos como el `<h2>` porque únicamente se le dará el estilo al elemento `<h2>` de éste componente, dejando el resto de elementos `<h2>` que pueda haber en el resto de aplicación con el estilo que tengan o el de por defecto.
-
-Más adelante veremos cómo integrar ésto con Webpack y con la herramienta de línea de comandos de Vue.
+Exporta por defecto un objeto JavaScript que contiene varias propiedades. En este ejemplo le indicamos con `name` que el compon
 
 </article>
 
@@ -6191,11 +6191,11 @@ Y para verificar que si se cambia el atributo, se refleja en el interior del `te
 ```
 
 De esta forma, al cargar la página tendremos esto:
-![](/images/webcomponents-nativos-como-pasar-propiedades/Screen-Shot-2017-03-22-at-13.15.40.png)
+![Captura de pantalla de un WebComponent renderizado en el navegador mostrando texto dinámico vía setA](/images/webcomponents-nativos-como-pasar-propiedades/Screen-Shot-2017-03-22-at-13.15.40.png)
 
 Y después, tras cambiar el valor de `text` por el texto: "Lo quiero ahora!" tendríamos esto:
 
-![](/images/webcomponents-nativos-como-pasar-propiedades/Screen-Shot-2017-03-22-at-13.15.44.png)
+![Web Component renderizado mostrando el texto Lo quiero ahora tras actualizar la propiedad text](/images/webcomponents-nativos-como-pasar-propiedades/Screen-Shot-2017-03-22-at-13.15.44.png)
 
 Puedes ver esto en funcionamiento en el siguiente **[CodePen](https://codepen.io/carlosazaustre/project/editor/ArjknA/)**
 
@@ -6384,11 +6384,11 @@ Si en nuestro `index.html` modificamos el componente con el nuevo atributo, tend
 <sell-button intro="Oferta" text="Comprar Ahora"></sell-button>
 ```
 
-![](/images/webcomponents-nativos-como-pasar-propiedades/Screen-Shot-2017-03-22-at-17.41.05.png)
+![Resultado visual del componente sell-button con atributos intro y text renderizados en el navegador](/images/webcomponents-nativos-como-pasar-propiedades/Screen-Shot-2017-03-22-at-17.41.05.png)
 
 Y si hacemos como con el ejemplo anterior, una función de _timeout_ que cambie las propiedades pasados 2 segundos, tendremos el nuevo resultado:
 
-![](/images/webcomponents-nativos-como-pasar-propiedades/Screen-Shot-2017-03-23-at-09.18.08.png)
+![Captura del resultado tras aplicar un timeout que actualiza las propiedades de un WebComponent](/images/webcomponents-nativos-como-pasar-propiedades/Screen-Shot-2017-03-23-at-09.18.08.png)
 
 En el mismo [CodePen](https://codepen.io/carlosazaustre/project/editor/ArjknA/) tienes el código y demo de este ejemplo (En este caso en el archivo `sell-button-copy.html`.
 
@@ -7715,7 +7715,7 @@ El problema llegó cuando JavaScript evolucionó y la llegada del [nuevo estánd
 
 ## JavaScript evoluciona: ES6
 
-![](/images/mi-experiencia-cambiando-de-angularjs-a-reactjs/ecmascript-6.png)
+![Logotipo de ECMAScript 6 con el número 6 destacado sobre fondo amarillo](/images/mi-experiencia-cambiando-de-angularjs-a-reactjs/ecmascript-6.png)
 Ahora tenemos gestión de módulos de forma nativa (No es soportado actualmente pero está ahi). Tenemos [Promesas](/manejando-la-asincronia-en-javascript/) también de forma nativa, el [API de Fetch](/consumiendo-un-api-rest-desde-react-js-con-ecmascript6/), etc... Un montón de nuevas funcionalidades de las que no necesitamos ninguna librería o framework para ayudarnos (Salvo _Babel_ para transpilar código).
 
 Si quieres usar ES6 en Angular 1x, la cosa se complica bastante. Angular tiene su propio sistema de módulos y si quieres utilizar los de ES6 (o utilizar `require` con Browserify) Tienes que meter prácticamente cada controlador en un módulo de Angular, y luego exportarlo con ES6, etc...
@@ -7726,7 +7726,7 @@ Si ES6 te facilita la vida a la hora de programar en JavaScript, unirlo con Angu
 
 ## El nacimiento de los WebComponents y Angular 2
 
-![](/images/mi-experiencia-cambiando-de-angularjs-a-reactjs/web-components.png)
+![Diagrama explicativo sobre Web Components y su influencia en Angular 2](/images/mi-experiencia-cambiando-de-angularjs-a-reactjs/web-components.png)
 Paralelamente al desarrollo de Angular, se propuso la especificación de los [WebComponents](/como-crear-webcomponent-de-forma-nativa/) y fue el inicio de la programación orientada a componentes. Polymer y React seguían esa arquitectura y en Angular 1x se podía conseguir, [utilizando directivas como componentes](/angular-js-directivas-como-componentes/). Al final una directiva de Angular es un componente (tiene un tag HTML) y encapsula una plantilla HTML y un controlador con JavaScript.
 
 De hecho a partir de la versión 1.5 aparece la función `component()` que permite hacer justo eso, transformar una directiva en componente.
@@ -7743,7 +7743,7 @@ Durante todo ese tiempo, React fue una de las librerías que más despegó y emp
 
 ## Mis primeros pasos con React
 
-![](/images/mi-experiencia-cambiando-de-angularjs-a-reactjs/react-first-steps.png)
+![Primeros pasos con React tras migrar desde AngularJS](/images/mi-experiencia-cambiando-de-angularjs-a-reactjs/react-first-steps.png)
 Entonces, poco antes del verano de 2016, [empecé a probar React](/mi-inmersion-en-react/), vi lo mucho que había evolucionado desde la primera vez que lo vi en 2015. Pude ver lo bien que se integraba con el nuevo estándar de JavaScript y la sencillez con la que se podían hacer las cosas.
 
 Las únicas pegas que encontré en inicio, eran la [sintáxis JSX](/jsx-para-novatos/). Al principio crees que es HTML y claro, añadir HTML a código JavaScript no es lo que se debe hacer, pero luego comprendes que no es HTML, es código JavaScript pero escrito de una forma más sencilla de programar y de entender.
@@ -8460,19 +8460,27 @@ Feliz 2017!
 **Fecha:** 2016-10-26
 El post de hoy no es muy técnico pero tenía ganas de comentar mi experiencia como **mentor en Google Launchpad**
 
+## Qué es la Google Launchpad Week
+
 Hace unas semanas se organizó en Madrid una [Google Launchpad Week](https://events.withgoogle.com/launchpad-fintech-madrid/) orientada al mundo _Fintech_ con la colaboración de Google Developers, el [centro de Innovación BBVA](http://www.centrodeinnovacionbbva.com/eventos/evento-google-launchpad-week-fintech-0) y el coworking [La Terminal](https://laterminal.org/).
 
 ![Google Launchpad Week Fintech Madrid](/images/mi-experiencia-como-mentor-en-google-launchpad-week/unnamed.png)
 
 El año pasado tuve la oportunidad de participar como Startup con Chefly en la primera edición que se hacía de esta semana intensiva de _mentorship_ apoyada por Google en mi ciudad, Madrid. Puedes [leer mis impresiones en la serie de posts que escribí entonces](/google-launchpad-week-dia-1-producto/)
 
+## De startup a mentor: cómo es la semana
+
 Este año _he subido de nivel_ y he participado como mentor. Las **Launchpad Week** duran 5 días y cada día se trata una temática y se asesora y ayuda a las startups en ese tema. El primer día se trabaja el **Producto**, el segundo día la **UX**, el tercer día **Marketing** y por último, los días 4 y 5 se trabaja la **Tecnología**. Como has podido intuir, yo participé los dos últimos días :D
 
 ![Centro de Innovación BBVA](/images/mi-experiencia-como-mentor-en-google-launchpad-week/CtRPlZ5WIAADRXP.jpg)
 
+## Las startups que mentorizé
+
 Como os he comentado, el evento tuvo lugar en el Centro de Innovación del BBVA en Madrid, y alli tuve la suerte de poder mentorizar a 4 startups de las que participaron en la semana, entre ellas [NoySi](https://noysi.com/), [CheckIT](https://www.checkitbancario.com/), [Big Bang Trading](http://bigbangtrading.com/) y [Moneymatic](https://www.moneymatic.es/) Todas ellas con un gran equipo detrás.
 
 Fue gratificante ver como valoraban los comentarios que les hacíamos los mentores, consejos de cara a escalar en un futuro y poder mantener su código, etc...
+
+## Conclusión: vale la pena desde los dos lados
 
 Tras mi experiencia en "ambos bandos" creo que **toda startup o proyecto tiene que pasar una vez en su vida por una _Launchpad Week_**. El programa es intenso, pero la cantidad de información, consejos, pautas, hojas de ruta, etc.. que se logran en esos 5 días, tiene un gran valor.
 
@@ -9348,9 +9356,13 @@ Si quieres ampliar información sobre Webpack, puedes aprender mucho más en la 
 
 De primeras te puede parecer que estás mezclando código HTML dentro de tus ficheros JavaScript, pero nada más lejos de la realidad. A continuación te lo explico.
 
+## Por qué React necesita crear elementos
+
 React al basar el desarrollo de apps en componentes, necesitamos crear elementos HTML que definan nuestro componente, por ejemplo `<div>`, `<p>`, `<img>`, etc...
 
 También necesitaremos indicar cuando se trata de componentes creados por nosotros con React, como puede ser un ``, ``, etc...
+
+## Creando elementos con JavaScript puro
 
 Todo esto podemos hacerlo con JavaScript con los métodos que nos ofrece React como `React.createElement`. Veamos un ejemplo:
 
@@ -9404,6 +9416,8 @@ Si tuviésemos el siguiente CSS:
 El resultado en el navegador sería así:
 ![resultado react jsx](/images/jsx-para-novatos/ejemplo-jsx.png)
 
+## El mismo ejemplo con sintaxis JSX
+
 Ahora veamos como se haría lo mismo pero empleando sintaxis JSX:
 
 ```javascript
@@ -9418,15 +9432,17 @@ ReactDOM.render(Icon, document.getElementById("app"));
 
 Como puedes ver es mucho más práctico y legible esta sintaxis. Es prácticamente como escribir HTML pero no estás escribiendo HTML, es JavaScript.
 
+## Cosas a tener en cuenta
+
 Lo único que has de tener en cuenta es que hay algunas palabras reservadas en JavaScript y JSX te obliga a nombrar algunos atributos de otra manera, como es el caso de las `class` que para definir clases de CSS que con JSX debemos escribir `className`.
 
 A medida que nuestra aplicación va creciendo y tenemos componentes más grandes, que manejan distintos eventos, esta forma de usar JSX nos va a ayudar mucho a agilizar nuestros desarrollos.
 
 Recuerda, no es escribir HTML dentro de JS, es una forma de crear JS de una manera más práctica ;)
 
-Para poder utilizar JSX, necesitarías añadir una librería extra a tu HTML, pero es más aconsejable utilizar un _bundler_ integrado en tu entorno de desarrollo, como puede ser WebPack o [Browserify](/browserify-desarrollando-tu-frontend-como-en-node-js/), y que éste le aplique la transformación antes de publicar tu código en producción. De esto hablaré en próximas entradas.
+## Cómo utilizar JSX en tu proyecto
 
-Si quieres **profundizar más sobre JSX**, tienes este [tutorial interactivo](http://buildwithreact.com/tutorial/jsx) y también la [documentación oficial de Facebook](https://facebook.github.io/react/docs/jsx-in-depth.html).
+Para poder utilizar JSX, necesitarías añadir una librería extra a tu HTML, pero es más aconsejable utilizar un _bundler_ integrado en tu entorno de desarrollo, como puede ser WebPack o [Browserify](/browserify-desarrollando-tu-frontend-como-en-node-js/), y que éste le aplique la transformación antes de publicar
 
 </article>
 
@@ -10326,7 +10342,7 @@ En nuestra nueva vida, como _Freelancers_ nos dimos cuenta de la **cantidad de t
 
 Libros técnicos (en inglés), probando tecnologías, librerías y frameworks que por aquel entonces estaban empezando a despegar como **AngularJS** y **Node.js**. Y muchos cursos online, entre ellos los de [Platzi](https://platzi.com/r/carlos.azaustre/) en español y algunos en inglés en plataformas como [Coursera](http://coursera.org) o [CodeSchool](http://codeschool.com).
 
-![](/images/aprendiendo-y-compartiendo/0X48aG.gif)
+![Animación sobre aprendizaje en plataformas online como Coursera y CodeSchool](/images/aprendiendo-y-compartiendo/0X48aG.gif)
 
 Pero no por estar todo el conocimiento a nuestro alcance lo vamos a aprender de forma automática. No es tan fácil y esto le cuesta a veces a la gente le frustra.
 
@@ -13291,19 +13307,19 @@ Llegó el primer día dedicado a la **tecnología** en la semana de [Google Laun
 
 Hoy hemos contado con dos grandes charlas impartidas por [Andrés L. Martínez](http://twitter.com/davilagrau) (más conocido como _Almo_) y [Jorge Barroso](http://twitter.com/flipper83) (más conocido como _Flipper83_)
 
-![](/images/google-launchpad-madrid-dia-4-tecnologiaIMG_20150709_100654.jpg)
+![Almo y Flipper83 durante la sesión de tecnología en Google Launchpad Madrid](/images/google-launchpad-madrid-dia-4-tecnologiaIMG_20150709_100654.jpg)
 
 _Almo_ nos ha presentado las cifras del mercado _mobile_, muy interesantes, quedando como resumen que casi el 80% de la población utiliza Android, pero la monetización de las apps llega más de la parte de iOS.
 
-![](/images/google-launchpad-madrid-dia-4-tecnologiaIMG_20150709_101925.jpg)
-![](/images/google-launchpad-madrid-dia-4-tecnologiaIMG_20150709_102256.jpg)
-![](/images/google-launchpad-madrid-dia-4-tecnologiaIMG_20150709_101251.jpg)
+![Diapositiva con estadísticas de uso Android vs iOS y monetización de apps en Google Launchpad Madrid](/images/google-launchpad-madrid-dia-4-tecnologiaIMG_20150709_101925.jpg)
+![Presentación sobre monetización de apps iOS y Android en Google Launchpad Madrid 2015](/images/google-launchpad-madrid-dia-4-tecnologiaIMG_20150709_102256.jpg)
+![Sesión de tecnología en Google Launchpad Madrid 2015 con participantes y ponentes](/images/google-launchpad-madrid-dia-4-tecnologiaIMG_20150709_101251.jpg)
 
 Fuente: [Developer Economics](http://developereconomics.com/go)
 
 Después _Flipper_ nos ha contado su experiencia como "Mobile Developer for Startups" que puede aplicarse a cualquier tipo de App, incluidas las webs.
 
-![](/images/google-launchpad-madrid-dia-4-tecnologiaIMG_20150709_110552.jpg)
+![Ponente compartiendo su experiencia como Mobile Developer for Startups en Google Launchpad Madrid](/images/google-launchpad-madrid-dia-4-tecnologiaIMG_20150709_110552.jpg)
 
 De él hemos sacado varias cosas importantes, como:
 
@@ -13343,7 +13359,7 @@ Javier nos ha recomendado unas cuantas herramientas muy útiles para el análisi
 
 Ricardo nos ha dado un buen tip sobre el manejo de ramas en Git y realizar despliegues, utilizando la teoría del _Patrón Tofu_.
 
-![](/images/google-launchpad-madrid-dia-4-tecnologiagit-workflow-release-cycle-2feature.png)
+![Diagrama de flujo Git con ciclo de releases y ramas de features según el patrón Tofu](/images/google-launchpad-madrid-dia-4-tecnologiagit-workflow-release-cycle-2feature.png)
 Fuente: [Atlassian](https://www.atlassian.com/pt/git/workflows#!workflow-gitflow)
 
 Básicamente consiste en que las ramas "superiores" se encuentre el código o versión más estable, y en las "inferiores" la más sujeta a cambios. Por ejemplo, la rama de producción siempre por encima de "Staging" y esta de "Development". De esta manera siempre podemos volver a versiones anteriores fácilmente y tener versiones estables fácilmente localizables.
@@ -13409,7 +13425,7 @@ Hoy ha tocado el tema del **Marketing Digital**, como vender tu producto. Algo q
 
 La charla del día ha sido impartida por [Jorge Galido](http://twitter.com/Jorge__Galindo), Jefe de Producto en [47Degrees](http://www.47deg.com/) Que nos ha contado la estrategia que siguieron cuando lanzaron un aplicación Launcher para Android, llamada 9cards. Comunmente se le llama Growth Hacking, pero me gusta más el nombre que Jorge ha empleado, _Marketing pa' tiesos_.
 
-![](/images/chefly-en-google-launchpad-madrid-marketing/IMG_20150708_102933.jpg)
+![Sesión de marketing en Google Launchpad Madrid con el equipo de Chefly](/images/chefly-en-google-launchpad-madrid-marketing/IMG_20150708_102933.jpg)
 
 Cómo con una cantidad no demasiado grande de dinero, invertirla en publicidad y seguir una estrategia inteligente para conseguir el mismo rendimiento que si no aplicasemos ninguna estrategia y gastasemos 50 veces más.
 
@@ -13472,7 +13488,7 @@ Si [leístes el último post](/google-launchpad-week-dia-1-producto/), sabrás q
 
 Está siendo una gran experiencia. El día de ayer fue dedicado a **Producto** y hoy ha sido dedicado a la **UX**, usabilidad y diseño en general de nuestras aplicaciones. Sólo han pasado dos días y ya parece que llevamos más de una semana debido a la intensidad y la cantidad de información, feedback y orientación.
 
-![](/images/launchpad-week-madrid-dia-2-ux/2015/07/IMG_20150707_101355.jpg)
+![Asistentes en la sesión de UX de Launchpad Week Madrid 2015](/images/launchpad-week-madrid-dia-2-ux/2015/07/IMG_20150707_101355.jpg)
 
 El día de hoy ha comenzado con una charla titulada "El UX lo es todo" de [Eusebio Reyero](https://twitter.com/ereyero), CEO de [Hackity](http://hackity.com) que ha sido muy interesante y nos ha abierto mucho los ojos. Os dejo con una serie de _links_ que nos ha compartido en su presentación para todo aquel que quiera mejorar el UX de sus aplicaciones:
 
@@ -13494,7 +13510,7 @@ Después nos ha mentorizado y nos ha enseñando muchas más cosas que UX, hemos 
 
 Como desarrolladores tendemos a hacer lo que más nos gusta, programar. Implementamos funcionalidades sin probarlas y diseñamos nuestras webs en base a nuestros gustos. Es importante **medir** lo que hacen nuestros usuarios, que son los que mandan, son los que usan nuestra aplicación. **Analizar** los datos obtenidos y **decidir** nuestros diseños e iteracciones en base a ello.
 
-![](/images/launchpad-week-madrid-dia-2-ux/CJUg_1cWwAAkvlB-jpg-large.jpeg)
+![Grupos de profesionales colaborando en un taller de UX durante la Launchpad Week Madrid](/images/launchpad-week-madrid-dia-2-ux/CJUg_1cWwAAkvlB-jpg-large.jpeg)
 Foto por [@TetuanValley](http://twitter.com/tetuanvalley)
 
 Los demás mentores que nos han prestado su tiempo han sido [Marc Borràs](https://twitter.com/marcborras), [Silvia Pérez](https://www.linkedin.com/profile/view?id=45043302&authType=NAME_SEARCH&authToken=gO3T&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2Cidx%3A1-1-1%2CtarId%3A1436299910184%2Ctas%3Asilvia%20p%C3%A9rez%20felipe), [Nacho Rodríguez](https://www.linkedin.com/profile/view?id=4417489&authType=NAME_SEARCH&authToken=btCy&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2Cidx%3A1-1-1%2CtarId%3A1436299995808%2Ctas%3Anacho%20rod) y [David Alayón](https://twitter.com/DavidAlayon). Gente muy inteligente y profesional en su campo que nos ha dado muchos tips, consejos y visión que nos ayudarán a mejorar Chefly. Muchas gracias por vuestro tiempo.
@@ -13554,7 +13570,7 @@ Esta semana se [celebra en Madrid](https://events.withgoogle.com/launchpad-week-
 
 En **España ya se han celebrado 3 ediciones**, [2 en Barcelona](https://www.youtube.com/watch?v=69j2BJtPCzc) y ésta es [la primera en Madrid](https://events.withgoogle.com/launchpad-week-mad/). En otras ciudades del mundo, como en Tel-Aviv (Israel) llevan ya más de 30 ediciones.
 
-![](/images/google-launchpad-madrid-dia-1-producto/CJN357UWgAAqoS5-jpg-large.jpeg)
+![Participantes en el Google Launchpad Week Madrid durante la jornada de producto](/images/google-launchpad-madrid-dia-1-producto/CJN357UWgAAqoS5-jpg-large.jpeg)
 Foto por [@CampusMadrid](http://twitter.com/campusmad)
 
 Para participar tienes que ser seleccionado a través de una aceleradora, incubadora, o coworking space. Idealmente está enfocada para Startups que lleven un año trabajando, estén dedicados a _Full-Time_ y que puedan acudir durante la semana al menos 2 socios, preferiblemente el CEO y el CTO.
@@ -13567,7 +13583,7 @@ Cada día de la semana está dedicado a un elemento concreto. El primer día es 
 
 Cada día sigue el siguiente _Schedule_, primero un desayuno-networking de 9:10 a 10:00h, después una charla sobre el tema del día impartida por un mentor, de 10:00 a 11:00. Despues y hasta la hora de comer, tenemos sesiones 1:1 con mentores sobre el tema concreto del día, en slots de 45 minutos, donde nosotros contamos los problemas que tenemos y ellos nos dan ideas y nos hacen ver nuevos problemas, lo cuál es genial porque aprendes muchísimo. Despues 1h para comer y volvemos con 2 nuevos mentorías, en total 5 al día. Al finalizar el día ponemos todas las Startups en común lo que hemos aprendido y a las 18:30 _cerramos el kiosko_ y hacemos un poco de _networking_.
 
-![](/images/google-launchpad-madrid-dia-1-producto/CJPddp5UkAA26jw-jpg-large.jpeg)
+![Participantes de startups haciendo networking al final del primer día de Google Launchpad Madrid](/images/google-launchpad-madrid-dia-1-producto/CJPddp5UkAA26jw-jpg-large.jpeg)
 Foto por [@TetuanValley](http://twitter.com/tetuanvalley)
 
 **Hoy hemos tenido la primera sesión**, dedicada a la definición de Producto y vamos a compartir con la comunidad un poco los puntos más importantes que hemos aprendido, problemas encontrados y puntos de acción a realizar. Así si estás creando tu Startup, quizá te sirva de orientación y ayuda :)
@@ -13771,7 +13787,7 @@ $ docker-compose up
 
 Si probamos el API en `http://dockerhost:3000/employees` veremos que funciona:
 
-![](/images/desplegando-contenedores-docker-en-digital-ocean/Screen-Shot-2015-06-30-at-10-39-15.png)
+![Respuesta del API REST en dockerhost:3000/employees tras ejecutar docker-compose up](/images/desplegando-contenedores-docker-en-digital-ocean/Screen-Shot-2015-06-30-at-10-39-15.png)
 
 ---
 
@@ -13783,7 +13799,7 @@ De nuevo vamos a usar [DigitalOcean](https://www.digitalocean.com/?refcode=f716d
 
 Para poder crear servidores con [DigitalOcean](https://www.digitalocean.com/?refcode=f716de9860aa) necesitamos un token que nos dé acceso a su API. Lo podemos conseguir clickando en el menu API dentro de nuestra cuenta.
 
-![](/images/desplegando-contenedores-docker-en-digital-ocean/Screen-Shot-2015-06-30-at-10-59-39.png)
+![Captura de pantalla del menú API en DigitalOcean para obtener el token de acceso](/images/desplegando-contenedores-docker-en-digital-ocean/Screen-Shot-2015-06-30-at-10-59-39.png)
 Será un número parecido a este: `7ghr3247fg98429jhd5dufhwg325de9ff1ab`. Lo copiamos (Ten cuidado de no compartir este número con nadie, o tendrán acceso a tu cuenta)
 
 Ahora desde la linea de comandos, gracias al _Access Token_ de Digital Ocean y su driver podemos crear un droplet con el nombre `iojsapi_DO` con el comando `docker-machine create`:
@@ -13812,7 +13828,7 @@ $ docker-compose up
 
 Podemos ir a un navegador o hacer uso de la aplicación _Postman_ para probar nuestra API que estará corriendo en la IP que DigitalOcean nos ha proporcionado y el puerto `3000`. En mi caso en `http://45.55.195.22:3000`
 
-![](/images/desplegando-contenedores-docker-en-digital-ocean/Screen-Shot-2015-06-30-at-11-23-32.png)
+![Captura de pantalla de la API respondiendo en el puerto 3000 de DigitalOcean](/images/desplegando-contenedores-docker-en-digital-ocean/Screen-Shot-2015-06-30-at-11-23-32.png)
 
 ¿Notas como tu cerebro ha crecido un poco? :)
 
@@ -13851,28 +13867,28 @@ En éste artículo veremos como desplegarla en producción, con Git y [DigitalOc
 Vamos a utilizar [Digital Ocean](https://www.digitalocean.com/?refcode=f716de9860aa) como IaaS (**I**nfrastructure **a**s **a** **S**ervice) por su facilidad de uso y configuración. Además si te registras con este [link, **consigues 10$ gratis**](https://www.digitalocean.com/?refcode=f716de9860aa), lo que suponen 2 meses de uso continuado de la instancia más pequeña.
 
 Despues de registrarnos, creamos un Droplet.
-![](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-27-at-23-13-18.png)
+![Pantalla de creación de un Droplet en el panel de control de DigitalOcean](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-27-at-23-13-18.png)
 
 Si tienes problemas a la hora de configurar DigitalOcean, puedes seguir [éste post](/como-configurar-tu-servidor-cloud-en-digitalocean/) que escribí hace un tiempo.
 
 Le ponemos un nombre, por ejemplo `iojs-api` y elegimos el tamaño más pequeño (5$ al mes) que para este ejemplo nos sirve más que de sobra.
 
-![](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-27-at-23-38-03.png)
+![Captura del panel de Digital Ocean seleccionando el plan de 5$ para crear un Droplet](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-27-at-23-38-03.png)
 
 vamos a **elegir Ubuntu 14.04 como distribución del sistema** y en la región por defecto que es Nueva York:
 
-![](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-27-at-23-52-27.png)
+![Selección de Ubuntu 14.04 como sistema operativo y región Nueva York en DigitalOcean](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-27-at-23-52-27.png)
 
 No se te olvide crear una clave SSH para poder acceder al servidor desde la terminal sin tener que usar una contraseña. Así es más seguro y más cómodo. [Aquí](https://help.github.com/articles/generating-ssh-keys/) y [aquí](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2) puedes ver como [generar una clave RSA para SSH](https://help.github.com/articles/generating-ssh-keys/).
 
-![](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-27-at-23-52-49.png)
+![Captura de pantalla del proceso de generación de claves SSH RSA en terminal](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-27-at-23-52-49.png)
 
 ---
 
 ### Instalación del entorno
 
 Una vez esté creado el droplet podemos acceder desde la terminal vía SSH, donde `45.55.66.47` es la IP de nuestro servidor
-![](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-28-at-00-17-42.png)
+![Terminal SSH conectada a un droplet de Digital Ocean mostrando la IP del servidor](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-28-at-00-17-42.png)
 
 ```shell
 $ ssh root@45.55.66.47
@@ -13914,7 +13930,7 @@ ssh-rsa AAAAB3N[...]lGEr root@iojs-api
 ```
 
 la copiamos en GitHub, en las preferencias del repositorio. Ya entonces podremos hacer **pulls** e incluso cambios al repositorio.
-![](https://carlosazaustre.es/blog/content/images/2015/06/Screen-Shot-2015-06-28-at-11-31-32.png)
+![La imagen no está disponible (404), pero por el contexto —`root@iojs-api`, SSH key copiada a las pre](https://carlosazaustre.es/blog/content/images/2015/06/Screen-Shot-2015-06-28-at-11-31-32.png)
 
 Clonamos el proyecto. En mi caso lo tengo en la url: `git@github.com:carlosazaustre/iojs-api-example.git`
 Y posteriormente hacemos `npm install` para instalar las dependencias definidas en el `package.json` del proyecto
@@ -13940,14 +13956,14 @@ con `start index.js` iniciamos el API, y con `--next-gen-js --interpreter iojs` 
 
 Si ahora vamos a un navegador a la URL `http://45.55.66.47:3000/employees` o a la IP que te haya asignado Digital Ocean, podemos ver el siguiente resultado.
 
-![](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-28-at-11-38-44.png)
+![Respuesta JSON del endpoint /employees en el navegador con IP de Digital Ocean](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-28-at-11-38-44.png)
 
 Si hacemos pruebas, como un `POST` con un objeto empleado y luego de nuevo un `GET` tendríamos un resultado como el siguiente:
 
-![](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-28-at-12-03-58.png)
+![Resultado de pruebas POST y GET en la API REST desplegada en Digital Ocean](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-28-at-12-03-58.png)
 
 Y con un `GET` específico
-![](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-28-at-12-04-14.png)
+![Respuesta de petición GET específica a la API REST en Digital Ocean](/images/desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean/Screen-Shot-2015-06-28-at-12-04-14.png)
 
 Ya tenemos nuestro API disponible, si queremos camuflar el puerto y la IP de nuestro servidor, podemos utilizar un dominio propio o un subdominio (por ejemplo: `api.midominio.com`) y seguir este [post de cómo configurar un proxy inverso con Nginx](/como-servir-tu-api-rest-en-node-js-a-traves-de-nginx/).
 
@@ -14492,8 +14508,8 @@ Commo puedes ver, se ve de una forma más clara con JSX lo que estamos renderiza
 
 Lo que ha hecho que React se vuelva _trending_ es su velocidad de renderizado de vistas. Eso es posible gracias a un _Virtual DOM_ que genera React con cada componente que creamos y el algoritmo de _Diff_ que básicamente lo que hace es marcar que elementos dentro de nuestro DOM Virtual tienen cambios para renderizar solo ellos y no tener que revisar y repintar el DOM entero de nuestra página. Dónde más tiempo se pierde en una aplicación web es en el renderizado y pintado del DOM. React evita eso y por eso es tan rápido.
 
-![](/images/empezando-con-react-js-y-ecmascript-6/4.png)
-![](/images/empezando-con-react-js-y-ecmascript-6/5.png)
+![Diagrama del Virtual DOM de React mostrando el proceso de renderizado y actualización eficiente](/images/empezando-con-react-js-y-ecmascript-6/4.png)
+![Diagrama del Virtual DOM de React comparado con el renderizado tradicional del navegador](/images/empezando-con-react-js-y-ecmascript-6/5.png)
 Fuente: [React's diff Algorithm](http://calendar.perfplanet.com/2013/diff/)
 
 #### Diseño orientado a componentes
@@ -14841,10 +14857,10 @@ Como Docker utiliza como base el sistema operativo Linux, en OS X no podemos uti
 Para ejemplificar la estructura de cómo está organizado Docker en nuestro sistema operativo, estas imágenes sacadas de la documentación oficial de Docker nos resultan de ayuda.
 
 Si nuestro equipo fuera Linux, esta sería la organización:
-![](/images/manejando-docker-desde-os-x-creando-nuestro-primer-contenedor/linux_docker_host.png)
+![Diagrama de arquitectura del Docker Host en un sistema Linux](/images/manejando-docker-desde-os-x-creando-nuestro-primer-contenedor/linux_docker_host.png)
 
 Y en el caso de un equipo Mac con OS X, es ésta:
-![](/images/manejando-docker-desde-os-x-creando-nuestro-primer-contenedor/mac_docker_host.png)
+![Diagrama de arquitectura Docker en un equipo Mac con OS X y su Docker Host](/images/manejando-docker-desde-os-x-creando-nuestro-primer-contenedor/mac_docker_host.png)
 
 La diferencia es que en Linux, nuestro Host es el mismo sistema operativo. Y en OSX, el Host es la máquina virtual que tiene Linux. Lo complicado aquí es el acceso, las IPs y el mapeo de los puertos, pero en este post vamos a explicar como solucionar esto y utilizarlo de manera que la máquin virtual no _de guerra_ ;)
 
@@ -15635,9 +15651,13 @@ Si seguimos los pasos del [desarrollo web moderno](http://www.slideshare.net/Car
 
 Una opción es [usar Nginx](/como-configurar-nginx-con-node-js-en-produccion/), no solo como servidor web o balanceador de carga, si no también como Proxy inverso para redirigir las peticiones según la URL.
 
+## El escenario: Frontend y API en el mismo dominio
+
 Imaginemos que nuestra aplicación frontend está almacenada en el directorio de nuestro servidor `/var/www/` y que tenemos nuestra API en Node.js corriendo en `localhost:3000`
 
 Ahora lo que queremos que la parte cliente y todas las rutas del frontend (que pueden ser servidas con AngularJS) se sirvan a través de la ruta `/`. Y que nuestra API en Node.js se sirva a través de la ruta `/api`, en plan que si escribimos `http://midominio.com/` sirva el frontend y `http://midominio.com/api` sirva el API y podamos hacer las peticiones AJAX a esa URL.
+
+## Configuración de Nginx como proxy inverso
 
 Esto lo conseguimos con el siguiente fichero de configuración de Nginx:
 
@@ -15679,11 +15699,15 @@ server {
 
 Es importante, además de indicar para cada URL, que ruta tomar, los siguientes campos:
 
+### try_files y compatibilidad con HTML5 Pushstate
+
 ```shell
 try_files $uri $uri/ /index.html =404;
 ```
 
 Esto nos permite que el HTML5Pushstate que en ocasiones usamos en AngularJS, nos funcione. De otra manera es posible que tengamos fallos y errores cuando sirvamos las vistas del Frontend en Angular.js
+
+### Habilitando CORS para la API
 
 ```shell
 proxy_set_header 'Access-Control-Allow-Origin' 'http://midominio.com';
@@ -15691,17 +15715,7 @@ proxy_set_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS, PUT, DELETE
 proxy_set_header 'Access-Control-Allow-Headers' 'X-Requested-With,Accept,Content-Type, Origin';
 ```
 
-Esto habilita CORS para nuestro API. Aunque lo tengamos habilitado en nuestra configuración de Express dentro de Node, es conveniente configurarlo en NGINX, ya que es la primera barrera que pasan nuestras peticiones HTTP y así no entramos en conflicto
-
-```shell
-proxy_redirect off;
-proxy_buffering on;
-proxy_set_header	origin	'http://midominio.com';
-```
-
-También es importante declarar estos campos, ya que si no nuestro API puede no funcionar correctamente, con `redirect` a `off` y `buffering` a `on` nos evitamos sustos.
-
-Por último indicar la cabecera `origin` con la URL de nuestro dominio, para que el Cross-Origin no se vea afectado.
+Esto habilita CORS para nuestro API. Aunque lo tengamos habilitado en nuestra configuración de Express dentro de Node, es conveniente configurarlo en NGINX, ya que es
 
 </article>
 
@@ -16377,7 +16391,7 @@ y comparte tu conocimiento. La web la hacemos nosotros y el contenido que encotr
 
 Durante esta semana (del 8 al 14 de Febrero) he sido uno de los profesores del [Curso de Desarrollo Web que ofrece Platzi](http://platzi.com/online) (Antes Mejorando.la). Para ello **he viajado a Bogotá (Colombia)** a las oficinas y estudios centrales de **Platzi**.
 
-![](/images/mi-experiencia-como-profesor-en-los-cursos-de-platzi/B9p1VCGIEAAZcUJ.jpg)
+![Carlos Azaustre en las oficinas y estudios de Platzi en Bogotá, Colombia](/images/mi-experiencia-como-profesor-en-los-cursos-de-platzi/B9p1VCGIEAAZcUJ.jpg)
 
 > Vistas de Bogotá desde la oficina más _cool_ de Colombia
 
@@ -16389,7 +16403,7 @@ Conocí los cursos de Platzi a principios de 2013, hace ya 2 años y desde enton
 
 Entre los dos hemos enseñado HTML5, CSS3 y JS básico para que [puedas crear tu propia web desde cero](http://platzi.com/online). Por mi parte, me he encargado de enseñar JavaScript, jQuery y algunos elementos _cool_ de HTML5 como _Geolocation_ y _LocalStorage_ para crear una aplicación web.
 
-![](/images/mi-experiencia-como-profesor-en-los-cursos-de-platzi/B9gBYroCMAAKlhW.jpg)
+![Carlos Azaustre impartiendo clase de JavaScript y HTML5 en Platzi](/images/mi-experiencia-como-profesor-en-los-cursos-de-platzi/B9gBYroCMAAKlhW.jpg)
 
 > Team video listos para el _Streming_
 
@@ -16397,13 +16411,13 @@ Entre los dos hemos enseñado HTML5, CSS3 y JS básico para que [puedas crear tu
 
 Debo confesar que los primeros días estaba nervioso. Nunca había dado un curso online en directo y no sabía muy bien como iba a salir. Si que **tenía experiencia grabando [videotutoriales](https://www.youtube.com/playlist?list=PLUdlARNXMVkl9MJl4r90Z1j1nmAfWEPV3) y algún que otro "Comunidad Platzi"** pero el directo de una clase online en vivo, no lo había vivido aún.
 
-![](/images/mi-experiencia-como-profesor-en-los-cursos-de-platzi/B9rsQ5ECAAAIbwb.jpg)
+![Carlos Azaustre impartiendo una clase en vivo en la plataforma Platzi](/images/mi-experiencia-como-profesor-en-los-cursos-de-platzi/B9rsQ5ECAAAIbwb.jpg)
 
 > Minutos antes de la última clase en vivo.
 
 Y la verdad es que me encontré muy cómodo, pero sobre todo **gracias al equipo que hay detrás de los _streamings_** y que no se ve, pero sin ellos no habría nada. Entre ellos [Carlos Paredes](http://twitter.com/carloshparedes) y las nuevas incorporaciones como [Ángel Montalbán](http://twitter.com/spaciosmentales) y [Winiberto](http://twitter.com/winiberto), con los que durante esta semana he compartido trabajo, risas y convivencia las 24h del día y ya los considero familia :)
 
-![](/images/mi-experiencia-como-profesor-en-los-cursos-de-platzi/B9rBNCBIQAE8IHY.jpg)
+![Grupo de profesores de Platzi compartiendo momentos durante la semana de trabajo y convivencia](/images/mi-experiencia-como-profesor-en-los-cursos-de-platzi/B9rBNCBIQAE8IHY.jpg)
 
 > Win y Ángel en pleno Live
 
@@ -16413,27 +16427,27 @@ Y la verdad es que me encontré muy cómodo, pero sobre todo **gracias al equipo
 
 Costó acostumbrarse al _JetLag_ pero gracias al Team siempre había algo que hacer y los días fueron muy intensos haciéndome olvidar de la hora que era.
 
-![](/images/mi-experiencia-como-profesor-en-los-cursos-de-platzi/B9l5QaCIgAAnCA2.jpg)
+![Carlos Azaustre con el equipo de Platzi durante una de las jornadas intensas del evento](/images/mi-experiencia-como-profesor-en-los-cursos-de-platzi/B9l5QaCIgAAnCA2.jpg)
 
 > ArepaJS
 
 No puedo dejarme al **equipo de Devs**. Auténticos profesionales y mejores personas. He pasado muy buenos momentos con ellos. Compartiendo charlas de JavaScript con [Diego Uribe](https://twitter.com/DiegoUG) y [Leonidas Esteban](https://twitter.com/LeonidasEsteban), auténticos ninjas del JS. Y aprendiendo a bloquear mi laptop gracias a [Yohan](https://twitter.com/yograterol) y [Victor](https://twitter.com/8766Dart), para evitar que me "Bartearan" xD
 
-![](/images/mi-experiencia-como-profesor-en-los-cursos-de-platzi/B9fq3boIYAAEQnA.jpg)
+![Carlos Azaustre junto a compañeros de Platzi durante la grabación de sus cursos](/images/mi-experiencia-como-profesor-en-los-cursos-de-platzi/B9fq3boIYAAEQnA.jpg)
 
 De igual manera el **equipo de diseño** son unos artístas y gente increible. Conocer a la gente detrás de la imagen de Platzi: [Carlos Vaca](https://twitter.com/unavacaverde), [Jennifer](https://twitter.com/Hell_McNamara) y [Santiago Eastman](https://twitter.com/santiagoeastman) ha sido un honor.
 
-![](/images/mi-experiencia-como-profesor-en-los-cursos-de-platzi/B9lz1KLIgAEZwcB.jpg)
+![Grupo de profesores de Platzi caminando y sonriendo en una acera, tras un encuentro de formación](/images/mi-experiencia-como-profesor-en-los-cursos-de-platzi/B9lz1KLIgAEZwcB.jpg)
 
 > The Platzi Men
 
 No me olvido del resto del Team, [Sergio Zafra](https://twitter.com/szafra14), [Aleyda](https://twitter.com/leidymarmalade), [Cesar](https://twitter.com/reicek), [Alejandro](https://twitter.com/alejandrogm), Doña Araceli, y sobre todo de [Nicole](https://twitter.com/maldeadora), _Relationship Manager_ de Platzi y un encanto de persona a la vez que trabajadora. Si el día tuviera 30horas, ella trabajaría 32, **siempre atenta a que todos estuviesemos bien**.
 
-![](/images/mi-experiencia-como-profesor-en-los-cursos-de-platzi/B9wLPUEIUAAnC-1.jpg)
+![Grupo de seis personas sonriendo y posando juntas en un sofá del equipo de Platzi](/images/mi-experiencia-como-profesor-en-los-cursos-de-platzi/B9wLPUEIUAAnC-1.jpg)
 
 Poder ser parte de Platzi durante una semana, vivir cómo es la grabación de un Live y las clases de comunidad, son cosas que me llevo conmigo y que me han enseñado todo el trabajo que hay detrás de cada material que se publica en Platzi y que no vemos.
 
-![](/images/mi-experiencia-como-profesor-en-los-cursos-de-platzi/B9wdwvACIAAIq4f.jpg)
+![Carlos y el equipo de Platzi en el set de grabación rodeados de equipos de producción](/images/mi-experiencia-como-profesor-en-los-cursos-de-platzi/B9wdwvACIAAIq4f.jpg)
 
 > Selfie-Comunidad Platzi
 
@@ -16458,23 +16472,23 @@ Escribo este post para **compartir como ha sido el crecimiento de este blog** de
 
 ### 2012. Primeros 100 días
 
-![](/images/2014/Clocktower1885.jpg)
+![Torre del reloj histórica de 1885 simbolizando el inicio de una nueva etapa](/images/2014/Clocktower1885.jpg)
 
 Como decía, los 100 primeros días de este blog, en 2012, pasaron sin pena ni gloria por el mundo de internet. Apenas 2 visitas al día de medía. Demasiado para 4 artículos que tenía el blog:
 
-![](/images/2014/Screen-Shot-2015-01-21-at-17-08-19.png)
+![Gráfica de visitas del blog en 2012 con apenas 2 visitas diarias de media](/images/2014/Screen-Shot-2015-01-21-at-17-08-19.png)
 Hubo un pico de visitas el 26 de Noviembre, no recuerdo a que pudo ser debido, quizá porque lo compartí en Twitter o algo parecido.
 En resumen, las métricas de los primeros 100 días de vida de carlosazaustre.es fueron estas:
-![](/images/2014/Screen-Shot-2015-01-22-at-19-43-46.png)
+![Captura de pantalla con las métricas de los primeros 100 días de carlosazaustre.es en 2014](/images/2014/Screen-Shot-2015-01-22-at-19-43-46.png)
 
 ### Un vistazo a 2013. El primer año de vida del blog
 
-![](/images/2014/doc_mrfusion_LENR_cold_fusion.jpg)
+![Doc Brown alimentando con basura el reactor Mr. Fusion del DeLorean en Volver al Futuro](/images/2014/doc_mrfusion_LENR_cold_fusion.jpg)
 
 Durante 2013 seguí en Irlanda hasta que llegaron los meses de verano. Después del verano [estuve un mes de viaje por Estados Unidos](/viajar-estados-unidos/) y a continuación volví a España donde sigo viviendo a día de hoy.
 **En ese año escribí un total de 29 posts**. Los primeros meses continué con la tendencia del anterior, apenas publicaba, Entre Enero y Abril escribí 4 posts y todos ellos en Inglés. A finales de Mayo le dí una vuelta de tuerca y comencé a escribir en castellano. Desde Mayo a finales de año escribí 25 posts, todos ellos relacionados con internet y la tecnología. Sin ninguna temática más concreta, aunque ya [empecé a escribir algún tutorial](/como-crear-una-api-rest-en-node-js/).
 
-![](/images/2014/Screen-Shot-2015-01-22-at-19-57-12.png)
+![Captura de pantalla con las métricas y estadísticas del blog durante 2014](/images/2014/Screen-Shot-2015-01-22-at-19-57-12.png)
 
 Se puede ver en la gráfica, que hasta que no empecé a darle caña al blog (Meses de Junio y Julio sobre todo) no empezaron a llegar las visitas.
 
@@ -16486,25 +16500,25 @@ Y el último pico de ese año fue el 8 de noviembre por el post _[Nuestro viaje 
 
 En números, estan fueron las métricas del 2013, el primer año de vida del blog
 
-![](/images/2014/Screen-Shot-2015-01-22-at-20-05-54.png)
+![Captura de pantalla con las métricas del blog correspondientes al año 2013](/images/2014/Screen-Shot-2015-01-22-at-20-05-54.png)
 
 ### 2014. El año del despegue
 
-![](/images/2014/Dmc11.jpg)
+![Gráfico de métricas del blog durante el año 2014 mostrando el crecimiento de visitas](/images/2014/Dmc11.jpg)
 
 Empecé 2014 con más interés en **crear artículos y tutoriales para compartir conocimiento sobre la web**. Sólo con las visitas de Enero y Febrero alcancé las totales de 2013. Durante el año pasado escribí 24 posts, 5 menos que en el año anterior, pero aún así las visitas fueron creciendo mes a mes debido imagino a que muchos de los artículos se han ido **posicionando en Google** gracias a vuestros comentarios, Retweets y _Sharings_ en las redes sociales.
 
-![](/images/2014/2014.png)
+![Gráfica de visitas del blog durante 2014 con pico de tráfico destacado](/images/2014/2014.png)
 Se puede ver un pico de tráfico a mediados de Agosto de 2014, fue debido al [lanzamiento del eBook de Angular](https://amzn.to/2L5m5IR), que se hizo un poco viral en Twitter y se consiguieron **muchas descargas (más de 7000 hacia la fecha**). En su lanzamiento podías conseguirlo por €2.40 o gratis si lo compartías en Twitter. [Lo puedes conseguir en español desde Amazon](https://amzn.to/2L5m5IR).
 
 En esta tabla he recopilado las métricas mes a mes durante todo el año pasado:
-![](/images/2014/Screen-Shot-2015-01-22-at-21-22-30.png)
+![Tabla con métricas mensuales del blog durante el año 2014](/images/2014/Screen-Shot-2015-01-22-at-21-22-30.png)
 
 A finales de Enero [abrí una página en Facebook](http://facebook.com/carlosazaustre) y comencé [a subir algunos videotutoriales a mi canal de YouTube](https://www.youtube.com/watch?v=SKoK6braZlk&list=PLUdlARNXMVkl9MJl4r90Z1j1nmAfWEPV3). De los _Analytics_ de Facebook no tengo datos hasta Marzo, es por eso que no aparece ninguna cifra de _Followers_ en ese campo.
 
 Como puedes ver, **mes a mes las visitas han ido aumentando**, así como los suscriptores a la lista de correo, [cuenta de twitter](http://twitter.com/carlosazaustre), [canal de Youtube](https://www.youtube.com/user/azaman1984)... Con constancia y dedicación se pueden llegar a conseguir muchas cosas :)
 
-![](/images/2014/tumblr_m4i2a5wnnM1ruhu4ho1_500.jpg)
+![Gráfico con métricas y estadísticas del blog de Carlos Azaustre durante 2014](/images/2014/tumblr_m4i2a5wnnM1ruhu4ho1_500.jpg)
 
 > Si te lo propones, puedes conseguirlo todo - George McFly
 
@@ -16513,7 +16527,7 @@ Como puedes ver, **mes a mes las visitas han ido aumentando**, así como los sus
 Como dijo [Uriel](http://twitter.com/thespianartist), uno de los _Developer Advocate_ de [Mejorando.la](http://mejorando.la) a finales del año pasado:
 
 > Este año no tengan propósitos, tengan Objectives Key Results (OKR)
-> ![](/images/2014/Screen-Shot-2015-01-22-at-21-33-05.png)
+> ![Captura de pantalla de un tweet sobre Objectives Key Results (OKR) en lugar de propósitos de año nue](/images/2014/Screen-Shot-2015-01-22-at-21-33-05.png)
 
 Para el que no sepa que es un OKR, [aquí](https://www.youtube.com/watch?v=_BbhkTOv_98) te lo explican.
 
@@ -16523,13 +16537,13 @@ calidad, más tutoriales y videotutoriales y crear más recursos, como por ejemp
 También es importante el tiempo de carga de la página. Por eso uno de los primeros pasos que he dado este año es **cambiar el motor del blog de Wordpress y [migrarlo a Ghost**](/como-migrar-de-wordpress-a-ghost/). Ahora realiza menos operaciones y consultas y no carga tantos plugins como tenía mi anterior _theme_ de Wordpress. También he pasado de un hosting compartido a un servidor virtual en [DigitalOcean](https://www.digitalocean.com/?refcode=f716de9860aa). El _Theme_ está basado en [_Velox_](https://github.com/dreyacosta/velox), un Theme desarrollado por [David Rey Acosta](http://dreyacosta.com/) que tiene muy buenos _PageSpeed Insights_
 
 ¿Qué quiero decir con esto? Los datos hablan por si solos:
-![](/images/2014/Screen-Shot-2015-01-22-at-21-52-21.png)
+![Captura de pantalla con resultados de PageSpeed Insights del blog en 2014](/images/2014/Screen-Shot-2015-01-22-at-21-52-21.png)
 
 Esto parece una tontería, pero **la reducción del tiempo de carga**, además de evitar que los lectores abandonen la lectura, **mejora el posicionamiento en Google**, así que es bueno tenerlo en cuenta ;)
 
 ¡Vamos a por el 2015!
 
-![](/images/2014/1191937136_f.jpg)
+![Vista aérea de carreteras que simbolizan el camino hacia nuevos retos en 2015](/images/2014/1191937136_f.jpg)
 
 > ¿Carreteras? ¿Dónde vamos no necesitamos... carreteras
 
@@ -16709,13 +16723,13 @@ Mac OSX viene con un terminal por defecto, como todos los sistemas operativos, s
 
 Una de las cosas que más me gusta es la opción de ocultar y mostrar el terminal rápidamente con una combinación de teclas. Para configurar esta opción, debemos ir al menú `iTerm2 > Preferences...`, clickar en la pestaña `Keys` y habilitar el checkboxk `Hotkey - Show/hide iTerm2 with a system-wide hotkey`
 
-![](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-13-58-48.png)
+![Ventana de preferencias de iTerm2 mostrando la pestaña Keys con la opción Hotkey activada](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-13-58-48.png)
 
 #### Colores
 
 También podemos configurar los colores que se muestran en la terminal, eligiendo unos que nos resulten agradables. Para ello en la ventana de preferencias elegimos la pestaña `Profiles`, nos creamos uno nuevo. En mi caso le he puesto mi nombre `carlosazaustre` y
 
-![](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-14-05-55.png)
+![Ventana de preferencias de terminal con la pestaña Profiles y perfil carlosazaustre seleccionado](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-14-05-55.png)
 
 Los predefinidos que usará el sistema son `Black`, `Red`, `Green`, `Yellow`, `Blue`, `Magenta`, `Cyan` y `White`. Podemos cambiar sus valores hexadecimales por otros que nos resulten más agradables.
 
@@ -16737,14 +16751,14 @@ Que te responderá con
 
 `Bash` no está mal, pero prefiero utilizar `zsh` por las posibilidades y configuraciones que permite. Para cambiar el tipo de Shell en Mac. Abrimos el **Panel de Preferencias del sistema**, elegimos **Usuarios y Grupos**. Clickamos en nustro usuario con _Click Derecho_ y elegimos _Opciones avanzadas_
 
-![](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-14-25-09.png)
+![Ventana de Opciones avanzadas del usuario en Preferencias del Sistema de macOS](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-14-25-09.png)
 
 En el campo `Login Shell` elegimos la opción `/bib/zsh`:
 
-![](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-14-26-27.png)
+![Ventana de preferencias de Terminal mostrando la selección de /bin/zsh como shell de inicio](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-14-26-27.png)
 
 Tu terminal de iTerm lucirá ahora así:
-![](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-14-28-53.png)
+![Terminal macOS con el comando echo $SHELL mostrando /bin/zsh como shell predeterminado](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-14-28-53.png)
 
 Es el momento de personalizar el prompt por uno más **Pro** y útil que el que trae por defecto
 
@@ -16752,7 +16766,7 @@ Es el momento de personalizar el prompt por uno más **Pro** y útil que el que 
 
 La fuente por defecto que trae iTerm es `Monaco`, que no está mal, pero yo últimamente prefiero la tipografía de `Ubuntu`. La podemos descargar desde [font.ubuntu.com](http://font.ubuntu.com/) y una vez instalada la versión `Monospace` en nuestro sistema, la activamos desde la pestaña **Text** en el tab **Profiles** de las **Preferencias de iTerm**
 
-![](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-14-35-51.png)
+![Pestaña Text en Profiles de Preferencias de iTerm con fuente Monospace activada](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-14-35-51.png)
 
 Para poder cambiar el shell por defecto que trae `zsh`, por uno más personalizado, tenemos que editar el fichero `.zshrc` en el directorio home, o `~`
 
@@ -16760,7 +16774,7 @@ Cargamos los colores de iTerm dentro de la configuración del fichero con `autol
 
 Para personalizar el prompt usamos la variable `PROMPT`. Si escribimos algo como `PROMPT=" > "` en nuestro terminal tendremos algo como esto:
 
-![](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-15-35-48.png)
+![Terminal de Mac con el prompt personalizado mostrando el símbolo mayor que como indicador](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-15-35-48.png)
 
 Podemos configurarlo con más información y colores para hacerlo más identificable.
 
@@ -16987,7 +17001,7 @@ ZSH_THEME = "nico";
 ```
 
 Reinicia la terminal y tendrás el siguiente aspecto. Con feedback de la rama de Git en la que te encuentres, si ha habido cambios en el repositorio, etc...
-![](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-18-07-20.png)
+![Terminal personalizada en Mac mostrando rama Git activa y estado del repositorio](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-18-07-20.png)
 
 </article>
 
@@ -18260,7 +18274,7 @@ Llevo una semana en desarrollo con ello y poco a poco lo voy a ir ampliando y me
 
 **Fuente**: [http://addyosmani.com/blog/full-stack-javascript-with-mean-and-yeoman/](http://addyosmani.com/blog/full-stack-javascript-with-mean-and-yeoman/)
 
-[**¿Quieres más?** Descarga el ebook en español sobre **desarrollo web ágil con AngularJS y GulpJS**. ![](</blog/content/images/![](https://carlosazaustre.es/blog/content/images/2015/01/adwords_728x90.jpg)es/blog/ebook-angular/?utm_source=mean-post>)
+[**¿Quieres más?** Descarga el ebook en español sobre **desarrollo web ágil con AngularJS y GulpJS**. ![Banner promocional del ebook sobre desarrollo web ágil con AngularJS y GulpJS](</blog/content/images/![](https://carlosazaustre.es/blog/content/images/2015/01/adwords_728x90.jpg)es/blog/ebook-angular/?utm_source=mean-post>)
 
 </article>
 
@@ -18748,13 +18762,19 @@ En una aplicacion Node.js, típicamente, tenemos los ficheros estáticos en un d
 
 ![Grunt.js](/images/subiendo-archivos-estaticos-aws-s3-con-node/grunt-logo_g3kshp.png)
 
+## Requisitos previos
+
 Primero necesitamos [tener una cuenta en Amazon Web Services](/como-crear-un-servidor-web-con-amazon-web-services/) y activar un _bucket_ de S3. Necesitaremos un _Access Key ID_ y un _Secret Access Key_ para poder identificarnos con el API y acceder a los servicios. En la parte de código necesitamos tener [**Grunt.js** instalado como conté en un anterior pos](/automatizar-tareas-en-javascript-con-grunt-js/)t e instalar esta nueva librería de desarrollo en nuestro proyecto.
+
+## Instalación
 
 ```
 npm install grunt-aws --save-dev
 ```
 
 Con el flag `--save-dev` salvamos la librería dentro del archivo `package.json` de nuestro proyecto.
+
+## Configuración de la tarea en Gruntfile.js
 
 Una vez hecho esto, creamos una nueva tarea en nuestro fichero [Gruntfile.js](/automatizar-tareas-en-javascript-con-grunt-js/) donde automatizamos las tareas, que llamaremos **s3** y tendrá esta pinta:
 
@@ -18773,6 +18793,8 @@ s3: {
 ```
 
 Con esto le decimos a Grunt que tenemos una tarea llamada `s3` y que cuando se ejecute, se conecte a nuestro servicio S3, recoja todos los ficheros, sin importar la extensión, dentro de la carpeta `/public` de nuestra aplicación y los suba a nuestro _bucket_ en S3.
+
+## Ejecutar la tarea
 
 Para que se ejecute esta tarea simplemente tenemos que llamar desde consola con este comando:
 
@@ -18803,7 +18825,7 @@ Por suerte surgieron frameworks que implementaban el patrón MVC (Modelo, Vista,
 
 BackboneJS te permite crear tu app rápidamente aunque en ocasiones es complicado de utilizar. La mayoría de los desarrolladores eligen BackboneJS porque parece la opción más segura, lleva más tiempo entre nosotros, hay mucha documentación sobre él y está mantenido por una gran comunidad.
 
-![](https://carlosazaustre.es/blog/content/images/2015/02/square_odd9l7.png)
+![La imagen devuelve 404, pero por el nombre del archivo (`square_odd9l7.png`), el contexto del post s](https://carlosazaustre.es/blog/content/images/2015/02/square_odd9l7.png)
 
 Sin embargo AngularJS está pisando fuerte. Aunque su primera versión es de 2009, se ha hecho muy popular a finales de 2012 y ahora en 2013 está en pleno auge. Tanto que ya se habla de una nueva _technology stack_ como antes era **LAMP** (**L**inux + **A**pache + **M**ySQL + **P**HP) ahora la tendencia es **[MEAN](http://www.mean.io/)** (**M**ongoDB/**M**ongoose + **E**xpressJS + **A**ngularJS + **N**odeJS), lo que también se traduce a aplicaciones _JavaScript End-to-End_. AngularJS está mantenido por Google y bastante comunidad. También como punto a su favor está lo sencillo que crear Tests unitarios y _End-to-End_ con [Jasmine](http://pivotal.github.io/jasmine/) y [Karma](http://karma-runner.github.io/0.10/index.html), algo que suele ser un poco costoso al principio.
 
@@ -18865,13 +18887,21 @@ Si consigues llegar hasta aquí, tendrás un buen conocimiento del desarrollo de
 **Fecha:** 2013-09-06
 ![tessel-logo-horizontal](/images/tessel-el-microcontrolador-programable-en-javascript/tessel-logo-horizontal_ci3qhl.png)
 
+## ¿Qué es Tessel?
+
 Tessel, también conocido como [Technical.io](http://technical.io), es un proyecto de Hardware _Open-Source_ que consiste en un micro-controlador, del estilo a [Arduino](http://www.arduino.cc/), pero programable con JavaScript, demostrando una vez más la versatilidad de este [lenguaje de programación ya presente en todas las partes del desarrollo web](/javascript/).
 
 ![teardown2](/images/tessel-el-microcontrolador-programable-en-javascript/teardown2_mc3p3f.png)
 
+## Módulos y características
+
 Además de la placa y la MicroSD, se han desarrollado diferentes módulos para añadirle mas funcionalidad como son el acelerómetro, un chip RFID, audio, bluetooth, un servo-motor, relés, y sensores de temperatura y humedad. Puede programarse directamente desde un USB, sin necesidad de utilizar cables ethernet, WiFi, teclados externos y pantallas externas como pasa con el mini-ordenador [RaspberryPi](http://www.raspberrypi.org/)
 
+## Campaña de crowdfunding
+
 Ayer, día 5 de septiembre [lanzaron su campaña de crowdfunding para conseguir 50.000$](http://www.dragoninnovation.com/projects/22-tessel) y así poder poner en producción el prototipo y sacarlo a la venta por un precio razonable y en solo 3 horas tras el lanzamiento de la campaña superaron el 100% de la financiación necesaria.
+
+## Mi pedido
 
 Yo por mi parte me apunté a la lista de correo y ya he pre-pedido mi Tessel, la versión básica con un módulo de clase A, posiblemente pida el acelerómetro o el sensor de temperatura. El _Master pack_ también está muy interesante ya que incluye todos los sensores, pero me parecía un precio demasiado elevado.
 
@@ -18896,6 +18926,8 @@ Con un simple fichero JS que llamaremos `Gruntfile`, indicamos las tareas que qu
 
 A continuación muestro como sería este fichero para automatizar las tareas de arranque del servidor y preprocesamiento de archivos stylus a CSS y su minificación.
 
+## Instalación
+
 Lo primero que necesitamos es instalar Grunt de manera global en nuestro equipo, doy por hecho que ya tenemos Node.js instalado, si no es así pásate por esta entrada.
 
 Para ello tecleamos:
@@ -18905,7 +18937,11 @@ $ sudo npm install -g grunt
 $ sudo npm install -g grunt-cli
 ```
 
-Grunt posee diversos plugins para tareas específicas, nosotros usaremos `grunt-contrib-watch`, `grunt-contrib-stylus`, `grunt-contrib-cssmin` y `grunt-contrib-bg-shell`. Estas librerías nos permitirán vigilar cambiso que hagamos en determinados directorios para así actuar y ejecutar la tarea que queremos, preprocesar stylus y convertirlo a CSS, minificar el CSS y ejecutar instrucciones por linea de comandos respectivamente.
+## Plugins necesarios
+
+Grunt posee diversos plugins para tareas específicas, nosotros usaremos `grunt-contrib-watch`, `grunt-contrib-stylus`, `grunt-contrib-cssmin` y `grunt-contrib-bg-shell`. Estas librerías nos permitirán vigilar cambiso que hagamos en determinados directorios para así actuar y ejecutar la tarea que queremos, preprocesar stylus y convertirlo a CSS, minificar el CSS y ejecutar instrucciones por linea de comandos respectivamente.
+
+### Cargar los plugins en el Gruntfile
 
 Para cargar los plugins, debemos incluir en nuestro fichero `Gruntfile.js` las siguientes líneas:
 
@@ -18916,6 +18952,8 @@ grunt.loadNpmTasks("grunt-contrib-cssmin");
 grunt.loadNpmTasks("grunt-bg-shell");
 ```
 
+## Definición de tareas
+
 las tareas que vamos a definir serán las siguientes:
 
 ```javascript
@@ -18923,11 +18961,13 @@ las tareas que vamos a definir serán las siguientes:
 // tareas 'stylus' y 'cssmin' que ahora definiremos
 grunt.registerTask("compile", ["stylus", "cssmin"]);
 
-// Ésta tarea llamada 'server' nos permitirá correr
+// Ésta tarea llamada 'server' nos permitirá correr
 // el servidor a al vez que las tareas 'compile' y
 // 'watch' que ahora definiremos
 grunt.registerTask("server", ["bgShell:runNode", "compile", "watch"]);
 ```
+
+### Descripción de cada tarea
 
 Procedemos a crear las tareas:
 
@@ -18935,6 +18975,8 @@ Procedemos a crear las tareas:
 - `stylus`: Con ella preprocesamos los ficheros `.styl` que tengamos a un único fichero .css (Stylus es un preprocesador de CSS como lo son Compass, Sass, Less,… pero más hipster porque funciona bajo Node.js ;)
 - `cssmin`: Con esto minificamos el fichero css resultante en una sola línea de texto para que sea menos pesado y nuestra aplicación web tarde menos en cargar
 - `watch`: Gracias a ella cualquier cambio que hagamos en un fichero CSS o STYLUS se dará cuenta y ejecutará el preprocesamiento para que no tengamos que preocuparnos de resetear nada.
+
+### Código completo del Gruntfile
 
 El código para definir las tareas sería algo así:
 
@@ -18952,35 +18994,8 @@ module.exports = function(grunt) {
 
 		stylus: {
 			compile: {
-				options: {
-					paths: [stylesheetsDir],
-					'include css': true
-				},
-				files: {
-					'public/app/css/app.min.css': stylesheetsDir + '/index.styl'
-				}
-			}
-		},
-
-		watch: {
-			stylesheets: {
-				files: [stylesheetsDir + '/**/*.styl', stylesheetsDir + '/**/*.css'],
-				tasks: ['stylus'],
-				options: {
-					interrupt: true
-				}
-			}
-		}
-	});
+				options
 ```
-
-Para arrancar nuestra aplicacieon y hacer correr las tareas, en lugar de ejecutar `node app.js` por ejemplo, tendríamos que ejecutar
-
-```shell
-grunt server
-```
-
-Puedes ver un ejemplo completo en el siguiente repositorio [grunt-node-sandbox](https://github.com/carlosazaustre/grunt-node-sandbox). Por supuesto se pueden automatizar más cosas, como por ejemplo minificar el JavaScript, generar archivos preconfigurados de backbone, añadir etiquetas a nuestros archivos con la fecha, nombre de autor, etc.. Un montón de cosas que puedes ver por [aquí](http://gruntjs.com/sample-gruntfile)
 
 </article>
 
@@ -18997,7 +19012,7 @@ La forma antigua de hacer esto era tener un hosting web y subir los archivos por
 
 La que más recomiendo para “trastear” es abrirse una cuenta en [Amazon Web Services (AWS)](http://aws.amazon.com/) y lanzar una instancia [Elastic Compute Cloud (EC2)](http://aws.amazon.com/ec2/) que básicamente consiste en una máquina virtual Linux con al que podemos hacer lo que queramos, y lo más importante, **Amazon te da 1 año gratis para usarlo**, después del año te cobrará por horas de uso y almacenamiento, pero la instancia puedes pararla y terminarla cuando desees. En caso de que quieras dejarla siempre corriendo, puedes llegar a pagar unos 16€ al mes.
 
-![](/images/como-crear-un-servidor-web-con-amazon-web-services/amazon_com_web_services_qepgql.jpg)
+![Panel de control de Amazon Web Services para gestionar una instancia EC2](/images/como-crear-un-servidor-web-con-amazon-web-services/amazon_com_web_services_qepgql.jpg)
 
 El primer paso como digo es hacerse una cuenta en Amazon Web Services, si tienes cuenta en la tienda de Amazon te sirve la misma. Para ello vamos a [aws.amazon.com](http://aws.amazon.com) y pulsamos en **Get Started for free - Launch virtual machines and apps in minutes**
 
@@ -19166,13 +19181,21 @@ Compártelo con la comunidad en los comentarios.
 **Fecha:** 2013-07-01
 El siguiente paso en la aventura de los trámites para convertirse en autónomo en Irlanda es registrarse en la [Revenue Office of Ireland](http://www.revenue.ie/en/index.html), la hacienda irlandesa. Para ello antes de nada necesitas el [PPS Number](/como-ser-autonomo-en-irlanda) y el formulario [TR1 (PDF)](http://www.revenue.ie/en/tax/vat/forms/formtr1.pdf) cumplimentado.
 
+## Impuestos como autónomo en Irlanda
+
 Como ya he comentado en más de una ocasión, el tema de los impuestos es diferente en Irlanda que en España. Aquí un _self-employed_ o **autónomo únicamente ha de pagar el 4% de sus ingresos al final del año**, mientras que en España se ha de pagar el 20% de los beneficios obtenidos (Ingresos – Gastos). En tema de impuestos no es que sea mejor ni peor, ya que si en España ingresas 10.000€ en un año pero tienes 10.000€ de gastos, tu beneficio es 0 y no pagas nada, y en Irlanda si te encuentras en la misma situación pagaráas un 4% de tus 10.000€ ingresados, es decir 400€.
+
+### Exenciones y umbrales a tener en cuenta
 
 Pero por otra parte, si en Irlanda **has ingresado 5.000€ o menos en un año, no pagas nada**. Y también añadir que [**si tus ingresos no superan los 37.000€ en un año, estás exento de cobrar el IVA (VAT)** en tus facturas, en caso de que tu negocio sea del sector servicios](http://selfemployedsupports.ie/tax_for_self_employed_people.en.html).
 
+## El año fiscal irlandés
+
 El **año fiscal** en Irlanda empieza **el 1 de Noviembre y termina el 31 de Octubre** del siguiente año. Hasta esa fecha no hay que preocuparse de hacer declaraciones trimestrales de IRPF, pagar el IVA cada 3 meses, y demás burocracia. Sólo has de dedicarte a trabajar y guardar una copia de tus facturas. No tienes que tener un libro de registro donde meter todos los gastos que se te ocurran, ellos solo van a mirar tus ingresos.
 
-Como extra, [por 20€ (trámite online) puedes **solicitar un nombre de negocio**](http://www.cro.ie/ena/downloads-business-name.aspx) para ti, de esta manera en tus facturas en lugar de poner tu nombre como tal, puedes poner tu nombre de negocio (en mi caso [Osomsoft](http://osomsoft.com)). Parece una tontería, pero algunas empresas ven con mejor ojo que te llames “ACME Software” que “Manolo García”, sobre todo si son de los Pirineos hacia abajo.
+## Registro de nombre de negocio (Business Name)
+
+Como extra, [por 20€ (trámite online) puedes **solicitar un nombre de negocio**](http://www.cro.ie/ena/downloads-business-name.aspx) para ti, de esta manera en tus facturas en lugar de poner tu nombre como tal, puedes poner tu nombre de negocio (en mi caso [Osomsoft](http://osomsoft.com)). Parece una tontería, pero algunas empresas ven con mejor ojo que te llames "ACME Software" que "Manolo García", sobre todo si son de los Pirineos hacia abajo.
 
 Puedes solicitar tu nombre de negocio, una vez que ya estás registrado en el _Revenue_, en la [**CRO** (Companies Registration Office)](http://www.cro.ie/ena/business-registration-business-name.aspx), enviando el [formulario RBN1](http://www.cro.ie/ena/forms_r_bnames.aspx) cumplimentado. En un par de semanas recibes tu certificado en tu domicilio.
 
@@ -19191,19 +19214,25 @@ Uno de los objetivos que nos marcamos cuando nos mudamos a Irlanda fue registrar
 
 Esto tiene una serie de pasos, papeleos y demás que quiero comentar aquí para poder ayudar a otra gente que esté en una situación similar a la mía. Tiene algo de burocracia como todo papeleo, pero no es tan complicado como hacerse autónomo en España. Vamos a ello.
 
-Antes de nada comentar que [Paola](http://twiiter.com/ggarciapaola) y yo somos ambos desarrolladores/programadores de Software y los pasos que voy a comentar son para trabajar como tal. Desconozco si para cada tipo de profesión los pasos cambian o no, pero seguramente muchos sean parecidos.
+## Lo que necesitas saber antes de empezar
 
-Algunas personas creen que se necesita un visado o un permiso de trabajo para residir en un país europeo o poder trabajar en él, pero están equivocados. **Si algo bueno nos ha traído la Unión Europea es la posibilidad de circular libremente por los páises de la unión con nuestro DNI español y vivir/trabajar donde queramos**. Bien es cierto que algunos páises no es tan sencillo registrarse como autónomo y ya está, pero Irlanda es uno de los que lo pone más fácil. Y **en cuanto a la cuota de autónomos es el país que mejor nos trata** (o que por lo menos yo conozco). Otro sitio donde se puede ser autónomo sin tener que hipotecarse como en España es UK, allí se paga un mínimo de unas 15 libras al més aproximadamente que se va incrementando según factures o no. En Irlanda es diferente, **aquí no se paga nada por querer trabajar**, sólamente a final del año se pagan impuestos, en concreto un 4% de tus ingresos.
+Antes de nada comentar que [Paola](http://twiiter.com/ggarciapaola) y yo somos ambos desarrolladores/programadores de Software y los pasos que voy a comentar son para trabajar como tal. Desconozco si para cada tipo de profesión los pasos cambian o no, pero seguramente muchos sean parecidos.
 
-![](/images/como-ser-autonomo-en-irlanda/pps1-1.png)
+## Ventajas de ser autónomo en Irlanda frente a España
 
-Lo primero de todo que debes hacer cuando te mudes a Irlanda, es solicitar el [**PPS Number** (Personal Public Service Number)](http://www.welfare.ie/EN/Topics/PPSN/Pages/ppsnindex.aspx) que se podría traducir como una especie de “DNI” Irlandés que indica que resides en el país y sirve también como número de la seguridad social de aquí. En Irlanda no hay DNI como tenemos en España, aquí se identifican con el Pasaporte, pero si vives en Irlanda, necesitas un número de estos.
+Algunas personas creen que se necesita un visado o un permiso de trabajo para residir en un país europeo o poder trabajar en él, pero están equivocados. **Si algo bueno nos ha traído la Unión Europea es la posibilidad de circular libremente por los páises de la unión con nuestro DNI español y vivir/trabajar donde queramos**. Bien es cierto que algunos páises no es tan sencillo registrarse como autónomo y ya está, pero Irlanda es uno de los que lo pone más fácil. Y **en cuanto a la cuota de autónomos es el país que mejor nos trata** (o que por lo menos yo conozca). Otro sitio donde se puede ser autónomo sin tener que hipotecarse como en España es UK, allí se paga un mínimo de unas 15 libras al més aproximadamente que se va incrementando según factures o no. En Irlanda es diferente, **aquí no se paga nada por querer trabajar**, sólamente a final del año se pagan impuestos, en concreto un 4% de tus ingresos.
+
+## El PPS Number: tu número de identificación en Irlanda
+
+![Formulario oficial para solicitar el PPS Number en Irlanda](/images/como-ser-autonomo-en-irlanda/pps1-1.png)
+
+Lo primero de todo que debes hacer cuando te mudes a Irlanda, es solicitar el [**PPS Number** (Personal Public Service Number)](http://www.welfare.ie/EN/Topics/PPSN/Pages/ppsnindex.aspx) que se podría traducir como una especie de "DNI" Irlandés que indica que resides en el país y sirve también como número de la seguridad social de aquí. En Irlanda no hay DNI como tenemos en España, aquí se identifican con el Pasaporte, pero si vives en Irlanda, necesitas un número de estos.
+
+### Cómo solicitar el PPS Number
 
 Para solicitar este número, necesitas acudir a las [Welfare Offices](http://www.welfare.ie/EN/Pages/default.aspx) (algo así como la oficina de la seguridad social) y[ llevar una **identificación** (DNI, Pasaporte, Carnet de Conducir) y una **prueba de que estás residiendo en Irlanda**, como puede ser una factura de la luz o el gas a tu nombre, un contrato de alquiler, etc…)](http://www.welfare.ie/EN/Topics/PPSN/Pages/HowToApply.aspx)
 
-Esto es necesario porque la administración para comprobar la veracidad de los datos que aportas, enviará una carta a la dirección dónde vivas para chequearlo. Esto suele tomar **1 semana más o menos** de demora.
-
-Así que, en resumen, primero ven a vivir a Irlanda. Puedes estar en un hostal un par de semanas mientras encuentras un piso donde vivir como hicimos nosotros, y una vez ya tengas el contrato de alquiler empieza a moverte por las administraciones para registrarte como _self-employed_. Aunque aquí puedes empezar a trabajar como tal sin estar registrado del todo, son bastante más benevolentes con eso que en otros países.
+Esto es necesario porque la administración para comprobar la veracidad de los datos que aportas, en
 
 </article>
 
@@ -19214,7 +19243,9 @@ Así que, en resumen, primero ven a vivir a Irlanda. Puedes estar en un hostal u
 # JavaScript. Un lenguaje para dominarlos a todos
 
 **Fecha:** 2013-06-17
-Hasta no hace mucho Javascript se usaba para “adornar” las webs, ponerles efectos bonitos que no podíamos conseguir con CSS o HTML, alertas y poco más. La libreráa **jQuery** nos facilitó mucho la vida, haciendo más fácil el manejo del **DOM** (_Document Object Model_) y el uso de funciones. Más adelante con la llegada de **AJAX** (**A**synchronous **J**avaScript **A**nd **X**ML), lo empezamos a utilizar para cargar contenido dinámicamente en nuestras webs. AJAX hizo posible que aplicaciones web como _Gmail_ sean lo que son.
+Hasta no hace mucho Javascript se usaba para "adornar" las webs, ponerles efectos bonitos que no podíamos conseguir con CSS o HTML, alertas y poco más. La libreráa **jQuery** nos facilitó mucho la vida, haciendo más fácil el manejo del **DOM** (_Document Object Model_) y el uso de funciones. Más adelante con la llegada de **AJAX** (**A**synchronous **J**avaScript **A**nd **X**ML), lo empezamos a utilizar para cargar contenido dinámicamente en nuestras webs. AJAX hizo posible que aplicaciones web como _Gmail_ sean lo que son.
+
+## JavaScript, el lenguaje más popular
 
 Sólo hay que echar un vistazo a [GitHub](http://github.com), la mayor comunidad de proyectos _OpenSource_, y ver cuales son los lenguajes más _Trending Topic:_
 
@@ -19223,29 +19254,34 @@ Sólo hay que echar un vistazo a [GitHub](http://github.com), la mayor comunidad
 Se puede ver que incluso en la lista de los 10 más usados, el último lugar corresponde a [CoffeeScript](http://coffeescript.org/) un metalenguaje que compila a Javascript, por lo que casi el 25% de los lenguajes más utilizados en la red es JS.
 
 ![js](/images/javascript/js_xkixgr.jpg)
+
+## JavaScript en el cliente: frameworks MVC
+
 Pero JS está evolucionando muchísimo, algunos lo consideran el lenguaje de programación del futuro, pero creo que es ya del presente. JS ha crecido en el navegador, apareciendo numerosos **frameworks MVC** (_Model View Controller_) que permiten desde el cliente hacer numerosas operaciones antes relegadas al servidor, haciéndolas más rápidas y escalables.
 
+## JSON y MongoDB: datos en JavaScript
+
 **Javascript ha llegado también al modelo de datos**. Anteriormente el intercambio de los mismos entre páginas web se hacia con XML, ahora y desde hace un tiempo tenemos **JSON** (**J**ava**S**cript **O**bject **N**otation) mucho más ligero que XML y que se entiende perfectamente con JS ya que usan la misma notación.
+
+### MongoDB: base de datos NoSQL orientada a documentos
 
 Si tenemos modelo de datos, **tenemos también base de datos**. **MongoDB** es una base de datos **NoSQL** (Base de datos no relacional) orientada a documentos.
 
 ![MongoDB](/images/javascript/MongoDB_yaii3q.png)
 En lugar de guardar la información en tablas, se almacenan en forma de documentos JSON. De manera que pueden ser llamados facilmente desde JS e incorporarlos en nuestras aplicaciones webs. No significa que vayan a desaparecer las bases de datos tradicionales. En algunos momentos necesitamos que sean relacionales, pero para diversos tipos de aplicaciones una base NoSQL es una solución bastante óptima.
 
+## Node.js: JavaScript también en el servidor
+
 Si tenemos JS en cliente, modelo de datos y bases de datos escritas en JS, **¿Tenemos algo parecido en el servidor?** Por supuesto.
 
 ![5958685476_78ab9d2a86_m](/images/javascript/5958685476_78ab9d2a86_m_od23ju.jpg)
 
-El [proyecto **Node.js**](https://github.com/joyent/node) ha llevado JS al lado del servidor. Fue presentado en 2009 por **Ryan Dahl** en la [JSConf](http://jsconf.com/). Creado a partir del motor [V8](<http://en.wikipedia.org/wiki/V8_(JavaScript_engine)>) para renderizar Javascript del navegador Google Chrome.
+El [proyecto **Node.js**](https://github.com/joyent/node) ha llevado JS al lado del servidor. Fue presentado en 2009 por **Ryan Dahl** en la [JSConf](http://jsconf.com/). Creado a partir del motor [V8](<http://en.wikipedia.org/wiki/V8_(JavaScript_engine)>) para renderizar Javascript del navegador Google Chrome.
 
 > 📺 [Ver vídeo en YouTube](https://www.youtube.com/watch?v=ztspvPYybIY)
 />
 
-Ahora podemos crear servidores webs con Javascript en el Back-End que soportan bastante redundancia. Está en una fase temprana de desarrollo (v0.10) y tiene 4 años de vida, pero está madurando considerablemente y ya tiene numerosos frameworks y librerías ([Express](http://expressjs.com/), [Socket.io](http://socket.io/)) que están haciendo más sencillo crear aplicaciones en este nuevo entorno.
-
-Cada día vemos que [si algo puede hacerse en Javascript, se acabará haciendo en Javascript](http://www.codinghorror.com/blog/2007/07/the-principle-of-least-power.html).
-
-[**¿Quieres aprender JavaScript** desde cero? Consigue mi libro en formato digital: **Aprendiendo JavaScript**](http://leanpub.com/aprendiendo-javascript)
+Ahora podemos crear servidores webs con Javascript en el Back-End que soportan bas
 
 </article>
 
@@ -19264,7 +19300,7 @@ Primero de todo, decir que trabajo normalmente en un [MacBook Air 13″](http://
 
 #### Herramientas habituales
 
-![](/images/herramientas-utiles-para-desarrolladores/8251028685_c9f6cd4f72_z_cqdwwj.jpg)
+![Conjunto de herramientas habituales utilizadas por desarrolladores web](/images/herramientas-utiles-para-desarrolladores/8251028685_c9f6cd4f72_z_cqdwwj.jpg)
 
 - **Editor de texto**: [Sublime Text 2](http://www.sublimetext.com/), Multiplataforma. Escrito en Python. Muy rápido, y ligero. Contiene numerosos paquetes y funcionalidades que lo hacen ser EL EDITOR. Bien es cierto que si programas en Objective-C te es más útil XCode, y si lo haces para Android te sea mejor (aunque sea un dolor) utilizar Eclipse. Pero si te dedicas al desarrollo web, es lo mejor.
 

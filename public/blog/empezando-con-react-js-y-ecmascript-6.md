@@ -41,8 +41,8 @@ Commo puedes ver, se ve de una forma más clara con JSX lo que estamos renderiza
 
 Lo que ha hecho que React se vuelva _trending_ es su velocidad de renderizado de vistas. Eso es posible gracias a un _Virtual DOM_ que genera React con cada componente que creamos y el algoritmo de _Diff_ que básicamente lo que hace es marcar que elementos dentro de nuestro DOM Virtual tienen cambios para renderizar solo ellos y no tener que revisar y repintar el DOM entero de nuestra página. Dónde más tiempo se pierde en una aplicación web es en el renderizado y pintado del DOM. React evita eso y por eso es tan rápido.
 
-![](/images/empezando-con-react-js-y-ecmascript-6/4.png)
-![](/images/empezando-con-react-js-y-ecmascript-6/5.png)
+![Diagrama del Virtual DOM de React mostrando el proceso de renderizado y actualización eficiente](/images/empezando-con-react-js-y-ecmascript-6/4.png)
+![Diagrama del Virtual DOM de React comparado con el renderizado tradicional del navegador](/images/empezando-con-react-js-y-ecmascript-6/5.png)
 Fuente: [React's diff Algorithm](http://calendar.perfplanet.com/2013/diff/)
 
 #### Diseño orientado a componentes

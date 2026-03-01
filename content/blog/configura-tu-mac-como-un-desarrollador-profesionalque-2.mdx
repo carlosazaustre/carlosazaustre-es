@@ -23,13 +23,13 @@ Mac OSX viene con un terminal por defecto, como todos los sistemas operativos, s
 
 Una de las cosas que más me gusta es la opción de ocultar y mostrar el terminal rápidamente con una combinación de teclas. Para configurar esta opción, debemos ir al menú `iTerm2 > Preferences...`, clickar en la pestaña `Keys` y habilitar el checkboxk `Hotkey - Show/hide iTerm2 with a system-wide hotkey`
 
-![](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-13-58-48.png)
+![Ventana de preferencias de iTerm2 mostrando la pestaña Keys con la opción Hotkey activada](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-13-58-48.png)
 
 #### Colores
 
 También podemos configurar los colores que se muestran en la terminal, eligiendo unos que nos resulten agradables. Para ello en la ventana de preferencias elegimos la pestaña `Profiles`, nos creamos uno nuevo. En mi caso le he puesto mi nombre `carlosazaustre` y
 
-![](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-14-05-55.png)
+![Ventana de preferencias de terminal con la pestaña Profiles y perfil carlosazaustre seleccionado](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-14-05-55.png)
 
 Los predefinidos que usará el sistema son `Black`, `Red`, `Green`, `Yellow`, `Blue`, `Magenta`, `Cyan` y `White`. Podemos cambiar sus valores hexadecimales por otros que nos resulten más agradables.
 
@@ -51,14 +51,14 @@ Que te responderá con
 
 `Bash` no está mal, pero prefiero utilizar `zsh` por las posibilidades y configuraciones que permite. Para cambiar el tipo de Shell en Mac. Abrimos el **Panel de Preferencias del sistema**, elegimos **Usuarios y Grupos**. Clickamos en nustro usuario con _Click Derecho_ y elegimos _Opciones avanzadas_
 
-![](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-14-25-09.png)
+![Ventana de Opciones avanzadas del usuario en Preferencias del Sistema de macOS](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-14-25-09.png)
 
 En el campo `Login Shell` elegimos la opción `/bib/zsh`:
 
-![](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-14-26-27.png)
+![Ventana de preferencias de Terminal mostrando la selección de /bin/zsh como shell de inicio](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-14-26-27.png)
 
 Tu terminal de iTerm lucirá ahora así:
-![](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-14-28-53.png)
+![Terminal macOS con el comando echo $SHELL mostrando /bin/zsh como shell predeterminado](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-14-28-53.png)
 
 Es el momento de personalizar el prompt por uno más **Pro** y útil que el que trae por defecto
 
@@ -66,7 +66,7 @@ Es el momento de personalizar el prompt por uno más **Pro** y útil que el que 
 
 La fuente por defecto que trae iTerm es `Monaco`, que no está mal, pero yo últimamente prefiero la tipografía de `Ubuntu`. La podemos descargar desde [font.ubuntu.com](http://font.ubuntu.com/) y una vez instalada la versión `Monospace` en nuestro sistema, la activamos desde la pestaña **Text** en el tab **Profiles** de las **Preferencias de iTerm**
 
-![](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-14-35-51.png)
+![Pestaña Text en Profiles de Preferencias de iTerm con fuente Monospace activada](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-14-35-51.png)
 
 Para poder cambiar el shell por defecto que trae `zsh`, por uno más personalizado, tenemos que editar el fichero `.zshrc` en el directorio home, o `~`
 
@@ -74,7 +74,7 @@ Cargamos los colores de iTerm dentro de la configuración del fichero con `autol
 
 Para personalizar el prompt usamos la variable `PROMPT`. Si escribimos algo como `PROMPT=" > "` en nuestro terminal tendremos algo como esto:
 
-![](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-15-35-48.png)
+![Terminal de Mac con el prompt personalizado mostrando el símbolo mayor que como indicador](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-15-35-48.png)
 
 Podemos configurarlo con más información y colores para hacerlo más identificable.
 
@@ -301,4 +301,4 @@ ZSH_THEME = "nico";
 ```
 
 Reinicia la terminal y tendrás el siguiente aspecto. Con feedback de la rama de Git en la que te encuentres, si ha habido cambios en el repositorio, etc...
-![](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-18-07-20.png)
+![Terminal personalizada en Mac mostrando rama Git activa y estado del repositorio](/images/configura-tu-mac-como-un-desarrollador-profesionalque-2/Screen-Shot-2015-01-10-at-18-07-20.png)

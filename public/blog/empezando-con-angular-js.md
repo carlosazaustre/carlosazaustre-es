@@ -21,7 +21,7 @@ Por suerte surgieron frameworks que implementaban el patrón MVC (Modelo, Vista,
 
 BackboneJS te permite crear tu app rápidamente aunque en ocasiones es complicado de utilizar. La mayoría de los desarrolladores eligen BackboneJS porque parece la opción más segura, lleva más tiempo entre nosotros, hay mucha documentación sobre él y está mantenido por una gran comunidad.
 
-![](https://carlosazaustre.es/blog/content/images/2015/02/square_odd9l7.png)
+![La imagen devuelve 404, pero por el nombre del archivo (`square_odd9l7.png`), el contexto del post s](https://carlosazaustre.es/blog/content/images/2015/02/square_odd9l7.png)
 
 Sin embargo AngularJS está pisando fuerte. Aunque su primera versión es de 2009, se ha hecho muy popular a finales de 2012 y ahora en 2013 está en pleno auge. Tanto que ya se habla de una nueva _technology stack_ como antes era **LAMP** (**L**inux + **A**pache + **M**ySQL + **P**HP) ahora la tendencia es **[MEAN](http://www.mean.io/)** (**M**ongoDB/**M**ongoose + **E**xpressJS + **A**ngularJS + **N**odeJS), lo que también se traduce a aplicaciones _JavaScript End-to-End_. AngularJS está mantenido por Google y bastante comunidad. También como punto a su favor está lo sencillo que crear Tests unitarios y _End-to-End_ con [Jasmine](http://pivotal.github.io/jasmine/) y [Karma](http://karma-runner.github.io/0.10/index.html), algo que suele ser un poco costoso al principio.
 
