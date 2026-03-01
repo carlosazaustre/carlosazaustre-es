@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import type { PostMeta } from "@/lib/blog";
 
 function formatDate(dateStr: string): string {
@@ -16,22 +15,7 @@ export default function BlogCard({ post }: { post: PostMeta }) {
       href={`/blog/${post.slug}`}
       style={{ textDecoration: "none", display: "block" }}
     >
-      <article className="neo-card" style={{ padding: 0, overflow: "hidden" }}>
-        {/* Cover image */}
-        {post.coverImage && (
-          <div style={{ position: "relative", width: "100%", aspectRatio: "1200/630", borderBottom: "3px solid var(--border)" }}>
-            <Image
-              src={post.coverImage}
-              alt={post.title}
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              style={{ objectFit: "cover" }}
-              unoptimized={post.coverImage.startsWith("/api/")}
-            />
-          </div>
-        )}
-
-        <div style={{ padding: "1.25rem 1.5rem" }}>
+      <article className="neo-card" style={{ padding: "1.5rem" }}>
         {/* Tags */}
         {post.tags.length > 0 && (
           <div
@@ -114,7 +98,6 @@ export default function BlogCard({ post }: { post: PostMeta }) {
             {post.readingTime} lectura
           </span>
         </div>
-        </div> {/* end padding wrapper */}
       </article>
     </Link>
   );
