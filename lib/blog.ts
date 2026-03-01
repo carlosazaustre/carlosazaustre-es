@@ -187,6 +187,7 @@ const BLOG_DIR = path.join(process.cwd(), "content/blog");
 export interface PostMeta {
   slug: string;
   title: string;
+  seoTitle?: string;
   date: string;
   updatedAt?: string;
   excerpt: string;
@@ -251,6 +252,7 @@ export function getAllPosts(): PostMeta[] {
     return {
       slug,
       title: data.title ?? "Sin título",
+      seoTitle: data.seoTitle ? String(data.seoTitle) : undefined,
       date: data.date ? String(data.date) : new Date().toISOString(),
       updatedAt: data.updatedAt ? String(data.updatedAt) : undefined,
       excerpt: data.excerpt ?? extractExcerpt(content),
@@ -300,6 +302,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
   return {
     slug,
     title: data.title ?? "Sin título",
+    seoTitle: data.seoTitle ? String(data.seoTitle) : undefined,
     date: data.date ? String(data.date) : new Date().toISOString(),
     updatedAt: data.updatedAt ? String(data.updatedAt) : undefined,
     excerpt: data.excerpt ?? extractExcerpt(content),
