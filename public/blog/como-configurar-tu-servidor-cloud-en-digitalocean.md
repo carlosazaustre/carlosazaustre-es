@@ -10,6 +10,9 @@ related:
   - desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean
   - como-crear-un-servidor-web-con-amazon-web-services
   - como-configurar-nginx-con-node-js-en-produccion
+excerpt: >-
+  Aprende a configurar tu primer servidor cloud en DigitalOcean paso a paso.
+  Crea un droplet Linux desde 5$ al mes y despliega tus aplicaciones web.
 ---
 
 # Cómo configurar tu servidor cloud en DigitalOcean

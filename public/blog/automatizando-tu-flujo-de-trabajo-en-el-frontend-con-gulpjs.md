@@ -11,6 +11,9 @@ related:
   - automatizar-tareas-en-javascript-con-grunt-js
   - primeros-pasos-con-webpack
   - browserify-desarrollando-tu-frontend-como-en-node-js
+excerpt: >-
+  Aprende a automatizar tu flujo de trabajo en el frontend con GulpJS y Node.js:
+  minifica CSS, JavaScript y más con una sintaxis clara y eficiente
 ---
 
 # Automatizando tu flujo de trabajo en el Frontend con GulpJS

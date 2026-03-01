@@ -9,6 +9,9 @@ related:
   - automatizando-tu-flujo-de-trabajo-en-el-frontend-con-gulpjs
   - browserify-desarrollando-tu-frontend-como-en-node-js
   - automatizar-tareas-en-javascript-con-grunt-js
+excerpt: >-
+  Webpack es el bundler que necesitas para preparar tus apps JavaScript en
+  producción. Aprende su instalación y configuración básica desde cero.
 ---
 
 # Primeros pasos con Webpack

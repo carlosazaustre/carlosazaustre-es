@@ -11,6 +11,9 @@ related:
   - autenticacion-con-token-en-node-js
   - como-relacionar-tus-modelos-en-mongodb
   - como-servir-tu-api-rest-en-node-js-a-traves-de-nginx
+excerpt: >-
+  Aprende a crear una API REST con Node.js, Express y MongoDB paso a paso.
+  Tutorial completo del stack MEAN con Mongoose y operaciones CRUD desde cero.
 ---
 
 # Cómo crear un API REST usando Node.js, Express y MongoDB

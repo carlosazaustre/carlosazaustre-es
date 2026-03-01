@@ -10,6 +10,9 @@ related:
   - como-configurar-nginx-con-node-js-en-produccion
   - como-servir-tu-api-rest-en-node-js-a-traves-de-nginx
   - como-configurar-tu-servidor-cloud-en-digitalocean
+excerpt: >-
+  Aprende a instalar un servidor HTTPS en Nginx desde cero con SSL. Configura tu
+  certificado en Ubuntu y AWS EC2 para proteger los datos de tu aplicación web.
 ---
 
 # Cómo instalar un Servidor HTTPS en Nginx desde cero

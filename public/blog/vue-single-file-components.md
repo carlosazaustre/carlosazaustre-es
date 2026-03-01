@@ -10,6 +10,9 @@ related:
   - primeros-pasos-en-vue
   - desarrollo-basado-en-componentes-con-vue-js
   - que-es-lo-que-me-gusta-de-vue-js
+excerpt: >-
+  Descubre cómo usar Vue Single File Components para construir componentes
+  escalables con template, script y style en un único archivo .vue de Vue.js
 ---
 
 # Vue: Single File Components

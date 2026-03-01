@@ -8,6 +8,10 @@ related:
   - ser-autonomo-en-espana-pasos-para-ser-freelance
   - como-ser-autonomo-en-irlanda
   - e-residency
+excerpt: >-
+  Mi experiencia con N26, el banco online sin comisiones. Descubre cómo
+  funciona, sus ventajas en divisas, retirada de efectivo y por qué es ideal
+  para autónomos.
 ---
 
 # Eligiendo un banco online sin comisiones. Mi experiencia con N26

@@ -10,6 +10,9 @@ related:
   - estructura-de-un-componente-en-react
   - jsx-para-novatos
   - empezando-con-react-js-y-ecmascript-6
+excerpt: >-
+  Aprende a crear componentes en React de 4 formas: clases ES6, funciones,
+  stateless y createClass. Descubre cuándo usar cada estilo según tu proyecto.
 ---
 
 # 4 Formas de crear un Componente en React

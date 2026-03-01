@@ -13,6 +13,9 @@ related:
   - >-
     primera-aplicacion-web-en-raspberrypi-con-nodejs-cylonjs-controlando-leds-desde-el-movil
   - desarrollo-full-stack-javascript-tambien-conocido-como-mean
+excerpt: >-
+  Aprende a usar WebSockets con Socket.io en tus aplicaciones web. Comunicación
+  bidireccional en tiempo real entre cliente y servidor de forma sencilla.
 ---
 
 # WebSockets: Cómo utilizar Socket.io en tus aplicaciones web

@@ -11,6 +11,9 @@ related:
   - empezando-con-angular-js
   - tutorial-ejemplo-de-aplicacion-web-con-angular-js-y-api-rest-con-node
   - autenticacion-con-token-en-angularjs
+excerpt: >-
+  Aprende a crear una aplicación web con AngularJS y Routing. Tutorial práctico
+  con ejemplos de SPA, navegación entre vistas y configuración de rutas.
 ---
 
 # Tutorial de AngularJS. Ejemplo de Aplicación web con AngularJS y Routing

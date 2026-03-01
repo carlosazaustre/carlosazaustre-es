@@ -10,6 +10,10 @@ related:
   - empezando-con-react-js-y-ecmascript-6
   - estructura-de-un-componente-en-react
   - formas-de-crear-un-componente-en-react
+excerpt: >-
+  Aprende qué es JSX, la extensión de JavaScript de Facebook para React.
+  Descubre cómo simplifica la creación de componentes con sintaxis similar a
+  HTML.
 ---
 
 # JSX para novatos

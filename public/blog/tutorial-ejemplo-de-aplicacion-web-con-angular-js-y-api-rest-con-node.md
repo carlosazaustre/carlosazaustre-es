@@ -13,6 +13,9 @@ related:
   - tutorial-aplicacion-web-con-angularjs-y-routing
   - como-crear-una-api-rest-usando-node-js
   - autenticacion-con-token-en-angularjs
+excerpt: >-
+  Aprende a crear una aplicación web con AngularJS conectada a una API REST con
+  Node.js. Tutorial paso a paso para desarrollar tu primer SPA con JavaScript.
 ---
 
 # Tutorial de AngularJS. Ejemplo de aplicación web conectada a una API REST con Node

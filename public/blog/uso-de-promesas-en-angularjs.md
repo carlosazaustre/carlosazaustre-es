@@ -9,6 +9,9 @@ related:
   - manejando-la-asincronia-en-javascript
   - tutorial-ejemplo-de-aplicacion-web-con-angular-js-y-api-rest-con-node
   - empezando-con-angular-js
+excerpt: >-
+  Aprende qué son las Promises de JavaScript y cómo usarlas en AngularJS para
+  sustituir callbacks y gestionar valores asíncronos de forma eficiente
 ---
 
 # JavaScript Promises. Uso de promesas en AngularJS

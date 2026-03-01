@@ -10,6 +10,9 @@ related:
   - como-configurar-tu-servidor-cloud-en-digitalocean
   - subiendo-archivos-estaticos-aws-s3-con-node
   - como-configurar-nginx-con-node-js-en-produccion
+excerpt: >-
+  Aprende a configurar un servidor web en Amazon Web Services. Crea tu instancia
+  EC2 con Linux y monta un entorno LAMP en la nube gratis durante 1 año.
 ---
 
 # Cómo configurar un servidor web con Amazon Web Services

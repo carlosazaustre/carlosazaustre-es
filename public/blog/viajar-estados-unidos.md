@@ -8,6 +8,9 @@ related:
   - mochila
   - banco-online-sin-comisiones
   - e-residency
+excerpt: >-
+  Descubre cómo viajar a Estados Unidos de forma barata. Consejos, experiencias
+  reales y trucos para organizar un viaje económico a USA sin gastar una fortuna
 ---
 
 # Viajar a Estados Unidos de forma barata. Nuestra experiencia

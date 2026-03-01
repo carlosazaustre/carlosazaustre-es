@@ -9,6 +9,9 @@ related:
   - '2015'
   - '2014'
   - mi-experiencia-como-profesor-en-los-cursos-de-platzi
+excerpt: >-
+  Resumen de mi charla Ignite en PlatziConf Madrid 2016: cómo internet cambió mi
+  aprendizaje y por qué compartir conocimiento con la comunidad es clave
 ---
 
 # Aprendiendo y Compartiendo con la Comunidad

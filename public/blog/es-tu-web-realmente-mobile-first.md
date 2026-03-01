@@ -10,6 +10,9 @@ related:
   - los-5-patrones-del-responsive-design
   - imagenes-responsive
   - lazy-loading-image
+excerpt: >-
+  Aprende qué significa Mobile First, por qué Google prioriza webs responsive y
+  cómo aplicar Progressive Enhancement o Graceful Degradation en tu diseño web.
 ---
 
 # ¿Es tu web realmente Mobile First?

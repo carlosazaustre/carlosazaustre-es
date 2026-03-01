@@ -10,6 +10,10 @@ related:
   - como-configurar-nginx-con-node-js-en-produccion
   - como-crear-una-api-rest-usando-node-js
   - aplicacion-node-como-servicio-upstart
+excerpt: >-
+  Aprende a configurar Nginx como proxy inverso para servir tu API REST en
+  Node.js desde tu dominio. Guía práctica con ejemplos de configuración paso a
+  paso.
 ---
 
 # Cómo servir tu API REST en Node.js a través de Nginx

@@ -9,6 +9,9 @@ related:
   - ejemplo-de-aplicacion-con-react-js-en-ecmascript-6
   - consumiendo-un-api-rest-desde-react-js-con-ecmascript6
   - ecmascript6
+excerpt: >-
+  Aprende a empezar con ReactJS y ECMAScript 6. Descubre cómo funciona JSX, el
+  patrón MVC en el Frontend y por qué React es la librería de Facebook más usada
 ---
 
 # Empezando con ReactJS y ECMAScript 6

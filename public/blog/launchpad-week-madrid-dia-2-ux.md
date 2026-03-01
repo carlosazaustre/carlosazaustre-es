@@ -9,6 +9,9 @@ related:
   - google-launchpad-madrid-dia-1-producto
   - google-launchpad-madrid-dia-4-tecnologia
   - chefly-en-google-launchpad-madrid-marketing
+excerpt: >-
+  Segundo día en Launchpad Week Madrid enfocado en UX. Descubre qué aprendimos
+  sobre diseño de experiencia de usuario en el programa de Google para startups.
 ---
 
 # Launchpad Week Madrid. Día 2: UX

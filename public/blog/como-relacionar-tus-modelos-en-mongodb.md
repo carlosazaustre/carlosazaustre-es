@@ -10,6 +10,10 @@ related:
   - como-conectarte-remotamente-a-tu-base-de-datos-mongodb
   - como-crear-una-api-rest-usando-node-js
   - desarrollo-full-stack-javascript-tambien-conocido-como-mean
+excerpt: >-
+  Aprende a relacionar modelos en MongoDB con Mongoose y el método populate.
+  Crea referencias entre colecciones en Node.js con ejemplos prácticos paso a
+  paso.
 ---
 
 # Cómo relacionar tus modelos en MongoDB

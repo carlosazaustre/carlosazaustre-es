@@ -9,6 +9,10 @@ related:
   - husky-lintstaged
   - travis-despliegue-integracion-continua
   - herramientas-utiles-para-desarrolladores
+excerpt: >-
+  Aprende qué son los Conventional Commits: la especificación estándar para
+  escribir mensajes de commit claros, legibles y compatibles con Semantic
+  Versioning.
 ---
 
 # Conventional Commits - Especificación para tus mensajes de commit

@@ -10,6 +10,10 @@ related:
   - desarrollo-basado-en-componentes-con-vue-js
   - que-es-lo-que-me-gusta-de-vue-js
   - vue-single-file-components
+excerpt: >-
+  Aprende a dar tus primeros pasos en Vue.js sin Webpack ni Babel. Solo
+  necesitas HTML y CSS para comenzar a desarrollar con este framework
+  JavaScript.
 ---
 
 # Primeros pasos en Vue

@@ -9,6 +9,9 @@ related:
   - google-launchpad-madrid-dia-1-producto
   - launchpad-week-madrid-dia-2-ux
   - google-launchpad-madrid-dia-4-tecnologia
+excerpt: >-
+  Tercer día de Chefly en Google Launchpad Madrid con foco en marketing digital.
+  Descubrimos cómo vender una startup con consejos de expertos de Google.
 ---
 
 # Tercer día de Chefly en Google Launchpad Madrid: Marketing

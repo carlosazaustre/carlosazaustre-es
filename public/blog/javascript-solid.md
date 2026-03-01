@@ -9,6 +9,9 @@ related:
   - el-camino-para-ser-un-pro-en-javascript
   - ecmascript6
   - manejando-la-asincronia-en-javascript
+excerpt: >-
+  Descubre los 5 principios SOLID aplicados a JavaScript para escribir código
+  limpio, escalable y mantenible. Aprende con ejemplos y vídeo en YouTube.
 ---
 
 # Principios SOLID en JavaScript

@@ -12,6 +12,9 @@ related:
   - angular-2-primeros-pasos
   - primeros-pasos-con-webpack
   - automatizando-tu-flujo-de-trabajo-en-el-frontend-con-gulpjs
+excerpt: >-
+  Aprende a usar Browserify para escribir JavaScript del lado del cliente como
+  en Node.js, usando require() y NPM para gestionar módulos en tu frontend.
 ---
 
 # Browserify. Desarrollando tu Frontend como en Node.js

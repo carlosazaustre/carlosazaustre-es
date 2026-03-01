@@ -6,20 +6,18 @@
  *
  * Uso manual:  node scripts/generate-excerpts.mjs
  * Prebuild:    se ejecuta automáticamente (solo procesa posts sin excerpt)
+ *
+ * ⚠️ NO MODIFICAR: usa fetch nativo de Node.js, NO curl.
  */
 
 import fs from "fs";
 import path from "path";
-import os from "os";
 import { fileURLToPath } from "url";
-import { execFileSync } from "child_process";
 import matter from "gray-matter";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const BLOG_DIR = path.join(__dirname, "../public/blog");
-const DELAY_MS = 2000;
-const MAX_RETRIES = 4;
-const TMP_PAYLOAD = path.join(os.tmpdir(), "excerpt-payload.json");
+const DELAY_MS = 400;
 
 const GATEWAY_TOKEN = process.env.OPENCLAW_GATEWAY_TOKEN;
 const GATEWAY_PORT = process.env.OPENCLAW_GATEWAY_PORT || "18789";
@@ -33,16 +31,27 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function generateExcerpt(title, content, attempt = 1) {
-  const trimmedContent = content.replace(/^#+.*/gm, "").trim().slice(0, 1200);
+async function generateExcerpt(title, content) {
+  const trimmedContent = content.replace(/^#+.*/gm, "").trim().slice(0, 400);
 
-  const payload = {
-    model: "anthropic/claude-haiku-4-5",
-    max_tokens: 180,
-    messages: [
-      {
-        role: "user",
-        content: `Genera un excerpt SEO en español para este artículo de blog técnico.
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 45000);
+
+  const res = await fetch(`http://localhost:${GATEWAY_PORT}/v1/chat/completions`, {
+    method: "POST",
+    signal: controller.signal,
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${GATEWAY_TOKEN}`,
+    },
+    body: JSON.stringify({
+      model: "anthropic/claude-haiku-4-5",
+      max_tokens: 180,
+      stream: false,
+      messages: [
+        {
+          role: "user",
+          content: `Genera un excerpt SEO en español para este artículo de blog técnico.
 Requisitos:
 - Entre 140 y 160 caracteres exactos
 - Descriptivo, con las keywords principales del artículo
@@ -55,37 +64,15 @@ Contenido:
 ${trimmedContent}
 
 Responde SOLO con el texto del excerpt:`,
-      },
-    ],
-  };
-
-  fs.writeFileSync(TMP_PAYLOAD, JSON.stringify(payload), "utf-8");
-
-  try {
-    const result = execFileSync(
-      "curl",
-      [
-        "-s",
-        "--max-time", "25",
-        "-X", "POST",
-        `http://localhost:${GATEWAY_PORT}/v1/chat/completions`,
-        "-H", "Content-Type: application/json",
-        "-H", `Authorization: Bearer ${GATEWAY_TOKEN}`,
-        "-d", `@${TMP_PAYLOAD}`,
+        },
       ],
-      { encoding: "utf-8", timeout: 30000 }
-    );
+    }),
+  });
 
-    const json = JSON.parse(result);
-    if (json.error) throw new Error(json.error.message || JSON.stringify(json.error));
-    return json.choices[0].message.content.trim();
-  } catch (err) {
-    if (attempt < MAX_RETRIES) {
-      await sleep(2000 * attempt);
-      return generateExcerpt(title, content, attempt + 1);
-    }
-    throw err;
-  }
+  clearTimeout(timeout);
+  if (!res.ok) throw new Error(`API error ${res.status}`);
+  const json = await res.json();
+  return json.choices[0].message.content.trim();
 }
 
 async function main() {
@@ -133,7 +120,6 @@ async function main() {
 
   console.log("");
   console.log(`✅ Completado: ${updated} actualizados, ${errors} errores`);
-  if (updated > 0) console.log("💡 Recuerda hacer commit de los cambios en public/blog/");
 }
 
 main().catch((err) => {

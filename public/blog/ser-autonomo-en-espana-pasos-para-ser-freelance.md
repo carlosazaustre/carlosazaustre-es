@@ -9,6 +9,10 @@ related:
   - como-ser-autonomo-en-irlanda
   - como-ser-autonomo-en-irlanda-registro-en-hacienda
   - banco-online-sin-comisiones
+excerpt: >-
+  Guía completa para darte de alta como autónomo en España. Descubre los pasos
+  necesarios para trabajar como freelance, pagar impuestos y emprender
+  legalmente.
 ---
 
 # Ser autónomo en España. Pasos para ser Freelance

@@ -10,6 +10,9 @@ related:
   - que-es-la-autenticacion-con-token
   - autenticacion-con-token-en-node-js
   - tutorial-ejemplo-de-aplicacion-web-con-angular-js-y-api-rest-con-node
+excerpt: >-
+  Aprende a implementar autenticación con token en AngularJS usando Satellizer.
+  Integra OAuth con Facebook, Google o GitHub en tu app de forma sencilla.
 ---
 
 # Cómo hacer autenticación basada en token con AngularJS

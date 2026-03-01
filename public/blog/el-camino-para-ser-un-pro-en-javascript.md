@@ -11,6 +11,9 @@ related:
   - javascript
   - ecmascript6
   - manejando-la-asincronia-en-javascript
+excerpt: >-
+  Descubre los 7 pasos para convertirte en un profesional de JavaScript. Desde
+  Node.js hasta frameworks modernos, tu guía definitiva para dominar JS.
 ---
 
 # 7 Pasos para ser un profesional en JavaScript

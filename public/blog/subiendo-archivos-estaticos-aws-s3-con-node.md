@@ -10,6 +10,9 @@ related:
   - automatizar-tareas-en-javascript-con-grunt-js
   - como-crear-un-servidor-web-con-amazon-web-services
   - automatizando-tu-flujo-de-trabajo-en-el-frontend-con-gulpjs
+excerpt: >-
+  Aprende a subir archivos estáticos a AWS S3 desde Node.js usando Grunt.js.
+  Automatiza el despliegue de assets en Amazon Web Services de forma sencilla.
 ---
 
 # Subir archivos estáticos en AWS S3 con Node.js y Grunt.js

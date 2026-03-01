@@ -10,6 +10,10 @@ related:
   - react-tutorial-modern
   - empezando-con-react-js-y-ecmascript-6
   - primeros-pasos-con-webpack
+excerpt: >-
+  Aprende a iniciar un proyecto React con Vite, la herramienta de tooling
+  Frontend más rápida. Alternativa moderna a Webpack, Parcel y Snowpack para tus
+  apps.
 ---
 
 # Cómo iniciar un proyecto React con Vite

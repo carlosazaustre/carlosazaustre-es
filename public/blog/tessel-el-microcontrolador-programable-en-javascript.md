@@ -11,6 +11,9 @@ related:
     primera-aplicacion-web-en-raspberrypi-con-nodejs-cylonjs-controlando-leds-desde-el-movil
   - programando-en-node-js-con-raspberrypi-primeros-pasos
   - aplicacion-node-como-servicio-upstart
+excerpt: >-
+  Tessel es un microcontrolador open-source programable en JavaScript. Descubre
+  cómo funciona este hardware alternativo a Arduino y cómo empezar a usarlo.
 ---
 
 # Tessel, el microcontrolador programable en JavaScript

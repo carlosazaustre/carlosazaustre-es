@@ -10,6 +10,9 @@ related:
   - primeros-pasos-en-vue
   - vue-single-file-components
   - que-es-lo-que-me-gusta-de-vue-js
+excerpt: >-
+  Aprende a crear componentes reutilizables con Vue.js y construye aplicaciones
+  web modernas. Tutorial paso a paso con ejemplos de código y plantillas.
 ---
 
 # Desarrollo basado en Componentes con Vue.js

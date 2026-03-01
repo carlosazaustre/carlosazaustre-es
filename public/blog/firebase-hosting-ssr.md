@@ -12,6 +12,10 @@ related:
   - gatsby-deploy-firebase
   - que-son-las-firebase-cloud-functions
   - google-cloud-run
+excerpt: >-
+  Aprende a desplegar una aplicación Next.js con Server-Side Rendering en el
+  nuevo Firebase Hosting, anunciado en Firebase Summit 2022 y disponible en
+  preview.
 ---
 
 # Cómo desplegar una app Server-Side Rendering con Next.js en el nuevo Firebase Hosting

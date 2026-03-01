@@ -10,6 +10,9 @@ related:
   - que-es-la-autenticacion-con-token
   - autenticacion-con-token-en-angularjs
   - registro-y-autorizacion-de-usuarios-en-node-js-con-twitter-y-facebook
+excerpt: >-
+  Aprende a implementar autenticación basada en token con Node.js y Express.
+  Modulariza tu servidor, conecta MongoDB y protege tu API REST paso a paso.
 ---
 
 # Cómo implementar autenticación basada en token con Node.js

@@ -8,6 +8,10 @@ related:
   - e-residency
   - impuestos-estonia
   - ser-autonomo-en-espana-pasos-para-ser-freelance
+excerpt: >-
+  Aprende paso a paso cómo crear una empresa en Estonia: requisitos, costes,
+  tarjeta de e-residente y cuenta bancaria para montar tu compañía estonia desde
+  España
 ---
 
 # Cómo crear una empresa en Estonia

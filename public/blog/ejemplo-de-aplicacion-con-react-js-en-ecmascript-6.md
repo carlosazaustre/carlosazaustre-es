@@ -11,6 +11,9 @@ related:
   - empezando-con-react-js-y-ecmascript-6
   - consumiendo-un-api-rest-desde-react-js-con-ecmascript6
   - estructura-de-un-componente-en-react
+excerpt: >-
+  Aprende a crear una aplicación web con React.js y ECMAScript 6. Usa
+  componentes reutilizables, Browserify y Babel para modernizar tu JavaScript.
 ---
 
 # Ejemplo de aplicación con React.js en ECMAScript 6

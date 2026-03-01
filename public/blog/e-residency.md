@@ -9,6 +9,10 @@ related:
   - empresa-estonia
   - impuestos-estonia
   - ser-autonomo-en-espana-pasos-para-ser-freelance
+excerpt: >-
+  Descubre qué es la e-residency de Estonia y cómo solicitarla paso a paso.
+  Conviértete en residente digital y firma documentos desde cualquier parte del
+  mundo.
 ---
 
 # Qué es la e-residency de Estonia y como conseguirla

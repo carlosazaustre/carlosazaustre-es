@@ -9,6 +9,10 @@ related:
   - manejando-docker-desde-os-x-creando-nuestro-primer-contenedor
   - desplegando-contenedores-docker-en-digital-ocean
   - como-configurar-nginx-con-node-js-en-produccion
+excerpt: >-
+  Aprende a usar Docker como entorno de desarrollo local con LiveReload
+  automático. Configura contenedores en Mac, Windows o Linux para tus
+  aplicaciones web.
 ---
 
 # Docker como entorno de desarrollo local

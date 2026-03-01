@@ -9,6 +9,9 @@ related:
   - chefly-en-google-launchpad-madrid-marketing
   - google-launchpad-madrid-dia-1-producto
   - launchpad-week-madrid-dia-2-ux
+excerpt: >-
+  Día 4 de Google Launchpad Madrid dedicado a tecnología: mercado mobile,
+  Android vs iOS y aprendizajes clave para mejorar Chefly en Campus Madrid
 ---
 
 # Google Launchpad Madrid, Día 4: Tecnología

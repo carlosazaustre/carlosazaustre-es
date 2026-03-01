@@ -11,6 +11,9 @@ related:
   - angular-js-directivas-como-componentes
   - desarrollo-por-componentes-con-angular-1-5-con-es6-es2015
   - como-pasar-variables-como-atributos-en-directivas-de-angularjs
+excerpt: >-
+  Aprende las 3 formas de comunicar componentes en AngularJS 1.x: servicios,
+  eventos y herencia de scope. Guía práctica con ejemplos de código incluidos
 ---
 
 # 3 formas de comunicar componentes en AngularJS 1.x

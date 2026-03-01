@@ -10,6 +10,9 @@ related:
   - conectando-firebase-a-react
   - usando-firebase-storage-con-react-js
   - firebase-hosting-ssr
+excerpt: >-
+  Aprende qué son las Firebase Cloud Functions, cómo ejecutar código JavaScript
+  en Node.js sin servidor y cuándo usarlas en tus proyectos con Google Firebase.
 ---
 
 # ¿Qué son las Firebase Cloud Functions?

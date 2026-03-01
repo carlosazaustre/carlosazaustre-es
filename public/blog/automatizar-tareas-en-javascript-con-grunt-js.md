@@ -10,6 +10,10 @@ related:
   - automatizando-tu-flujo-de-trabajo-en-el-frontend-con-gulpjs
   - primeros-pasos-con-webpack
   - subiendo-archivos-estaticos-aws-s3-con-node
+excerpt: >-
+  Aprende a automatizar tareas en JavaScript con Grunt.js: configura un
+  Gruntfile, usa plugins como watch, stylus y cssmin, y optimiza tu flujo de
+  desarrollo web
 ---
 
 # Automatizar tareas en JavaScript con Grunt.js

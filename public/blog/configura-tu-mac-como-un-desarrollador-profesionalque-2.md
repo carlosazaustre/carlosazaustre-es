@@ -10,6 +10,10 @@ related:
   - herramientas-utiles-para-desarrolladores
   - el-escritorio-de-un-desarrollador-web
   - workspace
+excerpt: >-
+  Aprende a configurar tu terminal en Mac como un desarrollador profesional:
+  instala iTerm2, personaliza colores y aumenta tu productividad con atajos de
+  teclado
 ---
 
 # Configura tu terminal de Mac como un desarrollador profesional

@@ -9,6 +9,9 @@ related:
   - workspace
   - el-escritorio-de-un-desarrollador-web
   - pc-2023
+excerpt: >-
+  Descubre qué dispositivos llevo siempre en mi mochila para trabajar en remoto
+  desde cualquier lugar con la misma productividad que en mi escritorio
 ---
 
 # Un Setup en tu mochila

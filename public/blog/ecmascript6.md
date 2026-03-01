@@ -9,6 +9,9 @@ related:
   - empezando-con-react-js-y-ecmascript-6
   - ejemplo-de-aplicacion-con-react-js-en-ecmascript-6
   - es6-tagged-template-literals
+excerpt: >-
+  Aprende ECMAScript 6 (ES6 o ES2015), el nuevo estándar de JavaScript. Descubre
+  su historia, características principales y cómo usarlo en tus proyectos web.
 ---
 
 # Aprende ECMAScript 6 (ES6 o ES2015), el nuevo estándar de JavaScript

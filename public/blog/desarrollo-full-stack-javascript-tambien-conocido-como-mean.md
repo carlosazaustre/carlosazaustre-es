@@ -12,6 +12,10 @@ related:
   - como-crear-una-api-rest-usando-node-js
   - tutorial-ejemplo-de-aplicacion-web-con-angular-js-y-api-rest-con-node
   - empezando-con-angular-js
+excerpt: >-
+  Aprende qué es el stack MEAN: MongoDB, Express, AngularJS y Node.js para
+  desarrollar aplicaciones web con JavaScript en frontend, backend y base de
+  datos.
 ---
 
 # Desarrollo Full Stack JavaScript. El conocido como Stack MEAN

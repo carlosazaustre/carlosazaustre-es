@@ -9,6 +9,10 @@ related:
   - workspace
   - mochila
   - pc-2023
+excerpt: >-
+  Descubre los 11 accesorios imprescindibles para el escritorio de un
+  desarrollador web: monitor externo, teclado Bluetooth, auriculares y más
+  herramientas.
 ---
 
 # 11 dispositivos para el espacio de trabajo de un desarrollador web

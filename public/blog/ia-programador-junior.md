@@ -11,6 +11,9 @@ related:
   - el-camino-para-ser-un-pro-en-javascript
   - aprendiendo-y-compartiendo
   - mi-experiencia-como-profesor-en-los-cursos-de-platzi
+excerpt: >-
+  ¿Es la inteligencia artificial un aliado o un obstáculo para los programadores
+  junior? Descubre cómo la IA puede transformar tu aprendizaje de programación
 ---
 
 # El problema de la Inteligencia Artificial y los Programadores Junior

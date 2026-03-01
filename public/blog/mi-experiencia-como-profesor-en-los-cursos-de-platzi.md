@@ -11,6 +11,9 @@ related:
   - aprendiendo-y-compartiendo
   - mi-experiencia-como-mentor-en-google-launchpad-week
   - el-camino-para-ser-un-pro-en-javascript
+excerpt: >-
+  Viajé a Bogotá, Colombia, para ser profesor del Curso de Desarrollo Web en
+  Platzi. Te cuento cómo fue la experiencia dentro de sus estudios.
 ---
 
 # Mi experiencia como profesor en los cursos de Platzi

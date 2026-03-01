@@ -11,6 +11,10 @@ related:
   - angular-js-directivas-como-componentes
   - formas-de-comunicar-componentes-en-angularjs-1-x
   - ecmascript6
+excerpt: >-
+  Aprende a desarrollar con Angular 1.5 usando el método .component() y
+  ES6/ES2015. Código más limpio, preparado para migrar a Angular 2 con UIRouter
+  y Babel.
 ---
 
 # Desarrollo por componentes con Angular 1.5 y ES6/ES2015

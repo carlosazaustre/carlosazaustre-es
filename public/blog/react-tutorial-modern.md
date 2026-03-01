@@ -11,6 +11,10 @@ related:
   - empezando-con-react-js-y-ecmascript-6
   - react-vite
   - ejemplo-de-aplicacion-con-react-js-en-ecmascript-6
+excerpt: >-
+  Aprende a crear una aplicación web con React desde cero usando Zustand para el
+  estado global y React Query para gestión de datos en este tutorial paso a
+  paso.
 ---
 
 # Tutorial React: Cómo crear una aplicación web con React desde cero con librerías modernas

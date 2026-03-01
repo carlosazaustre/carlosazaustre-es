@@ -10,6 +10,10 @@ related:
   - automatizando-tu-flujo-de-trabajo-en-el-frontend-con-gulpjs
   - automatizar-tareas-en-javascript-con-grunt-js
   - desplegando-nuestro-api-rest-en-la-nube-con-digital-ocean
+excerpt: >-
+  Aprende a configurar Travis CI para automatizar testing, building y despliegue
+  continuo de tus proyectos web. Guía práctica de integración continua paso a
+  paso.
 ---
 
 # Cómo configurar Travis como herramienta para Integración y Despliegue continuo

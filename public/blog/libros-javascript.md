@@ -9,6 +9,10 @@ related:
   - el-camino-para-ser-un-pro-en-javascript
   - ecmascript6
   - javascript
+excerpt: >-
+  Descubre los mejores libros recomendados para aprender JavaScript y Node.js,
+  desde guías para principiantes hasta referencias avanzadas para
+  desarrolladores web
 ---
 
 # Los mejores libros recomendados sobre JavaScript y Node.js

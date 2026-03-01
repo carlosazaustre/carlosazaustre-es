@@ -10,6 +10,9 @@ related:
   - firebase-hosting-ssr
   - react-tutorial-modern
   - como-crear-una-api-rest-usando-node-js
+excerpt: >-
+  Aprende a crear un acortador de URLs con Next.js, Prisma y PostgreSQL.
+  Tutorial paso a paso para construir tu propio servicio tipo bit.ly desde cero.
 ---
 
 # Cómo hacer un acortador de URLs con Next.js y Prisma

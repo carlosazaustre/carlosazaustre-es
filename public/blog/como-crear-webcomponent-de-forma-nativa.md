@@ -10,6 +10,10 @@ related:
   - webcomponents-nativos-como-pasar-propiedades
   - novedades-en-el-ecosistema-de-webcomponents-gracias-a-polymer-3-0
   - angular-js-directivas-como-componentes
+excerpt: >-
+  Aprende a crear WebComponents nativos con JavaScript, HTML y CSS usando la
+  Custom Elements API, sin librerías externas. Crea tus propios tags HTML
+  reutilizables
 ---
 
 # Cómo crear un WebComponent de forma nativa

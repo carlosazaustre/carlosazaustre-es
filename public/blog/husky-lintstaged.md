@@ -10,6 +10,9 @@ related:
   - conventional-commits
   - travis-despliegue-integracion-continua
   - automatizando-tu-flujo-de-trabajo-en-el-frontend-con-gulpjs
+excerpt: >-
+  Aprende a configurar Husky y Lint-Staged para automatizar Git Hooks en tus
+  commits y garantizar la calidad del código en cada push a tu repositorio
 ---
 
 # Cómo configurar Husky y Lint-Staged en un proyecto

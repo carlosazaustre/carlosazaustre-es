@@ -8,6 +8,10 @@ related:
   - ecmascript6
   - manejando-la-asincronia-en-javascript
   - javascript
+excerpt: >-
+  Aprende qué son los ES6 Tagged Template Literals en JavaScript, una poderosa
+  característica de ECMAScript 6 para manipular strings de forma avanzada y
+  flexible.
 ---
 
 # ES6 Tagged Template Literals

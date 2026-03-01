@@ -11,6 +11,9 @@ related:
   - angular-js-directivas-como-componentes
   - formas-de-comunicar-componentes-en-angularjs-1-x
   - desarrollo-por-componentes-con-angular-1-5-con-es6-es2015
+excerpt: >-
+  Aprende cómo pasar variables como atributos en directivas de AngularJS y crea
+  componentes reutilizables con binding dinámico en tus aplicaciones Angular.
 ---
 
 # Cómo pasar variables como atributos en directivas de AngularJS

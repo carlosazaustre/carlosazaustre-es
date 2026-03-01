@@ -11,6 +11,10 @@ related:
   - desplegando-contenedores-docker-en-digital-ocean
   - travis-despliegue-integracion-continua
   - firebase-hosting-ssr
+excerpt: >-
+  Aprende a desplegar tu primera aplicación Node.js en Google Cloud Run usando
+  Cloud Build y Docker. Guía paso a paso para correr contenedores en Google
+  Cloud.
 ---
 
 # Cómo lanzar una aplicación web en Google Cloud Run con Cloud Build

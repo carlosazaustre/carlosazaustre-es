@@ -14,6 +14,10 @@ related:
   - css-grid-layout-css
   - dynamic-island-html
   - lazy-loading-image
+excerpt: >-
+  Chrome 146 y 147 traen features CSS que eliminan la necesidad de JavaScript:
+  scroll-driven animations, anchor positioning y popover API nativa en el
+  navegador.
 ---
 
 # CSS en 2026: las tres features de Chrome que eliminan JavaScript que llevas años escribiendo

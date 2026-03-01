@@ -9,6 +9,10 @@ related:
   - uso-de-promesas-en-angularjs
   - ecmascript6
   - javascript
+excerpt: >-
+  Aprende las distintas formas de manejar la asincronía en JavaScript:
+  callbacks, promesas y async/await para gestionar operaciones de
+  entrada/salida.
 ---
 
 # Formas de manejar la asincronía en JavaScript

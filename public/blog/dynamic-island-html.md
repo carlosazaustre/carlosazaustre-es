@@ -10,6 +10,9 @@ related:
   - css-2026-elimina-javascript-chrome-146-147
   - como-crear-webcomponent-de-forma-nativa
   - los-5-patrones-del-responsive-design
+excerpt: >-
+  Aprende a crear la Dynamic Island del iPhone 14 con HTML, CSS y JavaScript.
+  Tutorial paso a paso con código completo para reproducirla en la web.
 ---
 
 # Cómo hacer la Dynamic Island del iPhone 14 con HTML, CSS y JavaScript

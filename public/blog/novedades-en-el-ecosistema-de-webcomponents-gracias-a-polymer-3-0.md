@@ -10,6 +10,9 @@ related:
   - como-crear-webcomponent-de-forma-nativa
   - webcomponents-nativos-como-pasar-propiedades
   - desarrollo-basado-en-componentes-con-vue-js
+excerpt: >-
+  Descubre las novedades de Polymer 3.0 y el futuro de los WebComponents tras el
+  Polymer Dev Summit, la conferencia anual de Google para desarrolladores.
 ---
 
 # El futuro de los WebComponents gracias a Polymer 3.0

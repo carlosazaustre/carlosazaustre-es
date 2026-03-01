@@ -9,6 +9,9 @@ related:
   - el-escritorio-de-un-desarrollador-web
   - automatizando-tu-flujo-de-trabajo-en-el-frontend-con-gulpjs
   - configura-tu-mac-como-un-desarrollador-profesionalque-2
+excerpt: >-
+  Descubre 15 herramientas esenciales para desarrolladores web que aumentan la
+  productividad y optimizan el flujo de trabajo en tu día a día como programador
 ---
 
 # 15 Herramientas útiles que todo desarrollador web debería conocer

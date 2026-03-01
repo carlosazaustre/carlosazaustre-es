@@ -12,6 +12,9 @@ related:
   - como-configurar-tu-servidor-cloud-en-digitalocean
   - como-servir-tu-api-rest-en-node-js-a-traves-de-nginx
   - como-crear-una-api-rest-usando-node-js
+excerpt: >-
+  Aprende a desplegar tu API REST con Node.js e IO.js en DigitalOcean.
+  Configuración del servidor en producción paso a paso con Git y ECMAScript 6.
 ---
 
 # Desplegando nuestro API REST Node/IO.js en la nube con Digital Ocean

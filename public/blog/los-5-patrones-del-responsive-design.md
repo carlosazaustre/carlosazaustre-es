@@ -10,6 +10,9 @@ related:
   - es-tu-web-realmente-mobile-first
   - imagenes-responsive
   - css-grid-layout-css
+excerpt: >-
+  Aprende los 5 patrones del Responsive Design con Flexbox: Tiny Tweaks, Mostly
+  Fluid, Column Drop, Layout Shifter y Off Canvas para crear diseños adaptables
 ---
 
 # Los 5 patrones del Responsive Design con Flexbox

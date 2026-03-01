@@ -9,6 +9,9 @@ related:
   - formas-de-crear-un-componente-en-react
   - jsx-para-novatos
   - empezando-con-react-js-y-ecmascript-6
+excerpt: >-
+  Aprende a crear componentes en React con createClass y clases ES6. Guía
+  práctica con ejemplos de código JavaScript para desarrolladores web frontend.
 ---
 
 # Estructura y funcionamiento de un componente en React

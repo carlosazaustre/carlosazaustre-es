@@ -9,6 +9,10 @@ related:
   - como-ser-autonomo-en-irlanda
   - ser-autonomo-en-espana-pasos-para-ser-freelance
   - e-residency
+excerpt: >-
+  Aprende cómo registrarte como autónomo en Irlanda ante la Revenue Office:
+  formulario TR1, PPS Number y claves del sistema fiscal irlandés para
+  self-employed
 ---
 
 # Cómo ser autónomo en Irlanda - Registro en Hacienda

@@ -11,6 +11,9 @@ related:
   - autenticacion-con-token-en-node-js
   - que-es-la-autenticacion-con-token
   - autenticacion-con-token-en-angularjs
+excerpt: >-
+  Aprende a implementar registro y autorización de usuarios en Node.js usando
+  OAuth con Twitter y Facebook paso a paso con ejemplos prácticos en vídeo
 ---
 
 # Registro y autorización de usuarios en Node.js con Twitter y Facebook

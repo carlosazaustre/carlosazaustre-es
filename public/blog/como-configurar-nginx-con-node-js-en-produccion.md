@@ -10,6 +10,10 @@ related:
   - como-servir-tu-api-rest-en-node-js-a-traves-de-nginx
   - como-instalar-un-servidor-https-en-nginx-desde-cero
   - aplicacion-node-como-servicio-upstart
+excerpt: >-
+  Aprende a configurar Nginx como reverse proxy con Node.js en producción.
+  Gestiona múltiples procesos en tu VPS o EC2 de AWS desde un único servidor
+  web.
 ---
 
 # Cómo configurar Nginx con Node.js en Producción

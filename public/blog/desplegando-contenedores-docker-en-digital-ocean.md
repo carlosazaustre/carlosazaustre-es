@@ -14,6 +14,9 @@ related:
   - docker-como-entorno-de-desarrollo-local
   - manejando-docker-desde-os-x-creando-nuestro-primer-contenedor
   - como-configurar-tu-servidor-cloud-en-digitalocean
+excerpt: >-
+  Aprende a desplegar contenedores Docker en DigitalOcean usando Docker Compose
+  y Docker Machine con una API REST en Node.js y MongoDB en producción
 ---
 
 # Desplegando contenedores en DigitalOcean con Docker, Docker Compose y Docker Machine

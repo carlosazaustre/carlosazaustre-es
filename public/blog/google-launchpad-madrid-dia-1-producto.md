@@ -9,6 +9,10 @@ related:
   - launchpad-week-madrid-dia-2-ux
   - google-launchpad-madrid-dia-4-tecnologia
   - mi-experiencia-como-mentor-en-google-launchpad-week
+excerpt: >-
+  Google Launchpad Week Madrid en CampusMadrid: una semana intensiva con
+  mentores de Google para startups. Descubre cómo fue el primer día centrado en
+  Producto.
 ---
 
 # Google Launchpad Week Madrid. Día 1: Producto
