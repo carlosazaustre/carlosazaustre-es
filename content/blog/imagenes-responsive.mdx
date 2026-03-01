@@ -13,6 +13,23 @@ related:
   - los-5-patrones-del-responsive-design
   - es-tu-web-realmente-mobile-first
 seoTitle: Imágenes Responsive en CSS
+faq:
+  - q: Pero ¿Puedo usar esto actualmente?
+    a: >-
+      Claro que si. Si vamos a la web CanIUse vemos que la mayoría de los
+      navegadores lo implementan. Por tanto no hay excusas. Además a unas malas,
+      el elemento tiene el atributo src que por defecto nos mostrará esa imagen
+      si no entiende el srcset.
+  - q: ¿Cuál es el mejor tipo de fichero para mis imágenes web?
+    a: >-
+      Depende del contenido&#58; SVG para logos, iconos y formas con colores
+      planos, ya que escalan sin perder calidad. Para fotografías, las imágenes
+      rasterizadas son la opción adecuada.
+  - q: ¿Y < picture > ?
+    a: >-
+      picture también es una opción, pero solo tiene en cuenta el tamaño de
+      pantalla, no la resolución. En dispositivos retina siempre necesitarás
+      imágenes grandes, desperdiciando recursos en pantallas normales.
 ---
 
 Actualmente tenemos gran variedad de dispositivos desde los que accedemos a internet. Smartphones, tablets, laptops, desktops, televisores, incluso relojes.

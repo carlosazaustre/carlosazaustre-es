@@ -164,6 +164,21 @@ export default async function BlogPostPage({ params }: Props) {
     ],
   };
 
+  const faqLd = post.faq && post.faq.length >= 2
+    ? {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: post.faq.map((item) => ({
+          "@type": "Question",
+          name: item.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.a,
+          },
+        })),
+      }
+    : null;
+
   return (
     <>
     <script
@@ -174,6 +189,12 @@ export default async function BlogPostPage({ params }: Props) {
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
     />
+    {faqLd && (
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
+    )}
     <ReadingProgress />
     <div style={{ maxWidth: "960px", margin: "0 auto", padding: "3rem 1.5rem" }}>
       <article>

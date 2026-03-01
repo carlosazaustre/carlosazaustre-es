@@ -15,6 +15,27 @@ related:
   - es-tu-web-realmente-mobile-first
   - css-2026-elimina-javascript-chrome-146-147
 seoTitle: Lazy Loading de Imágenes en HTML Nativo
+faq:
+  - q: ¿Que soporte tiene por los navegadores?
+    a: >-
+      Ahora bien, aunque se trate de un estándar HTML, todavía no tiene el
+      soporte de todos los navegadores Fuente&#58; caniuse.com Por lo que si lo
+      quieres utilizar, todavía necesitas de un polyfill y un poco de
+      JavaScript.
+  - q: Cómo utilizar lazy-loading nativo para imágenes
+    a: >-
+      Detecta si el navegador lo soporta y, si es así, añade el atributo loading
+      en el tag img. Si no lo soporta, usa una librería o script propio.
+  - q: ¿Y si mi navegador no soporta el _lazy-load_ nativo?
+    a: >-
+      Se puede cargar una librería externa como polyfill que recree el
+      lazy-load. Para ello se usa data-src en lugar de src en los tags img,
+      compatible con la librería lazysizes.
+  - q: ¿El nuevo atributo `loading` solo sirve para imágenes?
+    a: >-
+      El nuevo atributo no sólo sirve para el tag img de HTML. También se puede
+      utilizar para imágenes con srcset, dentro de picture y en iframes. Aquí
+      tienes algunos ejemplos&#58;
 ---
 
 El pasado 12 de Febrero de 2020 el atributo `loading` para imágenes e iframes se hizo por fin parte del estándar HTML. Si bien ya se podía utilizar activando un par de _flags_ en el navegador Chrome, hasta ahora no formaba parte de las funcionalidades que soporta el navegador.

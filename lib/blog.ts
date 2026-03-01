@@ -194,6 +194,11 @@ const rehypeLazyImages: Plugin<[], Root> = () => (tree: Root) => {
 
 const BLOG_DIR = path.join(process.cwd(), "content/blog");
 
+export interface FaqItem {
+  q: string;
+  a: string;
+}
+
 export interface PostMeta {
   slug: string;
   title: string;
@@ -205,6 +210,7 @@ export interface PostMeta {
   related?: string[];
   readingTime: string;
   coverImage?: string;
+  faq?: FaqItem[];
 }
 
 export interface Post extends PostMeta {
@@ -270,6 +276,7 @@ export function getAllPosts(): PostMeta[] {
       related: Array.isArray(data.related) ? data.related : undefined,
       readingTime: formatReadingTime(content),
       coverImage: data.coverImage ?? `/api/og?title=${encodeURIComponent(data.title ?? "")}`,
+      faq: Array.isArray(data.faq) ? data.faq : undefined,
     } as PostMeta;
   });
 
@@ -320,6 +327,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     tags: Array.isArray(data.tags) ? data.tags : [],
     readingTime: formatReadingTime(content),
     coverImage: data.coverImage ?? `/api/og?title=${encodeURIComponent(data.title ?? "")}`,
+    faq: Array.isArray(data.faq) ? data.faq : undefined,
     content: processed.toString(),
   };
 }

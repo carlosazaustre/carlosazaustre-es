@@ -23,6 +23,50 @@ related:
   - dynamic-island-html
   - lazy-loading-image
 seoTitle: 'CSS 2026: 3 features que reemplazan JS'
+faq:
+  - q: Cuándo usarlo
+    a: >-
+      Tiene mucho sentido en&#58; Listas reordenables Dashboards con múltiples
+      paneles Sidebars + contenido principal animándose a la vez Cualquier
+      componente que necesite animar su estado interno de forma independiente
+      Soporte&#58; Chrome 147+. Firefox y Safari están en progreso. ---
+  - q: ¿Cuándo usarlo en producción?
+    a: >-
+      Usa @supports para añadirlo sin romper browsers legacy. Scroll-triggered
+      animations y view transitions en Chrome/Edge están listas hoy;
+      corner-shape aún está en preview.
+  - q: ¿Scroll-triggered animations es lo mismo que scroll-driven animations?
+    a: >-
+      No. Las scroll-driven animations (Chrome 115) hacen que la animación
+      avance en proporción al scroll — por ejemplo, una barra de progreso de
+      lectura. Las scroll-triggered animations (Chrome 146) disparan la
+      animación al cruzar un punto concreto del viewport, como un fade-in. Son
+      herramientas distintas para casos de uso distintos.
+  - q: >-
+      ¿Puedo usar element-scoped view transitions con React o cualquier
+      framework?
+    a: >-
+      Sí. La API es JavaScript nativo — llamas a element.startViewTransition()
+      en lugar de document.startViewTransition(). Puedes integrarlo en cualquier
+      hook, efecto o handler de eventos de tu framework. Chrome 147+ es el
+      requisito de browser.
+  - q: ¿corner-shape ya está disponible para usar?
+    a: >-
+      Todavía no en stable. Está en feature preview en versiones experimentales
+      de Chrome. No lo uses en producción todavía.
+  - q: ¿Qué pasa con los browsers que no soportan estas features?
+    a: >-
+      Con progressive enhancement y @supports, nada. El elemento aparece sin
+      animar, la transición no ocurre, o la forma usa el border-radius de
+      siempre. No hay errores, no hay JavaScript roto. El usuario de un browser
+      legacy simplemente no ve el efecto — y eso es perfectamente aceptable.
+  - q: >-
+      ¿Estas features requieren algo especial en el servidor o solo son CSS del
+      cliente?
+    a: >-
+      Solo son CSS del cliente. No hay configuración de servidor, no hay
+      dependencias npm, no hay nada que instalar. Es CSS nativo que el browser
+      interpreta directamente.
 ---
 
 ## CSS en 2026: las tres features de Chrome que eliminan JavaScript que llevas años escribiendo
