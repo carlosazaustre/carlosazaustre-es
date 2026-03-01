@@ -15,6 +15,7 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import matter from "gray-matter";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, "..");
@@ -23,40 +24,9 @@ const OUTPUT = path.join(ROOT, "public", "rss.xml");
 const BASE_URL = "https://carlosazaustre.es";
 const MAX_ITEMS = 50;
 
-// ─── Minimal frontmatter parser (no dependency on gray-matter for portability)
+// ─── Frontmatter parser via gray-matter (handles all YAML including block scalars)
 function parseFrontmatter(raw) {
-  const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-  if (!match) return { data: {}, content: raw };
-
-  const yamlBlock = match[1];
-  const content = raw.slice(match[0].length).trim();
-  const data = {};
-
-  for (const line of yamlBlock.split(/\r?\n/)) {
-    const colonIdx = line.indexOf(":");
-    if (colonIdx === -1) continue;
-
-    const key = line.slice(0, colonIdx).trim();
-    let value = line.slice(colonIdx + 1).trim();
-
-    // Remove surrounding quotes
-    if ((value.startsWith('"') && value.endsWith('"')) ||
-        (value.startsWith("'") && value.endsWith("'"))) {
-      value = value.slice(1, -1);
-    }
-
-    // Parse inline YAML arrays: [a, b, c]
-    if (value.startsWith("[") && value.endsWith("]")) {
-      data[key] = value
-        .slice(1, -1)
-        .split(",")
-        .map((v) => v.trim().replace(/^['"]|['"]$/g, ""))
-        .filter(Boolean);
-    } else {
-      data[key] = value;
-    }
-  }
-
+  const { data, content } = matter(raw);
   return { data, content };
 }
 

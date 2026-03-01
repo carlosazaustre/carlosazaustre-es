@@ -182,6 +182,16 @@ const rehypeCodeWindow: Plugin<[], Root> = () => (tree: Root) => {
   });
 };
 
+// Adds loading="lazy" and decoding="async" to all <img> elements in content
+const rehypeLazyImages: Plugin<[], Root> = () => (tree: Root) => {
+  visit(tree, "element", (node: Element) => {
+    if (node.tagName !== "img") return;
+    node.properties = node.properties ?? {};
+    if (!node.properties.loading) node.properties.loading = "lazy";
+    if (!node.properties.decoding) node.properties.decoding = "async";
+  });
+};
+
 const BLOG_DIR = path.join(process.cwd(), "content/blog");
 
 export interface PostMeta {
@@ -296,6 +306,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     .use(rehypeSummary)
     .use(rehypeHighlight, { detect: true })
     .use(rehypeCodeWindow)
+    .use(rehypeLazyImages)
     .use(rehypeStringify, { allowDangerousHtml: true })
     .process(preprocessMDX(content));
 

@@ -6,8 +6,6 @@ import SiteShell from "@/components/SiteShell";
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
 };
 
 export const metadata: Metadata = {
@@ -41,6 +39,9 @@ export const metadata: Metadata = {
         { url: "https://carlosazaustre.es/rss.xml", title: "Carlos Azaustre — Blog RSS" },
       ],
     },
+  },
+  icons: {
+    apple: "/carlos-azaustre.png",
   },
 };
 
@@ -113,6 +114,9 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
+        {/* Preconnect para Google Fonts — mejora LCP */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebSite) }}

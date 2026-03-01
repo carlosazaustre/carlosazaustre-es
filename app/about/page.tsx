@@ -9,7 +9,7 @@ import { SectionTitle } from "@/components/SectionTitle";
 export const metadata: Metadata = {
   title: "Sobre mí",
   description:
-    "Ingeniero en Telemática por la UC3M. Google Developer Expert en Web Technologies, Microsoft MVP. Creador de contenido educativo sobre programación. Profesor de Programación y Desarrollo Web en la Universidad Europea.",
+    "Google Developer Expert en Web Technologies. Ingeniero de Software y creador de contenido educativo sobre JavaScript, React y Node.js. Profesor universitario.",
   openGraph: {
     title: "Sobre mí — Carlos Azaustre",
     description:

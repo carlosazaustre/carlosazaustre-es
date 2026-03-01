@@ -18,504 +18,576 @@
     <copyright>© 2026 Carlos Azaustre</copyright>
     <managingEditor>cazaustre@gmail.com (Carlos Azaustre)</managingEditor>
   <item>
-    <title>&gt;-</title>
+    <title>CSS en 2026: las tres features de Chrome que eliminan JavaScript que llevas años escribiendo</title>
     <link>https://carlosazaustre.es/blog/css-2026-elimina-javascript-chrome-146-147</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/css-2026-elimina-javascript-chrome-146-147</guid>
-    <description>&gt;-</description>
+    <description>Chrome 146 y 147 traen features CSS que eliminan la necesidad de JavaScript: scroll-driven animations, anchor positioning y popover API nativa en el navegador.</description>
     <pubDate>Fri, 27 Feb 2026 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
-    <enclosure url="https://carlosazaustre.es/api/og?title=%3E-" type="image/png" length="0"/>
-
+    <enclosure url="https://carlosazaustre.es/api/og?title=CSS%20en%202026%3A%20las%20tres%20features%20de%20Chrome%20que%20eliminan%20JavaScript%20que%20llevas%20a%C3%B1os%20escribiendo" type="image/png" length="0"/>
+    <category>CSS</category>
+    <category>JavaScript</category>
+    <category>Chrome</category>
+    <category>Frontend</category>
+    <category>Web Development</category>
   </item>
   <item>
     <title>El problema de la Inteligencia Artificial y los Programadores Junior</title>
     <link>https://carlosazaustre.es/blog/ia-programador-junior</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/ia-programador-junior</guid>
-    <description>&gt;-</description>
+    <description>¿Es la inteligencia artificial un aliado o un obstáculo para los programadores junior? Descubre cómo la IA puede transformar tu aprendizaje de programación</description>
     <pubDate>Sat, 11 May 2024 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=El%20problema%20de%20la%20Inteligencia%20Artificial%20y%20los%20Programadores%20Junior" type="image/png" length="0"/>
-
+    <category>ia</category>
+    <category>carrera</category>
+    <category>programacion</category>
+    <category>herramientas</category>
   </item>
   <item>
     <title>Qué TECH Cuentas - Ep.01, con Pau Garcia-Milà</title>
     <link>https://carlosazaustre.es/blog/quetechcuentas-01</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/quetechcuentas-01</guid>
-    <description>&gt;-</description>
+    <description>Primer episodio del podcast Qué TECH Cuentas con Pau Garcia-Milà: tecnología, emprendimiento e innovación con uno de los referentes del sector tech en España</description>
     <pubDate>Mon, 30 Oct 2023 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=Qu%C3%A9%20TECH%20Cuentas%20-%20Ep.01%2C%20con%20Pau%20Garcia-Mil%C3%A0" type="image/png" length="0"/>
-
+    <category>🎧 Podcast</category>
   </item>
   <item>
     <title>Principios SOLID en JavaScript</title>
     <link>https://carlosazaustre.es/blog/javascript-solid</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/javascript-solid</guid>
-    <description>&gt;-</description>
+    <description>Descubre los 5 principios SOLID aplicados a JavaScript para escribir código limpio, escalable y mantenible. Aprende con ejemplos y vídeo en YouTube.</description>
     <pubDate>Mon, 16 Oct 2023 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=Principios%20SOLID%20en%20JavaScript" type="image/png" length="0"/>
-
+    <category>javascript</category>
+    <category>arquitectura</category>
   </item>
   <item>
-    <title>&gt;-</title>
+    <title>Tutorial React: Cómo crear una aplicación web con React desde cero con librerías modernas</title>
     <link>https://carlosazaustre.es/blog/react-tutorial-modern</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/react-tutorial-modern</guid>
-    <description>&gt;-</description>
+    <description>Aprende a crear una aplicación web con React desde cero usando Zustand para el estado global y React Query para gestión de datos en este tutorial paso a paso.</description>
     <pubDate>Fri, 29 Sep 2023 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
-    <enclosure url="https://carlosazaustre.es/api/og?title=%3E-" type="image/png" length="0"/>
-
+    <enclosure url="https://carlosazaustre.es/api/og?title=Tutorial%20React%3A%20C%C3%B3mo%20crear%20una%20aplicaci%C3%B3n%20web%20con%20React%20desde%20cero%20con%20librer%C3%ADas%20modernas" type="image/png" length="0"/>
+    <category>react</category>
+    <category>tutorial</category>
   </item>
   <item>
     <title>Volviendo a los Orígenes: El Arte de Armar tu Propio PC</title>
     <link>https://carlosazaustre.es/blog/pc-2023</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/pc-2023</guid>
-    <description>&gt;-</description>
+    <description>Después de 18 años, vuelvo a armar un PC desde cero: Ryzen 7 7700X, RTX 4070 y 32GB RAM. Descubre cómo montar tu propio ordenador paso a paso</description>
     <pubDate>Tue, 13 Jun 2023 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=Volviendo%20a%20los%20Or%C3%ADgenes%3A%20El%20Arte%20de%20Armar%20tu%20Propio%20PC" type="image/png" length="0"/>
-
+    <category>herramientas</category>
+    <category>carrera</category>
   </item>
   <item>
     <title>Conventional Commits - Especificación para tus mensajes de commit</title>
     <link>https://carlosazaustre.es/blog/conventional-commits</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/conventional-commits</guid>
-    <description>&gt;-</description>
+    <description>Aprende qué son los Conventional Commits: la especificación estándar para escribir mensajes de commit claros, legibles y compatibles con Semantic Versioning.</description>
     <pubDate>Tue, 29 Nov 2022 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=Conventional%20Commits%20-%20Especificaci%C3%B3n%20para%20tus%20mensajes%20de%20commit" type="image/png" length="0"/>
-
+    <category>git</category>
+    <category>herramientas</category>
   </item>
   <item>
-    <title>&gt;-</title>
+    <title>Cómo desplegar una app Server-Side Rendering con Next.js en el nuevo Firebase Hosting</title>
     <link>https://carlosazaustre.es/blog/firebase-hosting-ssr</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/firebase-hosting-ssr</guid>
-    <description>&gt;-</description>
+    <description>Aprende a desplegar una aplicación Next.js con Server-Side Rendering en el nuevo Firebase Hosting, anunciado en Firebase Summit 2022 y disponible en preview.</description>
     <pubDate>Mon, 14 Nov 2022 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
-    <enclosure url="https://carlosazaustre.es/api/og?title=%3E-" type="image/png" length="0"/>
-
+    <enclosure url="https://carlosazaustre.es/api/og?title=C%C3%B3mo%20desplegar%20una%20app%20Server-Side%20Rendering%20con%20Next.js%20en%20el%20nuevo%20Firebase%20Hosting" type="image/png" length="0"/>
+    <category>nextjs</category>
+    <category>firebase</category>
+    <category>web</category>
   </item>
   <item>
     <title>Cómo configurar Husky y Lint-Staged en un proyecto</title>
     <link>https://carlosazaustre.es/blog/husky-lintstaged</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/husky-lintstaged</guid>
-    <description>&gt;-</description>
+    <description>Aprende a configurar Husky y Lint-Staged para automatizar Git Hooks en tus commits y garantizar la calidad del código en cada push a tu repositorio</description>
     <pubDate>Wed, 09 Nov 2022 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=C%C3%B3mo%20configurar%20Husky%20y%20Lint-Staged%20en%20un%20proyecto" type="image/png" length="0"/>
-
+    <category>git</category>
+    <category>herramientas</category>
+    <category>tutorial</category>
   </item>
   <item>
     <title>Cómo hacer la Dynamic Island del iPhone 14 con HTML, CSS y JavaScript</title>
     <link>https://carlosazaustre.es/blog/dynamic-island-html</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/dynamic-island-html</guid>
-    <description>&gt;-</description>
+    <description>Aprende a crear la Dynamic Island del iPhone 14 con HTML, CSS y JavaScript. Tutorial paso a paso con código completo para reproducirla en la web.</description>
     <pubDate>Sun, 06 Nov 2022 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=C%C3%B3mo%20hacer%20la%20Dynamic%20Island%20del%20iPhone%2014%20con%20HTML%2C%20CSS%20y%20JavaScript" type="image/png" length="0"/>
-
+    <category>html</category>
+    <category>css</category>
+    <category>javascript</category>
   </item>
   <item>
     <title>Cómo iniciar un proyecto React con Vite</title>
     <link>https://carlosazaustre.es/blog/react-vite</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/react-vite</guid>
-    <description>&gt;-</description>
+    <description>Aprende a iniciar un proyecto React con Vite, la herramienta de tooling Frontend más rápida. Alternativa moderna a Webpack, Parcel y Snowpack para tus apps.</description>
     <pubDate>Wed, 26 Oct 2022 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=C%C3%B3mo%20iniciar%20un%20proyecto%20React%20con%20Vite" type="image/png" length="0"/>
-
+    <category>react</category>
+    <category>javascript</category>
+    <category>herramientas</category>
   </item>
   <item>
     <title>Mi Setup 2022 - Trabajo en Remoto y desde casa</title>
     <link>https://carlosazaustre.es/blog/workspace</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/workspace</guid>
-    <description>&gt;-</description>
+    <description>Mi setup como desarrollador: escritorio elevable, monitor, teclado, ratón y herramientas que uso a diario para programar y crear contenido.</description>
     <pubDate>Thu, 27 Jan 2022 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=Mi%20Setup%202022%20-%20Trabajo%20en%20Remoto%20y%20desde%20casa" type="image/png" length="0"/>
-
+    <category>herramientas</category>
+    <category>carrera</category>
   </item>
   <item>
     <title>Cómo hacer un acortador de URLs con Next.js y Prisma</title>
     <link>https://carlosazaustre.es/blog/acortador-urls</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/acortador-urls</guid>
-    <description>&gt;-</description>
+    <description>Aprende a crear un acortador de URLs con Next.js, Prisma y PostgreSQL. Tutorial paso a paso para construir tu propio servicio tipo bit.ly desde cero.</description>
     <pubDate>Fri, 16 Jul 2021 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=C%C3%B3mo%20hacer%20un%20acortador%20de%20URLs%20con%20Next.js%20y%20Prisma" type="image/png" length="0"/>
-
+    <category>nextjs</category>
+    <category>react</category>
+    <category>tutorial</category>
   </item>
   <item>
     <title>Un Setup en tu mochila</title>
     <link>https://carlosazaustre.es/blog/mochila</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/mochila</guid>
-    <description>&gt;-</description>
+    <description>Descubre qué dispositivos llevo siempre en mi mochila para trabajar en remoto desde cualquier lugar con la misma productividad que en mi escritorio</description>
     <pubDate>Sun, 09 Aug 2020 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=Un%20Setup%20en%20tu%20mochila" type="image/png" length="0"/>
-
+    <category>✈️ Viajes</category>
+    <category>💻 Desarrollo</category>
   </item>
   <item>
     <title>Cómo configurar Travis como herramienta para Integración y Despliegue continuo</title>
     <link>https://carlosazaustre.es/blog/travis-despliegue-integracion-continua</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/travis-despliegue-integracion-continua</guid>
-    <description>&gt;-</description>
+    <description>Aprende a configurar Travis CI para automatizar testing, building y despliegue continuo de tus proyectos web. Guía práctica de integración continua paso a paso.</description>
     <pubDate>Sat, 29 Feb 2020 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=C%C3%B3mo%20configurar%20Travis%20como%20herramienta%20para%20Integraci%C3%B3n%20y%20Despliegue%20continuo" type="image/png" length="0"/>
-
+    <category>git</category>
+    <category>herramientas</category>
+    <category>tutorial</category>
   </item>
   <item>
     <title>Lazy loading de imágenes ya forma parte del estándar HTML</title>
     <link>https://carlosazaustre.es/blog/lazy-loading-image</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/lazy-loading-image</guid>
-    <description>&gt;-</description>
+    <description>Implementa lazy loading de imágenes en tu web para mejorar el rendimiento y Core Web Vitals. Técnicas nativas con Intersection Observer API y atributo loading.</description>
     <pubDate>Tue, 25 Feb 2020 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=Lazy%20loading%20de%20im%C3%A1genes%20ya%20forma%20parte%20del%20est%C3%A1ndar%20HTML" type="image/png" length="0"/>
-
+    <category>html</category>
+    <category>performance</category>
+    <category>web</category>
   </item>
   <item>
     <title>Cómo desplegar tu sitio en Gatsby a Firebase Hosting</title>
     <link>https://carlosazaustre.es/blog/gatsby-deploy-firebase</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/gatsby-deploy-firebase</guid>
-    <description>&gt;-</description>
+    <description>Aprende a desplegar tu sitio Gatsby en Firebase Hosting con integración continua usando Travis CI. Automatiza tus deploys y olvídate de hacerlo manualmente.</description>
     <pubDate>Thu, 13 Feb 2020 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=C%C3%B3mo%20desplegar%20tu%20sitio%20en%20Gatsby%20a%20Firebase%20Hosting" type="image/png" length="0"/>
-
+    <category>firebase</category>
+    <category>herramientas</category>
+    <category>tutorial</category>
+    <category>web</category>
   </item>
   <item>
     <title>Cómo lanzar una aplicación web en Google Cloud Run con Cloud Build</title>
     <link>https://carlosazaustre.es/blog/google-cloud-run</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/google-cloud-run</guid>
-    <description>&gt;-</description>
+    <description>Aprende a desplegar tu primera aplicación Node.js en Google Cloud Run usando Cloud Build y Docker. Guía paso a paso para correr contenedores en Google Cloud.</description>
     <pubDate>Mon, 08 Jul 2019 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=C%C3%B3mo%20lanzar%20una%20aplicaci%C3%B3n%20web%20en%20Google%20Cloud%20Run%20con%20Cloud%20Build" type="image/png" length="0"/>
-
+    <category>nodejs</category>
+    <category>web</category>
+    <category>tutorial</category>
+    <category>herramientas</category>
   </item>
   <item>
     <title>Aprende ECMAScript 6 (ES6 o ES2015), el nuevo estándar de JavaScript</title>
     <link>https://carlosazaustre.es/blog/ecmascript6</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/ecmascript6</guid>
-    <description>&gt;-</description>
+    <description>Aprende ECMAScript 6 (ES6 o ES2015), el nuevo estándar de JavaScript. Descubre su historia, características principales y cómo usarlo en tus proyectos web.</description>
     <pubDate>Wed, 24 Oct 2018 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=Aprende%20ECMAScript%206%20(ES6%20o%20ES2015)%2C%20el%20nuevo%20est%C3%A1ndar%20de%20JavaScript" type="image/png" length="0"/>
-
+    <category>javascript</category>
+    <category>tutorial</category>
   </item>
   <item>
     <title>Desarrollo basado en Componentes con Vue.js</title>
     <link>https://carlosazaustre.es/blog/desarrollo-basado-en-componentes-con-vue-js</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/desarrollo-basado-en-componentes-con-vue-js</guid>
-    <description>&gt;-</description>
+    <description>Aprende a crear componentes reutilizables con Vue.js y construye aplicaciones web modernas. Tutorial paso a paso con ejemplos de código y plantillas.</description>
     <pubDate>Wed, 17 Oct 2018 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=Desarrollo%20basado%20en%20Componentes%20con%20Vue.js" type="image/png" length="0"/>
-
+    <category>vuejs</category>
+    <category>tutorial</category>
+    <category>web</category>
   </item>
   <item>
     <title>Vue: Single File Components</title>
     <link>https://carlosazaustre.es/blog/vue-single-file-components</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/vue-single-file-components</guid>
-    <description>&gt;-</description>
+    <description>Descubre cómo usar Vue Single File Components para construir componentes escalables con template, script y style en un único archivo .vue de Vue.js</description>
     <pubDate>Wed, 10 Oct 2018 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=Vue%3A%20Single%20File%20Components" type="image/png" length="0"/>
-
+    <category>vuejs</category>
+    <category>javascript</category>
+    <category>tutorial</category>
   </item>
   <item>
     <title>El futuro de los WebComponents gracias a Polymer 3.0</title>
     <link>https://carlosazaustre.es/blog/novedades-en-el-ecosistema-de-webcomponents-gracias-a-polymer-3-0</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/novedades-en-el-ecosistema-de-webcomponents-gracias-a-polymer-3-0</guid>
-    <description>&gt;-</description>
+    <description>Descubre las novedades de Polymer 3.0 y el futuro de los WebComponents tras el Polymer Dev Summit, la conferencia anual de Google para desarrolladores.</description>
     <pubDate>Fri, 05 Oct 2018 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=El%20futuro%20de%20los%20WebComponents%20gracias%20a%20Polymer%203.0" type="image/png" length="0"/>
-
+    <category>javascript</category>
+    <category>web</category>
   </item>
   <item>
     <title>Primeros pasos en Vue</title>
     <link>https://carlosazaustre.es/blog/primeros-pasos-en-vue</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/primeros-pasos-en-vue</guid>
-    <description>&gt;-</description>
+    <description>Aprende a dar tus primeros pasos en Vue.js sin Webpack ni Babel. Solo necesitas HTML y CSS para comenzar a desarrollar con este framework JavaScript.</description>
     <pubDate>Mon, 01 Oct 2018 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=Primeros%20pasos%20en%20Vue" type="image/png" length="0"/>
-
+    <category>vuejs</category>
+    <category>javascript</category>
+    <category>tutorial</category>
   </item>
   <item>
     <title>Cómo crear una empresa en Estonia</title>
     <link>https://carlosazaustre.es/blog/empresa-estonia</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/empresa-estonia</guid>
-    <description>&gt;-</description>
+    <description>Aprende paso a paso cómo crear una empresa en Estonia: requisitos, costes, tarjeta de e-residente y cuenta bancaria para montar tu compañía estonia desde España</description>
     <pubDate>Mon, 24 Sep 2018 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=C%C3%B3mo%20crear%20una%20empresa%20en%20Estonia" type="image/png" length="0"/>
-
+    <category>💰 Negocios</category>
   </item>
   <item>
     <title>Impuestos de una empresa en Estonia</title>
     <link>https://carlosazaustre.es/blog/impuestos-estonia</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/impuestos-estonia</guid>
-    <description>&gt;-</description>
+    <description>Guía práctica sobre el sistema fiscal de Estonia para autónomos digitales: cómo funciona el impuesto de sociedades, IVA y las ventajas de la e-Residency.</description>
     <pubDate>Tue, 18 Sep 2018 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=Impuestos%20de%20una%20empresa%20en%20Estonia" type="image/png" length="0"/>
-
+    <category>💰 Negocios</category>
   </item>
   <item>
     <title>Qué es la e-residency de Estonia y como conseguirla</title>
     <link>https://carlosazaustre.es/blog/e-residency</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/e-residency</guid>
-    <description>&gt;-</description>
+    <description>Descubre qué es la e-residency de Estonia y cómo solicitarla paso a paso. Conviértete en residente digital y firma documentos desde cualquier parte del mundo.</description>
     <pubDate>Wed, 12 Sep 2018 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=Qu%C3%A9%20es%20la%20e-residency%20de%20Estonia%20y%20como%20conseguirla" type="image/png" length="0"/>
-
+    <category>💰 Negocios</category>
   </item>
   <item>
     <title>Docker como entorno de desarrollo local</title>
     <link>https://carlosazaustre.es/blog/docker-como-entorno-de-desarrollo-local</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/docker-como-entorno-de-desarrollo-local</guid>
-    <description>&gt;-</description>
+    <description>Aprende a usar Docker como entorno de desarrollo local con LiveReload automático. Configura contenedores en Mac, Windows o Linux para tus aplicaciones web.</description>
     <pubDate>Sat, 01 Sep 2018 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=Docker%20como%20entorno%20de%20desarrollo%20local" type="image/png" length="0"/>
-
+    <category>herramientas</category>
+    <category>web</category>
   </item>
   <item>
     <title>ES6 Tagged Template Literals</title>
     <link>https://carlosazaustre.es/blog/es6-tagged-template-literals</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/es6-tagged-template-literals</guid>
-    <description>&gt;-</description>
+    <description>Aprende qué son los ES6 Tagged Template Literals en JavaScript, una poderosa característica de ECMAScript 6 para manipular strings de forma avanzada y flexible.</description>
     <pubDate>Sat, 01 Sep 2018 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=ES6%20Tagged%20Template%20Literals" type="image/png" length="0"/>
-
+    <category>javascript</category>
   </item>
   <item>
     <title>WebComponents Nativos: Cómo pasar propiedades</title>
     <link>https://carlosazaustre.es/blog/webcomponents-nativos-como-pasar-propiedades</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/webcomponents-nativos-como-pasar-propiedades</guid>
-    <description>&gt;-</description>
+    <description>Aprende a pasar propiedades a Web Components nativos usando atributos HTML y la API customElements. Tutorial práctico sin frameworks, solo JavaScript puro.</description>
     <pubDate>Fri, 31 Aug 2018 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=WebComponents%20Nativos%3A%20C%C3%B3mo%20pasar%20propiedades" type="image/png" length="0"/>
-
+    <category>javascript</category>
+    <category>web</category>
   </item>
   <item>
     <title>Eligiendo un banco online sin comisiones. Mi experiencia con N26</title>
     <link>https://carlosazaustre.es/blog/banco-online-sin-comisiones</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/banco-online-sin-comisiones</guid>
-    <description>&gt;-</description>
+    <description>Mi experiencia con N26, el banco online sin comisiones. Descubre cómo funciona, sus ventajas en divisas, retirada de efectivo y por qué es ideal para autónomos.</description>
     <pubDate>Fri, 24 Aug 2018 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=Eligiendo%20un%20banco%20online%20sin%20comisiones.%20Mi%20experiencia%20con%20N26" type="image/png" length="0"/>
-
+    <category>💰 Negocios</category>
   </item>
   <item>
     <title>Viajar a Estados Unidos de forma barata. Nuestra experiencia</title>
     <link>https://carlosazaustre.es/blog/viajar-estados-unidos</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/viajar-estados-unidos</guid>
-    <description>&gt;-</description>
+    <description>Descubre cómo viajar a Estados Unidos de forma barata. Consejos, experiencias reales y trucos para organizar un viaje económico a USA sin gastar una fortuna</description>
     <pubDate>Sat, 18 Aug 2018 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=Viajar%20a%20Estados%20Unidos%20de%20forma%20barata.%20Nuestra%20experiencia" type="image/png" length="0"/>
-
+    <category>✈️ Viajes</category>
   </item>
   <item>
     <title>¿Qué es Flux? Entendiendo su arquitectura</title>
     <link>https://carlosazaustre.es/blog/como-funciona-flux</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/como-funciona-flux</guid>
-    <description>&gt;-</description>
+    <description>Aprende qué es Flux, la arquitectura de manejo de datos para Front-End creada por Facebook que sustituye el patrón MVC en aplicaciones web complejas.</description>
     <pubDate>Fri, 25 May 2018 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=%C2%BFQu%C3%A9%20es%20Flux%3F%20Entendiendo%20su%20arquitectura" type="image/png" length="0"/>
-
+    <category>javascript</category>
+    <category>react</category>
+    <category>arquitectura</category>
   </item>
   <item>
     <title>Cómo crear un API REST usando Node.js, Express y MongoDB</title>
     <link>https://carlosazaustre.es/blog/como-crear-una-api-rest-usando-node-js</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/como-crear-una-api-rest-usando-node-js</guid>
-    <description>&gt;-</description>
+    <description>Aprende a crear una API REST con Node.js, Express y MongoDB paso a paso. Tutorial completo del stack MEAN con Mongoose y operaciones CRUD desde cero.</description>
     <pubDate>Thu, 21 Sep 2017 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=C%C3%B3mo%20crear%20un%20API%20REST%20usando%20Node.js%2C%20Express%20y%20MongoDB" type="image/png" length="0"/>
-
+    <category>nodejs</category>
+    <category>javascript</category>
+    <category>tutorial</category>
+    <category>web</category>
   </item>
   <item>
     <title>Qué es lo que me gusta de Vue.js</title>
     <link>https://carlosazaustre.es/blog/que-es-lo-que-me-gusta-de-vue-js</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/que-es-lo-que-me-gusta-de-vue-js</guid>
-    <description>&gt;-</description>
+    <description>Descubro por qué Vue.js me enamoró este verano: un framework JavaScript reactivo, sencillo y potente que compite de tú a tú con React y Angular</description>
     <pubDate>Wed, 16 Aug 2017 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=Qu%C3%A9%20es%20lo%20que%20me%20gusta%20de%20Vue.js" type="image/png" length="0"/>
-
+    <category>vuejs</category>
+    <category>javascript</category>
+    <category>web</category>
   </item>
   <item>
     <title>¿Qué son las Firebase Cloud Functions?</title>
     <link>https://carlosazaustre.es/blog/que-son-las-firebase-cloud-functions</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/que-son-las-firebase-cloud-functions</guid>
-    <description>&gt;-</description>
+    <description>Aprende qué son las Firebase Cloud Functions, cómo ejecutar código JavaScript en Node.js sin servidor y cuándo usarlas en tus proyectos con Google Firebase.</description>
     <pubDate>Mon, 19 Jun 2017 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=%C2%BFQu%C3%A9%20son%20las%20Firebase%20Cloud%20Functions%3F" type="image/png" length="0"/>
-
+    <category>firebase</category>
+    <category>javascript</category>
+    <category>nodejs</category>
   </item>
   <item>
     <title>Mi experiencia cambiando de AngularJS a ReactJS</title>
     <link>https://carlosazaustre.es/blog/mi-experiencia-cambiando-de-angularjs-a-reactjs</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/mi-experiencia-cambiando-de-angularjs-a-reactjs</guid>
-    <description>&gt;-</description>
+    <description>Descubre por qué pasé de AngularJS a ReactJS: mi experiencia real trabajando con ambos frameworks y las razones que me llevaron a cambiar de tecnología</description>
     <pubDate>Fri, 17 Mar 2017 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=Mi%20experiencia%20cambiando%20de%20AngularJS%20a%20ReactJS" type="image/png" length="0"/>
-
+    <category>angular</category>
+    <category>react</category>
   </item>
   <item>
     <title>¿Cómo funciona Redux? Conceptos básicos</title>
     <link>https://carlosazaustre.es/blog/como-funciona-redux-conceptos-basicos</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/como-funciona-redux-conceptos-basicos</guid>
-    <description>&gt;-</description>
+    <description>Aprende cómo funciona Redux: store, actions, reducers y el flujo unidireccional de datos para gestionar el estado en aplicaciones React de forma predecible.</description>
     <pubDate>Thu, 09 Mar 2017 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=%C2%BFC%C3%B3mo%20funciona%20Redux%3F%20Conceptos%20b%C3%A1sicos" type="image/png" length="0"/>
-
+    <category>javascript</category>
+    <category>react</category>
+    <category>arquitectura</category>
   </item>
   <item>
     <title>Cómo crear un WebComponent de forma nativa</title>
     <link>https://carlosazaustre.es/blog/como-crear-webcomponent-de-forma-nativa</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/como-crear-webcomponent-de-forma-nativa</guid>
-    <description>&gt;-</description>
+    <description>Aprende a crear WebComponents nativos con JavaScript, HTML y CSS usando la Custom Elements API, sin librerías externas. Crea tus propios tags HTML reutilizables</description>
     <pubDate>Wed, 01 Feb 2017 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=C%C3%B3mo%20crear%20un%20WebComponent%20de%20forma%20nativa" type="image/png" length="0"/>
-
+    <category>javascript</category>
+    <category>html</category>
+    <category>web</category>
   </item>
   <item>
     <title>4 Formas de crear un Componente en React</title>
     <link>https://carlosazaustre.es/blog/formas-de-crear-un-componente-en-react</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/formas-de-crear-un-componente-en-react</guid>
-    <description>&gt;-</description>
+    <description>Aprende a crear componentes en React de 4 formas: clases ES6, funciones, stateless y createClass. Descubre cuándo usar cada estilo según tu proyecto.</description>
     <pubDate>Tue, 24 Jan 2017 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=4%20Formas%20de%20crear%20un%20Componente%20en%20React" type="image/png" length="0"/>
-
+    <category>react</category>
+    <category>javascript</category>
+    <category>tutorial</category>
   </item>
   <item>
     <title>Resumen de 2016 y propósitos para 2017</title>
     <link>https://carlosazaustre.es/blog/2016</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/2016</guid>
-    <description>&gt;-</description>
+    <description>Resumen de 2016: más de 800.000 visitas únicas y un 80% de crecimiento en el blog. Métricas, logros y propósitos para afrontar 2017 con nuevos objetivos</description>
     <pubDate>Tue, 03 Jan 2017 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=Resumen%20de%202016%20y%20prop%C3%B3sitos%20para%202017" type="image/png" length="0"/>
-
+    <category>carrera</category>
+    <category>web</category>
   </item>
   <item>
     <title>Mi experiencia cómo mentor en Google Launchpad Week</title>
     <link>https://carlosazaustre.es/blog/mi-experiencia-como-mentor-en-google-launchpad-week</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/mi-experiencia-como-mentor-en-google-launchpad-week</guid>
-    <description>&gt;-</description>
+    <description>Comparto mi experiencia como mentor en Google Launchpad Week Fintech Madrid: cómo se organizó el evento y qué aprendí ayudando a startups a crecer</description>
     <pubDate>Wed, 26 Oct 2016 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=Mi%20experiencia%20c%C3%B3mo%20mentor%20en%20Google%20Launchpad%20Week" type="image/png" length="0"/>
-
+    <category>carrera</category>
   </item>
   <item>
     <title>Usando Firebase Storage con React.js</title>
     <link>https://carlosazaustre.es/blog/usando-firebase-storage-con-react-js</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/usando-firebase-storage-con-react-js</guid>
-    <description>&gt;-</description>
+    <description>Descubre cómo usar Firebase Storage con React.js para subir y almacenar archivos en la nube, una alternativa a Amazon S3 para tus proyectos web.</description>
     <pubDate>Thu, 13 Oct 2016 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=Usando%20Firebase%20Storage%20con%20React.js" type="image/png" length="0"/>
-
+    <category>firebase</category>
+    <category>react</category>
+    <category>javascript</category>
   </item>
   <item>
     <title>Cómo conectar Firebase a una aplicación React</title>
     <link>https://carlosazaustre.es/blog/conectando-firebase-a-react</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/conectando-firebase-a-react</guid>
-    <description>&gt;-</description>
+    <description>Aprende a conectar Firebase a React paso a paso. Usa la base de datos realtime de Google en tu aplicación React con este tutorial práctico en español.</description>
     <pubDate>Tue, 04 Oct 2016 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=C%C3%B3mo%20conectar%20Firebase%20a%20una%20aplicaci%C3%B3n%20React" type="image/png" length="0"/>
-
+    <category>firebase</category>
+    <category>react</category>
   </item>
   <item>
     <title>Estructura y funcionamiento de un componente en React</title>
     <link>https://carlosazaustre.es/blog/estructura-de-un-componente-en-react</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/estructura-de-un-componente-en-react</guid>
-    <description>&gt;-</description>
+    <description>Aprende a crear componentes en React con createClass y clases ES6. Guía práctica con ejemplos de código JavaScript para desarrolladores web frontend.</description>
     <pubDate>Wed, 28 Sep 2016 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=Estructura%20y%20funcionamiento%20de%20un%20componente%20en%20React" type="image/png" length="0"/>
-
+    <category>react</category>
+    <category>javascript</category>
   </item>
   <item>
     <title>Primeros pasos con Webpack</title>
     <link>https://carlosazaustre.es/blog/primeros-pasos-con-webpack</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/primeros-pasos-con-webpack</guid>
-    <description>&gt;-</description>
+    <description>Webpack es el bundler que necesitas para preparar tus apps JavaScript en producción. Aprende su instalación y configuración básica desde cero.</description>
     <pubDate>Thu, 22 Sep 2016 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=Primeros%20pasos%20con%20Webpack" type="image/png" length="0"/>
-
+    <category>javascript</category>
+    <category>herramientas</category>
   </item>
   <item>
     <title>JSX para novatos</title>
     <link>https://carlosazaustre.es/blog/jsx-para-novatos</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/jsx-para-novatos</guid>
-    <description>&gt;-</description>
+    <description>Aprende qué es JSX, la extensión de JavaScript de Facebook para React. Descubre cómo simplifica la creación de componentes con sintaxis similar a HTML.</description>
     <pubDate>Mon, 19 Sep 2016 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=JSX%20para%20novatos" type="image/png" length="0"/>
-
+    <category>javascript</category>
+    <category>react</category>
+    <category>tutorial</category>
   </item>
   <item>
     <title>Mi inmersión en React</title>
     <link>https://carlosazaustre.es/blog/mi-inmersion-en-react</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/mi-inmersion-en-react</guid>
-    <description>&gt;-</description>
+    <description>Experiencia personal aprendiendo React: componentes, estado, props y el ecosistema. Por qué React cambió mi forma de hacer frontend para siempre.</description>
     <pubDate>Tue, 13 Sep 2016 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=Mi%20inmersi%C3%B3n%20en%20React" type="image/png" length="0"/>
-
+    <category>react</category>
+    <category>javascript</category>
   </item>
   <item>
     <title>Desarrollo por componentes con Angular 1.5 y ES6/ES2015</title>
     <link>https://carlosazaustre.es/blog/desarrollo-por-componentes-con-angular-1-5-con-es6-es2015</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/desarrollo-por-componentes-con-angular-1-5-con-es6-es2015</guid>
-    <description>&gt;-</description>
+    <description>Aprende a desarrollar con Angular 1.5 usando el método .component() y ES6/ES2015. Código más limpio, preparado para migrar a Angular 2 con UIRouter y Babel.</description>
     <pubDate>Mon, 04 Jul 2016 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=Desarrollo%20por%20componentes%20con%20Angular%201.5%20y%20ES6%2FES2015" type="image/png" length="0"/>
-
+    <category>angular</category>
+    <category>javascript</category>
+    <category>tutorial</category>
   </item>
   <item>
     <title>Formas de manejar la asincronía en JavaScript</title>
     <link>https://carlosazaustre.es/blog/manejando-la-asincronia-en-javascript</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/manejando-la-asincronia-en-javascript</guid>
-    <description>&gt;-</description>
+    <description>Aprende las distintas formas de manejar la asincronía en JavaScript: callbacks, promesas y async/await para gestionar operaciones de entrada/salida.</description>
     <pubDate>Thu, 23 Jun 2016 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=Formas%20de%20manejar%20la%20asincron%C3%ADa%20en%20JavaScript" type="image/png" length="0"/>
-
+    <category>javascript</category>
+    <category>tutorial</category>
   </item>
   <item>
     <title>Aprendiendo y Compartiendo con la Comunidad</title>
     <link>https://carlosazaustre.es/blog/aprendiendo-y-compartiendo</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/aprendiendo-y-compartiendo</guid>
-    <description>&gt;-</description>
+    <description>Resumen de mi charla Ignite en PlatziConf Madrid 2016: cómo internet cambió mi aprendizaje y por qué compartir conocimiento con la comunidad es clave</description>
     <pubDate>Fri, 17 Jun 2016 00:00:00 GMT</pubDate>
     <dc:creator>Carlos Azaustre</dc:creator>
     <enclosure url="https://carlosazaustre.es/api/og?title=Aprendiendo%20y%20Compartiendo%20con%20la%20Comunidad" type="image/png" length="0"/>
-
+    <category>carrera</category>
+    <category>programacion</category>
   </item>
   </channel>
 </rss>

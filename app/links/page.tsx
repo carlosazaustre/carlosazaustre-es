@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://carlosazaustre.es/links",
   },
+  openGraph: {
+    url: "https://carlosazaustre.es/links",
+  },
   robots: {
     index: false,
     follow: false,

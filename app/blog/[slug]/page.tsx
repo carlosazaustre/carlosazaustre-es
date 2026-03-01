@@ -70,8 +70,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: post.excerpt,
       type: "article",
       url: canonicalUrl,
-      publishedTime: post.date,
-      modifiedTime: post.updatedAt ?? post.date,
+      publishedTime: new Date(post.date).toISOString(),
+      modifiedTime: new Date(post.updatedAt ?? post.date).toISOString(),
       authors: ["https://carlosazaustre.es/about"],
       images: [{ url: ogImage, width: 1200, height: 630, alt: post.title }],
     },
@@ -103,6 +103,10 @@ export default async function BlogPostPage({ params }: Props) {
   const [contentFirst, contentSecond] = splitHtmlAtMidpoint(post.content);
   const relatedPosts = getRelatedPosts(post.slug, post.tags, post.related);
 
+  const wordCount = post.content
+    ? post.content.replace(/<[^>]+>/g, " ").trim().split(/\s+/).filter(Boolean).length
+    : undefined;
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -118,7 +122,7 @@ export default async function BlogPostPage({ params }: Props) {
       url: "https://carlosazaustre.es",
     },
     publisher: {
-      "@type": "Person",
+      "@type": "Organization",
       name: "Carlos Azaustre",
       logo: {
         "@type": "ImageObject",
@@ -127,10 +131,37 @@ export default async function BlogPostPage({ params }: Props) {
     },
     keywords: post.tags.join(", "),
     inLanguage: "es",
+    articleSection: post.tags[0] ?? "Desarrollo Web",
+    ...(wordCount ? { wordCount } : {}),
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": `https://carlosazaustre.es/blog/${post.slug}`,
     },
+  };
+
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Inicio",
+        item: "https://carlosazaustre.es",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: "https://carlosazaustre.es/blog",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title,
+        item: `https://carlosazaustre.es/blog/${post.slug}`,
+      },
+    ],
   };
 
   return (
@@ -138,6 +169,10 @@ export default async function BlogPostPage({ params }: Props) {
     <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
     />
     <ReadingProgress />
     <div style={{ maxWidth: "960px", margin: "0 auto", padding: "3rem 1.5rem" }}>
