@@ -1,18 +1,8 @@
 ---
-title: 'Google Launchpad Week Madrid. Día 1: Producto'
-date: '2015-07-06'
-url: 'https://carlosazaustre.es/blog/google-launchpad-madrid-dia-1-producto'
-tags:
-  - carrera
-  - programacion
-related:
-  - launchpad-week-madrid-dia-2-ux
-  - google-launchpad-madrid-dia-4-tecnologia
-  - mi-experiencia-como-mentor-en-google-launchpad-week
-excerpt: >-
-  Google Launchpad Week Madrid en CampusMadrid: una semana intensiva con
-  mentores de Google para startups. Descubre cómo fue el primer día centrado en
-  Producto.
+title: "Google Launchpad Week Madrid. Día 1: Producto"
+date: "2015-07-06"
+url: "https://carlosazaustre.es/blog/google-launchpad-madrid-dia-1-producto"
+tags: []
 ---
 
 # Google Launchpad Week Madrid. Día 1: Producto

@@ -1,17 +1,8 @@
 ---
-title: Consumiendo un API REST desde React.js con ECMAScript6
-date: '2015-06-25'
-url: >-
-  https://carlosazaustre.es/blog/consumiendo-un-api-rest-desde-react-js-con-ecmascript6
-tags:
-  - react
-  - javascript
-related:
-  - ejemplo-de-aplicacion-con-react-js-en-ecmascript-6
-  - empezando-con-react-js-y-ecmascript-6
-excerpt: >-
-  Aprende a consumir una API REST desde React.js usando ECMAScript6. Peticiones
-  AJAX con fetch en lugar de XMLHttpRequest y datos JSON en tiempo real.
+title: "Consumiendo un API REST desde React.js con ECMAScript6"
+date: "2015-06-25"
+url: "https://carlosazaustre.es/blog/consumiendo-un-api-rest-desde-react-js-con-ecmascript6"
+tags: []
 ---
 
 # Consumiendo un API REST desde React.js con ECMAScript6

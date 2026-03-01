@@ -1,18 +1,8 @@
 ---
-title: Qué es lo que me gusta de Vue.js
-date: '2017-08-16'
-url: 'https://carlosazaustre.es/blog/que-es-lo-que-me-gusta-de-vue-js'
-tags:
-  - vuejs
-  - javascript
-  - web
-related:
-  - primeros-pasos-en-vue
-  - vue-single-file-components
-  - desarrollo-basado-en-componentes-con-vue-js
-excerpt: >-
-  Descubro por qué Vue.js me enamoró este verano: un framework JavaScript
-  reactivo, sencillo y potente que compite de tú a tú con React y Angular
+title: "Qué es lo que me gusta de Vue.js"
+date: "2017-08-16"
+url: "https://carlosazaustre.es/blog/que-es-lo-que-me-gusta-de-vue-js"
+tags: []
 ---
 
 # Qué es lo que me gusta de Vue.js

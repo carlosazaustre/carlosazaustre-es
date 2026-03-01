@@ -1,17 +1,8 @@
 ---
-title: 'Launchpad Week Madrid. Día 2: UX'
-date: '2015-07-07'
-url: 'https://carlosazaustre.es/blog/launchpad-week-madrid-dia-2-ux'
-tags:
-  - carrera
-  - web
-related:
-  - google-launchpad-madrid-dia-1-producto
-  - google-launchpad-madrid-dia-4-tecnologia
-  - chefly-en-google-launchpad-madrid-marketing
-excerpt: >-
-  Segundo día en Launchpad Week Madrid enfocado en UX. Descubre qué aprendimos
-  sobre diseño de experiencia de usuario en el programa de Google para startups.
+title: "Launchpad Week Madrid. Día 2: UX"
+date: "2015-07-07"
+url: "https://carlosazaustre.es/blog/launchpad-week-madrid-dia-2-ux"
+tags: []
 ---
 
 # Launchpad Week Madrid. Día 2: UX

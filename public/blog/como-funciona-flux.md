@@ -1,18 +1,8 @@
 ---
-title: ¿Qué es Flux? Entendiendo su arquitectura
-date: '2018-05-25'
-url: 'https://carlosazaustre.es/blog/como-funciona-flux'
-tags:
-  - javascript
-  - react
-  - arquitectura
-related:
-  - como-funciona-redux-conceptos-basicos
-  - empezando-con-react-js-y-ecmascript-6
-  - ejemplo-de-aplicacion-con-react-js-en-ecmascript-6
-excerpt: >-
-  Aprende qué es Flux, la arquitectura de manejo de datos para Front-End creada
-  por Facebook que sustituye el patrón MVC en aplicaciones web complejas.
+title: "¿Qué es Flux? Entendiendo su arquitectura"
+date: "2018-05-25"
+url: "https://carlosazaustre.es/blog/como-funciona-flux"
+tags: []
 ---
 
 # ¿Qué es Flux? Entendiendo su arquitectura

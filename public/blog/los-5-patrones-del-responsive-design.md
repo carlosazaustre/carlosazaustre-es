@@ -1,18 +1,8 @@
 ---
-title: Los 5 patrones del Responsive Design con Flexbox
-date: '2015-11-04'
-url: 'https://carlosazaustre.es/blog/los-5-patrones-del-responsive-design'
-tags:
-  - css
-  - html
-  - web
-related:
-  - es-tu-web-realmente-mobile-first
-  - imagenes-responsive
-  - css-grid-layout-css
-excerpt: >-
-  Aprende los 5 patrones del Responsive Design con Flexbox: Tiny Tweaks, Mostly
-  Fluid, Column Drop, Layout Shifter y Off Canvas para crear diseños adaptables
+title: "Los 5 patrones del Responsive Design con Flexbox"
+date: "2015-11-04"
+url: "https://carlosazaustre.es/blog/los-5-patrones-del-responsive-design"
+tags: []
 ---
 
 # Los 5 patrones del Responsive Design con Flexbox

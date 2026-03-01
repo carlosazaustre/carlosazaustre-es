@@ -1,18 +1,8 @@
 ---
-title: Cómo hacer que tus imágenes sean Responsive
-date: '2015-10-21'
-url: 'https://carlosazaustre.es/blog/imagenes-responsive'
-tags:
-  - html
-  - web
-  - performance
-related:
-  - lazy-loading-image
-  - los-5-patrones-del-responsive-design
-  - es-tu-web-realmente-mobile-first
-excerpt: >-
-  Aprende a hacer imágenes responsive con el atributo srcset de HTML. Adapta tus
-  imágenes a cualquier dispositivo y resolución con este tutorial práctico.
+title: "Cómo hacer que tus imágenes sean Responsive"
+date: "2015-10-21"
+url: "https://carlosazaustre.es/blog/imagenes-responsive"
+tags: []
 ---
 
 # Cómo hacer que tus imágenes sean Responsive

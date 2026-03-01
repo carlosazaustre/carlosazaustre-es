@@ -1,19 +1,8 @@
 ---
-title: Mi experiencia como profesor en los cursos de Platzi
-date: '2015-02-15'
-url: >-
-  https://carlosazaustre.es/blog/mi-experiencia-como-profesor-en-los-cursos-de-platzi
-tags:
-  - carrera
-  - tutorial
-  - web
-related:
-  - aprendiendo-y-compartiendo
-  - mi-experiencia-como-mentor-en-google-launchpad-week
-  - el-camino-para-ser-un-pro-en-javascript
-excerpt: >-
-  Viajé a Bogotá, Colombia, para ser profesor del Curso de Desarrollo Web en
-  Platzi. Te cuento cómo fue la experiencia dentro de sus estudios.
+title: "Mi experiencia como profesor en los cursos de Platzi"
+date: "2015-02-15"
+url: "https://carlosazaustre.es/blog/mi-experiencia-como-profesor-en-los-cursos-de-platzi"
+tags: []
 ---
 
 # Mi experiencia como profesor en los cursos de Platzi

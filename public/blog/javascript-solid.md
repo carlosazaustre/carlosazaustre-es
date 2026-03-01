@@ -1,17 +1,8 @@
 ---
-title: Principios SOLID en JavaScript
-date: '2023-10-16'
-url: 'https://carlosazaustre.es/blog/javascript-solid'
-tags:
-  - javascript
-  - arquitectura
-related:
-  - el-camino-para-ser-un-pro-en-javascript
-  - ecmascript6
-  - manejando-la-asincronia-en-javascript
-excerpt: >-
-  Descubre los 5 principios SOLID aplicados a JavaScript para escribir código
-  limpio, escalable y mantenible. Aprende con ejemplos y vídeo en YouTube.
+title: "Principios SOLID en JavaScript"
+date: "2023-10-16"
+url: "https://carlosazaustre.es/blog/javascript-solid"
+tags: []
 ---
 
 # Principios SOLID en JavaScript

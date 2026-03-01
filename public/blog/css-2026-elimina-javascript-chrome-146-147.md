@@ -1,26 +1,11 @@
 ---
-title: >-
-  CSS en 2026: las tres features de Chrome que eliminan JavaScript que llevas
-  años escribiendo
-date: '2026-02-27'
-url: 'https://carlosazaustre.es/blog/css-2026-elimina-javascript-chrome-146-147'
-tags:
-  - CSS
-  - JavaScript
-  - Chrome
-  - Frontend
-  - Web Development
-related:
-  - css-grid-layout-css
-  - dynamic-island-html
-  - lazy-loading-image
-excerpt: >-
-  Chrome 146 y 147 traen features CSS que eliminan la necesidad de JavaScript:
-  scroll-driven animations, anchor positioning y popover API nativa en el
-  navegador.
+title: ">-"
+date: "2026-02-27"
+url: "https://carlosazaustre.es/blog/css-2026-elimina-javascript-chrome-146-147"
+tags: []
 ---
 
-# CSS en 2026: las tres features de Chrome que eliminan JavaScript que llevas años escribiendo
+# >-
 
 > Publicado el 2026-02-27 — https://carlosazaustre.es/blog/css-2026-elimina-javascript-chrome-146-147
 

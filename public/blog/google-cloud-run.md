@@ -1,20 +1,8 @@
 ---
-title: Cómo lanzar una aplicación web en Google Cloud Run con Cloud Build
-date: '2019-07-08'
-url: 'https://carlosazaustre.es/blog/google-cloud-run'
-tags:
-  - nodejs
-  - web
-  - tutorial
-  - herramientas
-related:
-  - desplegando-contenedores-docker-en-digital-ocean
-  - travis-despliegue-integracion-continua
-  - firebase-hosting-ssr
-excerpt: >-
-  Aprende a desplegar tu primera aplicación Node.js en Google Cloud Run usando
-  Cloud Build y Docker. Guía paso a paso para correr contenedores en Google
-  Cloud.
+title: "Cómo lanzar una aplicación web en Google Cloud Run con Cloud Build"
+date: "2019-07-08"
+url: "https://carlosazaustre.es/blog/google-cloud-run"
+tags: []
 ---
 
 # Cómo lanzar una aplicación web en Google Cloud Run con Cloud Build

@@ -1,17 +1,8 @@
 ---
-title: 'Google Launchpad Madrid, Día 4: Tecnología'
-date: '2015-07-09'
-url: 'https://carlosazaustre.es/blog/google-launchpad-madrid-dia-4-tecnologia'
-tags:
-  - web
-  - programacion
-related:
-  - chefly-en-google-launchpad-madrid-marketing
-  - google-launchpad-madrid-dia-1-producto
-  - launchpad-week-madrid-dia-2-ux
-excerpt: >-
-  Día 4 de Google Launchpad Madrid dedicado a tecnología: mercado mobile,
-  Android vs iOS y aprendizajes clave para mejorar Chefly en Campus Madrid
+title: "Google Launchpad Madrid, Día 4: Tecnología"
+date: "2015-07-09"
+url: "https://carlosazaustre.es/blog/google-launchpad-madrid-dia-4-tecnologia"
+tags: []
 ---
 
 # Google Launchpad Madrid, Día 4: Tecnología

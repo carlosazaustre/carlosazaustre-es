@@ -1,17 +1,8 @@
 ---
-title: Mi experiencia cambiando de AngularJS a ReactJS
-date: '2017-03-17'
-url: 'https://carlosazaustre.es/blog/mi-experiencia-cambiando-de-angularjs-a-reactjs'
-tags:
-  - angular
-  - react
-related:
-  - empezando-con-react-js-y-ecmascript-6
-  - mi-inmersion-en-react
-  - ejemplo-de-aplicacion-con-react-js-en-ecmascript-6
-excerpt: >-
-  Descubre por qué pasé de AngularJS a ReactJS: mi experiencia real trabajando
-  con ambos frameworks y las razones que me llevaron a cambiar de tecnología
+title: "Mi experiencia cambiando de AngularJS a ReactJS"
+date: "2017-03-17"
+url: "https://carlosazaustre.es/blog/mi-experiencia-cambiando-de-angularjs-a-reactjs"
+tags: []
 ---
 
 # Mi experiencia cambiando de AngularJS a ReactJS

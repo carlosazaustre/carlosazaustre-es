@@ -1,16 +1,8 @@
 ---
-title: Viajar a Estados Unidos de forma barata. Nuestra experiencia
-date: '2018-08-18'
-url: 'https://carlosazaustre.es/blog/viajar-estados-unidos'
-tags:
-  - carrera
-related:
-  - mochila
-  - banco-online-sin-comisiones
-  - e-residency
-excerpt: >-
-  Descubre cómo viajar a Estados Unidos de forma barata. Consejos, experiencias
-  reales y trucos para organizar un viaje económico a USA sin gastar una fortuna
+title: "Viajar a Estados Unidos de forma barata. Nuestra experiencia"
+date: "2018-08-18"
+url: "https://carlosazaustre.es/blog/viajar-estados-unidos"
+tags: []
 ---
 
 # Viajar a Estados Unidos de forma barata. Nuestra experiencia

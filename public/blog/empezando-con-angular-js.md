@@ -1,20 +1,8 @@
 ---
-title: ¿Qué es AngularJS? Primeros pasos para aprenderlo
-date: '2013-09-09'
-url: 'https://carlosazaustre.es/blog/empezando-con-angular-js'
-tags:
-  - angular
-  - javascript
-  - web
-  - tutorial
-related:
-  - tutorial-aplicacion-web-con-angularjs-y-routing
-  - tutorial-ejemplo-de-aplicacion-web-con-angular-js-y-api-rest-con-node
-  - autenticacion-con-token-en-angularjs
-excerpt: >-
-  Aprende qué es AngularJS, el framework MVC de JavaScript para crear
-  aplicaciones SPA. Descubre sus ventajas frente a otros frameworks y recursos
-  para empezar.
+title: "¿Qué es AngularJS? Primeros pasos para aprenderlo"
+date: "2013-09-09"
+url: "https://carlosazaustre.es/blog/empezando-con-angular-js"
+tags: []
 ---
 
 # ¿Qué es AngularJS? Primeros pasos para aprenderlo

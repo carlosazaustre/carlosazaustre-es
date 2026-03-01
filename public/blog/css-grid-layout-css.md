@@ -1,17 +1,8 @@
 ---
-title: El futuro de CSS Grid Layout
-date: '2015-12-28'
-url: 'https://carlosazaustre.es/blog/css-grid-layout-css'
-tags:
-  - css
-  - tutorial
-related:
-  - los-5-patrones-del-responsive-design
-  - css-2026-elimina-javascript-chrome-146-147
-  - es-tu-web-realmente-mobile-first
-excerpt: >-
-  Descubre el futuro de CSS Grid Layout: cómo los módulos CSS evolucionan más
-  allá de CSS3 y qué diferencia a Grid de Flexbox en el diseño web moderno
+title: "El futuro de CSS Grid Layout"
+date: "2015-12-28"
+url: "https://carlosazaustre.es/blog/css-grid-layout-css"
+tags: []
 ---
 
 # El futuro de CSS Grid Layout

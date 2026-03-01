@@ -1,18 +1,8 @@
 ---
-title: ¿Es tu web realmente Mobile First?
-date: '2015-10-14'
-url: 'https://carlosazaustre.es/blog/es-tu-web-realmente-mobile-first'
-tags:
-  - css
-  - web
-  - performance
-related:
-  - los-5-patrones-del-responsive-design
-  - imagenes-responsive
-  - lazy-loading-image
-excerpt: >-
-  Aprende qué significa Mobile First, por qué Google prioriza webs responsive y
-  cómo aplicar Progressive Enhancement o Graceful Degradation en tu diseño web.
+title: "¿Es tu web realmente Mobile First?"
+date: "2015-10-14"
+url: "https://carlosazaustre.es/blog/es-tu-web-realmente-mobile-first"
+tags: []
 ---
 
 # ¿Es tu web realmente Mobile First?

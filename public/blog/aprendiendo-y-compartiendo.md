@@ -1,17 +1,8 @@
 ---
-title: Aprendiendo y Compartiendo con la Comunidad
-date: '2016-06-17'
-url: 'https://carlosazaustre.es/blog/aprendiendo-y-compartiendo'
-tags:
-  - carrera
-  - programacion
-related:
-  - '2015'
-  - '2014'
-  - mi-experiencia-como-profesor-en-los-cursos-de-platzi
-excerpt: >-
-  Resumen de mi charla Ignite en PlatziConf Madrid 2016: cómo internet cambió mi
-  aprendizaje y por qué compartir conocimiento con la comunidad es clave
+title: "Aprendiendo y Compartiendo con la Comunidad"
+date: "2016-06-17"
+url: "https://carlosazaustre.es/blog/aprendiendo-y-compartiendo"
+tags: []
 ---
 
 # Aprendiendo y Compartiendo con la Comunidad

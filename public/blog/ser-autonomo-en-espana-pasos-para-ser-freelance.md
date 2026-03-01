@@ -1,18 +1,8 @@
 ---
-title: Ser autónomo en España. Pasos para ser Freelance
-date: '2015-05-05'
-url: 'https://carlosazaustre.es/blog/ser-autonomo-en-espana-pasos-para-ser-freelance'
-tags:
-  - carrera
-  - web
-related:
-  - como-ser-autonomo-en-irlanda
-  - como-ser-autonomo-en-irlanda-registro-en-hacienda
-  - banco-online-sin-comisiones
-excerpt: >-
-  Guía completa para darte de alta como autónomo en España. Descubre los pasos
-  necesarios para trabajar como freelance, pagar impuestos y emprender
-  legalmente.
+title: "Ser autónomo en España. Pasos para ser Freelance"
+date: "2015-05-05"
+url: "https://carlosazaustre.es/blog/ser-autonomo-en-espana-pasos-para-ser-freelance"
+tags: []
 ---
 
 # Ser autónomo en España. Pasos para ser Freelance

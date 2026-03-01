@@ -1,5 +1,5 @@
 # Carlos Azaustre — Blog completo en Markdown
-> Generado automáticamente: 2026-02-28T22:07:21.851Z
+> Generado automáticamente: 2026-03-01T13:20:15.001Z
 > Fuente: https://carlosazaustre.es/blog
 > Este archivo contiene todos los artículos del blog en formato Markdown limpio,
 > organizado para ser ingestado por modelos de lenguaje (LLMs).
@@ -8,11 +8,9 @@
 
 <article slug="css-2026-elimina-javascript-chrome-146-147" date="2026-02-27" url="https://carlosazaustre.es/blog/css-2026-elimina-javascript-chrome-146-147">
 
-# CSS en 2026: las tres features de Chrome que eliminan JavaScript que llevas años escribiendo
+# >-
 
 **Fecha:** 2026-02-27
-**Tags:** CSS, JavaScript, Chrome, Frontend, Web Development
-
 # CSS en 2026: las tres features de Chrome que eliminan JavaScript que llevas años escribiendo
 
 Llevo años escribiendo el mismo bloque de código. Tú también, probablemente.
@@ -763,7 +761,7 @@ Como siempre, si tienes alguna pregunta o comentario, no dudes en escribirlo aba
 
 <article slug="react-tutorial-modern" date="2023-09-29" url="https://carlosazaustre.es/blog/react-tutorial-modern">
 
-# Tutorial React: Cómo crear una aplicación web con React desde cero con librerías modernas
+# >-
 
 **Fecha:** 2023-09-29
 # Cómo desarrollar una aplicación React desde cero con Zustand, React Query, React Hook Form, React Router y React Hot Toast - Tutorial paso a paso
@@ -1398,7 +1396,7 @@ Para ello hay diversas herramientas, una de ellas es [Conventional Changelog](ht
 
 <article slug="firebase-hosting-ssr" date="2022-11-14" url="https://carlosazaustre.es/blog/firebase-hosting-ssr">
 
-# Cómo desplegar una app Server-Side Rendering con Next.js en el nuevo Firebase Hosting
+# >-
 
 **Fecha:** 2022-11-14
 ![Firebase Hosting](/images/firebase-hosting-ssr/firebase-hosting.png)
@@ -13616,7 +13614,7 @@ Esto ha sido nuestro primer día de _Launchpad_. [Mañana a darle caña a la UX]
 
 <article slug="desplegando-contenedores-docker-en-digital-ocean" date="2015-07-02" url="https://carlosazaustre.es/blog/desplegando-contenedores-docker-en-digital-ocean">
 
-# Desplegando contenedores en DigitalOcean con Docker, Docker Compose y Docker Machine
+# >-
 
 **Fecha:** 2015-07-02
 Hace unos meses escribí un post sobre [como manejar contenedores Docker en MAC](/manejando-docker-desde-os-x-creando-nuestro-primer-contenedor/), ya que se necesita una máquina virtual (_boot2docker_) para poder utilizarlos.
@@ -17322,7 +17320,7 @@ Gulp al igual que Grunt posee una gran comunidad y hay disponibles cientos de pl
 
 <article slug="primera-aplicacion-web-en-raspberrypi-con-nodejs-cylonjs-controlando-leds-desde-el-movil" date="2014-07-16" url="https://carlosazaustre.es/blog/primera-aplicacion-web-en-raspberrypi-con-nodejs-cylonjs-controlando-leds-desde-el-movil">
 
-# Primera aplicación web en RaspberryPi con NodeJS + CylonJS. Controlando LEDs desde el móvil
+# >-
 
 **Fecha:** 2014-07-16
 En este tutorial vamos a implementar una WebApp que controle 3 LEDs de colores conectados a los pines GPIO de la RaspberryPi. Utilizando para ello **JavaScript a _troche_ y _moche_.**
@@ -18406,7 +18404,7 @@ El código de este ejemplo esta disponible en el [siguiente repositorio de githu
 
 <article slug="tutorial-ejemplo-de-aplicacion-web-con-angular-js-y-api-rest-con-node" date="2014-01-13" url="https://carlosazaustre.es/blog/tutorial-ejemplo-de-aplicacion-web-con-angular-js-y-api-rest-con-node">
 
-# Tutorial de AngularJS. Ejemplo de aplicación web conectada a una API REST con Node
+# >-
 
 **Fecha:** 2014-01-13
 [AngularJS](/empezando-con-angular-js) es uno de los frameworks más populares para desarrollar aplicaciones del lado cliente (Frontend) con JavaScript.

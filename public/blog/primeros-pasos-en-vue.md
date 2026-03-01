@@ -1,19 +1,8 @@
 ---
-title: Primeros pasos en Vue
-date: '2018-10-01'
-url: 'https://carlosazaustre.es/blog/primeros-pasos-en-vue'
-tags:
-  - vuejs
-  - javascript
-  - tutorial
-related:
-  - desarrollo-basado-en-componentes-con-vue-js
-  - que-es-lo-que-me-gusta-de-vue-js
-  - vue-single-file-components
-excerpt: >-
-  Aprende a dar tus primeros pasos en Vue.js sin Webpack ni Babel. Solo
-  necesitas HTML y CSS para comenzar a desarrollar con este framework
-  JavaScript.
+title: "Primeros pasos en Vue"
+date: "2018-10-01"
+url: "https://carlosazaustre.es/blog/primeros-pasos-en-vue"
+tags: []
 ---
 
 # Primeros pasos en Vue

@@ -1,17 +1,8 @@
 ---
-title: Eligiendo un banco online sin comisiones. Mi experiencia con N26
-date: '2018-08-24'
-url: 'https://carlosazaustre.es/blog/banco-online-sin-comisiones'
-tags:
-  - carrera
-related:
-  - ser-autonomo-en-espana-pasos-para-ser-freelance
-  - como-ser-autonomo-en-irlanda
-  - e-residency
-excerpt: >-
-  Mi experiencia con N26, el banco online sin comisiones. Descubre cómo
-  funciona, sus ventajas en divisas, retirada de efectivo y por qué es ideal
-  para autónomos.
+title: "Eligiendo un banco online sin comisiones. Mi experiencia con N26"
+date: "2018-08-24"
+url: "https://carlosazaustre.es/blog/banco-online-sin-comisiones"
+tags: []
 ---
 
 # Eligiendo un banco online sin comisiones. Mi experiencia con N26

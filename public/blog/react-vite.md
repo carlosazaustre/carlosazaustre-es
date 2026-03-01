@@ -1,19 +1,8 @@
 ---
-title: Cómo iniciar un proyecto React con Vite
-date: '2022-10-26'
-url: 'https://carlosazaustre.es/blog/react-vite'
-tags:
-  - react
-  - javascript
-  - herramientas
-related:
-  - react-tutorial-modern
-  - empezando-con-react-js-y-ecmascript-6
-  - primeros-pasos-con-webpack
-excerpt: >-
-  Aprende a iniciar un proyecto React con Vite, la herramienta de tooling
-  Frontend más rápida. Alternativa moderna a Webpack, Parcel y Snowpack para tus
-  apps.
+title: "Cómo iniciar un proyecto React con Vite"
+date: "2022-10-26"
+url: "https://carlosazaustre.es/blog/react-vite"
+tags: []
 ---
 
 # Cómo iniciar un proyecto React con Vite

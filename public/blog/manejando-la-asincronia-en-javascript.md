@@ -1,18 +1,8 @@
 ---
-title: Formas de manejar la asincronía en JavaScript
-date: '2016-06-23'
-url: 'https://carlosazaustre.es/blog/manejando-la-asincronia-en-javascript'
-tags:
-  - javascript
-  - tutorial
-related:
-  - uso-de-promesas-en-angularjs
-  - ecmascript6
-  - javascript
-excerpt: >-
-  Aprende las distintas formas de manejar la asincronía en JavaScript:
-  callbacks, promesas y async/await para gestionar operaciones de
-  entrada/salida.
+title: "Formas de manejar la asincronía en JavaScript"
+date: "2016-06-23"
+url: "https://carlosazaustre.es/blog/manejando-la-asincronia-en-javascript"
+tags: []
 ---
 
 # Formas de manejar la asincronía en JavaScript

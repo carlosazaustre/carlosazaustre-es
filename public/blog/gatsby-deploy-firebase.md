@@ -1,20 +1,8 @@
 ---
-title: Cómo desplegar tu sitio en Gatsby a Firebase Hosting
-date: '2020-02-13'
-url: 'https://carlosazaustre.es/blog/gatsby-deploy-firebase'
-tags:
-  - firebase
-  - herramientas
-  - tutorial
-  - web
-related:
-  - firebase-hosting-ssr
-  - conectando-firebase-a-react
-  - que-son-las-firebase-cloud-functions
-excerpt: >-
-  Aprende a desplegar tu sitio Gatsby en Firebase Hosting con integración
-  continua usando Travis CI. Automatiza tus deploys y olvídate de hacerlo
-  manualmente.
+title: "Cómo desplegar tu sitio en Gatsby a Firebase Hosting"
+date: "2020-02-13"
+url: "https://carlosazaustre.es/blog/gatsby-deploy-firebase"
+tags: []
 ---
 
 # Cómo desplegar tu sitio en Gatsby a Firebase Hosting

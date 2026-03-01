@@ -1,24 +1,11 @@
 ---
-title: >-
-  Cómo desplegar una app Server-Side Rendering con Next.js en el nuevo Firebase
-  Hosting
-date: '2022-11-14'
-url: 'https://carlosazaustre.es/blog/firebase-hosting-ssr'
-tags:
-  - nextjs
-  - firebase
-  - web
-related:
-  - gatsby-deploy-firebase
-  - que-son-las-firebase-cloud-functions
-  - google-cloud-run
-excerpt: >-
-  Aprende a desplegar una aplicación Next.js con Server-Side Rendering en el
-  nuevo Firebase Hosting, anunciado en Firebase Summit 2022 y disponible en
-  preview.
+title: ">-"
+date: "2022-11-14"
+url: "https://carlosazaustre.es/blog/firebase-hosting-ssr"
+tags: []
 ---
 
-# Cómo desplegar una app Server-Side Rendering con Next.js en el nuevo Firebase Hosting
+# >-
 
 > Publicado el 2022-11-14 — https://carlosazaustre.es/blog/firebase-hosting-ssr
 

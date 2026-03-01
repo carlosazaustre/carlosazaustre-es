@@ -1,21 +1,8 @@
 ---
-title: Programando en Node.js con RaspberryPi. Primeros pasos
-date: '2014-07-15'
-url: >-
-  https://carlosazaustre.es/blog/programando-en-node-js-con-raspberrypi-primeros-pasos
-tags:
-  - nodejs
-  - javascript
-  - tutorial
-related:
-  - >-
-    primera-aplicacion-web-en-raspberrypi-con-nodejs-cylonjs-controlando-leds-desde-el-movil
-  - tessel-el-microcontrolador-programable-en-javascript
-  - aplicacion-node-como-servicio-upstart
-excerpt: >-
-  Configura Node.js en tu Raspberry Pi y empieza a programar proyectos IoT.
-  Tutorial paso a paso para controlar GPIO, instalar dependencias y desplegar tu
-  primera app.
+title: "Programando en Node.js con RaspberryPi. Primeros pasos"
+date: "2014-07-15"
+url: "https://carlosazaustre.es/blog/programando-en-node-js-con-raspberrypi-primeros-pasos"
+tags: []
 ---
 
 # Programando en Node.js con RaspberryPi. Primeros pasos

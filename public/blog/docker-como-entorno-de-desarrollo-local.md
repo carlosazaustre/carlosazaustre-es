@@ -1,18 +1,8 @@
 ---
-title: Docker como entorno de desarrollo local
-date: '2018-09-01'
-url: 'https://carlosazaustre.es/blog/docker-como-entorno-de-desarrollo-local'
-tags:
-  - herramientas
-  - web
-related:
-  - manejando-docker-desde-os-x-creando-nuestro-primer-contenedor
-  - desplegando-contenedores-docker-en-digital-ocean
-  - como-configurar-nginx-con-node-js-en-produccion
-excerpt: >-
-  Aprende a usar Docker como entorno de desarrollo local con LiveReload
-  automático. Configura contenedores en Mac, Windows o Linux para tus
-  aplicaciones web.
+title: "Docker como entorno de desarrollo local"
+date: "2018-09-01"
+url: "https://carlosazaustre.es/blog/docker-como-entorno-de-desarrollo-local"
+tags: []
 ---
 
 # Docker como entorno de desarrollo local

@@ -1,18 +1,8 @@
 ---
-title: Mi inmersión en React
-date: '2016-09-13'
-url: 'https://carlosazaustre.es/blog/mi-inmersion-en-react'
-tags:
-  - react
-  - javascript
-related:
-  - empezando-con-react-js-y-ecmascript-6
-  - ejemplo-de-aplicacion-con-react-js-en-ecmascript-6
-  - mi-experiencia-cambiando-de-angularjs-a-reactjs
-excerpt: >-
-  Experiencia personal aprendiendo React: componentes, estado, props y el
-  ecosistema. Reflexiones sobre la curva de aprendizaje y por qué React cambió
-  mi forma de hacer frontend.
+title: "Mi inmersión en React"
+date: "2016-09-13"
+url: "https://carlosazaustre.es/blog/mi-inmersion-en-react"
+tags: []
 ---
 
 # Mi inmersión en React

@@ -1,19 +1,8 @@
 ---
-title: Manejando Docker desde OS X. Creando nuestro primer contenedor de NodeJS
-date: '2015-05-04'
-url: >-
-  https://carlosazaustre.es/blog/manejando-docker-desde-os-x-creando-nuestro-primer-contenedor
-tags:
-  - nodejs
-  - herramientas
-  - web
-related:
-  - docker-como-entorno-de-desarrollo-local
-  - desplegando-contenedores-docker-en-digital-ocean
-  - aplicacion-node-como-servicio-upstart
-excerpt: >-
-  Primeros pasos con Docker en macOS: cómo instalar Docker, crear tu primer
-  contenedor y entender los conceptos básicos de imágenes, volúmenes y redes.
+title: "Manejando Docker desde OS X. Creando nuestro primer contenedor de NodeJS"
+date: "2015-05-04"
+url: "https://carlosazaustre.es/blog/manejando-docker-desde-os-x-creando-nuestro-primer-contenedor"
+tags: []
 ---
 
 # Manejando Docker desde OS X. Creando nuestro primer contenedor de NodeJS

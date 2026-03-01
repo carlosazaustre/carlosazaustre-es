@@ -1,19 +1,8 @@
 ---
-title: Lazy loading de imágenes ya forma parte del estándar HTML
-date: '2020-02-25'
-url: 'https://carlosazaustre.es/blog/lazy-loading-image'
-tags:
-  - html
-  - performance
-  - web
-related:
-  - imagenes-responsive
-  - es-tu-web-realmente-mobile-first
-  - css-2026-elimina-javascript-chrome-146-147
-excerpt: >-
-  Implementa lazy loading de imágenes en tu web para mejorar el rendimiento y
-  Core Web Vitals. Técnicas nativas con Intersection Observer API y atributo
-  loading.
+title: "Lazy loading de imágenes ya forma parte del estándar HTML"
+date: "2020-02-25"
+url: "https://carlosazaustre.es/blog/lazy-loading-image"
+tags: []
 ---
 
 # Lazy loading de imágenes ya forma parte del estándar HTML

@@ -1,25 +1,11 @@
 ---
-title: >-
-  Desplegando contenedores en DigitalOcean con Docker, Docker Compose y Docker
-  Machine
-date: '2015-07-02'
-url: >-
-  https://carlosazaustre.es/blog/desplegando-contenedores-docker-en-digital-ocean
-tags:
-  - nodejs
-  - herramientas
-  - tutorial
-  - web
-related:
-  - docker-como-entorno-de-desarrollo-local
-  - manejando-docker-desde-os-x-creando-nuestro-primer-contenedor
-  - como-configurar-tu-servidor-cloud-en-digitalocean
-excerpt: >-
-  Aprende a desplegar contenedores Docker en DigitalOcean usando Docker Compose
-  y Docker Machine con una API REST en Node.js y MongoDB en producción
+title: ">-"
+date: "2015-07-02"
+url: "https://carlosazaustre.es/blog/desplegando-contenedores-docker-en-digital-ocean"
+tags: []
 ---
 
-# Desplegando contenedores en DigitalOcean con Docker, Docker Compose y Docker Machine
+# >-
 
 > Publicado el 2015-07-02 — https://carlosazaustre.es/blog/desplegando-contenedores-docker-en-digital-ocean
 

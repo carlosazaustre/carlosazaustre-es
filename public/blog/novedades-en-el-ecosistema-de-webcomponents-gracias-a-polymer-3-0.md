@@ -1,18 +1,8 @@
 ---
-title: El futuro de los WebComponents gracias a Polymer 3.0
-date: '2018-10-05'
-url: >-
-  https://carlosazaustre.es/blog/novedades-en-el-ecosistema-de-webcomponents-gracias-a-polymer-3-0
-tags:
-  - javascript
-  - web
-related:
-  - como-crear-webcomponent-de-forma-nativa
-  - webcomponents-nativos-como-pasar-propiedades
-  - desarrollo-basado-en-componentes-con-vue-js
-excerpt: >-
-  Descubre las novedades de Polymer 3.0 y el futuro de los WebComponents tras el
-  Polymer Dev Summit, la conferencia anual de Google para desarrolladores.
+title: "El futuro de los WebComponents gracias a Polymer 3.0"
+date: "2018-10-05"
+url: "https://carlosazaustre.es/blog/novedades-en-el-ecosistema-de-webcomponents-gracias-a-polymer-3-0"
+tags: []
 ---
 
 # El futuro de los WebComponents gracias a Polymer 3.0

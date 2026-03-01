@@ -1,17 +1,8 @@
 ---
-title: Un Setup en tu mochila
-date: '2020-08-09'
-url: 'https://carlosazaustre.es/blog/mochila'
-tags:
-  - herramientas
-  - carrera
-related:
-  - workspace
-  - el-escritorio-de-un-desarrollador-web
-  - pc-2023
-excerpt: >-
-  Descubre qué dispositivos llevo siempre en mi mochila para trabajar en remoto
-  desde cualquier lugar con la misma productividad que en mi escritorio
+title: "Un Setup en tu mochila"
+date: "2020-08-09"
+url: "https://carlosazaustre.es/blog/mochila"
+tags: []
 ---
 
 # Un Setup en tu mochila

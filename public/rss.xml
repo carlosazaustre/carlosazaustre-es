@@ -18,22 +18,18 @@
     <copyright>© 2026 Carlos Azaustre</copyright>
     <managingEditor>cazaustre@gmail.com (Carlos Azaustre)</managingEditor>
   <item>
-    <title>CSS en 2026: las tres features de Chrome que eliminan JavaScript que llevas años escribiendo</title>
+    <title>&gt;-</title>
     <link>https://carlosazaustre.es/blog/css-2026-elimina-javascript-chrome-146-147</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/css-2026-elimina-javascript-chrome-146-147</guid>
-    <description>CSS en 2026: las tres features de Chrome que eliminan JavaScript que llevas años escribiendo Llevo años escribiendo el mismo bloque de código. Tú también, probablemente. El  para animar elementos…</description>
+    <description>&gt;-</description>
     <pubDate>Fri, 27 Feb 2026 00:00:00 GMT</pubDate>
-    <category>CSS</category>
-    <category>JavaScript</category>
-    <category>Chrome</category>
-    <category>Frontend</category>
-    <category>Web Development</category>
+
   </item>
   <item>
     <title>El problema de la Inteligencia Artificial y los Programadores Junior</title>
     <link>https://carlosazaustre.es/blog/ia-programador-junior</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/ia-programador-junior</guid>
-    <description>Hoy quiero profundizar en un tema que generó bastante debate tras una publicación reciente que compartí:  El uso de la inteligencia artificial (IA) en la educación de programadores, especialmente para…</description>
+    <description>&gt;-</description>
     <pubDate>Sat, 11 May 2024 00:00:00 GMT</pubDate>
 
   </item>
@@ -41,7 +37,7 @@
     <title>Qué TECH Cuentas - Ep.01, con Pau Garcia-Milà</title>
     <link>https://carlosazaustre.es/blog/quetechcuentas-01</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/quetechcuentas-01</guid>
-    <description>El Futuro de la Educación Digital, Emprendimiento y Divulgación de Tecnología Hace unos días tuve el privilegio de charlar un rato con Pau Garcia-Milà para el primer episodio de mi podcast, un…</description>
+    <description>&gt;-</description>
     <pubDate>Mon, 30 Oct 2023 00:00:00 GMT</pubDate>
 
   </item>
@@ -49,15 +45,15 @@
     <title>Principios SOLID en JavaScript</title>
     <link>https://carlosazaustre.es/blog/javascript-solid</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/javascript-solid</guid>
-    <description>TL;DR: ¿Eres más de contenido en vídeo? Aquí tienes explicados los 5 principios SOLID de la programación, aplicado a JavaScript. En este artículo discutiremos los principios SOLID, una serie de pautas…</description>
+    <description>&gt;-</description>
     <pubDate>Mon, 16 Oct 2023 00:00:00 GMT</pubDate>
 
   </item>
   <item>
-    <title>Tutorial React: Cómo crear una aplicación web con React desde cero con librerías modernas</title>
+    <title>&gt;-</title>
     <link>https://carlosazaustre.es/blog/react-tutorial-modern</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/react-tutorial-modern</guid>
-    <description>Cómo desarrollar una aplicación React desde cero con Zustand, React Query, React Hook Form, React Router y React Hot Toast - Tutorial paso a paso Introducción En este tutorial paso a paso, vamos a…</description>
+    <description>&gt;-</description>
     <pubDate>Fri, 29 Sep 2023 00:00:00 GMT</pubDate>
 
   </item>
@@ -65,7 +61,7 @@
     <title>Volviendo a los Orígenes: El Arte de Armar tu Propio PC</title>
     <link>https://carlosazaustre.es/blog/pc-2023</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/pc-2023</guid>
-    <description>Después de más de 18 años, he vuelto a experimentar el placer de armar un PC componente por componente. Mi última experiencia de este tipo remonta a los tiempos cuando los primeros microprocesadores…</description>
+    <description>&gt;-</description>
     <pubDate>Tue, 13 Jun 2023 00:00:00 GMT</pubDate>
 
   </item>
@@ -73,15 +69,15 @@
     <title>Conventional Commits - Especificación para tus mensajes de commit</title>
     <link>https://carlosazaustre.es/blog/conventional-commits</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/conventional-commits</guid>
-    <description>¿Qué son los mensajes de commit? Los mensajes de commit son una forma de documentar los cambios que se realizan en un repositorio de código. Estos mensajes son muy útiles para entender qué cambios se…</description>
+    <description>&gt;-</description>
     <pubDate>Tue, 29 Nov 2022 00:00:00 GMT</pubDate>
 
   </item>
   <item>
-    <title>Cómo desplegar una app Server-Side Rendering con Next.js en el nuevo Firebase Hosting</title>
+    <title>&gt;-</title>
     <link>https://carlosazaustre.es/blog/firebase-hosting-ssr</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/firebase-hosting-ssr</guid>
-    <description>En la Firebase Summit 2022, Google anunció que el nuevo Firebase Hosting ya estaba disponible en . La gran novedad es que permite desplegar aplicaciones Server-Side Rendering (SSR) como podemos hacer…</description>
+    <description>&gt;-</description>
     <pubDate>Mon, 14 Nov 2022 00:00:00 GMT</pubDate>
 
   </item>
@@ -89,7 +85,7 @@
     <title>Cómo configurar Husky y Lint-Staged en un proyecto</title>
     <link>https://carlosazaustre.es/blog/husky-lintstaged</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/husky-lintstaged</guid>
-    <description>Mejora tu flujo de desarrollo como programador, utilizando Git Hooks que se ejecuten antes de un commit, push, etc... y que comprueben si el Linter pasa correctamente, los test dan OK,... y así…</description>
+    <description>&gt;-</description>
     <pubDate>Wed, 09 Nov 2022 00:00:00 GMT</pubDate>
 
   </item>
@@ -97,7 +93,7 @@
     <title>Cómo hacer la Dynamic Island del iPhone 14 con HTML, CSS y JavaScript</title>
     <link>https://carlosazaustre.es/blog/dynamic-island-html</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/dynamic-island-html</guid>
-    <description>¿Qué es la Dynamic Island? La Dynamic Island es una característica que se ha introducido en el iPhone 14 y que permite a los usuarios crear una isla personalizada en la pantalla de inicio del iPhone.…</description>
+    <description>&gt;-</description>
     <pubDate>Sun, 06 Nov 2022 00:00:00 GMT</pubDate>
 
   </item>
@@ -105,7 +101,7 @@
     <title>Cómo iniciar un proyecto React con Vite</title>
     <link>https://carlosazaustre.es/blog/react-vite</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/react-vite</guid>
-    <description>Vite es una herramienta de tooling para el Frontend. Lo puedes agrupar en la categoría donde se encuentran otros como Webpack, Parcel y Snowpack. Es muy útil para crear una estructura de proyecto que…</description>
+    <description>&gt;-</description>
     <pubDate>Wed, 26 Oct 2022 00:00:00 GMT</pubDate>
 
   </item>
@@ -113,7 +109,7 @@
     <title>Mi Setup 2022 - Trabajo en Remoto y desde casa</title>
     <link>https://carlosazaustre.es/blog/workspace</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/workspace</guid>
-    <description>El teletrabajo o trabajo desde casa ya es una realidad y un éstandar en la mayoría de empresas que tienen departamentos de desarrollo, diseño y/o marketing digital. Únicamente necesitas de un…</description>
+    <description>&gt;-</description>
     <pubDate>Thu, 27 Jan 2022 00:00:00 GMT</pubDate>
 
   </item>
@@ -121,7 +117,7 @@
     <title>Cómo hacer un acortador de URLs con Next.js y Prisma</title>
     <link>https://carlosazaustre.es/blog/acortador-urls</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/acortador-urls</guid>
-    <description>En este artículo aprenderás a crear un acortador de urls, desde cero y paso a paso. Un acortador es un servicio que posiblemente ya hayas utilizado, como por ejemplo bit.ly. Sirve para, dada una URL,…</description>
+    <description>&gt;-</description>
     <pubDate>Fri, 16 Jul 2021 00:00:00 GMT</pubDate>
 
   </item>
@@ -129,7 +125,7 @@
     <title>Un Setup en tu mochila</title>
     <link>https://carlosazaustre.es/blog/mochila</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/mochila</guid>
-    <description>Tener un setup para trabajar en remoto desde cualquier sitio se ha convertido en algo bastante habitual hoy en día. Suelo trabajar desde casa y mi espacio de trabajo en ese sentido es bastante fijo.…</description>
+    <description>&gt;-</description>
     <pubDate>Sun, 09 Aug 2020 00:00:00 GMT</pubDate>
 
   </item>
@@ -137,7 +133,7 @@
     <title>Cómo configurar Travis como herramienta para Integración y Despliegue continuo</title>
     <link>https://carlosazaustre.es/blog/travis-despliegue-integracion-continua</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/travis-despliegue-integracion-continua</guid>
-    <description>Integración Continua o Continuous Integration (CI) y el Despliegue Continuo o Continuous Deployment son dos términos que suelen ser mencionados juntos. Se refiere a una serie de tareas repetitivas…</description>
+    <description>&gt;-</description>
     <pubDate>Sat, 29 Feb 2020 00:00:00 GMT</pubDate>
 
   </item>
@@ -145,7 +141,7 @@
     <title>Lazy loading de imágenes ya forma parte del estándar HTML</title>
     <link>https://carlosazaustre.es/blog/lazy-loading-image</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/lazy-loading-image</guid>
-    <description>El pasado 12 de Febrero de 2020 el atributo  para imágenes e iframes se hizo por fin parte del estándar HTML. Si bien ya se podía utilizar activando un par de flags en el navegador Chrome, hasta ahora…</description>
+    <description>&gt;-</description>
     <pubDate>Tue, 25 Feb 2020 00:00:00 GMT</pubDate>
 
   </item>
@@ -153,7 +149,7 @@
     <title>Cómo desplegar tu sitio en Gatsby a Firebase Hosting</title>
     <link>https://carlosazaustre.es/blog/gatsby-deploy-firebase</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/gatsby-deploy-firebase</guid>
-    <description>Recientemente he migrado este blog a Gatsby para hacerlo más serverless y mi intención era subirlo a un CDN e implementar integración continua para olvidarme de desplegar manualmente. En este artículo…</description>
+    <description>&gt;-</description>
     <pubDate>Thu, 13 Feb 2020 00:00:00 GMT</pubDate>
 
   </item>
@@ -161,7 +157,7 @@
     <title>Cómo lanzar una aplicación web en Google Cloud Run con Cloud Build</title>
     <link>https://carlosazaustre.es/blog/google-cloud-run</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/google-cloud-run</guid>
-    <description>En el pasado evento del Cloud Next, Google anunció un nuevo producto dentro de sus servicios: Cloud Run. Una evolución de App Engine que básicamente permite correr cualquier lenguage de backend sobre…</description>
+    <description>&gt;-</description>
     <pubDate>Mon, 08 Jul 2019 00:00:00 GMT</pubDate>
 
   </item>
@@ -169,7 +165,7 @@
     <title>Aprende ECMAScript 6 (ES6 o ES2015), el nuevo estándar de JavaScript</title>
     <link>https://carlosazaustre.es/blog/ecmascript6</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/ecmascript6</guid>
-    <description>ECMAScript v6 (Abreviado como ES6 o ES2015) es el estándar que sigue JavaScript desde Junio de 2015. Hasta ese momento la versión de JS que estábamos usando en nuestros navegadores y Node.js, era la…</description>
+    <description>&gt;-</description>
     <pubDate>Wed, 24 Oct 2018 00:00:00 GMT</pubDate>
 
   </item>
@@ -177,7 +173,7 @@
     <title>Desarrollo basado en Componentes con Vue.js</title>
     <link>https://carlosazaustre.es/blog/desarrollo-basado-en-componentes-con-vue-js</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/desarrollo-basado-en-componentes-con-vue-js</guid>
-    <description>Las arquitecturas web basadas en Componentes es lo que más se emplea hoy en día en el desarrollo web moderno. Vue.js también nos permite crear Componentes y montar nuestra aplicación con ellos. Cómo…</description>
+    <description>&gt;-</description>
     <pubDate>Wed, 17 Oct 2018 00:00:00 GMT</pubDate>
 
   </item>
@@ -185,7 +181,7 @@
     <title>Vue: Single File Components</title>
     <link>https://carlosazaustre.es/blog/vue-single-file-components</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/vue-single-file-components</guid>
-    <description>Con Vue podemos crear componentes de múltiples formas, la más sencilla es cómo vismo en un post anterior donde utilizamos el método . Sin embargo esa forma, aunque es la más sencilla y práctica, no es…</description>
+    <description>&gt;-</description>
     <pubDate>Wed, 10 Oct 2018 00:00:00 GMT</pubDate>
 
   </item>
@@ -193,7 +189,7 @@
     <title>El futuro de los WebComponents gracias a Polymer 3.0</title>
     <link>https://carlosazaustre.es/blog/novedades-en-el-ecosistema-de-webcomponents-gracias-a-polymer-3-0</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/novedades-en-el-ecosistema-de-webcomponents-gracias-a-polymer-3-0</guid>
-    <description>Recientemente se ha celebrado el Polymer Dev Summit, una conferencia anual para desarrolladores de Polymer, la librería de Google basada en WebComponents. Pero esta conferencia es mucho más. Google…</description>
+    <description>&gt;-</description>
     <pubDate>Fri, 05 Oct 2018 00:00:00 GMT</pubDate>
 
   </item>
@@ -201,7 +197,7 @@
     <title>Primeros pasos en Vue</title>
     <link>https://carlosazaustre.es/blog/primeros-pasos-en-vue</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/primeros-pasos-en-vue</guid>
-    <description>Con éste artículo quiero enseñarte lo fácil que es empezar a trabajar con Vue para que veas su sencillez. Para ver como funciona Vue no necesitas Webpack, ni Babel, ni transpilers, ni una estructura…</description>
+    <description>&gt;-</description>
     <pubDate>Mon, 01 Oct 2018 00:00:00 GMT</pubDate>
 
   </item>
@@ -209,7 +205,7 @@
     <title>Cómo crear una empresa en Estonia</title>
     <link>https://carlosazaustre.es/blog/empresa-estonia</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/empresa-estonia</guid>
-    <description>Una vez tienes claros las ventajas e impuestos de crear una empresa en Estonia y el kit de e-residente, lo que te queda es montar la empresa. Y de eso vamos a hablar en éste artículo: Pasos, costes y…</description>
+    <description>&gt;-</description>
     <pubDate>Mon, 24 Sep 2018 00:00:00 GMT</pubDate>
 
   </item>
@@ -217,7 +213,7 @@
     <title>Impuestos de una empresa en Estonia</title>
     <link>https://carlosazaustre.es/blog/impuestos-estonia</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/impuestos-estonia</guid>
-    <description>Una vez tienes tu tarjeta de e-residente de Estonia el trámite más habitual es crear una empresa en Estonia. En este artículo te explico que tipo de negocios son válidos para una empresa Estonia, que…</description>
+    <description>&gt;-</description>
     <pubDate>Tue, 18 Sep 2018 00:00:00 GMT</pubDate>
 
   </item>
@@ -225,7 +221,7 @@
     <title>Qué es la e-residency de Estonia y como conseguirla</title>
     <link>https://carlosazaustre.es/blog/e-residency</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/e-residency</guid>
-    <description>Estonia es un pequeño país de la Unión Europea, pero muy grande en cuanto a digitalización de la burocracia y administración pública. Desde hace unos años tienen un programa llamado e-residency que…</description>
+    <description>&gt;-</description>
     <pubDate>Wed, 12 Sep 2018 00:00:00 GMT</pubDate>
 
   </item>
@@ -233,7 +229,7 @@
     <title>Docker como entorno de desarrollo local</title>
     <link>https://carlosazaustre.es/blog/docker-como-entorno-de-desarrollo-local</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/docker-como-entorno-de-desarrollo-local</guid>
-    <description>En este artículo quiero compartir como implementar un entorno de desarrollo local en tu ordenador para tus aplicaciones empleando para ello Docker. Lo configuraremos de manera que funcione como un…</description>
+    <description>&gt;-</description>
     <pubDate>Sat, 01 Sep 2018 00:00:00 GMT</pubDate>
 
   </item>
@@ -241,7 +237,7 @@
     <title>ES6 Tagged Template Literals</title>
     <link>https://carlosazaustre.es/blog/es6-tagged-template-literals</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/es6-tagged-template-literals</guid>
-    <description>ECMAScript v6, la nueva versión del estándar de JavaScript, ha traído muchas novedades y hay una de ellas que ha pasado desapercibida y me parece muy interesante. Son las ES6 Tagged Template Literals.…</description>
+    <description>&gt;-</description>
     <pubDate>Sat, 01 Sep 2018 00:00:00 GMT</pubDate>
 
   </item>
@@ -249,7 +245,7 @@
     <title>WebComponents Nativos: Cómo pasar propiedades</title>
     <link>https://carlosazaustre.es/blog/webcomponents-nativos-como-pasar-propiedades</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/webcomponents-nativos-como-pasar-propiedades</guid>
-    <description>En un post anterior vimos como crear un webcomponent de forma nativa, sin librerías. Utilizando puro JavaScript y las APIS del navegador (CustomElements v1 y ShadowDOM v1) Este artículo extiende el…</description>
+    <description>&gt;-</description>
     <pubDate>Fri, 31 Aug 2018 00:00:00 GMT</pubDate>
 
   </item>
@@ -257,7 +253,7 @@
     <title>Eligiendo un banco online sin comisiones. Mi experiencia con N26</title>
     <link>https://carlosazaustre.es/blog/banco-online-sin-comisiones</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/banco-online-sin-comisiones</guid>
-    <description>Desde hace una semana soy usuario de N26, un banco online sin comisiones y poco a poco lo estoy utilizando como mi cuenta principal. En este artículo quiero contarte mi experiencia con este nuevo…</description>
+    <description>&gt;-</description>
     <pubDate>Fri, 24 Aug 2018 00:00:00 GMT</pubDate>
 
   </item>
@@ -265,7 +261,7 @@
     <title>Viajar a Estados Unidos de forma barata. Nuestra experiencia</title>
     <link>https://carlosazaustre.es/blog/viajar-estados-unidos</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/viajar-estados-unidos</guid>
-    <description>Actualizado: Agosto 2018 En 2013, después de un año en Irlanda trabajando como Freelance, tanto Paola como yo, necesitábamos un descanso y un cambio de aires para recuperar energía. Nunca había estado…</description>
+    <description>&gt;-</description>
     <pubDate>Sat, 18 Aug 2018 00:00:00 GMT</pubDate>
 
   </item>
@@ -273,7 +269,7 @@
     <title>¿Qué es Flux? Entendiendo su arquitectura</title>
     <link>https://carlosazaustre.es/blog/como-funciona-flux</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/como-funciona-flux</guid>
-    <description>Como suele pasar en el desarrollo Front-End de los últimos años, existe un gran número de librerías, frameworks y herramientas que si uno no está más o menos pendiente y al día, resulte abrumador. El…</description>
+    <description>&gt;-</description>
     <pubDate>Fri, 25 May 2018 00:00:00 GMT</pubDate>
 
   </item>
@@ -281,7 +277,7 @@
     <title>Cómo crear un API REST usando Node.js, Express y MongoDB</title>
     <link>https://carlosazaustre.es/blog/como-crear-una-api-rest-usando-node-js</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/como-crear-una-api-rest-usando-node-js</guid>
-    <description>El primer paso para implementar un sitio web moderno es la construcción de un API REST que podemos consumir desde una aplicación web, mobile o nativa. En éste tutorial explicaré como desarrollar…</description>
+    <description>&gt;-</description>
     <pubDate>Thu, 21 Sep 2017 00:00:00 GMT</pubDate>
 
   </item>
@@ -289,7 +285,7 @@
     <title>Qué es lo que me gusta de Vue.js</title>
     <link>https://carlosazaustre.es/blog/que-es-lo-que-me-gusta-de-vue-js</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/que-es-lo-que-me-gusta-de-vue-js</guid>
-    <description>Todos los veranos me gusta aprovechar para aprender algo nuevo. El año pasado le dí una oportunidad a React y me gustó mucho, tanto que opté por dejar Angular (v1.x) a un lado y trabajar con React.js.…</description>
+    <description>&gt;-</description>
     <pubDate>Wed, 16 Aug 2017 00:00:00 GMT</pubDate>
 
   </item>
@@ -297,7 +293,7 @@
     <title>¿Qué son las Firebase Cloud Functions?</title>
     <link>https://carlosazaustre.es/blog/que-son-las-firebase-cloud-functions</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/que-son-las-firebase-cloud-functions</guid>
-    <description>Las Cloud Functions de Firebase son un nueva funcionalidad que ofrece la plataforma de Google y que anunciaron en el pasado Google Cloud Next&apos;17. Esta nueva funcionalidad permite crear funciones…</description>
+    <description>&gt;-</description>
     <pubDate>Mon, 19 Jun 2017 00:00:00 GMT</pubDate>
 
   </item>
@@ -305,7 +301,7 @@
     <title>Mi experiencia cambiando de AngularJS a ReactJS</title>
     <link>https://carlosazaustre.es/blog/mi-experiencia-cambiando-de-angularjs-a-reactjs</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/mi-experiencia-cambiando-de-angularjs-a-reactjs</guid>
-    <description>&gt; En este artículo quiero contar mi experiencia de trabajar con Angular durante un tiempo y mi cambio a React hace unos meses. No se trata de un post de &quot;Angular vs React&quot; ambas me parecen buenas…</description>
+    <description>&gt;-</description>
     <pubDate>Fri, 17 Mar 2017 00:00:00 GMT</pubDate>
 
   </item>
@@ -313,7 +309,7 @@
     <title>¿Cómo funciona Redux? Conceptos básicos</title>
     <link>https://carlosazaustre.es/blog/como-funciona-redux-conceptos-basicos</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/como-funciona-redux-conceptos-basicos</guid>
-    <description>En el anterior post vimos que era y cómo funcionaba la arquitectura Flux. Siendo de alguna manera, un sustituto o evolución del patrón Modelo-Vista-Controlador. Al igual que existe la programación…</description>
+    <description>&gt;-</description>
     <pubDate>Thu, 09 Mar 2017 00:00:00 GMT</pubDate>
 
   </item>
@@ -321,7 +317,7 @@
     <title>Cómo crear un WebComponent de forma nativa</title>
     <link>https://carlosazaustre.es/blog/como-crear-webcomponent-de-forma-nativa</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/como-crear-webcomponent-de-forma-nativa</guid>
-    <description>Gracias a los  cualquier desarrollador web puede crear sus propios componentes HTML. Es decir, un nuevo  HTML que &quot;esconde&quot; dentro su propia funcionalidad, diseño y layout. En este artículo te voy a…</description>
+    <description>&gt;-</description>
     <pubDate>Wed, 01 Feb 2017 00:00:00 GMT</pubDate>
 
   </item>
@@ -329,7 +325,7 @@
     <title>4 Formas de crear un Componente en React</title>
     <link>https://carlosazaustre.es/blog/formas-de-crear-un-componente-en-react</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/formas-de-crear-un-componente-en-react</guid>
-    <description>Un componente en React puede crearse de diferentes formas dependiendo de la versión de JavaScript que estemos utilizando y del propósito del componente. En este artículo recopilo las diferentes formas…</description>
+    <description>&gt;-</description>
     <pubDate>Tue, 24 Jan 2017 00:00:00 GMT</pubDate>
 
   </item>
@@ -337,7 +333,7 @@
     <title>Resumen de 2016 y propósitos para 2017</title>
     <link>https://carlosazaustre.es/blog/2016</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/2016</guid>
-    <description>Como viene siendo habitual por estas fechas, voy a compartir las métricas en torno al blog durante 2016. Si quieres ver como fue en anteriores años, aquí te dejo los enlaces: - Métricas del 2014 y…</description>
+    <description>&gt;-</description>
     <pubDate>Tue, 03 Jan 2017 00:00:00 GMT</pubDate>
 
   </item>
@@ -345,7 +341,7 @@
     <title>Mi experiencia cómo mentor en Google Launchpad Week</title>
     <link>https://carlosazaustre.es/blog/mi-experiencia-como-mentor-en-google-launchpad-week</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/mi-experiencia-como-mentor-en-google-launchpad-week</guid>
-    <description>El post de hoy no es muy técnico pero tenía ganas de comentar mi experiencia como mentor en Google Launchpad Hace unas semanas se organizó en Madrid una Google Launchpad Week orientada al mundo…</description>
+    <description>&gt;-</description>
     <pubDate>Wed, 26 Oct 2016 00:00:00 GMT</pubDate>
 
   </item>
@@ -353,7 +349,7 @@
     <title>Usando Firebase Storage con React.js</title>
     <link>https://carlosazaustre.es/blog/usando-firebase-storage-con-react-js</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/usando-firebase-storage-con-react-js</guid>
-    <description>En este artículo vamos a ver como utilizar la funcionalidad de Storage de Firebase para poder subir y almacenar archivos en la nube, y como integrarlo con React. Firebase Storage es algo similar a lo…</description>
+    <description>&gt;-</description>
     <pubDate>Thu, 13 Oct 2016 00:00:00 GMT</pubDate>
 
   </item>
@@ -361,7 +357,7 @@
     <title>Cómo conectar Firebase a una aplicación React</title>
     <link>https://carlosazaustre.es/blog/conectando-firebase-a-react</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/conectando-firebase-a-react</guid>
-    <description>Firebase es un set herramientas e infraestructura de Google que nos ayuda a los desarrolladores a implementar un Backend rápidamente sin necesidad de codear. Empezó como una Base de Datos Realtime as…</description>
+    <description>&gt;-</description>
     <pubDate>Tue, 04 Oct 2016 00:00:00 GMT</pubDate>
 
   </item>
@@ -369,7 +365,7 @@
     <title>Estructura y funcionamiento de un componente en React</title>
     <link>https://carlosazaustre.es/blog/estructura-de-un-componente-en-react</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/estructura-de-un-componente-en-react</guid>
-    <description>Un componente de React se puede crear de varias formas. Una de ellas es con el método  que ofrece la librería. Y la otra es utilizando las clases que ofrece ECMAScript 6 (ES2015). En este caso heredan…</description>
+    <description>&gt;-</description>
     <pubDate>Wed, 28 Sep 2016 00:00:00 GMT</pubDate>
 
   </item>
@@ -377,7 +373,7 @@
     <title>Primeros pasos con Webpack</title>
     <link>https://carlosazaustre.es/blog/primeros-pasos-con-webpack</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/primeros-pasos-con-webpack</guid>
-    <description>Webpack es un sistema de bundling para preparar el desarrollo de una aplicación web para producción. En cierta medida se puede considerar un Browserify avanzado ya que tiene muchas opciones de…</description>
+    <description>&gt;-</description>
     <pubDate>Thu, 22 Sep 2016 00:00:00 GMT</pubDate>
 
   </item>
@@ -385,7 +381,7 @@
     <title>JSX para novatos</title>
     <link>https://carlosazaustre.es/blog/jsx-para-novatos</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/jsx-para-novatos</guid>
-    <description>JSX es una extensión de JavaScript creada por Facebook para el uso con su librería React. Sirve de preprocesador (como Sass o Stylus a CSS) y transforma el código a JavaScript. De primeras te puede…</description>
+    <description>&gt;-</description>
     <pubDate>Mon, 19 Sep 2016 00:00:00 GMT</pubDate>
 
   </item>
@@ -393,7 +389,7 @@
     <title>Mi inmersión en React</title>
     <link>https://carlosazaustre.es/blog/mi-inmersion-en-react</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/mi-inmersion-en-react</guid>
-    <description>Antes de nada quiero aclarar que AngularJS me gusta (por si no se nota de mis anteriores posts :P). Aposté por Angular cuando mucha gente todavía renegaba de JavaScript y del stack MEAN. He aprendido…</description>
+    <description>&gt;-</description>
     <pubDate>Tue, 13 Sep 2016 00:00:00 GMT</pubDate>
 
   </item>
@@ -401,7 +397,7 @@
     <title>Desarrollo por componentes con Angular 1.5 y ES6/ES2015</title>
     <link>https://carlosazaustre.es/blog/desarrollo-por-componentes-con-angular-1-5-con-es6-es2015</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/desarrollo-por-componentes-con-angular-1-5-con-es6-es2015</guid>
-    <description>En el pasado AngularCamp impartí un workshop enseñando una aplicación web de ejemplo empleando la última versión de Angular 1x, la 1.5.6 que introduce el método  para desarrollar basado en componentes…</description>
+    <description>&gt;-</description>
     <pubDate>Mon, 04 Jul 2016 00:00:00 GMT</pubDate>
 
   </item>
@@ -409,7 +405,7 @@
     <title>Formas de manejar la asincronía en JavaScript</title>
     <link>https://carlosazaustre.es/blog/manejando-la-asincronia-en-javascript</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/manejando-la-asincronia-en-javascript</guid>
-    <description>Si hay algo que caracteriza a JavaScript, es la asincronía que presentan algunas funciones. Concretamente las que realizan operaciones de entrada/salida como escritura o lectura del disco o una…</description>
+    <description>&gt;-</description>
     <pubDate>Thu, 23 Jun 2016 00:00:00 GMT</pubDate>
 
   </item>
@@ -417,7 +413,7 @@
     <title>Aprendiendo y Compartiendo con la Comunidad</title>
     <link>https://carlosazaustre.es/blog/aprendiendo-y-compartiendo</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/aprendiendo-y-compartiendo</guid>
-    <description>Esto es un resumen de la charla Ignite que di en la PlatziConf Madrid 2016 organizada por Platzi en el Campus Madrid de Google. Una charla Ignite son 5 minutos de duración y sin control de las slides,…</description>
+    <description>&gt;-</description>
     <pubDate>Fri, 17 Jun 2016 00:00:00 GMT</pubDate>
 
   </item>

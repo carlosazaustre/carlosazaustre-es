@@ -1,17 +1,8 @@
 ---
-title: 'Aprende ECMAScript 6 (ES6 o ES2015), el nuevo estándar de JavaScript'
-date: '2018-10-24'
-url: 'https://carlosazaustre.es/blog/ecmascript6'
-tags:
-  - javascript
-  - tutorial
-related:
-  - empezando-con-react-js-y-ecmascript-6
-  - ejemplo-de-aplicacion-con-react-js-en-ecmascript-6
-  - es6-tagged-template-literals
-excerpt: >-
-  Aprende ECMAScript 6 (ES6 o ES2015), el nuevo estándar de JavaScript. Descubre
-  su historia, características principales y cómo usarlo en tus proyectos web.
+title: "Aprende ECMAScript 6 (ES6 o ES2015), el nuevo estándar de JavaScript"
+date: "2018-10-24"
+url: "https://carlosazaustre.es/blog/ecmascript6"
+tags: []
 ---
 
 # Aprende ECMAScript 6 (ES6 o ES2015), el nuevo estándar de JavaScript
