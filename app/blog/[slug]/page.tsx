@@ -70,6 +70,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       type: "article",
       url: canonicalUrl,
       publishedTime: post.date,
+      modifiedTime: post.updatedAt ?? post.date,
+      authors: ["https://carlosazaustre.es/about"],
       images: [{ url: ogImage, width: 1200, height: 630, alt: post.title }],
     },
     twitter: {
@@ -106,7 +108,7 @@ export default async function BlogPostPage({ params }: Props) {
     headline: post.title,
     description: post.excerpt,
     datePublished: new Date(post.date).toISOString(),
-    dateModified: new Date(post.date).toISOString(),
+    dateModified: new Date(post.updatedAt ?? post.date).toISOString(),
     url: `https://carlosazaustre.es/blog/${post.slug}`,
     image: `https://carlosazaustre.es/api/og?title=${encodeURIComponent(post.title)}`,
     author: {

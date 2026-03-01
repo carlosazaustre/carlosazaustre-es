@@ -32,12 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.6,
     },
-    {
-      url: `${BASE_URL}/links`,
-      lastModified: new Date("2026-01-01"),
-      changeFrequency: "weekly",
-      priority: 0.5,
-    },
+    // /links es noindex (link-in-bio) — excluida del sitemap
   ];
 
   // Blog posts
@@ -48,13 +43,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  // Tag pages
-  const tagPages: MetadataRoute.Sitemap = getAllTags().map(({ tag }) => ({
-    url: `${BASE_URL}/blog/tag/${encodeURIComponent(tag)}`,
-    lastModified: posts.length > 0 ? new Date(posts[0].date) : new Date("2026-01-01"),
-    changeFrequency: "weekly" as const,
-    priority: 0.6,
-  }));
+  // Tag pages — solo tags canónicos sin emojis
+  const tagPages: MetadataRoute.Sitemap = getAllTags()
+    .filter(({ tag }) => !/\p{Emoji}/u.test(tag))
+    .map(({ tag }) => ({
+      url: `${BASE_URL}/blog/tag/${encodeURIComponent(tag)}`,
+      lastModified: posts.length > 0 ? new Date(posts[0].date) : new Date("2026-01-01"),
+      changeFrequency: "weekly" as const,
+      priority: 0.6,
+    }));
 
   return [...staticPages, ...blogPages, ...tagPages];
 }

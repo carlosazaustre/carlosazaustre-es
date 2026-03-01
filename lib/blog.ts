@@ -188,6 +188,7 @@ export interface PostMeta {
   slug: string;
   title: string;
   date: string;
+  updatedAt?: string;
   excerpt: string;
   tags: string[];
   related?: string[];
@@ -251,6 +252,7 @@ export function getAllPosts(): PostMeta[] {
       slug,
       title: data.title ?? "Sin título",
       date: data.date ? String(data.date) : new Date().toISOString(),
+      updatedAt: data.updatedAt ? String(data.updatedAt) : undefined,
       excerpt: data.excerpt ?? extractExcerpt(content),
       tags: Array.isArray(data.tags) ? data.tags : [],
       related: Array.isArray(data.related) ? data.related : undefined,
@@ -299,6 +301,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     slug,
     title: data.title ?? "Sin título",
     date: data.date ? String(data.date) : new Date().toISOString(),
+    updatedAt: data.updatedAt ? String(data.updatedAt) : undefined,
     excerpt: data.excerpt ?? extractExcerpt(content),
     tags: Array.isArray(data.tags) ? data.tags : [],
     readingTime: formatReadingTime(content),

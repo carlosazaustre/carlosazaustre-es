@@ -97,6 +97,7 @@ function buildRss(posts) {
     .map(({ slug, title, date, excerpt, tags }) => {
       const url = `${BASE_URL}/blog/${slug}`;
       const pubDate = new Date(date).toUTCString();
+      const ogImage = `${BASE_URL}/api/og?title=${encodeURIComponent(title)}`;
       const cats = (Array.isArray(tags) ? tags : [])
         .map((t) => `    <category>${escapeXml(t)}</category>`)
         .join("\n");
@@ -107,6 +108,8 @@ function buildRss(posts) {
     <guid isPermaLink="true">${url}</guid>
     <description>${escapeXml(excerpt)}</description>
     <pubDate>${pubDate}</pubDate>
+    <dc:creator>Carlos Azaustre</dc:creator>
+    <enclosure url="${ogImage}" type="image/png" length="0"/>
 ${cats}
   </item>`;
     })
