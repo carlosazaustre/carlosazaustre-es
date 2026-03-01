@@ -6,7 +6,7 @@ import BlogCard from "@/components/BlogCard";
 export const metadata: Metadata = {
   title: "Blog — JavaScript, React y Arquitectura",
   description:
-    "Artículos y tutoriales sobre JavaScript, TypeScript, React, Node.js, arquitectura de software e inteligencia artificial. Por Carlos Azaustre, Google Developer Expert.",
+    "Artículos y tutoriales sobre JavaScript, TypeScript, React, Node.js, arquitectura de software e inteligencia artificial.",
   openGraph: {
     title: "Blog — Carlos Azaustre",
     description:

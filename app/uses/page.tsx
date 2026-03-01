@@ -18,7 +18,7 @@ import {
 export const metadata: Metadata = {
   title: "Uses — Mi setup",
   description:
-    "Todo lo que uso a diario: hardware, software, herramientas de desarrollo y gadgets de mi setup.",
+    "Todo lo que uso a diario como desarrollador: hardware, software, herramientas de desarrollo, gadgets y mi setup completo.",
   openGraph: {
     title: "Mi setup — Carlos Azaustre",
     description:
