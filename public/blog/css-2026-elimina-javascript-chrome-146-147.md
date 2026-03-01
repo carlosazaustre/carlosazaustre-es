@@ -9,7 +9,7 @@ tags: []
 
 > Publicado el 2026-02-27 — https://carlosazaustre.es/blog/css-2026-elimina-javascript-chrome-146-147
 
-# CSS en 2026: las tres features de Chrome que eliminan JavaScript que llevas años escribiendo
+## CSS en 2026: las tres features de Chrome que eliminan JavaScript que llevas años escribiendo
 
 Llevo años escribiendo el mismo bloque de código. Tú también, probablemente.
 

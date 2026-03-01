@@ -9,7 +9,7 @@ tags: []
 
 > Publicado el 2023-09-29 — https://carlosazaustre.es/blog/react-tutorial-modern
 
-# Cómo desarrollar una aplicación React desde cero con Zustand, React Query, React Hook Form, React Router y React Hot Toast - Tutorial paso a paso
+## Cómo desarrollar una aplicación React desde cero con Zustand, React Query, React Hook Form, React Router y React Hot Toast - Tutorial paso a paso
 
 ## Introducción
 

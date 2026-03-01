@@ -1,5 +1,5 @@
 # Carlos Azaustre — Blog completo en Markdown
-> Generado automáticamente: 2026-03-01T13:20:15.001Z
+> Generado automáticamente: 2026-03-01T13:27:30.064Z
 > Fuente: https://carlosazaustre.es/blog
 > Este archivo contiene todos los artículos del blog en formato Markdown limpio,
 > organizado para ser ingestado por modelos de lenguaje (LLMs).
@@ -11,7 +11,7 @@
 # >-
 
 **Fecha:** 2026-02-27
-# CSS en 2026: las tres features de Chrome que eliminan JavaScript que llevas años escribiendo
+## CSS en 2026: las tres features de Chrome que eliminan JavaScript que llevas años escribiendo
 
 Llevo años escribiendo el mismo bloque de código. Tú también, probablemente.
 
@@ -764,7 +764,7 @@ Como siempre, si tienes alguna pregunta o comentario, no dudes en escribirlo aba
 # >-
 
 **Fecha:** 2023-09-29
-# Cómo desarrollar una aplicación React desde cero con Zustand, React Query, React Hook Form, React Router y React Hot Toast - Tutorial paso a paso
+## Cómo desarrollar una aplicación React desde cero con Zustand, React Query, React Hook Form, React Router y React Hot Toast - Tutorial paso a paso
 
 ## Introducción
 
