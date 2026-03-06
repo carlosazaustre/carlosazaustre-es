@@ -111,8 +111,10 @@ export default async function EducacionEssayPage({ params }: Props) {
 
       <ReadingProgress />
 
-      <div style={{ maxWidth: "960px", margin: "0 auto", padding: "3rem 1.5rem" }}>
-        <article>
+      <div style={{ maxWidth: "1140px", margin: "0 auto", padding: "3rem 1.5rem" }}>
+        {/* Two-column layout: article + TOC sidebar */}
+        <div className="educacion-layout">
+        <article className="educacion-article">
           {/* Header */}
           <header
             style={{
@@ -226,18 +228,14 @@ export default async function EducacionEssayPage({ params }: Props) {
                 padding: "1.25rem 1.5rem",
                 marginBottom: "2.5rem",
                 boxShadow: "var(--shadow)",
-                fontSize: "1.15rem",
+                fontSize: "1.1rem",
                 fontWeight: 600,
                 lineHeight: 1.6,
-                maxWidth: "72ch",
               }}
             >
               {post.excerpt}
             </div>
           )}
-
-          {/* Table of Contents */}
-          <TableOfContents />
 
           {/* Content */}
           <ArticleContent html={post.content} />
@@ -251,6 +249,12 @@ export default async function EducacionEssayPage({ params }: Props) {
             />
           )}
         </article>
+
+        {/* TOC sidebar */}
+        <aside className="educacion-toc">
+          <TableOfContents />
+        </aside>
+        </div>{/* end educacion-layout */}
 
         {/* Bottom nav */}
         <div
