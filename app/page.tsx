@@ -232,13 +232,13 @@ export default async function HomePage() {
             </a>
           }>Últimos vídeos</SectionTitle>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: "1.25rem" }}>
-            {videos.map((v) => (
+            {videos.map((v, i) => (
               <a
                 key={v.id}
                 href={v.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="neo-card"
+                className={`neo-card${i === 3 ? " yt-card-4" : ""}`}
                 style={{ padding: 0, textDecoration: "none", overflow: "hidden", display: "flex", flexDirection: "column" }}
               >
                 {/* Thumbnail */}

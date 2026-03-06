@@ -16,7 +16,9 @@ import { fileURLToPath } from "url";
 import matter from "gray-matter";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const BLOG_DIR = path.join(__dirname, "../public/blog");
+// ⚠️ Fuente de verdad: content/blog/*.mdx (NO public/blog/)
+// public/blog/ es output generado; los cambios ahí no afectan el build
+const BLOG_DIR = path.join(__dirname, "../content/blog");
 const DELAY_MS = 400;
 
 const GATEWAY_TOKEN = process.env.OPENCLAW_GATEWAY_TOKEN;

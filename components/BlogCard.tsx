@@ -13,9 +13,9 @@ export default function BlogCard({ post }: { post: PostMeta }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      style={{ textDecoration: "none", display: "block" }}
+      style={{ textDecoration: "none", display: "flex", height: "100%" }}
     >
-      <article className="neo-card" style={{ padding: "1.5rem" }}>
+      <article className="neo-card" style={{ padding: "1.5rem", display: "flex", flexDirection: "column", width: "100%" }}>
         {/* Tags */}
         {post.tags.length > 0 && (
           <div
@@ -48,7 +48,7 @@ export default function BlogCard({ post }: { post: PostMeta }) {
           {post.title}
         </h2>
 
-        {/* Excerpt */}
+        {/* Excerpt — grows to fill available space, pushing meta to bottom */}
         {post.excerpt && (
           <p
             style={{
@@ -56,6 +56,7 @@ export default function BlogCard({ post }: { post: PostMeta }) {
               fontSize: "0.95rem",
               lineHeight: 1.6,
               marginBottom: "1rem",
+              flex: 1,
             }}
           >
             {post.excerpt}

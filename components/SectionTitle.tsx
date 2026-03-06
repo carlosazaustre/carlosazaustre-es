@@ -17,10 +17,10 @@ export function SectionTitle({ children, action }: SectionTitleProps) {
     >
       <h2
         style={{
-          fontFamily: "'Space Grotesk', sans-serif",
+          fontFamily: "var(--font-heading, 'Space Grotesk', sans-serif)",
           fontWeight: 800,
           fontSize: "1.5rem",
-          color: "#1A1A1A",
+          color: "var(--text)",
           margin: 0,
           whiteSpace: "nowrap",
         }}
@@ -31,8 +31,8 @@ export function SectionTitle({ children, action }: SectionTitleProps) {
         style={{
           flex: 1,
           height: "3px",
-          background: "#1A1A1A",
-          opacity: 0.12,
+          background: "var(--border)",
+          opacity: 0.25,
         }}
       />
       {action}

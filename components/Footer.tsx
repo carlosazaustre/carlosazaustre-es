@@ -59,6 +59,29 @@ export default function Footer() {
               {link.label}
             </Link>
           ))}
+          {/* Internal pages */}
+          {[
+            { href: "/uses", label: "Uses" },
+            { href: "/now", label: "Ahora" },
+          ].map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              style={{
+                fontFamily: "'Space Mono', monospace",
+                fontSize: "0.8rem",
+                fontWeight: 700,
+                color: "var(--accent)",
+                textDecoration: "none",
+                textTransform: "uppercase" as const,
+                letterSpacing: "0.5px",
+                borderBottom: "2px solid var(--accent)",
+                paddingBottom: "1px",
+              }}
+            >
+              {link.label}
+            </Link>
+          ))}
           {/* RSS Feed */}
           <Link
             href="/rss.xml"

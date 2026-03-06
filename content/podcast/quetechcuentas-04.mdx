@@ -1,0 +1,399 @@
+---
+title: 'Cómo contribuir a NodeJS y Open Source con Ulises Gascón | ¿Qué TECH Cuentas? Ep. 4'
+date: '2023-12-28'
+tags:
+  - "Podcast"
+  - "NodeJS"
+  - "Open Source"
+  - "JavaScript"
+excerpt: >-
+  Cuarto episodio del podcast ¿Qué TECH Cuentas? con Ulises Gascón: cómo contribuir a NodeJS y Express, ser mantenedor open source y la cultura maker
+videoId: 'hUMkv7kXYS8'
+episodeNumber: 4
+seoTitle: '¿Qué TECH Cuentas? Ep.4: NodeJS con Ulises Gascón'
+related:
+  - quetechcuentas-02
+  - quetechcuentas-03
+  - aprendiendo-y-compartiendo
+---
+
+## Cómo contribuir a proyectos Open Source como NodeJS con Ulises Gascón
+
+En el cuarto episodio de **¿Qué TECH Cuentas?** hablamos con [Ulises Gascón](https://ulisesgascon.com/), Principal Software Engineer en One Beyond y uno de los contribuidores y mantenedores más activos en proyectos open source de primer nivel, como NodeJS o Express.
+
+¿Qué puedes esperar de este episodio?
+
+✅ Cómo empezar a contribuir a proyectos open source si nunca lo has hecho antes.
+
+✅ Qué implica ser mantenedor de un proyecto de la escala de NodeJS: responsabilidades, retos y satisfacciones.
+
+✅ La importancia de la cultura maker y el software libre en el ecosistema actual.
+
+Si siempre has querido contribuir a open source pero no sabes por dónde empezar, esta conversación te va a ayudar.
+
+<YouTube videoId="hUMkv7kXYS8" />
+
+
+### Transcripción completa del Episodio
+
+- [00:00](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=0s) Hola, te doy la bienvenida a un nuevo episodio de ¿Qué Tech Cuentas?
+- [00:02](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=2s) Un podcast sobre tecnología en el que cada capítulo traigo a una persona referente en el sector.
+- [00:08](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=8s) En el capítulo de hoy nos acompaña Ulises Gascón, un ingeniero de software que ha trabajado en empresas como Google e IBM y actualmente es Principal Software Engineer, llevando varios proyectos y también es contribuidor y mantenedor de varios proyectos Open Source, entre ellos de Node.js.
+- [00:25](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=25s) A lo largo del episodio hablaremos un poco de su trayectoria, cómo fue incursionándose en el mundo del Open Source y cómo llegó a contribuir a proyectos tan grandes como Express o Node.js.
+- [00:36](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=36s) Te invito a que nos acompañes y disfrutes del episodio.
+- [00:40](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=40s) Bueno, pues bienvenidos a un nuevo episodio de ¿Qué Tech Cuentas?
+- [00:44](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=44s) Y hoy tengo el honor de de charlar un rato con con Ulises, que aparte de ser un crack, pues se le le puedo considerar amigo de confianza, de los que hacemos de vez en cuando algún one to one y y nos contamos cositas.
+- [00:57](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=57s) Y le agradezco muchísimo el eh este ratito que ha sacado para que nos cuente un poco de él.
+- [01:03](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=63s) Así que, ¿qué tal, Ulises?
+- [01:04](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=64s) Muchas gracias por venir.
+- [01:06](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=66s) Muy buenas.
+- [01:07](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=67s) Muy buenas.
+- [01:08](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=68s) Oye, muchas gracias por invitarme, la verdad, tenía tenía ganas de venir.
+- [01:11](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=71s) Si yo creo que la última vez que estuve en el canal fue hace años para presentar Goblin de B o alguna proyecto así un poco random.
+- [01:15](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=75s) Goblin.
+- [01:16](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=76s) Sí, sí, sí.
+- [01:17](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=77s) Lo pondré por aquí porque hay un vídeo ahí de Goblin de B de de la competencia de Firebase era en su momento, tenía las Ambus Functions y demás.
+- [01:27](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=87s) Sí, sí, sí, más o menos.
+- [01:28](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=88s) Ambus Functions y todo todo calidad.
+- [01:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=90s) Sí, la verdad fue fue un proyecto bastante divertido aprendizaje.
+- [01:33](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=93s) Eh, pues sí, la verdad que sí.
+- [01:34](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=94s) Yo creo que hemos coincidido en muchísimas, pero muchísimas cosas en los últimos años, así que se me ocurran.
+- [01:40](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=100s) Bueno, coincidimos en el Campus Party, ahí es cuando nos conocimos, de hecho.
+- [01:42](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=102s) Sí, ahí es cuando nos conocimos.
+- [01:43](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=103s) Hace unos 1000 meses, años allí con la stand de.
+- [01:45](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=105s) Sí, sí, me acuerdo un día en la entrada, eh José, que era guardia de seguridad por aquel momento, ahora ya es CTO de 20 empresas.
+- [01:52](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=112s) Dijo, "Mira, este es Ulises, es un colega que es un crack de la programación y tal."
+- [01:56](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=116s) Y digo, "Hola, Ulises, ¿qué tal?"
+- [01:57](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=117s) Y vida.
+- [02:00](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=120s) Sí, sí.
+- [02:00](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=120s) Fue buena, fue buena, sí señor.
+- [02:03](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=123s) Sí, luego también coincidimos en Google también, el mismo equipo una temporada.
+- [02:07](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=127s) Eh, yo que sé.
+- [02:08](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=128s) Coincidimos en Ah, bueno, estuvimos en dos equipos distintos y en tiempos muy distintos y en tipos muy diversos.
+- [02:12](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=132s) Distintos y diversos.
+- [02:13](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=133s) En dos realidades distintas, ya te digo, ya te digo.
+- [02:16](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=136s) Y yo que sé, y hemos coincidido en 800.000 millones de eventos y y bueno, yo que sé, también compartimos eh pues MVP, GDE, todas estas cosas también.
+- [02:25](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=145s) Eh, sí, yo que sé, nos gusta mucho la marcha de ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Sí, sí, nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [02:30](https://www.youtube.com/watch?v=hUMkv7kXYS8&t=150s) Nos gusta meternos en ir dando charlas por ahí.
+- [00:02:

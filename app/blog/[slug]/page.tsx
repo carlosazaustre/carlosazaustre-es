@@ -4,6 +4,7 @@ import Link from "next/link";
 import { getPostBySlug, getAllPosts, getRelatedPosts } from "@/lib/blog";
 import ReadingProgress from "@/components/ReadingProgress";
 import ArticleContent from "@/components/ArticleContent";
+import CitationBlock from "@/components/CitationBlock";
 import DisqusComments from "@/components/DisqusComments";
 import SubscribeNewsletter from "@/components/SubscribeNewsletter";
 import BookBanner from "@/components/BookBanner";
@@ -49,12 +50,22 @@ export async function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
 }
 
+/** Returns true when the post is a podcast episode */
+function isPodcastPost(post: { tags: string[]; videoId?: string }): boolean {
+  return post.tags.some((t) => t.toLowerCase() === "podcast") || !!post.videoId;
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPostBySlug(slug);
   if (!post) return {};
 
-  const ogImage = `/api/og?title=${encodeURIComponent(post.title)}`;
+  const isPodcast = isPodcastPost(post);
+
+  // Podcast episodes use the YouTube thumbnail; other posts use auto-generated OG image
+  const ogImage = isPodcast && post.videoId
+    ? `https://img.youtube.com/vi/${post.videoId}/maxresdefault.jpg`
+    : `/api/og?title=${encodeURIComponent(post.title)}`;
 
   const canonicalUrl = `https://carlosazaustre.es/blog/${slug}`;
   const metaTitle = post.seoTitle ?? post.title;
@@ -73,7 +84,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: new Date(post.date).toISOString(),
       modifiedTime: new Date(post.updatedAt ?? post.date).toISOString(),
       authors: ["https://carlosazaustre.es/about"],
-      images: [{ url: ogImage, width: 1200, height: 630, alt: post.title }],
+      images: [{ url: ogImage, width: 1280, height: 720, alt: post.title }],
     },
     twitter: {
       card: "summary_large_image",
@@ -107,61 +118,103 @@ export default async function BlogPostPage({ params }: Props) {
     ? post.content.replace(/<[^>]+>/g, " ").trim().split(/\s+/).filter(Boolean).length
     : undefined;
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: post.title,
-    description: post.excerpt,
-    datePublished: new Date(post.date).toISOString(),
-    dateModified: new Date(post.updatedAt ?? post.date).toISOString(),
-    url: `https://carlosazaustre.es/blog/${post.slug}`,
-    image: post.coverImage?.startsWith("http") ? post.coverImage : `https://carlosazaustre.es${post.coverImage ?? `/api/og?title=${encodeURIComponent(post.title)}`}`,
-    author: {
-      "@type": "Person",
-      name: "Carlos Azaustre",
-      url: "https://carlosazaustre.es",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Carlos Azaustre",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://carlosazaustre.es/carlos-azaustre.jpg",
-      },
-    },
-    keywords: post.tags.join(", "),
-    inLanguage: "es",
-    articleSection: post.tags[0] ?? "Desarrollo Web",
-    ...(wordCount ? { wordCount } : {}),
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `https://carlosazaustre.es/blog/${post.slug}`,
-    },
-  };
+  const isPodcast = isPodcastPost(post);
 
+  const postImage = isPodcast && post.videoId
+    ? `https://img.youtube.com/vi/${post.videoId}/maxresdefault.jpg`
+    : (post.coverImage?.startsWith("http") ? post.coverImage : `https://carlosazaustre.es${post.coverImage ?? `/api/og?title=${encodeURIComponent(post.title)}`}`);
+
+  // For podcast episodes use PodcastEpisode schema; for regular posts use BlogPosting
+  const jsonLd = isPodcast
+    ? {
+        "@context": "https://schema.org",
+        "@type": "PodcastEpisode",
+        name: post.title,
+        description: post.excerpt,
+        datePublished: new Date(post.date).toISOString(),
+        url: `https://carlosazaustre.es/blog/${post.slug}`,
+        image: postImage,
+        inLanguage: "es",
+        ...(post.episodeNumber ? { episodeNumber: post.episodeNumber } : {}),
+        partOfSeries: {
+          "@type": "PodcastSeries",
+          name: "¿Qué TECH Cuentas?",
+          url: "https://carlosazaustre.es/podcast",
+        },
+        author: {
+          "@type": "Person",
+          name: "Carlos Azaustre",
+          url: "https://carlosazaustre.es",
+        },
+        keywords: post.tags.join(", "),
+      }
+    : {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: post.title,
+        description: post.excerpt,
+        datePublished: new Date(post.date).toISOString(),
+        dateModified: new Date(post.updatedAt ?? post.date).toISOString(),
+        url: `https://carlosazaustre.es/blog/${post.slug}`,
+        image: postImage,
+        author: {
+          "@type": "Person",
+          name: "Carlos Azaustre",
+          url: "https://carlosazaustre.es",
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Carlos Azaustre",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://carlosazaustre.es/carlos-azaustre.jpg",
+          },
+        },
+        keywords: post.tags.join(", "),
+        inLanguage: "es",
+        articleSection: post.tags[0] ?? "Desarrollo Web",
+        ...(wordCount ? { wordCount } : {}),
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": `https://carlosazaustre.es/blog/${post.slug}`,
+        },
+      };
+
+  // VideoObject for podcast episodes with YouTube embed
+  const videoLd = isPodcast && post.videoId
+    ? {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        name: post.title,
+        description: post.excerpt,
+        thumbnailUrl: `https://img.youtube.com/vi/${post.videoId}/maxresdefault.jpg`,
+        uploadDate: new Date(post.date).toISOString(),
+        embedUrl: `https://www.youtube.com/embed/${post.videoId}`,
+        url: `https://www.youtube.com/watch?v=${post.videoId}`,
+        inLanguage: "es",
+        author: {
+          "@type": "Person",
+          name: "Carlos Azaustre",
+          url: "https://carlosazaustre.es",
+        },
+      }
+    : null;
+
+  // Breadcrumb: podcast episodes go through /podcast; regular posts through /blog
   const breadcrumbLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Inicio",
-        item: "https://carlosazaustre.es",
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Blog",
-        item: "https://carlosazaustre.es/blog",
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: post.title,
-        item: `https://carlosazaustre.es/blog/${post.slug}`,
-      },
-    ],
+    itemListElement: isPodcast
+      ? [
+          { "@type": "ListItem", position: 1, name: "Inicio", item: "https://carlosazaustre.es" },
+          { "@type": "ListItem", position: 2, name: "Podcast", item: "https://carlosazaustre.es/podcast" },
+          { "@type": "ListItem", position: 3, name: post.title, item: `https://carlosazaustre.es/blog/${post.slug}` },
+        ]
+      : [
+          { "@type": "ListItem", position: 1, name: "Inicio", item: "https://carlosazaustre.es" },
+          { "@type": "ListItem", position: 2, name: "Blog", item: "https://carlosazaustre.es/blog" },
+          { "@type": "ListItem", position: 3, name: post.title, item: `https://carlosazaustre.es/blog/${post.slug}` },
+        ],
   };
 
   const faqLd = post.faq && post.faq.length >= 2
@@ -189,6 +242,12 @@ export default async function BlogPostPage({ params }: Props) {
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
     />
+    {videoLd && (
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoLd) }}
+      />
+    )}
     {faqLd && (
       <script
         type="application/ld+json"
@@ -197,7 +256,7 @@ export default async function BlogPostPage({ params }: Props) {
     )}
     <ReadingProgress />
     <div style={{ maxWidth: "960px", margin: "0 auto", padding: "3rem 1.5rem" }}>
-      <article>
+      <article style={{ maxWidth: "915px" }}>
         {/* Header */}
         <header
           style={{
@@ -215,7 +274,6 @@ export default async function BlogPostPage({ params }: Props) {
               lineHeight: 1.15,
               color: "var(--text)",
               marginBottom: "1.25rem",
-              maxWidth: "900px",
             }}
           >
             {post.title}
@@ -267,7 +325,7 @@ export default async function BlogPostPage({ params }: Props) {
                 <circle cx="12" cy="12" r="10"/>
                 <polyline points="12 6 12 12 16 14"/>
               </svg>
-              {post.readingTime} lectura
+              {post.readingTime} {isPodcast ? "escucha" : "lectura"}
             </span>
 
             {/* Tags */}
@@ -297,7 +355,6 @@ export default async function BlogPostPage({ params }: Props) {
               fontSize: "1.15rem",
               fontWeight: 600,
               lineHeight: 1.6,
-              maxWidth: "72ch",
             }}
           >
             {post.excerpt}
@@ -309,9 +366,7 @@ export default async function BlogPostPage({ params }: Props) {
 
         {/* Banner libro en el interior del artículo (~mitad del texto) */}
         {recommendedBook && contentSecond && (
-          <div style={{ maxWidth: "72ch", fontSize: "1.1rem" }}>
-            <BookBanner book={recommendedBook} />
-          </div>
+          <BookBanner book={recommendedBook} />
         )}
 
         {/* Main content — segunda mitad */}
@@ -331,9 +386,20 @@ export default async function BlogPostPage({ params }: Props) {
           gap: "1rem",
         }}
       >
-        <Link href="/blog" className="neo-btn">
-          ← Todos los artículos
-        </Link>
+        {isPodcast ? (
+          <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+            <Link href="/podcast" className="neo-btn">
+              ← Todos los episodios
+            </Link>
+            <Link href="/blog" className="neo-btn">
+              Blog
+            </Link>
+          </div>
+        ) : (
+          <Link href="/blog" className="neo-btn">
+            ← Todos los artículos
+          </Link>
+        )}
         <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
           {/* Compartir en X */}
           <a
@@ -367,9 +433,12 @@ export default async function BlogPostPage({ params }: Props) {
 
       {/* Libro recomendado — fallback para artículos cortos (sin segunda mitad) */}
       {recommendedBook && !contentSecond && (
-        <div style={{ maxWidth: "72ch", fontSize: "1.1rem" }}>
-          <BookBanner book={recommendedBook} />
-        </div>
+        <BookBanner book={recommendedBook} />
+      )}
+
+      {/* Cómo citar este artículo */}
+      {post.citable && !isPodcast && (
+        <CitationBlock title={post.title} slug={post.slug} date={post.date} />
       )}
 
       {/* Related posts */}

@@ -15,6 +15,22 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 86400, // 24h
   },
 
+  // Redirects permanentes: podcast episodes desde /blog → /podcast
+  async redirects() {
+    const podcastSlugs = [
+      "quetechcuentas-01",
+      "quetechcuentas-02",
+      "quetechcuentas-03",
+      "quetechcuentas-04",
+      "quetechcuentas-05",
+    ];
+    return podcastSlugs.map((slug) => ({
+      source: `/blog/${slug}`,
+      destination: `/podcast/${slug}`,
+      permanent: true, // 308
+    }));
+  },
+
   // Headers de seguridad y caché
   async headers() {
     return [

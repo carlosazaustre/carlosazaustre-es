@@ -45,16 +45,6 @@
     <category>herramientas</category>
   </item>
   <item>
-    <title>Qué TECH Cuentas - Ep.01, con Pau Garcia-Milà</title>
-    <link>https://carlosazaustre.es/blog/quetechcuentas-01</link>
-    <guid isPermaLink="true">https://carlosazaustre.es/blog/quetechcuentas-01</guid>
-    <description>Primer episodio del podcast Qué TECH Cuentas con Pau Garcia-Milà: tecnología, emprendimiento e innovación con uno de los referentes del sector tech en España</description>
-    <pubDate>Mon, 30 Oct 2023 00:00:00 GMT</pubDate>
-    <dc:creator>Carlos Azaustre</dc:creator>
-    <enclosure url="https://carlosazaustre.es/api/og?title=Qu%C3%A9%20TECH%20Cuentas%20-%20Ep.01%2C%20con%20Pau%20Garcia-Mil%C3%A0" type="image/png" length="0"/>
-    <category>🎧 Podcast</category>
-  </item>
-  <item>
     <title>Principios SOLID en JavaScript</title>
     <link>https://carlosazaustre.es/blog/javascript-solid</link>
     <guid isPermaLink="true">https://carlosazaustre.es/blog/javascript-solid</guid>
@@ -588,6 +578,17 @@
     <enclosure url="https://carlosazaustre.es/api/og?title=Aprendiendo%20y%20Compartiendo%20con%20la%20Comunidad" type="image/png" length="0"/>
     <category>carrera</category>
     <category>programacion</category>
+  </item>
+  <item>
+    <title>Ejecuta tu App NodeJS como un Servicio en Linux</title>
+    <link>https://carlosazaustre.es/blog/aplicacion-node-como-servicio-upstart</link>
+    <guid isPermaLink="true">https://carlosazaustre.es/blog/aplicacion-node-como-servicio-upstart</guid>
+    <description>Aprende a ejecutar tu aplicación Node.js como un servicio en Linux con Upstart en Ubuntu. Una alternativa más robusta a pm2 o forever para producción.</description>
+    <pubDate>Fri, 04 Mar 2016 00:00:00 GMT</pubDate>
+    <dc:creator>Carlos Azaustre</dc:creator>
+    <enclosure url="https://carlosazaustre.es/api/og?title=Ejecuta%20tu%20App%20NodeJS%20como%20un%20Servicio%20en%20Linux" type="image/png" length="0"/>
+    <category>nodejs</category>
+    <category>tutorial</category>
   </item>
   </channel>
 </rss>

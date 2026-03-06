@@ -16,6 +16,98 @@
   --shadow-hover: 6px 6px 0px #1A1A1A;
   --shadow-lg: 8px 8px 0px #1A1A1A;
   --radius: 4px;
+  /* Semantic tokens — override per theme */
+  --blockquote-bg: #FFFDE7;
+  --summary-bg: #FFFDE7;
+  --code-inline-bg: #f0f0ea;
+  --table-stripe: #f9f9f4;
+  --table-hover: #fff9e0;
+  --font-body: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-heading: 'Space Grotesk', sans-serif;
+  /* Logo badge — always stays dark regardless of theme */
+  --logo-bg: #1A1A1A;
+  --logo-text: #FFCC00;
+}
+
+/* ────────────────────────────────────────────
+   DARK MODE
+   Fondo oscuro + texto blanco en página.
+   Cards claras con texto negro (neo-brutal).
+──────────────────────────────────────────── */
+html.theme-dark {
+  --accent: #FFCC00;
+  --accent-hover: #E6B800;
+  --bg: #1C1C1E;
+  --card: #F5F5F0;          /* card clara sobre fondo oscuro */
+  --border: #3A3A3A;        /* visible sobre bg oscuro */
+  --text: #F0F0EE;          /* BLANCO — texto de página */
+  --text-secondary: #B8B8B6;
+  --text-muted: #888888;
+  --shadow: 4px 4px 0px #3A3A3A;
+  --shadow-sm: 2px 2px 0px #3A3A3A;
+  --shadow-hover: 6px 6px 0px #3A3A3A;
+  --shadow-lg: 8px 8px 0px #3A3A3A;
+  --blockquote-bg: #FFFDE7;
+  --summary-bg: #FFFDE7;
+  --code-inline-bg: #E8E8E2;
+  --table-stripe: #EEEEEA;
+  --table-hover: #FFF8D6;
+  --font-body: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --logo-bg: #1A1A1A;
+  --logo-text: #FFFFFF;
+  color-scheme: dark;
+}
+
+/* Cards en dark mode: fondo claro → texto negro */
+html.theme-dark .neo-card {
+  --border: #1A1A1A;
+  --text: #1A1A1A;
+  --text-secondary: #444444;
+  --text-muted: #777777;
+  --shadow: 4px 4px 0px #1A1A1A;
+  --shadow-sm: 2px 2px 0px #1A1A1A;
+  --shadow-hover: 6px 6px 0px #1A1A1A;
+  --shadow-lg: 8px 8px 0px #1A1A1A;
+}
+
+/* Nav buttons en dark mode tienen fondo claro (--card) → texto negro */
+html.theme-dark .neo-btn {
+  color: #1A1A1A;
+}
+html.theme-dark .neo-btn-active {
+  background: #1A1A1A !important;
+  color: #FFCC00 !important;
+}
+
+/* ────────────────────────────────────────────
+   TERMINAL MODE
+   Fondo negro, cards negro-verdoso, texto
+   en verde claro con alta legibilidad
+──────────────────────────────────────────── */
+html.theme-terminal {
+  --accent: #00FF41;
+  --accent-hover: #00CC33;
+  --bg: #0D0D0D;
+  --card: #0A1A0A;          /* negro con tinte verde */
+  --border: #00FF41;
+  --text: #00FF41;          /* verde para títulos y elementos principales */
+  --text-secondary: #CCFFCC; /* verde muy claro — alto contraste sobre card oscura */
+  --text-muted: #52B052;
+  --shadow: 4px 4px 0px #00FF41;
+  --shadow-sm: 2px 2px 0px #00FF41;
+  --shadow-hover: 6px 6px 0px #00FF41;
+  --shadow-lg: 8px 8px 0px #00FF41;
+  --blockquote-bg: #0A1A0A;
+  --summary-bg: #0A1A0A;
+  --code-inline-bg: #001A00;
+  --table-stripe: #071207;
+  --table-hover: #0F2A0F;
+  --font-body: 'Space Mono', monospace;
+  --font-heading: 'Space Mono', monospace;
+  --logo-bg: #000000;
+  --logo-text: #00FF41;
+  color-scheme: dark;
 }
 
 * {
@@ -32,10 +124,11 @@ html {
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  font-family: var(--font-body);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 /* ────────────────────────────────────────────
@@ -151,14 +244,13 @@ body {
   font-size: 1.1rem;
   line-height: 1.8;
   color: var(--text);
-  max-width: 72ch;
 }
 
 .prose-neo h1,
 .prose-neo h2,
 .prose-neo h3,
 .prose-neo h4 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: var(--font-heading);
   font-weight: 800;
   color: var(--text);
   margin-top: 2rem;
@@ -251,19 +343,21 @@ body {
 .prose-neo blockquote {
   border-left: 5px solid var(--accent);
   padding: 1rem 1.5rem;
-  background: #FFFDE7;
+  background: var(--blockquote-bg);
   border: 3px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
   margin: 1.5rem 0;
   font-weight: 600;
   font-style: italic;
+  /* Siempre texto oscuro: fondo claro/amarillo en todos los modos */
+  color: #1A1A1A;
 }
 
 .prose-neo code {
   font-family: 'Space Mono', monospace;
   font-size: 0.875em;
-  background: #f0f0ea;
+  background: var(--code-inline-bg);
   border: 1.5px solid var(--border);
   border-radius: 2px;
   padding: 1px 6px;
@@ -491,7 +585,7 @@ body {
 
 /* ── Summary / Callout box ── */
 .prose-neo .neo-summary {
-  background: #FFFDE7;
+  background: var(--summary-bg);
   border: 3px solid var(--border);
   border-left: 6px solid var(--accent);
   border-radius: var(--radius);
@@ -501,7 +595,8 @@ body {
   font-size: 0.95rem;
   font-weight: 500;
   line-height: 1.6;
-  color: var(--text-secondary);
+  /* Siempre texto oscuro: fondo es amarillo/claro en todos los modos */
+  color: #1A1A1A;
 }
 
 /* ── highlight.js custom theme (dark, neobrutalist) ── */
@@ -585,7 +680,7 @@ body {
 }
 
 .prose-neo tbody tr:hover {
-  background: #fff9e0;
+  background: var(--table-hover);
 }
 
 .prose-neo tbody td {
@@ -607,11 +702,11 @@ body {
 
 /* Row striping */
 .prose-neo tbody tr:nth-child(even) {
-  background: #f9f9f4;
+  background: var(--table-stripe);
 }
 
 .prose-neo tbody tr:nth-child(even):hover {
-  background: #fff9e0;
+  background: var(--table-hover);
 }
 
 /* ────────────────────────────────────────────
@@ -677,6 +772,23 @@ body {
   color: var(--accent) !important;
 }
 
+/* Terminal: active button = green bg + black text (máximo contraste) */
+html.theme-terminal .neo-btn-active {
+  background: var(--accent) !important;
+  color: #000000 !important;
+}
+
+/* Terminal: callout boxes tienen fondo oscuro → texto verde claro */
+html.theme-terminal .prose-neo .neo-summary,
+html.theme-terminal .prose-neo blockquote {
+  color: #CCFFCC;
+}
+
+/* Theme toggle: hidden on mobile (ThemeToggle lives inside nav-desktop on desktop) */
+.nav-theme-mobile {
+  display: none;
+}
+
 /* Overlay */
 .nav-overlay {
   position: fixed;
@@ -740,8 +852,9 @@ body {
 
 @media (max-width: 768px) {
   /* Navbar */
-  .nav-desktop   { display: none; }
-  .nav-hamburger { display: inline-flex; }
+  .nav-desktop      { display: none; }
+  .nav-hamburger    { display: inline-flex; }
+  .nav-theme-mobile { display: flex; }
 
   /* Typography */
   .prose-neo {
@@ -829,4 +942,103 @@ body {
   transform-origin: center;
   transition: none !important;
   will-change: transform;
+}
+
+/* Podcast episode card — responsive layout */
+@media (max-width: 640px) {
+  .podcast-card-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .podcast-card-grid > div:first-child {
+    aspect-ratio: 16/9;
+    width: 100%;
+  }
+}
+
+/* Podcast transcript collapsible */
+.transcript-details {
+  margin-top: 3rem;
+  border: 3px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.transcript-details summary {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 1.25rem;
+  background: var(--card-elevated);
+  border-bottom: 2px solid var(--border);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+}
+
+.transcript-details summary::before {
+  content: '▶';
+  font-size: 0.7rem;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.transcript-details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.transcript-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.transcript-details > h3,
+.transcript-details > ul {
+  padding: 0 1.25rem;
+}
+
+.transcript-details > h3 {
+  margin-top: 1.25rem;
+  font-size: 1rem;
+}
+
+.transcript-details > ul {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  padding-bottom: 1.25rem;
+}
+
+.transcript-details > ul li {
+  margin-bottom: 0.25rem;
+}
+
+/* Book detail — responsive two-column layout */
+@media (max-width: 768px) {
+  .book-detail-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .book-detail-grid > div:first-child {
+    position: static !important;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+
+/* Books grid — responsive: 1 column on mobile */
+@media (max-width: 768px) {
+  .books-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* YouTube grid: 3 videos on desktop, 4 on mobile/tablet */
+.yt-card-4 {
+  display: none !important;
+}
+@media (max-width: 768px) {
+  .yt-card-4 {
+    display: flex !important;
+  }
 }
