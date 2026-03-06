@@ -4,6 +4,8 @@ import Link from "next/link";
 import { getAllEducacionPosts, getEducacionBySlug, getRelatedForEducacion } from "@/lib/educacion";
 import ReadingProgress from "@/components/ReadingProgress";
 import ArticleContent from "@/components/ArticleContent";
+import TableOfContents from "@/components/TableOfContents";
+import CitationBlock from "@/components/CitationBlock";
 import SubscribeNewsletter from "@/components/SubscribeNewsletter";
 import RelatedPosts from "@/components/RelatedPosts";
 
@@ -234,8 +236,20 @@ export default async function EducacionEssayPage({ params }: Props) {
             </div>
           )}
 
+          {/* Table of Contents */}
+          <TableOfContents />
+
           {/* Content */}
           <ArticleContent html={post.content} />
+
+          {/* Citation block */}
+          {post.citable && (
+            <CitationBlock
+              title={post.title}
+              date={post.date}
+              url={`https://carlosazaustre.es/educacion/${post.slug}`}
+            />
+          )}
         </article>
 
         {/* Bottom nav */}

@@ -1042,3 +1042,34 @@ html.theme-terminal .prose-neo blockquote {
     display: flex !important;
   }
 }
+
+/* ─── Referencias bibliográficas (sección /educacion) ─── */
+.references {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--border);
+}
+
+.references p {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  padding-left: 2rem;
+  text-indent: -2rem;
+  margin-bottom: 0.85rem;
+}
+
+.references p a {
+  color: var(--text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  word-break: break-all;
+}
+
+.references p a:hover {
+  color: var(--text);
+}
+
+.references em {
+  font-style: italic;
+}

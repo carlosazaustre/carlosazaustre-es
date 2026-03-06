@@ -1,8 +1,10 @@
 ---
-title: "Ejecuta tu App NodeJS como un Servicio en Linux"
-date: "2016-03-04"
-url: "https://carlosazaustre.es/blog/aplicacion-node-como-servicio-upstart"
-tags: []
+title: Ejecuta tu App NodeJS como un Servicio en Linux
+date: '2016-03-04'
+url: 'https://carlosazaustre.es/blog/aplicacion-node-como-servicio-upstart'
+tags:
+  - nodejs
+  - herramientas
 ---
 
 # Ejecuta tu App NodeJS como un Servicio en Linux

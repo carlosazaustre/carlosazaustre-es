@@ -1,8 +1,12 @@
 ---
-title: "Cómo relacionar tus modelos en MongoDB"
-date: "2015-01-18"
-url: "https://carlosazaustre.es/blog/como-relacionar-tus-modelos-en-mongodb"
-tags: []
+title: Cómo relacionar tus modelos en MongoDB
+date: '2015-01-18'
+url: 'https://carlosazaustre.es/blog/como-relacionar-tus-modelos-en-mongodb'
+tags:
+  - nodejs
+  - javascript
+  - tutorial
+  - web
 ---
 
 # Cómo relacionar tus modelos en MongoDB

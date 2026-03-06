@@ -1,8 +1,12 @@
 ---
-title: "Angular 2: Rutas y Componentes"
-date: "2015-11-11"
-url: "https://carlosazaustre.es/blog/angular-2-rutas-y-componentes"
-tags: []
+title: 'Angular 2: Rutas y Componentes'
+date: '2015-11-11'
+url: 'https://carlosazaustre.es/blog/angular-2-rutas-y-componentes'
+tags:
+  - angular
+  - tutorial
+  - javascript
+  - web
 ---
 
 # Angular 2: Rutas y Componentes
