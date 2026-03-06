@@ -211,6 +211,10 @@ export interface PostMeta {
   readingTime: string;
   coverImage?: string;
   faq?: FaqItem[];
+  videoId?: string;           // YouTube video ID (used for podcast episodes og:image)
+  episodeNumber?: number;     // Podcast episode number
+  contentType?: "blog" | "podcast" | "educacion"; // Determines URL prefix for internal links
+  citable?: boolean;          // Show "Cómo citar este artículo" block at the end
 }
 
 export interface Post extends PostMeta {
@@ -252,16 +256,20 @@ function extractExcerpt(content: string, maxLength = 160): string {
   return clean.slice(0, cut > 0 ? cut : maxLength) + "…";
 }
 
-export function getAllPosts(): PostMeta[] {
-  if (!fs.existsSync(BLOG_DIR)) return [];
+/** Generic reader: scans any content directory and returns PostMeta[]. */
+export function readPostsFromDir(
+  dir: string,
+  contentType: "blog" | "podcast" | "educacion" = "blog"
+): PostMeta[] {
+  if (!fs.existsSync(dir)) return [];
 
   const files = fs
-    .readdirSync(BLOG_DIR)
+    .readdirSync(dir)
     .filter((f) => f.endsWith(".md") || f.endsWith(".mdx"));
 
   const posts = files.map((filename) => {
     const slug = filename.replace(/\.(md|mdx)$/, "");
-    const filePath = path.join(BLOG_DIR, filename);
+    const filePath = path.join(dir, filename);
     const raw = fs.readFileSync(filePath, "utf8");
     const { data, content } = matter(raw);
 
@@ -277,21 +285,33 @@ export function getAllPosts(): PostMeta[] {
       readingTime: formatReadingTime(content),
       coverImage: data.coverImage ?? `/api/og?title=${encodeURIComponent(data.title ?? "")}`,
       faq: Array.isArray(data.faq) ? data.faq : undefined,
+      videoId: data.videoId ? String(data.videoId) : undefined,
+      episodeNumber: data.episodeNumber ? Number(data.episodeNumber) : undefined,
+      contentType,
+      citable: data.citable === true,
     } as PostMeta;
   });
 
-  // Sort by date DESC
   return posts.sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 }
 
-export async function getPostBySlug(slug: string): Promise<Post | null> {
+export function getAllPosts(): PostMeta[] {
+  return readPostsFromDir(BLOG_DIR, "blog");
+}
+
+/** Generic: reads a single post from any content directory. */
+export async function readPostFromDir(
+  dir: string,
+  slug: string,
+  contentType: "blog" | "podcast" | "educacion" = "blog"
+): Promise<Post | null> {
   const extensions = ["md", "mdx"];
   let filePath: string | null = null;
 
   for (const ext of extensions) {
-    const candidate = path.join(BLOG_DIR, `${slug}.${ext}`);
+    const candidate = path.join(dir, `${slug}.${ext}`);
     if (fs.existsSync(candidate)) {
       filePath = candidate;
       break;
@@ -328,8 +348,16 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     readingTime: formatReadingTime(content),
     coverImage: data.coverImage ?? `/api/og?title=${encodeURIComponent(data.title ?? "")}`,
     faq: Array.isArray(data.faq) ? data.faq : undefined,
+    videoId: data.videoId ? String(data.videoId) : undefined,
+    episodeNumber: data.episodeNumber ? Number(data.episodeNumber) : undefined,
+    contentType,
+    citable: data.citable === true,
     content: processed.toString(),
   };
+}
+
+export async function getPostBySlug(slug: string): Promise<Post | null> {
+  return readPostFromDir(BLOG_DIR, slug, "blog");
 }
 
 export function getAllTags(): { tag: string; count: number }[] {

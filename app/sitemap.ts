@@ -1,5 +1,8 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts, getAllTags } from "@/lib/blog";
+import { getAllPodcastPosts } from "@/lib/podcast";
+import { getAllEducacionPosts } from "@/lib/educacion";
+import { getAllBooks } from "@/lib/books";
 
 const BASE_URL = "https://carlosazaustre.es";
 
@@ -32,8 +35,48 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.6,
     },
+    {
+      url: `${BASE_URL}/podcast`,
+      lastModified: new Date("2024-01-30"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${BASE_URL}/now`,
+      lastModified: new Date("2026-03-02"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/libros`,
+      lastModified: new Date("2026-03-01"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/educacion`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
     // /links es noindex (link-in-bio) — excluida del sitemap
   ];
+
+  // Educacion essays
+  const educacionPages: MetadataRoute.Sitemap = getAllEducacionPosts().map((essay) => ({
+    url: `${BASE_URL}/educacion/${essay.slug}`,
+    lastModified: essay.date ? new Date(essay.date) : new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.75,
+  }));
+
+  // Book pages
+  const bookPages: MetadataRoute.Sitemap = getAllBooks().map((book) => ({
+    url: `${BASE_URL}/libros/${book.slug}`,
+    lastModified: new Date(book.publishedDate),
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
+  }));
 
   // Blog posts
   const blogPages: MetadataRoute.Sitemap = posts.map((post) => ({
@@ -53,5 +96,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     }));
 
-  return [...staticPages, ...blogPages, ...tagPages];
+  // Podcast episodes
+  const podcastEpisodes: MetadataRoute.Sitemap = getAllPodcastPosts().map((ep) => ({
+    url: `${BASE_URL}/podcast/${ep.slug}`,
+    lastModified: ep.date ? new Date(ep.date) : new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.75,
+  }));
+
+  return [...staticPages, ...bookPages, ...blogPages, ...podcastEpisodes, ...educacionPages, ...tagPages];
 }

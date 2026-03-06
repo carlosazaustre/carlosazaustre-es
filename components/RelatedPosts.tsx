@@ -5,9 +5,10 @@ import type { PostMeta } from "@/lib/blog";
 
 interface Props {
   posts: PostMeta[];
+  sectionTitle?: string;
 }
 
-export default function RelatedPosts({ posts }: Props) {
+export default function RelatedPosts({ posts, sectionTitle = "Artículos relacionados" }: Props) {
   if (posts.length === 0) return null;
 
   return (
@@ -46,7 +47,7 @@ export default function RelatedPosts({ posts }: Props) {
             margin: 0,
           }}
         >
-          Artículos relacionados
+          {sectionTitle}
         </h2>
       </div>
 
@@ -61,7 +62,7 @@ export default function RelatedPosts({ posts }: Props) {
         {posts.map((post) => (
           <Link
             key={post.slug}
-            href={`/blog/${post.slug}`}
+            href={`/${post.contentType === "podcast" ? "podcast" : post.contentType === "educacion" ? "educacion" : "blog"}/${post.slug}`}
             style={{ textDecoration: "none" }}
           >
             <article

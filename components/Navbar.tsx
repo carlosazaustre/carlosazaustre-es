@@ -4,10 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+// import ThemeToggle from "./ThemeToggle"; // TODO: re-enable when themes are polished
 
 const links = [
   { href: "/blog", label: "Blog" },
-  { href: "/uses", label: "Uses" },
+  { href: "/educacion", label: "Educación" },
+  { href: "/podcast", label: "Podcast" },
+  { href: "/libros", label: "Libros" },
   { href: "/about", label: "Sobre mí" },
 ];
 
@@ -55,8 +58,8 @@ export default function Navbar() {
           >
             <span
               style={{
-                background: "var(--text)",
-                color: "var(--accent)",
+                background: "var(--logo-bg)",
+                color: "var(--logo-text)",
                 padding: "2px 8px",
                 borderRadius: "2px",
               }}
