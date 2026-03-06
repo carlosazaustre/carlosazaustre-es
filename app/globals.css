@@ -1092,8 +1092,7 @@ html.theme-terminal .prose-neo blockquote {
   grid-area: toc;
   position: sticky;
   top: 80px; /* debajo del navbar */
-  max-height: calc(100vh - 100px);
-  overflow-y: auto;
+  align-self: start;
 }
 
 @media (max-width: 860px) {
