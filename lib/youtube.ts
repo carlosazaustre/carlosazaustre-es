@@ -7,7 +7,7 @@ export type YouTubeVideo = {
 };
 
 const CHANNEL_ID = "UCJgGc8pQO1lv04VXrBxA_Hg";
-const API_KEY = process.env.YOUTUBE_API_KEY ?? "AIzaSyDIqX2ZNskhTtalwZWASnyobBPJb3Ap55A";
+const API_KEY = process.env.YOUTUBE_API_KEY ?? "";
 
 // Uploads playlist = UC... → UU...
 const UPLOADS_PLAYLIST = CHANNEL_ID.replace(/^UC/, "UU");
