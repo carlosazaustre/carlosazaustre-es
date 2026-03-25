@@ -322,9 +322,13 @@ export default async function HomePage() {
             </a>
           </div>
           <div style={{ flex: "0 0 auto", textAlign: "center" }}>
-            <div style={{ fontFamily: "'Space Mono', monospace", fontSize: "3rem", fontWeight: 800, color: "var(--accent)", lineHeight: 1 }}>
-              &lt;/&gt;
-            </div>
+            <Image
+              src="/logo_aprendiendodev.png"
+              alt="aprendiendo.dev"
+              width={80}
+              height={80}
+              style={{ borderRadius: "12px" }}
+            />
             <div style={{ fontFamily: "'Space Mono', monospace", fontSize: "0.75rem", color: "#666", marginTop: "0.5rem" }}>
               learn by doing
             </div>

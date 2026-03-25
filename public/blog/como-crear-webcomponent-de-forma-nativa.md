@@ -1,12 +1,8 @@
 ---
-title: Cómo crear un WebComponent de forma nativa
-date: '2017-02-01'
-url: 'https://carlosazaustre.es/blog/como-crear-webcomponent-de-forma-nativa'
-tags:
-  - javascript
-  - html
-  - web
-  - tutorial
+title: "Cómo crear un WebComponent de forma nativa"
+date: "2017-02-01"
+url: "https://carlosazaustre.es/blog/como-crear-webcomponent-de-forma-nativa"
+tags: []
 ---
 
 # Cómo crear un WebComponent de forma nativa

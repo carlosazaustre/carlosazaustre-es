@@ -2,10 +2,18 @@
 title: 'Qué TECH Cuentas - Ep.01, con Pau Garcia-Milà'
 date: '2023-10-30'
 url: 'https://carlosazaustre.es/blog/quetechcuentas-01'
-tags: []
+tags:
+  - ia
+  - programacion
+  - carrera
+  - web
 excerpt: >-
   Primer episodio del podcast Qué TECH Cuentas con Pau Garcia-Milà. Conversamos
   sobre tecnología, innovación y el futuro digital con el emprendedor catalán.
+related:
+  - ia-programador-junior
+  - el-camino-para-ser-un-pro-en-javascript
+  - mi-experiencia-como-mentor-en-google-launchpad-week
 ---
 
 # Qué TECH Cuentas - Ep.01, con Pau Garcia-Milà

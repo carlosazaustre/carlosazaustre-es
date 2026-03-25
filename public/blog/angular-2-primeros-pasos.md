@@ -1,12 +1,8 @@
 ---
-title: Angular 2. Primeros pasos empleando Browserify y Babel
-date: '2015-11-09'
-url: 'https://carlosazaustre.es/blog/angular-2-primeros-pasos'
-tags:
-  - angular
-  - tutorial
-  - javascript
-  - web
+title: "Angular 2. Primeros pasos empleando Browserify y Babel"
+date: "2015-11-09"
+url: "https://carlosazaustre.es/blog/angular-2-primeros-pasos"
+tags: []
 ---
 
 # Angular 2. Primeros pasos empleando Browserify y Babel

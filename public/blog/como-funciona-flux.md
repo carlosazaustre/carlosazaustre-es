@@ -1,12 +1,8 @@
 ---
-title: ¿Qué es Flux? Entendiendo su arquitectura
-date: '2018-05-25'
-url: 'https://carlosazaustre.es/blog/como-funciona-flux'
-tags:
-  - javascript
-  - react
-  - arquitectura
-  - web
+title: "¿Qué es Flux? Entendiendo su arquitectura"
+date: "2018-05-25"
+url: "https://carlosazaustre.es/blog/como-funciona-flux"
+tags: []
 ---
 
 # ¿Qué es Flux? Entendiendo su arquitectura

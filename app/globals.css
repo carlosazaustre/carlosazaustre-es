@@ -431,6 +431,14 @@ body {
   line-height: 1.7;
 }
 
+.prose-neo .code-window a {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+  text-decoration-color: transparent;
+  background: none;
+}
+
 /* Copy button — lives inside the titlebar */
 .copy-btn {
   font-family: 'Space Mono', monospace;
@@ -937,7 +945,8 @@ html.theme-terminal .prose-neo blockquote {
   12%   { transform: translateX(0) rotate(0deg); }
   12.1%, 100% { transform: translateX(0) rotate(0deg); }
 }
-.links-banner-shake {
+.links-banner-shake,
+.links-shake {
   animation: links-banner-shake 5s ease infinite;
   transform-origin: center;
   transition: none !important;

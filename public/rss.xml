@@ -8,7 +8,7 @@
     <link>https://carlosazaustre.es/blog</link>
     <description>Artículos sobre JavaScript, React, Node.js, arquitectura de software e inteligencia artificial.</description>
     <language>es</language>
-    <lastBuildDate>Fri, 27 Feb 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://carlosazaustre.es/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://carlosazaustre.es/carlos-azaustre.jpg</url>
@@ -17,6 +17,19 @@
     </image>
     <copyright>© 2026 Carlos Azaustre</copyright>
     <managingEditor>cazaustre@gmail.com (Carlos Azaustre)</managingEditor>
+  <item>
+    <title>Cómo construí una memoria vectorial para mi agente IA con SQLite y cero GPU</title>
+    <link>https://carlosazaustre.es/blog/memoria-vectorial-openclaw-tutorial</link>
+    <guid isPermaLink="true">https://carlosazaustre.es/blog/memoria-vectorial-openclaw-tutorial</guid>
+    <description>Mi agente IA olvidaba todo entre sesiones. Monté una memoria semántica con Gemini embeddings, SQLite y Node.js en un VPS ARM de 8€/mes. Sin GPU, sin Qdrant, sin Redis. 7.000 chunks indexados y responde en milisegundos. Aquí tienes el código.</description>
+    <pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate>
+    <dc:creator>Carlos Azaustre</dc:creator>
+    <enclosure url="https://carlosazaustre.es/api/og?title=C%C3%B3mo%20constru%C3%AD%20una%20memoria%20vectorial%20para%20mi%20agente%20IA%20con%20SQLite%20y%20cero%20GPU" type="image/png" length="0"/>
+    <category>openclaw</category>
+    <category>ia</category>
+    <category>typescript</category>
+    <category>tutorial</category>
+  </item>
   <item>
     <title>CSS en 2026: las tres features de Chrome que eliminan JavaScript que llevas años escribiendo</title>
     <link>https://carlosazaustre.es/blog/css-2026-elimina-javascript-chrome-146-147</link>
@@ -578,17 +591,6 @@
     <enclosure url="https://carlosazaustre.es/api/og?title=Aprendiendo%20y%20Compartiendo%20con%20la%20Comunidad" type="image/png" length="0"/>
     <category>carrera</category>
     <category>programacion</category>
-  </item>
-  <item>
-    <title>Ejecuta tu App NodeJS como un Servicio en Linux</title>
-    <link>https://carlosazaustre.es/blog/aplicacion-node-como-servicio-upstart</link>
-    <guid isPermaLink="true">https://carlosazaustre.es/blog/aplicacion-node-como-servicio-upstart</guid>
-    <description>Aprende a ejecutar tu aplicación Node.js como un servicio en Linux con Upstart en Ubuntu. Una alternativa más robusta a pm2 o forever para producción.</description>
-    <pubDate>Fri, 04 Mar 2016 00:00:00 GMT</pubDate>
-    <dc:creator>Carlos Azaustre</dc:creator>
-    <enclosure url="https://carlosazaustre.es/api/og?title=Ejecuta%20tu%20App%20NodeJS%20como%20un%20Servicio%20en%20Linux" type="image/png" length="0"/>
-    <category>nodejs</category>
-    <category>tutorial</category>
   </item>
   </channel>
 </rss>

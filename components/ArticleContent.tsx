@@ -18,6 +18,27 @@ export default function ArticleContent({ html }: { html: string }) {
       wrapper.appendChild(table);
     });
 
+    // Render Mermaid diagrams
+    const mermaidDivs = ref.current.querySelectorAll<HTMLElement>(".mermaid");
+    if (mermaidDivs.length > 0) {
+      import("https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs" as string)
+        .then((mod) => {
+          mod.default.initialize({
+            startOnLoad: false,
+            theme: "dark",
+            themeVariables: {
+              darkMode: true,
+              background: "#1c2128",
+              primaryColor: "#539bf5",
+              primaryTextColor: "#adbac7",
+              lineColor: "#444c56",
+            },
+          });
+          mod.default.run({ nodes: mermaidDivs });
+        })
+        .catch(() => { /* Mermaid load failed — diagrams stay as text */ });
+    }
+
     const windows = ref.current.querySelectorAll<HTMLElement>(".code-window");
 
     windows.forEach((win) => {

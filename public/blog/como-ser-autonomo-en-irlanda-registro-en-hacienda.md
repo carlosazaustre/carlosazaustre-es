@@ -1,10 +1,8 @@
 ---
-title: Cómo ser autónomo en Irlanda - Registro en Hacienda
-date: '2013-07-01'
-url: >-
-  https://carlosazaustre.es/blog/como-ser-autonomo-en-irlanda-registro-en-hacienda
-tags:
-  - carrera
+title: "Cómo ser autónomo en Irlanda - Registro en Hacienda"
+date: "2013-07-01"
+url: "https://carlosazaustre.es/blog/como-ser-autonomo-en-irlanda-registro-en-hacienda"
+tags: []
 ---
 
 # Cómo ser autónomo en Irlanda - Registro en Hacienda

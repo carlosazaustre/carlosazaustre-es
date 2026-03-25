@@ -11,8 +11,48 @@ import rehypeHighlight from "rehype-highlight";
 import rehypeStringify from "rehype-stringify";
 import readingTime from "reading-time";
 import type { Plugin } from "unified";
-import type { Root, Element } from "hast";
+import type { Root, Element, Text } from "hast";
 import { visit } from "unist-util-visit";
+
+// Transforms ```mermaid code blocks into a client-rendered mermaid diagram
+const rehypeMermaid: Plugin<[], Root> = () => (tree: Root) => {
+  visit(tree, "element", (node: Element, index, parent) => {
+    if (
+      node.tagName !== "pre" ||
+      !parent ||
+      index === undefined ||
+      index === null
+    )
+      return;
+
+    const code = node.children.find(
+      (c): c is Element => (c as Element).tagName === "code"
+    );
+    if (!code) return;
+
+    const className = (code?.properties?.className as string[]) ?? [];
+    if (!className.some((c) => c === "language-mermaid")) return;
+
+    // Extract raw mermaid source from the code element's text children
+    const mermaidSource = (code.children ?? [])
+      .filter((c): c is Text => c.type === "text")
+      .map((c) => c.value)
+      .join("");
+
+    if (!mermaidSource.trim()) return;
+
+    // Replace the <pre> with a <div class="mermaid"> containing the raw source
+    // Mermaid.js will pick this up client-side
+    const wrapper: Element = {
+      type: "element",
+      tagName: "div",
+      properties: { className: ["mermaid"] },
+      children: [{ type: "text", value: mermaidSource }],
+    };
+
+    (parent.children as Element[])[index] = wrapper;
+  });
+};
 
 // Transforms <spotifypodcast episode="ID"> into an embedded Spotify player
 const rehypeSpotify: Plugin<[], Root> = () => (tree: Root) => {
@@ -330,6 +370,7 @@ export async function readPostFromDir(
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
     .use(rehypeSlug)
+    .use(rehypeMermaid)
     .use(rehypeYouTube)
     .use(rehypeSpotify)
     .use(rehypeSummary)

@@ -1,12 +1,8 @@
 ---
-title: Cómo configurar tu servidor cloud en DigitalOcean
-date: '2014-07-31'
-url: >-
-  https://carlosazaustre.es/blog/como-configurar-tu-servidor-cloud-en-digitalocean
-tags:
-  - web
-  - herramientas
-  - tutorial
+title: "Cómo configurar tu servidor cloud en DigitalOcean"
+date: "2014-07-31"
+url: "https://carlosazaustre.es/blog/como-configurar-tu-servidor-cloud-en-digitalocean"
+tags: []
 ---
 
 # Cómo configurar tu servidor cloud en DigitalOcean

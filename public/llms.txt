@@ -5,7 +5,7 @@
 ## Páginas principales
 
 - [Inicio](https://carlosazaustre.es/): Página principal con presentación y últimos contenidos
-- [Blog](https://carlosazaustre.es/blog): 106 artículos sobre desarrollo web, JavaScript, arquitectura de software e IA
+- [Blog](https://carlosazaustre.es/blog): 107 artículos sobre desarrollo web, JavaScript, arquitectura de software e IA
 - [About](https://carlosazaustre.es/about): Biografía, experiencia profesional, libros y contacto
 - [Uses](https://carlosazaustre.es/uses): Stack tecnológico y herramientas que usa Carlos en su día a día
 - [Links](https://carlosazaustre.es/links): Links de interés, recursos y redes sociales
@@ -19,6 +19,7 @@
 
 ## Blog — Artículos recientes
 
+- [Cómo construí una memoria vectorial para mi agente IA con SQLite y cero GPU](https://carlosazaustre.es/blog/memoria-vectorial-openclaw-tutorial): Mi agente IA olvidaba todo entre sesiones. Monté una memoria semántica con Gemini embeddings, SQLite y Node.js en un VPS ARM de 8€/mes. Sin GPU, sin Qdrant, sin Redis. 7.000 chunks indexados y responde en milisegundos. Aquí tienes el código.
 - [>-](https://carlosazaustre.es/blog/css-2026-elimina-javascript-chrome-146-147): >-
 - [El problema de la Inteligencia Artificial y los Programadores Junior](https://carlosazaustre.es/blog/ia-programador-junior): >-
 - [Principios SOLID en JavaScript](https://carlosazaustre.es/blog/javascript-solid): >-
@@ -68,7 +69,6 @@
 - [Desarrollo por componentes con Angular 1.5 y ES6/ES2015](https://carlosazaustre.es/blog/desarrollo-por-componentes-con-angular-1-5-con-es6-es2015): >-
 - [Formas de manejar la asincronía en JavaScript](https://carlosazaustre.es/blog/manejando-la-asincronia-en-javascript): >-
 - [Aprendiendo y Compartiendo con la Comunidad](https://carlosazaustre.es/blog/aprendiendo-y-compartiendo): >-
-- [Ejecuta tu App NodeJS como un Servicio en Linux](https://carlosazaustre.es/blog/aplicacion-node-como-servicio-upstart): >-
 
 ## Opcional
 

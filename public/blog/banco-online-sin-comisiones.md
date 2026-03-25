@@ -1,10 +1,8 @@
 ---
-title: Eligiendo un banco online sin comisiones. Mi experiencia con N26
-date: '2018-08-24'
-url: 'https://carlosazaustre.es/blog/banco-online-sin-comisiones'
-tags:
-  - carrera
-  - herramientas
+title: "Eligiendo un banco online sin comisiones. Mi experiencia con N26"
+date: "2018-08-24"
+url: "https://carlosazaustre.es/blog/banco-online-sin-comisiones"
+tags: []
 ---
 
 # Eligiendo un banco online sin comisiones. Mi experiencia con N26

@@ -1,0 +1,317 @@
+---
+title: "Cómo construí una memoria vectorial para mi agente IA con SQLite y cero GPU"
+date: "2026-03-23"
+url: "https://carlosazaustre.es/blog/memoria-vectorial-openclaw-tutorial"
+tags: ["openclaw", "ia", "typescript", "tutorial"]
+---
+
+# Cómo construí una memoria vectorial para mi agente IA con SQLite y cero GPU
+
+> Publicado el 2026-03-23 — https://carlosazaustre.es/blog/memoria-vectorial-openclaw-tutorial
+
+Mi agente IA vive en un VPS. Corre 24/7, me ayuda con código, gestiona contenido, monitoriza tendencias. Pero tenía un problema gordo: cada sesión nueva empezaba desde cero. Le preguntaba "¿recuerdas lo que hablamos ayer sobre el curso?" y nada. Silencio.
+
+OpenClaw tiene `memory_search`, que busca en archivos Markdown. Para contexto curado va bien. Pero cuando necesitas encontrar algo que dijiste hace dos semanas, enterrado entre cientos de sesiones... grep no da para más.
+
+Necesitaba búsqueda semántica. La solución típica es montar Qdrant, Pinecone o Chroma. Pero estoy en un VPS ARM de 8 GB sin GPU, y no me apetecía meter otro servicio en Docker ni pagar APIs de embedding que se van acumulando.
+
+Así que monté algo más simple. Unas 1.100 líneas de TypeScript, SQLite como base de datos y Gemini embeddings, que son gratis. Lleva semanas funcionando en producción con más de 7.000 chunks indexados. Las consultas responden en milisegundos.
+
+## La arquitectura
+
+![Arquitectura de la memoria vectorial](/images/blog/vector-memory-architecture.svg)
+
+Son cuatro componentes. Sin dependencias pesadas. La única dependencia de Node.js es `better-sqlite3`.
+
+## Paso 1: Los embeddings (gratis)
+
+Gemini Embedding 001 genera vectores de 768 dimensiones. Tiene un tier gratuito bastante generoso, más que suficiente para un agente personal.
+
+```typescript
+// embeddings.ts
+const EMBEDDING_MODEL = "gemini-embedding-001";
+const DIMENSIONS = 768;
+const BATCH_SIZE = 100;
+
+export async function embedBatch(texts: string[]): Promise<Float32Array[]> {
+  const allResults: Float32Array[] = [];
+
+  for (let i = 0; i < texts.length; i += BATCH_SIZE) {
+    const batch = texts.slice(i, i + BATCH_SIZE);
+
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/${EMBEDDING_MODEL}:batchEmbedContents?key=${GEMINI_API_KEY}`;
+
+    const body = {
+      requests: batch.map((text) => ({
+        model: `models/${EMBEDDING_MODEL}`,
+        content: { parts: [{ text }] },
+        outputDimensionality: DIMENSIONS,
+      })),
+    };
+
+    const response = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+
+    const data = await response.json();
+    for (const emb of data.embeddings) {
+      allResults.push(new Float32Array(emb.values));
+    }
+  }
+
+  return allResults;
+}
+```
+
+La API acepta hasta 100 textos por lote. Los vectores vuelven como arrays de floats que guardamos tal cual como `Float32Array`.
+
+## Paso 2: Trocear las conversaciones
+
+Las sesiones de OpenClaw son archivos JSONL con mensajes de usuario, asistente, herramientas y sistema mezclados. No tiene sentido embeber todo eso. Tool calls, mensajes de sistema y respuestas de una línea son ruido que empeora la búsqueda.
+
+```typescript
+// chunker.ts
+const MAX_CHUNK_CHARS = 1500;
+const OVERLAP_CHARS = 200;
+
+export function chunkSession(messages, sessionKey): Chunk[] {
+  const chunks = [];
+  let currentChunk = "";
+  let chunkIndex = 0;
+
+  for (const msg of messages) {
+    // Solo user y assistant con contenido real
+    if (msg.role === "tool" || !msg.content) continue;
+
+    const line = `[${msg.role}]: ${msg.content.slice(0, 800)}\n`;
+
+    if (currentChunk.length + line.length > MAX_CHUNK_CHARS && currentChunk) {
+      chunks.push({ content: currentChunk.trim(), index: chunkIndex++ });
+      // Overlap para mantener contexto entre chunks
+      const overlap = currentChunk.slice(-OVERLAP_CHARS);
+      currentChunk = overlap + line;
+    } else {
+      currentChunk += line;
+    }
+  }
+
+  if (currentChunk.trim()) {
+    chunks.push({ content: currentChunk.trim(), index: chunkIndex });
+  }
+
+  return chunks;
+}
+```
+
+Para archivos Markdown (notas diarias, MEMORY.md), el chunking va por secciones `##`. Si una sección es muy larga, se parte con overlap.
+
+Los chunks quedan de unos 1.500 caracteres con 200 de solapamiento. Lo bastante grandes para tener contexto, lo bastante pequeños para que el embedding sea específico.
+
+## Paso 3: SQLite como base de datos vectorial
+
+No necesitas Qdrant ni Pinecone para esto. SQLite almacena los vectores como BLOBs y la similitud coseno se calcula directamente en JavaScript.
+
+```typescript
+// db.ts
+export function openDb(): Database.Database {
+  const db = new Database(dbPath);
+  db.pragma("journal_mode = WAL");
+
+  db.exec(`
+    CREATE TABLE IF NOT EXISTS memories (
+      id TEXT PRIMARY KEY,
+      content TEXT NOT NULL,
+      source_type TEXT NOT NULL,    -- session, daily, memory, brain
+      source_path TEXT,
+      session_key TEXT,
+      created_at TEXT NOT NULL,
+      metadata TEXT,
+      chunk_index INTEGER DEFAULT 0,
+      token_count INTEGER DEFAULT 0,
+      embedding BLOB               -- Float32Array como buffer
+    );
+
+    CREATE TABLE IF NOT EXISTS ingest_log (
+      source_path TEXT PRIMARY KEY,
+      last_modified TEXT NOT NULL,
+      last_ingested TEXT NOT NULL,
+      chunk_count INTEGER DEFAULT 0
+    );
+  `);
+
+  return db;
+}
+```
+
+Los vectores se guardan con `Buffer.from(embedding.buffer)`. Para leerlos, los reconstruyes con `new Float32Array(buffer)`.
+
+La tabla `ingest_log` lleva el control de qué archivos ya se procesaron y cuándo se modificaron por última vez. Si un archivo no ha cambiado, se salta. La ingesta incremental va rápida gracias a esto.
+
+## La búsqueda: coseno por fuerza bruta
+
+Esta es la parte que suena mal en papel pero funciona bien en la práctica. Para cada búsqueda, se calcula la similitud coseno entre el vector de la query y todos los vectores de la base de datos:
+
+```typescript
+function cosineSimilarity(a: Float32Array, b: Float32Array): number {
+  let dot = 0, normA = 0, normB = 0;
+  for (let i = 0; i < a.length; i++) {
+    dot += a[i] * b[i];
+    normA += a[i] * a[i];
+    normB += b[i] * b[i];
+  }
+  return dot / (Math.sqrt(normA) * Math.sqrt(normB));
+}
+
+export function queryMemories(db, embedding, options): MemoryResult[] {
+  // Carga todos los vectores de la DB
+  const rows = db.prepare(
+    "SELECT * FROM memories WHERE embedding IS NOT NULL"
+  ).all();
+
+  // Calcula similitud contra cada uno
+  const scored = rows.map((row) => {
+    const rowEmb = new Float32Array(
+      row.embedding.buffer,
+      row.embedding.byteOffset,
+      row.embedding.byteLength / 4
+    );
+    return { row, similarity: cosineSimilarity(embedding, rowEmb) };
+  });
+
+  // Ordena por similitud y devuelve los top N
+  scored.sort((a, b) => b.similarity - a.similarity);
+  return scored.slice(0, options.limit);
+}
+```
+
+Con 7.000 chunks de 768 dimensiones, esta operación tarda unos 15ms en mi VPS ARM. SQLite carga los BLOBs rápido, el cálculo de coseno es una multiplicación vectorial simple, y V8 optimiza bien los loops sobre `Float32Array`.
+
+Si tuvieras 100.000 chunks sería otra historia. Ahí necesitarías un índice ANN (HNSW o IVF). Pero para un agente personal, la fuerza bruta funciona y es bastante más simple de mantener.
+
+## El servidor HTTP
+
+Servidor Node.js puro, sin Express ni ningún framework encima:
+
+```typescript
+// server.ts — Endpoints principales
+// GET /query?q=<texto>&limit=5&types=session,daily
+// GET /recent?limit=5&types=session
+// GET /stats
+// POST /ingest
+```
+
+Solo escucha en localhost (127.0.0.1). No necesita autenticación porque solo el agente local lo consulta.
+
+Un ejemplo real:
+
+```bash
+curl "http://localhost:3010/query?q=configuración+del+curso+de+IA&limit=3"
+```
+
+```json
+{
+  "query": "configuración del curso de IA",
+  "count": 3,
+  "results": [
+    {
+      "source_type": "session",
+      "created_at": "2026-03-12",
+      "score": 0.8234,
+      "content": "[user]: Quiero revisar el plan del curso de programar con IA..."
+    }
+  ]
+}
+```
+
+## La ingesta: procesos hijos para no reventar la RAM
+
+La ingesta fue donde más problemas me dio. En un VPS ARM con 8 GB, procesar cientos de archivos JSONL en un solo proceso de Node.js acumulaba memoria hasta que el SO lo mataba.
+
+La solución fue un script bash que invoca `ingest-one.ts` para cada archivo en un proceso separado. Cada proceso arranca, procesa un archivo, y se cierra. Nada de acumulación.
+
+```bash
+# ingest.sh
+for f in "$SESSIONS"/*.jsonl; do
+  RESULT=$(node dist/ingest-one.js "$f" session 2>&1) || true
+  case "$RESULT" in
+    OK:*) INGESTED=$((INGESTED+1)) ;;
+    SKIP) SKIPPED=$((SKIPPED+1)) ;;
+    *)    ERRORS=$((ERRORS+1)) ;;
+  esac
+done
+```
+
+Cada invocación comprueba si el archivo cambió desde la última vez (comparando `mtime`). Si no cambió, devuelve `SKIP` y sale. Si cambió, borra los chunks antiguos, trocea, embebe y guarda. Un cron nocturno se encarga de procesar solo lo nuevo.
+
+## Cómo lo usa el agente en la práctica
+
+El agente tiene dos capas de memoria que trabajan juntas:
+
+1. **Archivos Markdown** (MEMORY.md + notas diarias) — memoria curada que lee al arrancar cada sesión
+2. **Memoria vectorial** (este sistema) — para buscar en el historial completo cuando lo necesita
+
+Al inicio de cada sesión, consulta `/recent?limit=5&types=session` para tener contexto de las conversaciones recientes. Cuando necesita buscar algo concreto, tira de `/query?q=...`.
+
+## Los números después de semanas en producción
+
+| Métrica | Valor |
+|---------|-------|
+| Chunks indexados | 7.277 |
+| Tamaño de la DB | 35 MB |
+| Tiempo de query | ~15ms |
+| Coste mensual | 0€ (Gemini free tier) |
+| RAM del servidor | ~85 MB |
+| Líneas de código | ~1.100 |
+| Dependencias | 1 (better-sqlite3) |
+
+## Hasta dónde escala
+
+La búsqueda por fuerza bruta escala de forma lineal:
+
+- **10.000 chunks**: ~20ms
+- **50.000 chunks**: ~100ms
+- **100.000 chunks**: ~200ms, ya empieza a notarse
+- **500.000 chunks**: necesitas un índice ANN
+
+Para un agente personal es difícil pasar de 50K chunks salvo que lleves años. Si llegara a ese punto, se puede migrar a `sqlite-vec` (extensión de SQLite con índice HNSW) sin tocar el resto.
+
+## Cómo montarlo
+
+El código cabe en 6 archivos:
+
+```
+vector-memory/
+├── src/
+│   ├── embeddings.ts   — API de Gemini (71 líneas)
+│   ├── chunker.ts      — Troceado de sesiones y markdown (146 líneas)
+│   ├── db.ts           — SQLite + coseno (163 líneas)
+│   ├── query.ts        — Interfaz de búsqueda (59 líneas)
+│   ├── server.ts       — HTTP API (212 líneas)
+│   ├── ingest.ts       — Pipeline de ingesta (259 líneas)
+│   └── ingest-one.ts   — Ingesta por archivo (136 líneas)
+├── ingest.sh           — Script bash para ingesta incremental
+├── package.json        — Solo depende de better-sqlite3
+└── data/
+    └── memory.db       — Toda la memoria en un archivo
+```
+
+Los pasos:
+
+1. Conseguir una API key de Gemini (gratis en [aistudio.google.com](https://aistudio.google.com))
+2. `npm install better-sqlite3`
+3. Configurar `GEMINI_API_KEY` en un `.env`
+4. Ejecutar `ingest.sh` para indexar las sesiones
+5. Arrancar el servidor con `node dist/server.js`
+6. Consultar con `curl http://localhost:3010/query?q=tu+consulta`
+
+Un cron nocturno que ejecute `ingest.sh` mantiene todo actualizado.
+
+## Por qué no usé QMD / Qdrant / Chroma
+
+Porque no hacía falta. QMD, el sidecar de OpenClaw para búsqueda semántica, tiene búsqueda híbrida (BM25 + vectorial), reranking con cross-encoder y query expansion. Qdrant y Chroma tienen índices ANN que escalan a millones de vectores.
+
+Pero para 7.000 chunks en un VPS de 8€/mes, SQLite y coseno bruto hacen el trabajo. Sin servicios extra, sin Docker, sin configuración adicional. Un archivo de 35 MB que contiene toda la memoria de mi agente.
+
+A veces la solución más simple es la que mejor funciona.
