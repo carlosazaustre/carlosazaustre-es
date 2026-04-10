@@ -104,6 +104,208 @@ const rehypeSummary: Plugin<[], Root> = () => (tree: Root) => {
   });
 };
 
+// Transforms <tweet tweetid="XXX"> into a static Twitter/X card fetched at build time
+function parseTweetText(html: string): string {
+  return html
+    .replace(/<br\s*\/?>/gi, "\n")
+    .replace(/<a[^>]*>([^<]*)<\/a>/gi, "$1")
+    .replace(/<[^>]+>/g, "")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&mdash;/g, "—")
+    .trim();
+}
+
+function buildTweetCard(opts: {
+  authorName: string;
+  handle: string;
+  text: string;
+  date: string;
+  url: string;
+}): Element {
+  const { authorName, handle, text, date, url } = opts;
+  const initial = authorName.charAt(0).toUpperCase();
+
+  const lines = text.split("\n").filter(Boolean);
+  const paragraphs: Element[] = lines.map((line) => ({
+    type: "element",
+    tagName: "p",
+    properties: { className: ["tweet-text-line"] },
+    children: [{ type: "text", value: line }],
+  }));
+
+  return {
+    type: "element",
+    tagName: "div",
+    properties: { className: ["tweet-card"] },
+    children: [
+      {
+        type: "element",
+        tagName: "a",
+        properties: {
+          href: url,
+          target: "_blank",
+          rel: "noopener noreferrer",
+          className: ["tweet-card-link"],
+          "aria-label": `Ver tweet de ${authorName} en X`,
+        },
+        children: [
+          // Header: avatar + author + X logo
+          {
+            type: "element",
+            tagName: "div",
+            properties: { className: ["tweet-header"] },
+            children: [
+              {
+                type: "element",
+                tagName: "div",
+                properties: { className: ["tweet-avatar"] },
+                children: [{ type: "text", value: initial }],
+              },
+              {
+                type: "element",
+                tagName: "div",
+                properties: { className: ["tweet-meta"] },
+                children: [
+                  {
+                    type: "element",
+                    tagName: "span",
+                    properties: { className: ["tweet-name"] },
+                    children: [{ type: "text", value: authorName }],
+                  },
+                  {
+                    type: "element",
+                    tagName: "span",
+                    properties: { className: ["tweet-handle"] },
+                    children: [{ type: "text", value: handle }],
+                  },
+                ],
+              },
+              {
+                type: "element",
+                tagName: "div",
+                properties: { className: ["tweet-x-logo"] },
+                children: [{ type: "text", value: "𝕏" }],
+              },
+            ],
+          },
+          // Body
+          {
+            type: "element",
+            tagName: "div",
+            properties: { className: ["tweet-body"] },
+            children: paragraphs,
+          },
+          // Footer: date
+          ...(date
+            ? [
+                {
+                  type: "element" as const,
+                  tagName: "div",
+                  properties: { className: ["tweet-footer"] },
+                  children: [{ type: "text" as const, value: date }],
+                },
+              ]
+            : []),
+        ],
+      },
+    ],
+  };
+}
+
+function buildTweetFallback(tweetId: string): Element {
+  return {
+    type: "element",
+    tagName: "div",
+    properties: { className: ["tweet-card", "tweet-card--fallback"] },
+    children: [
+      {
+        type: "element",
+        tagName: "a",
+        properties: {
+          href: `https://x.com/i/status/${tweetId}`,
+          target: "_blank",
+          rel: "noopener noreferrer",
+          className: ["tweet-card-link"],
+        },
+        children: [
+          {
+            type: "element",
+            tagName: "div",
+            properties: { className: ["tweet-header"] },
+            children: [
+              {
+                type: "element",
+                tagName: "div",
+                properties: { className: ["tweet-x-logo"] },
+                children: [{ type: "text", value: "𝕏" }],
+              },
+              {
+                type: "element",
+                tagName: "span",
+                properties: { className: ["tweet-name"] },
+                children: [{ type: "text", value: "Ver en X →" }],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  };
+}
+
+const rehypeTweet: Plugin<[], Root> = () => async (tree: Root) => {
+  const nodes: Array<{ node: Element; index: number; parent: { children: Element[] } }> = [];
+
+  visit(tree, "element", (node: Element, index, parent) => {
+    if (node.tagName !== "tweet" || !parent || index === undefined || index === null) return;
+    nodes.push({ node, index, parent: parent as { children: Element[] } });
+  });
+
+  for (const { node, index, parent } of nodes) {
+    const tweetId = (node.properties?.tweetid ?? node.properties?.tweetId ?? "") as string;
+    if (!tweetId) continue;
+
+    let replacement: Element;
+
+    try {
+      const oembedUrl = `https://publish.twitter.com/oembed?url=https://x.com/i/status/${tweetId}&omit_script=true`;
+      const res = await fetch(oembedUrl, {
+        headers: { "User-Agent": "Mozilla/5.0 (compatible; cazaustre-web/1.0)" },
+      });
+      if (!res.ok) throw new Error(`oEmbed fetch failed: ${res.status}`);
+      const data = (await res.json()) as { html: string; author_name: string; author_url: string };
+
+      const tweetTextMatch = data.html.match(/<p[^>]*>([\s\S]*?)<\/p>/);
+      const tweetText = tweetTextMatch ? parseTweetText(tweetTextMatch[1]) : "";
+
+      const handleMatch = data.author_url.match(/(?:twitter|x)\.com\/([^/?#]+)/);
+      const handle = handleMatch ? `@${handleMatch[1]}` : "";
+
+      const urlMatch = data.html.match(/href="(https:\/\/twitter\.com\/[^"]+\/status\/[^"?]+)/);
+      const tweetUrl = urlMatch ? urlMatch[1] : `https://twitter.com/i/web/status/${tweetId}`;
+
+      const dateMatch = data.html.match(/<a[^>]+>([A-Za-z]+ \d+, \d{4})<\/a>/);
+      const dateText = dateMatch ? dateMatch[1] : "";
+
+      replacement = buildTweetCard({
+        authorName: data.author_name,
+        handle,
+        text: tweetText,
+        date: dateText,
+        url: tweetUrl,
+      });
+    } catch {
+      replacement = buildTweetFallback(tweetId);
+    }
+
+    parent.children[index] = replacement;
+  }
+};
+
 // Transforms <youtube videoid="XXX"> into a styled embed
 const rehypeYouTube: Plugin<[], Root> = () => (tree: Root) => {
   visit(tree, "element", (node: Element, index, parent) => {
@@ -373,6 +575,7 @@ export async function readPostFromDir(
     .use(rehypeMermaid)
     .use(rehypeYouTube)
     .use(rehypeSpotify)
+    .use(rehypeTweet)
     .use(rehypeSummary)
     .use(rehypeHighlight, { detect: true })
     .use(rehypeCodeWindow)

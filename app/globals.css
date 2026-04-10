@@ -607,6 +607,129 @@ body {
   color: #1A1A1A;
 }
 
+/* ── Tweet / X card ── */
+.prose-neo .tweet-card {
+  border: 3px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  background: var(--card);
+  margin: 1.75rem 0;
+  overflow: hidden;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.prose-neo .tweet-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translate(-1px, -1px);
+}
+
+.prose-neo .tweet-card-link {
+  display: block;
+  padding: 1.25rem 1.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.prose-neo .tweet-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0.875rem;
+}
+
+.prose-neo .tweet-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2.5px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Mono', monospace;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--border);
+  flex-shrink: 0;
+}
+
+.prose-neo .tweet-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  flex: 1;
+  min-width: 0;
+}
+
+.prose-neo .tweet-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.prose-neo .tweet-handle {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.prose-neo .tweet-x-logo {
+  width: 32px;
+  height: 32px;
+  background: #000;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: #fff;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.prose-neo .tweet-body {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.975rem;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 0.875rem;
+}
+
+.prose-neo .tweet-body .tweet-text-line {
+  margin: 0 0 0.5em;
+  padding: 0;
+}
+
+.prose-neo .tweet-body .tweet-text-line:last-child {
+  margin-bottom: 0;
+}
+
+.prose-neo .tweet-footer {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  border-top: 1.5px solid var(--border);
+  padding-top: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+/* Dark mode: card has light bg → keep text dark (same as neo-card) */
+html.theme-dark .prose-neo .tweet-card {
+  --border: #1A1A1A;
+  --text: #1A1A1A;
+  --text-muted: #777777;
+  --shadow: 4px 4px 0px #1A1A1A;
+  --shadow-hover: 6px 6px 0px #1A1A1A;
+}
+
 /* ── highlight.js custom theme (dark, neobrutalist) ── */
 .hljs { color: #e8e8e8; }
 .hljs-comment, .hljs-quote             { color: #6a737d; font-style: italic; }

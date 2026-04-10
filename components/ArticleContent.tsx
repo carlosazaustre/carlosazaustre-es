@@ -21,7 +21,7 @@ export default function ArticleContent({ html }: { html: string }) {
     // Render Mermaid diagrams
     const mermaidDivs = ref.current.querySelectorAll<HTMLElement>(".mermaid");
     if (mermaidDivs.length > 0) {
-      import("https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs" as string)
+      import(/* webpackIgnore: true */ "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs" as string)
         .then((mod) => {
           mod.default.initialize({
             startOnLoad: false,
