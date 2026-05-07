@@ -8,7 +8,7 @@
     <link>https://carlosazaustre.es/blog</link>
     <description>Artículos sobre JavaScript, React, Node.js, arquitectura de software e inteligencia artificial.</description>
     <language>es</language>
-    <lastBuildDate>Mon, 23 Mar 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 07 May 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://carlosazaustre.es/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://carlosazaustre.es/carlos-azaustre.jpg</url>
@@ -17,6 +17,47 @@
     </image>
     <copyright>© 2026 Carlos Azaustre</copyright>
     <managingEditor>cazaustre@gmail.com (Carlos Azaustre)</managingEditor>
+  <item>
+    <title>Corsair Galleon 100 SD: el teclado que integra un Stream Deck de Elgato (análisis)</title>
+    <link>https://carlosazaustre.es/blog/corsair-galleon-100-sd-analisis</link>
+    <guid isPermaLink="true">https://carlosazaustre.es/blog/corsair-galleon-100-sd-analisis</guid>
+    <description>Corsair y Elgato firman una fusión real: teclado mecánico de gama alta con Stream Deck integrado. Lo he probado en productividad, creación de contenido y gaming para ver si los 349,99 € están justificados.</description>
+    <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>Carlos Azaustre</dc:creator>
+    <enclosure url="https://carlosazaustre.es/api/og?title=Corsair%20Galleon%20100%20SD%3A%20el%20teclado%20que%20integra%20un%20Stream%20Deck%20de%20Elgato%20(an%C3%A1lisis)" type="image/png" length="0"/>
+    <category>corsair</category>
+    <category>elgato</category>
+    <category>galleon</category>
+    <category>stream-deck</category>
+    <category>teclado</category>
+    <category>gaming</category>
+    <category>review</category>
+  </item>
+  <item>
+    <title>JavaScript 2026: 5 novedades que hacen el código más limpio y menos frustrante</title>
+    <link>https://carlosazaustre.es/blog/javascript-2026-novedades</link>
+    <guid isPermaLink="true">https://carlosazaustre.es/blog/javascript-2026-novedades</guid>
+    <description>Llevo más de 20 años escribiendo JavaScript y estas 5 novedades de ES2026 no son simples azúcares sintácticos. Son soluciones a problemas reales que nos han obligado a usar librerías externas durante años.</description>
+    <pubDate>Thu, 16 Apr 2026 00:00:00 GMT</pubDate>
+    <dc:creator>Carlos Azaustre</dc:creator>
+    <enclosure url="https://carlosazaustre.es/api/og?title=JavaScript%202026%3A%205%20novedades%20que%20hacen%20el%20c%C3%B3digo%20m%C3%A1s%20limpio%20y%20menos%20frustrante" type="image/png" length="0"/>
+    <category>JavaScript</category>
+    <category>Web Development</category>
+  </item>
+  <item>
+    <title>Mi segundo cerebro: cómo construí una wiki que la IA mantiene sola</title>
+    <link>https://carlosazaustre.es/blog/mi-segundo-cerebro-wiki-ia</link>
+    <guid isPermaLink="true">https://carlosazaustre.es/blog/mi-segundo-cerebro-wiki-ia</guid>
+    <description>Un sistema personal de segundo cerebro donde la IA no busca información, sino que la sintetiza y organiza en una wiki viva. Bookmarks de X, posts de LinkedIn y notas de voz procesados automáticamente.</description>
+    <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
+    <dc:creator>Carlos Azaustre</dc:creator>
+    <enclosure url="https://carlosazaustre.es/api/og?title=Mi%20segundo%20cerebro%3A%20c%C3%B3mo%20constru%C3%AD%20una%20wiki%20que%20la%20IA%20mantiene%20sola" type="image/png" length="0"/>
+    <category>AI</category>
+    <category>Productivity</category>
+    <category>Tools</category>
+    <category>Python</category>
+    <category>Automation</category>
+  </item>
   <item>
     <title>Cómo construí una memoria vectorial para mi agente IA con SQLite y cero GPU</title>
     <link>https://carlosazaustre.es/blog/memoria-vectorial-openclaw-tutorial</link>
@@ -557,40 +598,6 @@
     <enclosure url="https://carlosazaustre.es/api/og?title=Mi%20inmersi%C3%B3n%20en%20React" type="image/png" length="0"/>
     <category>react</category>
     <category>javascript</category>
-  </item>
-  <item>
-    <title>Desarrollo por componentes con Angular 1.5 y ES6/ES2015</title>
-    <link>https://carlosazaustre.es/blog/desarrollo-por-componentes-con-angular-1-5-con-es6-es2015</link>
-    <guid isPermaLink="true">https://carlosazaustre.es/blog/desarrollo-por-componentes-con-angular-1-5-con-es6-es2015</guid>
-    <description>Aprende a desarrollar con Angular 1.5 usando el método .component() y ES6/ES2015. Código más limpio, preparado para migrar a Angular 2 con UIRouter y Babel.</description>
-    <pubDate>Mon, 04 Jul 2016 00:00:00 GMT</pubDate>
-    <dc:creator>Carlos Azaustre</dc:creator>
-    <enclosure url="https://carlosazaustre.es/api/og?title=Desarrollo%20por%20componentes%20con%20Angular%201.5%20y%20ES6%2FES2015" type="image/png" length="0"/>
-    <category>angular</category>
-    <category>javascript</category>
-    <category>tutorial</category>
-  </item>
-  <item>
-    <title>Formas de manejar la asincronía en JavaScript</title>
-    <link>https://carlosazaustre.es/blog/manejando-la-asincronia-en-javascript</link>
-    <guid isPermaLink="true">https://carlosazaustre.es/blog/manejando-la-asincronia-en-javascript</guid>
-    <description>Aprende las distintas formas de manejar la asincronía en JavaScript: callbacks, promesas y async/await para gestionar operaciones de entrada/salida.</description>
-    <pubDate>Thu, 23 Jun 2016 00:00:00 GMT</pubDate>
-    <dc:creator>Carlos Azaustre</dc:creator>
-    <enclosure url="https://carlosazaustre.es/api/og?title=Formas%20de%20manejar%20la%20asincron%C3%ADa%20en%20JavaScript" type="image/png" length="0"/>
-    <category>javascript</category>
-    <category>tutorial</category>
-  </item>
-  <item>
-    <title>Aprendiendo y Compartiendo con la Comunidad</title>
-    <link>https://carlosazaustre.es/blog/aprendiendo-y-compartiendo</link>
-    <guid isPermaLink="true">https://carlosazaustre.es/blog/aprendiendo-y-compartiendo</guid>
-    <description>Resumen de mi charla Ignite en PlatziConf Madrid 2016: cómo internet cambió mi aprendizaje y por qué compartir conocimiento con la comunidad es clave</description>
-    <pubDate>Fri, 17 Jun 2016 00:00:00 GMT</pubDate>
-    <dc:creator>Carlos Azaustre</dc:creator>
-    <enclosure url="https://carlosazaustre.es/api/og?title=Aprendiendo%20y%20Compartiendo%20con%20la%20Comunidad" type="image/png" length="0"/>
-    <category>carrera</category>
-    <category>programacion</category>
   </item>
   </channel>
 </rss>
