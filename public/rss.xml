@@ -8,7 +8,7 @@
     <link>https://carlosazaustre.es/blog</link>
     <description>Artículos sobre JavaScript, React, Node.js, arquitectura de software e inteligencia artificial.</description>
     <language>es</language>
-    <lastBuildDate>Thu, 16 Apr 2026 00:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 07 May 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://carlosazaustre.es/rss.xml" rel="self" type="application/rss+xml"/>
     <image>
       <url>https://carlosazaustre.es/carlos-azaustre.jpg</url>
@@ -17,6 +17,22 @@
     </image>
     <copyright>© 2026 Carlos Azaustre</copyright>
     <managingEditor>cazaustre@gmail.com (Carlos Azaustre)</managingEditor>
+  <item>
+    <title>Corsair Galleon 100 SD: el teclado que integra un Stream Deck de Elgato (análisis)</title>
+    <link>https://carlosazaustre.es/blog/corsair-galleon-100-sd-analisis</link>
+    <guid isPermaLink="true">https://carlosazaustre.es/blog/corsair-galleon-100-sd-analisis</guid>
+    <description>Corsair y Elgato firman una fusión real: teclado mecánico de gama alta con Stream Deck integrado. Lo he probado en productividad, creación de contenido y gaming para ver si los 349,99 € están justificados.</description>
+    <pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate>
+    <dc:creator>Carlos Azaustre</dc:creator>
+    <enclosure url="https://carlosazaustre.es/api/og?title=Corsair%20Galleon%20100%20SD%3A%20el%20teclado%20que%20integra%20un%20Stream%20Deck%20de%20Elgato%20(an%C3%A1lisis)" type="image/png" length="0"/>
+    <category>corsair</category>
+    <category>elgato</category>
+    <category>galleon</category>
+    <category>stream-deck</category>
+    <category>teclado</category>
+    <category>gaming</category>
+    <category>review</category>
+  </item>
   <item>
     <title>JavaScript 2026: 5 novedades que hacen el código más limpio y menos frustrante</title>
     <link>https://carlosazaustre.es/blog/javascript-2026-novedades</link>
@@ -582,18 +598,6 @@
     <enclosure url="https://carlosazaustre.es/api/og?title=Mi%20inmersi%C3%B3n%20en%20React" type="image/png" length="0"/>
     <category>react</category>
     <category>javascript</category>
-  </item>
-  <item>
-    <title>Desarrollo por componentes con Angular 1.5 y ES6/ES2015</title>
-    <link>https://carlosazaustre.es/blog/desarrollo-por-componentes-con-angular-1-5-con-es6-es2015</link>
-    <guid isPermaLink="true">https://carlosazaustre.es/blog/desarrollo-por-componentes-con-angular-1-5-con-es6-es2015</guid>
-    <description>Aprende a desarrollar con Angular 1.5 usando el método .component() y ES6/ES2015. Código más limpio, preparado para migrar a Angular 2 con UIRouter y Babel.</description>
-    <pubDate>Mon, 04 Jul 2016 00:00:00 GMT</pubDate>
-    <dc:creator>Carlos Azaustre</dc:creator>
-    <enclosure url="https://carlosazaustre.es/api/og?title=Desarrollo%20por%20componentes%20con%20Angular%201.5%20y%20ES6%2FES2015" type="image/png" length="0"/>
-    <category>angular</category>
-    <category>javascript</category>
-    <category>tutorial</category>
   </item>
   </channel>
 </rss>

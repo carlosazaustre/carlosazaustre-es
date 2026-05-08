@@ -5,7 +5,7 @@
 ## Páginas principales
 
 - [Inicio](https://carlosazaustre.es/): Página principal con presentación y últimos contenidos
-- [Blog](https://carlosazaustre.es/blog): 109 artículos sobre desarrollo web, JavaScript, arquitectura de software e IA
+- [Blog](https://carlosazaustre.es/blog): 110 artículos sobre desarrollo web, JavaScript, arquitectura de software e IA
 - [About](https://carlosazaustre.es/about): Biografía, experiencia profesional, libros y contacto
 - [Uses](https://carlosazaustre.es/uses): Stack tecnológico y herramientas que usa Carlos en su día a día
 - [Links](https://carlosazaustre.es/links): Links de interés, recursos y redes sociales
@@ -19,6 +19,7 @@
 
 ## Blog — Artículos recientes
 
+- [Corsair Galleon 100 SD: el teclado que integra un Stream Deck de Elgato (análisis)](https://carlosazaustre.es/blog/corsair-galleon-100-sd-analisis): >-
 - [JavaScript 2026: 5 novedades que hacen el código más limpio y menos frustrante](https://carlosazaustre.es/blog/javascript-2026-novedades): >-
 - [Mi segundo cerebro: cómo construí una wiki que la IA mantiene sola](https://carlosazaustre.es/blog/mi-segundo-cerebro-wiki-ia): >-
 - [Cómo construí una memoria vectorial para mi agente IA con SQLite y cero GPU](https://carlosazaustre.es/blog/memoria-vectorial-openclaw-tutorial): Mi agente IA olvidaba todo entre sesiones. Monté una memoria semántica con Gemini embeddings, SQLite y Node.js en un VPS ARM de 8€/mes. Sin GPU, sin Qdrant, sin Redis. 7.000 chunks indexados y responde en milisegundos. Aquí tienes el código.
@@ -68,7 +69,6 @@
 - [Primeros pasos con Webpack](https://carlosazaustre.es/blog/primeros-pasos-con-webpack): >-
 - [JSX para novatos](https://carlosazaustre.es/blog/jsx-para-novatos): >-
 - [Mi inmersión en React](https://carlosazaustre.es/blog/mi-inmersion-en-react): >-
-- [Desarrollo por componentes con Angular 1.5 y ES6/ES2015](https://carlosazaustre.es/blog/desarrollo-por-componentes-con-angular-1-5-con-es6-es2015): >-
 
 ## Opcional
 
