@@ -1,0 +1,76 @@
+# Carlos Azaustre
+
+> Ingeniero de Software con más de 20 años de experiencia en desarrollo web. Google Developer Expert (GDE) en Web Technologies. Creador de contenido educativo sobre JavaScript, React, Node.js, arquitectura de software e inteligencia artificial. Autor de los libros "Aprendiendo JavaScript" y "Dominando JavaScript". Profesor asociado en la Universidad Europea de Madrid.
+
+## Páginas principales
+
+- [Inicio](https://carlosazaustre.es/): Página principal con presentación y últimos contenidos
+- [Blog](https://carlosazaustre.es/blog): 109 artículos sobre desarrollo web, JavaScript, arquitectura de software e IA
+- [About](https://carlosazaustre.es/about): Biografía, experiencia profesional, libros y contacto
+- [Uses](https://carlosazaustre.es/uses): Stack tecnológico y herramientas que usa Carlos en su día a día
+- [Links](https://carlosazaustre.es/links): Links de interés, recursos y redes sociales
+
+## Recursos de contenido
+
+- [RSS Feed](https://carlosazaustre.es/rss.xml): Feed RSS del blog en formato XML
+- [Markdown completo del blog](https://carlosazaustre.es/llms-full.txt): Todo el contenido del blog en Markdown para LLMs
+- [Libros en Amazon](https://amzn.to/4tZb96k): Aprendiendo JavaScript
+- [Canal de YouTube](https://youtube.com/@carlosazaustre): Vídeos sobre programación web e IA
+
+## Blog — Artículos recientes
+
+- [JavaScript 2026: 5 novedades que hacen el código más limpio y menos frustrante](https://carlosazaustre.es/blog/javascript-2026-novedades): >-
+- [Mi segundo cerebro: cómo construí una wiki que la IA mantiene sola](https://carlosazaustre.es/blog/mi-segundo-cerebro-wiki-ia): >-
+- [Cómo construí una memoria vectorial para mi agente IA con SQLite y cero GPU](https://carlosazaustre.es/blog/memoria-vectorial-openclaw-tutorial): Mi agente IA olvidaba todo entre sesiones. Monté una memoria semántica con Gemini embeddings, SQLite y Node.js en un VPS ARM de 8€/mes. Sin GPU, sin Qdrant, sin Redis. 7.000 chunks indexados y responde en milisegundos. Aquí tienes el código.
+- [>-](https://carlosazaustre.es/blog/css-2026-elimina-javascript-chrome-146-147): >-
+- [El problema de la Inteligencia Artificial y los Programadores Junior](https://carlosazaustre.es/blog/ia-programador-junior): >-
+- [Principios SOLID en JavaScript](https://carlosazaustre.es/blog/javascript-solid): >-
+- [>-](https://carlosazaustre.es/blog/react-tutorial-modern): >-
+- [Volviendo a los Orígenes: El Arte de Armar tu Propio PC](https://carlosazaustre.es/blog/pc-2023): >-
+- [Conventional Commits - Especificación para tus mensajes de commit](https://carlosazaustre.es/blog/conventional-commits): >-
+- [>-](https://carlosazaustre.es/blog/firebase-hosting-ssr): >-
+- [Cómo configurar Husky y Lint-Staged en un proyecto](https://carlosazaustre.es/blog/husky-lintstaged): >-
+- [Cómo hacer la Dynamic Island del iPhone 14 con HTML, CSS y JavaScript](https://carlosazaustre.es/blog/dynamic-island-html): >-
+- [Cómo iniciar un proyecto React con Vite](https://carlosazaustre.es/blog/react-vite): >-
+- [Mi Setup 2022 - Trabajo en Remoto y desde casa](https://carlosazaustre.es/blog/workspace): >-
+- [Cómo hacer un acortador de URLs con Next.js y Prisma](https://carlosazaustre.es/blog/acortador-urls): >-
+- [Un Setup en tu mochila](https://carlosazaustre.es/blog/mochila): >-
+- [Cómo configurar Travis como herramienta para Integración y Despliegue continuo](https://carlosazaustre.es/blog/travis-despliegue-integracion-continua): >-
+- [Lazy loading de imágenes ya forma parte del estándar HTML](https://carlosazaustre.es/blog/lazy-loading-image): >-
+- [Cómo desplegar tu sitio en Gatsby a Firebase Hosting](https://carlosazaustre.es/blog/gatsby-deploy-firebase): >-
+- [Cómo lanzar una aplicación web en Google Cloud Run con Cloud Build](https://carlosazaustre.es/blog/google-cloud-run): >-
+- [Aprende ECMAScript 6 (ES6 o ES2015), el nuevo estándar de JavaScript](https://carlosazaustre.es/blog/ecmascript6): >-
+- [Desarrollo basado en Componentes con Vue.js](https://carlosazaustre.es/blog/desarrollo-basado-en-componentes-con-vue-js): >-
+- [Vue: Single File Components](https://carlosazaustre.es/blog/vue-single-file-components): >-
+- [El futuro de los WebComponents gracias a Polymer 3.0](https://carlosazaustre.es/blog/novedades-en-el-ecosistema-de-webcomponents-gracias-a-polymer-3-0): >-
+- [Primeros pasos en Vue](https://carlosazaustre.es/blog/primeros-pasos-en-vue): >-
+- [Cómo crear una empresa en Estonia](https://carlosazaustre.es/blog/empresa-estonia): >-
+- [Impuestos de una empresa en Estonia](https://carlosazaustre.es/blog/impuestos-estonia): >-
+- [Qué es la e-residency de Estonia y como conseguirla](https://carlosazaustre.es/blog/e-residency): >-
+- [Docker como entorno de desarrollo local](https://carlosazaustre.es/blog/docker-como-entorno-de-desarrollo-local): >-
+- [ES6 Tagged Template Literals](https://carlosazaustre.es/blog/es6-tagged-template-literals): >-
+- [WebComponents Nativos: Cómo pasar propiedades](https://carlosazaustre.es/blog/webcomponents-nativos-como-pasar-propiedades): >-
+- [Eligiendo un banco online sin comisiones. Mi experiencia con N26](https://carlosazaustre.es/blog/banco-online-sin-comisiones): >-
+- [Viajar a Estados Unidos de forma barata. Nuestra experiencia](https://carlosazaustre.es/blog/viajar-estados-unidos): >-
+- [¿Qué es Flux? Entendiendo su arquitectura](https://carlosazaustre.es/blog/como-funciona-flux): >-
+- [Cómo crear un API REST usando Node.js, Express y MongoDB](https://carlosazaustre.es/blog/como-crear-una-api-rest-usando-node-js): >-
+- [Qué es lo que me gusta de Vue.js](https://carlosazaustre.es/blog/que-es-lo-que-me-gusta-de-vue-js): >-
+- [¿Qué son las Firebase Cloud Functions?](https://carlosazaustre.es/blog/que-son-las-firebase-cloud-functions): >-
+- [Mi experiencia cambiando de AngularJS a ReactJS](https://carlosazaustre.es/blog/mi-experiencia-cambiando-de-angularjs-a-reactjs): >-
+- [¿Cómo funciona Redux? Conceptos básicos](https://carlosazaustre.es/blog/como-funciona-redux-conceptos-basicos): >-
+- [Cómo crear un WebComponent de forma nativa](https://carlosazaustre.es/blog/como-crear-webcomponent-de-forma-nativa): >-
+- [4 Formas de crear un Componente en React](https://carlosazaustre.es/blog/formas-de-crear-un-componente-en-react): >-
+- [Resumen de 2016 y propósitos para 2017](https://carlosazaustre.es/blog/2016): >-
+- [Mi experiencia cómo mentor en Google Launchpad Week](https://carlosazaustre.es/blog/mi-experiencia-como-mentor-en-google-launchpad-week): >-
+- [Usando Firebase Storage con React.js](https://carlosazaustre.es/blog/usando-firebase-storage-con-react-js): >-
+- [Cómo conectar Firebase a una aplicación React](https://carlosazaustre.es/blog/conectando-firebase-a-react): >-
+- [Estructura y funcionamiento de un componente en React](https://carlosazaustre.es/blog/estructura-de-un-componente-en-react): >-
+- [Primeros pasos con Webpack](https://carlosazaustre.es/blog/primeros-pasos-con-webpack): >-
+- [JSX para novatos](https://carlosazaustre.es/blog/jsx-para-novatos): >-
+- [Mi inmersión en React](https://carlosazaustre.es/blog/mi-inmersion-en-react): >-
+- [Desarrollo por componentes con Angular 1.5 y ES6/ES2015](https://carlosazaustre.es/blog/desarrollo-por-componentes-con-angular-1-5-con-es6-es2015): >-
+
+## Opcional
+
+- [Sitemap](https://carlosazaustre.es/sitemap.xml): Mapa completo del sitio en XML
+- Cada artículo del blog está disponible en Markdown limpio añadiendo .md a la URL: `https://carlosazaustre.es/blog/<slug>.md`
