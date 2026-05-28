@@ -51,6 +51,13 @@ jobs:
           chmod 600 ~/.ssh/deploy_key
           printf 'Host *\n  StrictHostKeyChecking no\n  UserKnownHostsFile /dev/null\n' > ~/.ssh/config
 
+      - name: Verify Tailscale connectivity
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+        run: |
+          tailscale status
+          tailscale ping --c 3 "$VPS_HOST" || true
+
       - name: Sync to VPS
         env:
           VPS_USER: ${{ secrets.VPS_USER }}
