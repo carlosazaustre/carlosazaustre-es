@@ -148,6 +148,38 @@ const books = [
   },
 ];
 
+const BASE_URL = "https://carlosazaustre.es";
+
+const aboutJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": `${BASE_URL}/about#profilepage`,
+      url: `${BASE_URL}/about`,
+      name: "Sobre mí — Carlos Azaustre",
+      inLanguage: "es",
+      mainEntity: { "@id": `${BASE_URL}/#person` },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: BASE_URL },
+        { "@type": "ListItem", position: 2, name: "Sobre mí", item: `${BASE_URL}/about` },
+      ],
+    },
+    ...books.map((book) => ({
+      "@type": "Book",
+      name: book.title,
+      isbn: book.isbn,
+      url: book.url,
+      image: `${BASE_URL}${book.cover}`,
+      author: { "@id": `${BASE_URL}/#person` },
+      inLanguage: "es",
+    })),
+  ],
+};
+
 function formatStat(n: number | null): string {
   if (n === null || n === 0) return "—";
   if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
@@ -204,6 +236,10 @@ export default async function AboutPage() {
 
   return (
     <div style={{ maxWidth: "960px", margin: "0 auto", padding: "3rem 1.5rem" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}
+      />
 
       {/* Hero */}
       <section

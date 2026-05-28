@@ -1,0 +1,146 @@
+---
+title: 'Elgato Wave Link 3.0: el mezclador de audio gratis que ya no necesita hardware Elgato'
+date: '2026-05-28'
+slug: elgato-wave-link-3-analisis
+description: >-
+  Análisis de Elgato Wave Link 3.0, el mezclador de audio reconstruido desde
+  cero, nativo en Mac y Windows, gratuito y compatible con cualquier micrófono
+  o interfaz. Probado en un flujo real de formación online, directos y
+  grabación de cursos.
+tags:
+  - elgato
+  - wave-link
+  - audio
+  - streaming
+  - obs
+  - creadores-contenido
+  - software
+  - review
+excerpt: >-
+  Wave Link 3.0 se reescribe desde cero, deja de exigir hardware Elgato y se
+  vuelve gratis. Lo he probado en grabación de cursos, directos y videollamadas
+  para ver si por fin es una alternativa seria a Voicemeeter o Loopback.
+related:
+  - corsair-galleon-100-sd-analisis
+  - workspace
+  - el-escritorio-de-un-desarrollador-web
+seoTitle: 'Elgato Wave Link 3.0: análisis del mezclador de audio gratuito para creadores'
+---
+
+Cuando grabas cursos, haces directos o das clases online, el audio se complica más rápido que el vídeo. En una sesión normal puedo tener sonando a la vez el micrófono, el navegador con una demo, Discord con alumnos, una app que comparto en pantalla y música de fondo. Y cada uno de esos canales tiene que ir a un sitio distinto: lo que escucho yo no es lo que escucha el alumno en directo, y lo que se graba para el curso no es lo que oye quien me llama por videollamada.
+
+Durante años, en Windows esto se resolvía con Voicemeeter (potente, pero feo y con una curva pronunciada) y en Mac con Loopback de Rogue Amoeba (excelente, pero 99 € de pago). Elgato tenía **Wave Link**, su propia propuesta, pero arrastraba dos problemas serios: necesitabas un micrófono Wave o un Stream Deck + para sacarle partido completo, y la app en Mac iba claramente por detrás de la versión Windows.
+
+La **versión 3.0** rompe con eso. La he estado probando varias semanas en mi flujo real de trabajo. Puedes descargarla gratis desde [la página oficial de Elgato](https://www.elgato.com/es/es/s/downloads).
+
+## Qué cambia respecto a la 2.0 (y por qué importa)
+
+Elgato ha reescrito Wave Link **desde cero**, con frameworks nativos en Mac y Windows. Esto no es marketing: en Apple Silicon la diferencia se nota en arranque, latencia y consumo. Hay además un **modo Performance** en macOS con buffer optimizado y compensación de drift para reducir latencia.
+
+Las tres novedades que cambian la conversación:
+
+- **Es gratis**. Versiones anteriores ya lo eran en parte, pero ahora se posiciona explícitamente como software libre de uso, sin hardware obligatorio.
+- **Funciona con cualquier micrófono o interfaz**. Blue Yeti, HyperX QuadCast, Shure SM7B vía interfaz, Focusrite Scarlett, MOTU M2, headsets USB... lo que el sistema reconozca como entrada vale.
+- **Hasta 5 submixes independientes**, lo cual es bastante más de lo que ofrecen alternativas similares.
+
+Si ya tenías un Wave XLR o un Wave:3, ganas además control sobre **Clipguard 2.0**, el DSP interno y los inserts VST, todo desde la propia app. Pero ya no es un requisito.
+
+## El modelo mental: canales × mezclas
+
+La curva inicial existe, pero el concepto es simple si te lo explican bien. Wave Link funciona como una **matriz**:
+
+- En el **eje vertical** tienes los **canales de entrada**: micrófono, Discord, navegador, una app concreta, la salida de una capturadora, un segundo PC vía interfaz...
+- En el **eje horizontal** tienes las **mezclas de salida**: hasta cinco. Cada una es independiente y puede ir a un destino distinto.
+
+Cada intersección tiene su propio fader. Es exactamente el patrón mental de "hundir los barquitos": decides cuánto de cada canal entra en cada mezcla.
+
+![Vista principal de Wave Link 3.0 con la matriz de canales y mezclas](/images/blog/elgato-wave-link-3/wave-link-01-mixes.png)
+*Vista de Mixes: canales de entrada a la izquierda (Wave XLR, Stream Deck, Voice Apps, Browser, Zoom, QuickTime) y mezclas de salida en la parte superior (Personal Mix, Stream Mix, Chat Mix).*
+
+Para un flujo de formación online, esto se traduce en cosas como:
+
+- **Mezcla 1 (Stream)**: mic + música + Discord + browser. Lo que escucha la audiencia.
+- **Mezcla 2 (Grabación)**: mic + browser, sin música ni notificaciones. Pista limpia para editar el curso después.
+- **Mezcla 3 (Yo)**: todo, con el mic atenuado para no escucharme con eco.
+- **Mezcla 4 (Videollamada)**: solo mic. Lo que sale por Discord o Meet.
+- **Mezcla 5 (Reserva)**: para experimentos o un canal de monitorización extra.
+
+Esto resuelve un problema antiguo: dejar de pelearte con "el sonido del navegador se está colando en la videollamada" o "la música se grabó en la pista del curso". Cada destino es una salida distinta, configurable desde el SO.
+
+## Casos de uso reales para creadores educativos
+
+Donde Wave Link 3.0 cambia mi día a día:
+
+1. **Compartir pantalla con audio de la app**. Si estoy enseñando una demo de una herramienta que reproduce sonido (un editor de vídeo, un sintetizador, lo que sea), Wave Link lo trata como un canal más. Lo envío a la mezcla del directo pero no a la grabación del curso si no quiero ese audio doblado.
+2. **Cortar música solo en la pista de grabación**. La música de fondo da ambiente al directo pero ensucia la pista master de un curso. Con una mezcla independiente para grabación, el problema desaparece.
+3. **Atajos físicos con Stream Deck**. La integración exporta automáticamente un perfil de Stream Deck con faders, botones de silencio por canal y por mezcla. En Stream Deck Plus o XL los diales físicos hacen de faders virtuales, lo cual es muy cómodo durante un directo.
+
+Aquí lo conté en formato corto:
+
+<YouTube videoId="dtFu3W8x9lY" />
+
+## Efectos, VST3 y AU sin pasar por caja
+
+![Configuración de efectos por canal en Wave Link 3.0](/images/blog/elgato-wave-link-3/wave-link-02-effects.png)
+*Panel de efectos del canal Wave XLR: Clipguard y filtro de graves como efectos de hardware, Voice Focus (ai-coustics) como efecto de software.*
+
+Los efectos se aplican por canal, no solo al micrófono. Esto abre opciones interesantes: un compresor sobre Discord para evitar picos de alumnos con micrófonos mal configurados, un EQ para suavizar el navegador, o un noise gate sobre la capturadora.
+
+- En Windows detecta automáticamente plugins **VST3**; VST2 requiere ruta manual.
+- En macOS usa el formato nativo **AU**.
+- Los efectos se apilan en cadena y el orden se reordena arrastrando.
+
+El **Marketplace de Elgato** está integrado dentro de la app: filtros, compresores, EQs, varios gratuitos y otros de pago, incluyendo algunos de terceros conocidos (VoiceMod entre ellos). Si ya tienes tus plugins de toda la vida, los usas sin más.
+
+En macOS además puedes copiar y pegar efectos entre canales, seleccionar varios a la vez y renombrarlos con doble clic. Detalles pequeños que ahorran tiempo cuando configuras varias plantillas.
+
+![Vista de dispositivo Wave XLR con controles de entrada y monitorización](/images/blog/elgato-wave-link-3/wave-link-03-device.png)
+*Vista de dispositivo: ganancia de entrada, Gain Lock, phantom power 48V y controles de monitorización directamente en Wave Link.*
+
+## Integraciones: OBS, Discord y Stream Deck
+
+La parte más práctica del setup:
+
+- **OBS**: en los ajustes de fuente de audio eliges la mezcla que quieras (por ejemplo, "Stream Mix"). No tienes que pelearte con dispositivos virtuales del sistema.
+- **Discord**: en ajustes de voz eliges el canal que has dedicado a la videollamada. El resto del sistema no se entera.
+- **Stream Deck**: el plugin se ha reescrito para la 3.0. Genera el perfil completo a partir de tu configuración actual: faders, botones de mute, activación de efectos, cambio de mezcla, todo.
+
+En Mac hay además una guinda que no esperaba: **integración con Siri y Apple Shortcuts**. Puedes silenciar canales, ajustar volúmenes o cambiar de mezcla con un atajo o por voz. Para arrancar un directo o cortar el micrófono sin tocar nada, es útil.
+
+## Vista compacta y uso diario
+
+Cuando ya tienes los canales y mezclas montados, no necesitas ver la matriz entera todo el rato. Wave Link 3.0 tiene una **vista compacta** disponible en Mac y Windows que reduce la interfaz a lo esencial: faders, mutes y monitor. Es lo que dejo abierto durante un directo en una esquina del segundo monitor.
+
+## Lo mejor y lo mejorable
+
+Después de varias semanas usándolo, este es mi resumen.
+
+**Lo mejor**
+
+- Es **gratis** y funciona con cualquier micrófono o interfaz, no solo Elgato.
+- La reescritura nativa se nota: arranca más rápido, consume menos y la latencia es menor.
+- **5 submixes** independientes cubren con holgura los casos de uso más complejos.
+- Efectos por canal con VST3/AU detectados automáticamente.
+- Integración con OBS, Discord y Stream Deck pulida y sin fricción.
+- Vista compacta y, en Mac, integración con Siri y Shortcuts.
+
+**Lo mejorable**
+
+- La **curva inicial** sigue existiendo: la primera vez que abres la matriz de canales × mezclas hay que pararse a pensar. No es algo que aprendas en cinco minutos.
+- En **Windows** el plugin VST2 requiere ruta manual; solo VST3 es plug & play.
+- En **Mac**, aunque ha mejorado mucho, sigue habiendo pequeñas diferencias funcionales respecto a Windows (por ejemplo, la integración del Marketplace está más madura en Win).
+- **No sustituye a Loopback para rutas creativas avanzadas** (combinar entradas en dispositivos virtuales para apps fuera del ecosistema). Cubre el 95% de los casos de creador, pero no es un router de audio genérico tipo JACK.
+
+## Veredicto
+
+Wave Link 3.0 deja de ser "el complemento de mi micrófono Elgato" y se convierte en una **herramienta independiente** que compite de tú a tú con Voicemeeter en Windows y con Loopback en Mac. Que sea gratis y que no exija hardware Elgato cambia las reglas del juego para quien empieza a montar un setup de creación.
+
+Para mi flujo, que mezcla formación online, directos y grabación de cursos, ya es la herramienta por defecto. Si vienes de Voicemeeter y te has acostumbrado a su flexibilidad bruta, te puede chocar al principio la lógica de matriz; pero a cambio ganas una interfaz que entiendes de un vistazo y un setup reproducible.
+
+Si solo grabas vídeos sueltos con un micrófono y nada más, es overkill. Pero en cuanto aparece un segundo origen de audio en tu flujo (Discord, una app que comparte sonido, música de fondo), Wave Link 3.0 te quita de encima horas de configuración a lo largo del año.
+
+## Vídeo tutorial completo
+
+Si quieres ver paso a paso cómo configurarlo desde cero, el equipo de Elgato ha publicado un tutorial oficial en español que cubre desde la primera configuración hasta los efectos y el Marketplace:
+
+<YouTube videoId="hJJEda76yMA" />
