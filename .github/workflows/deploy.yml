@@ -51,13 +51,6 @@ jobs:
           chmod 600 ~/.ssh/deploy_key
           printf 'Host *\n  StrictHostKeyChecking no\n  UserKnownHostsFile /dev/null\n' > ~/.ssh/config
 
-      - name: Verify Tailscale connectivity
-        env:
-          VPS_HOST: ${{ secrets.VPS_HOST }}
-        run: |
-          tailscale status
-          tailscale ping --c 3 "$VPS_HOST" || true
-
       - name: Sync to VPS
         env:
           VPS_USER: ${{ secrets.VPS_USER }}
@@ -81,6 +74,6 @@ jobs:
             [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
             cd /home/openclaw/.openclaw/workspace/cazaustre-web
             npm ci --omit=dev
-            pm2 reload ecosystem.config.js --update-env || pm2 start ecosystem.config.js
+            pm2 restart ecosystem.config.js --update-env 2>/dev/null || pm2 start ecosystem.config.js
             pm2 save
           REMOTE
