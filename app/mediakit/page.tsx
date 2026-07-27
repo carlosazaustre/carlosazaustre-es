@@ -92,7 +92,7 @@ const RATE_CARD = [
   {
     emoji: "📦",
     title: "Pack Instagram + TikTok + LinkedIn",
-    price: "1.400€",
+    price: "1.650€",
     note: "+ IVA si aplica",
     badge: "3 plataformas",
     badgeBg: "#E1306C",
@@ -108,7 +108,7 @@ const RATE_CARD = [
   {
     emoji: "⚡",
     title: "YouTube Short",
-    price: "650€",
+    price: "850€",
     note: "+ IVA si aplica",
     badge: "YouTube Shorts",
     badgeBg: "#FF0000",
@@ -122,7 +122,7 @@ const RATE_CARD = [
   {
     emoji: "🎙️",
     title: "Mención / Ad-roll en YouTube",
-    price: "400€",
+    price: "650€",
     note: "+ IVA si aplica",
     badge: "YouTube",
     badgeBg: "#FF0000",
@@ -137,7 +137,7 @@ const RATE_CARD = [
   {
     emoji: "🎬",
     title: "Vídeo Completo en YouTube",
-    price: "1.200€",
+    price: "2.000€",
     note: "+ IVA si aplica",
     badge: "YouTube · Exclusivo",
     badgeBg: "#1A1A1A",
@@ -198,8 +198,8 @@ const RATE_CARD = [
   {
     emoji: "🎤",
     title: "Ponencia / Taller / Mesa Redonda",
-    price: "1.500€",
-    note: "+ gastos de desplazamiento",
+    price: "1.650€",
+    note: "+ IVA + gastos de desplazamiento",
     badge: "Evento presencial",
     badgeBg: "#059669",
     highlight: false,
