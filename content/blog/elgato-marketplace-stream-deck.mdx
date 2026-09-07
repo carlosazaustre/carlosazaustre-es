@@ -1,0 +1,152 @@
+---
+title: 'Elgato Marketplace: la "App Store" del Stream Deck que te ahorra horas de configuración'
+date: '2026-09-07'
+slug: elgato-marketplace-stream-deck
+description: >-
+  Qué es Elgato Marketplace, cómo se integra con Stream Deck, OBS, Wave Link y
+  Camera Hub, y cómo lo uso en un flujo real de creador educativo para grabar
+  cursos, dar clases online y publicar vídeos sin pelearme con la configuración.
+tags:
+  - elgato
+  - marketplace
+  - stream-deck
+  - obs
+  - wave-link
+  - creadores-contenido
+  - herramientas
+excerpt: >-
+  Elgato Marketplace es el repositorio de plugins, perfiles, escenas, música,
+  LUTs y hasta archivos 3D del ecosistema Elgato. Te cuento cómo lo uso para
+  grabar cursos y dar clases, y por qué es la parte del ecosistema que menos
+  gente aprovecha.
+related:
+  - elgato-wave-link-3-analisis
+  - corsair-galleon-100-sd-analisis
+  - workspace
+seoTitle: 'Elgato Marketplace: qué es y cómo usarlo con Stream Deck, OBS y Wave Link'
+---
+
+Cuando compras un Stream Deck acabas haciendo lo mismo que hace todo el mundo: montar cuatro botones para silenciar el micro, abrir Spotify y cambiar de escena en OBS. Y ahí se queda la cosa durante meses.
+
+En mi caso, que me dedico a grabar cursos, dar clases online y publicar vídeos de programación, el problema nunca ha sido el hardware sino el tiempo que se va en dejarlo todo configurado. Montar una escena de OBS decente, encontrar música que puedas usar sin sustos de copyright, mantener iconos coherentes entre perfiles, ajustar el audio para que la voz suene bien. Cada una de esas tareas se come una tarde.
+
+De ahí que **Elgato Marketplace** me parezca la parte del ecosistema que menos gente aprovecha. Es una plataforma de recursos digitales integrada en las propias apps de Elgato, donde descargas plugins, perfiles, escenas, sonidos y assets ya hechos en lugar de construirlos tú desde cero. Puedes verla en [marketplace.elgato.com](https://marketplace.elgato.com/).
+
+## Qué es exactamente Marketplace
+
+La forma más rápida de explicarlo es que funciona como una **App Store del ecosistema Elgato**. No es una web aparte a la que entras de vez en cuando, sino un catálogo que vive dentro de Stream Deck, Wave Link, Camera Hub, OBS e iCUE, y que se actualiza de forma continua.
+
+Lo que encuentras dentro, por categorías:
+
+- **Plugins y perfiles preconfigurados** para Stream Deck.
+- **Iconos y elementos visuales** para personalizar botones y perfiles.
+- **Música y efectos de sonido** listos para directos, vídeos y grabaciones.
+- **Presets y efectos de voz** (VST) que se aplican desde Wave Link.
+- **Alertas, escenas y transiciones para OBS**, ahora con instalación directa vía Marketplace Connect.
+- **LUTs y fondos** para Camera Hub.
+- **Archivos 3D** para imprimirte accesorios y soportes de tus dispositivos.
+
+Hay contenido gratuito y de pago, y buena parte de lo interesante, incluidos los plugins oficiales, es gratis.
+
+![Vista principal de Elgato Marketplace con las categorías de contenido](/images/blog/elgato-marketplace/marketplace-01-home.webp)
+*Página principal de Marketplace. En la barra lateral, las secciones por producto (Stream Deck, Wave Link, Camera Hub, iCUE, OBS y 3D); bajo el buscador, los atajos por tipo de recurso.*
+
+## El Stream Deck es el centro de todo
+
+Aquí es donde Marketplace tiene más recorrido. Sin plugins, un Stream Deck se queda en una botonera de accesos directos bastante cara.
+
+Los que más uso en mi día a día:
+
+1. **[Plugin de Discord](https://marketplace.elgato.com/product/discord-e3559f36-d31d-4529-ab1f-739955e2ac7a)**. Silenciar, cambiar de canal y ver quién habla sin salir de la pantalla que estoy compartiendo. En una clase con alumnos conectados, esto es lo que te evita el clásico "perdona, no te escuchaba".
+2. **[Plugin de Twitch](https://marketplace.elgato.com/product/twitch-54e38b3b-89ab-4400-b55f-645378785709)**, actualizado hace poco. Control de directo, marcadores y moderación desde el propio botón.
+3. **[Window Mover](https://marketplace.elgato.com/product/window-mover-f204b85a-2ca8-4139-9752-2074e15d5780)**. Este es el que menos esperaba usar y el que más ha cambiado mi flujo: coloca ventanas en posiciones y monitores concretos con un botón. Para grabar un curso, con el editor a la izquierda, el navegador a la derecha y la terminal abajo, poder reproducir el mismo layout exacto en cada sesión se agradece más de lo que parece.
+
+Y por encima de los plugins están los **perfiles**. Un perfil es un conjunto completo de botones ya montado que te descargas y te funciona tal cual. En vez de diseñar desde cero el perfil de grabación, partes de uno que alguien ya pensó y lo ajustas a tu gusto.
+
+Para un creador educativo, el patrón que a mí me funciona es tener tres perfiles y ir cambiando entre ellos:
+
+- **Grabación de curso**: control de OBS, Window Mover para el layout, marcadores de capítulo, mute limpio.
+- **Clase en directo**: Discord, compartir pantalla, temporizador, escenas con cámara.
+- **Edición**: atajos del editor de vídeo, navegación por timeline, exportación.
+
+Montar eso a mano me llevó en su día bastantes horas. Partiendo de perfiles de Marketplace habría sido cuestión de un rato.
+
+![Catálogo de plugins de Stream Deck en Elgato Marketplace](/images/blog/elgato-marketplace/marketplace-02-streamdeck.webp)
+*Catálogo de plugins de Stream Deck filtrado por macOS. Los tres que menciono arriba (Discord, Twitch y Window Mover) están aquí, y todos son gratuitos.*
+
+## Marketplace Connect: escenas de OBS en un clic
+
+Esta es la novedad que más tiempo ahorra si trabajas con OBS. **[Marketplace Connect](https://www.elgato.com/us/en/s/marketplace-connect-for-obs)** es un plugin de OBS Studio que instala colecciones de escenas completas desde Marketplace, con sus overlays, sus fuentes, sus transiciones y los plugins que esa colección necesita.
+
+El flujo es directo: abres OBS, vas a `Tools > Elgato Marketplace Connect`, inicias sesión y ves tu biblioteca. Eliges una colección, pulsas descargar y un instalador guiado la deja montada. Si falta algún plugin de OBS, te avisa y te da el enlace.
+
+Lo interesante para quien viene del Stream Deck es que las colecciones de escenas **pueden incluir su propio perfil de Stream Deck** y sus acciones. Te bajas un setup de directo y llega ya cableado a tu botonera, sin asociar escena por escena a mano.
+
+Es gratuito (solo pide cuenta de Elgato) y está disponible tanto en Windows como en macOS.
+
+![Sección de OBS en Elgato Marketplace con Marketplace Connect y colecciones de escenas](/images/blog/elgato-marketplace/marketplace-03-obs.webp)
+*Sección de OBS en Marketplace: la descarga de Marketplace Connect arriba y, debajo, las colecciones de escenas listas para instalar. Aquí conviven paquetes gratuitos y de pago.*
+
+## Integrado en Wave Link: efectos de audio a un clic
+
+Cuando [analicé Wave Link 3.0](/blog/elgato-wave-link-3-analisis) mencioné el Marketplace de pasada, pero da bastante juego como ejemplo de qué significa aquí "integrado".
+
+En Wave Link, el catálogo de efectos vive **dentro de la app**. Ves un compresor, un EQ o un filtro que te interesa, lo instalas desde ahí mismo y aparece disponible como efecto en el canal que quieras. Sin descarga manual, sin buscar la carpeta de VST3 y sin reiniciar nada.
+
+El caso más claro es **[Voice Focus](https://marketplace.elgato.com/product/voice-focus-cadb20d0-18f1-45da-bf59-0f898f1e1767)**, el procesado de voz basado en IA de ai-coustics: limpia ruido de fondo y da cuerpo a la voz sin que tengas que saber nada de cadenas de audio. Si grabas cursos en una habitación sin tratamiento acústico, como es mi caso, te ahorra repetir tomas. Este va aparte: cuesta 43,04 €, mientras que el compresor, el ecualizador y el de-esser de Elgato son gratuitos.
+
+En esa misma línea, [Wave Link 3.0](https://marketplace.elgato.com/product/wave-link-3-beta-aa41150f-9645-4275-b064-7642ba6a17ae) y [Wave Cast](https://marketplace.elgato.com/audio/wavecast) también se distribuyen desde Marketplace, igual que cualquier otro recurso del catálogo.
+
+![Catálogo de efectos de audio de Wave Link en Elgato Marketplace](/images/blog/elgato-marketplace/marketplace-04-wavelink.webp)
+*Efectos de audio para Wave Link. Este mismo catálogo es el que aparece embebido dentro de la app cuando añades un efecto a un canal.*
+
+## Lo que no es software: música, LUTs y archivos 3D
+
+Hay dos categorías que suelen pasar desapercibidas y que a mí me resuelven problemas bastante concretos.
+
+La primera es la **música y los efectos de sonido**. Tener una biblioteca dentro del ecosistema, pensada para usarse en directos y vídeos, te quita de encima la búsqueda eterna de pistas que no te tumben un vídeo por copyright. Para intros, transiciones entre módulos de un curso o fondo de un directo, cumple de sobra.
+
+La segunda son los **archivos 3D**. Si tienes impresora, hay soportes, adaptadores y accesorios para dispositivos Elgato que puedes imprimirte en lugar de comprarlos. Es un extra pequeño, pero explica bastante bien hasta dónde llega la idea de plataforma.
+
+Y para quien use la cámara con Camera Hub, los **LUTs y fondos** son la forma rápida de mantener un look consistente entre vídeos sin tocar el grading en edición.
+
+## Convertirte en Maker: publicar y monetizar lo tuyo
+
+En Marketplace también **puedes publicar**. Cualquier creador puede darse de alta como *Maker*, subir sus propias creaciones (iconos, perfiles, plugins, escenas, música) y monetizarlas. La documentación para desarrolladores está en [maker.elgato.com](https://maker.elgato.com/).
+
+Para un perfil como el mío la lectura es evidente: si ya montas perfiles de Stream Deck para tu flujo de trabajo, o packs de iconos para tu comunidad, ese trabajo ya está hecho. Publicarlo es una vía de ingresos adicional que no depende de la plataforma de vídeo de turno, y encaja bien si tu audiencia es técnica.
+
+No vale para cualquiera, claro. Un producto publicado exige mantenimiento y soporte. Pero si desarrollas un plugin porque lo necesitabas tú, distribuirlo dentro del ecosistema tiene mucho más alcance que dejarlo en un repositorio suelto.
+
+## Lo mejor y lo mejorable
+
+Después de un tiempo usándolo como parte del flujo diario, este es mi resumen.
+
+**Lo mejor**
+
+- Te quita de encima la fase de **configuración desde cero**, que es donde se va el tiempo de verdad al montar un setup.
+- Está **integrado dentro de las apps** (Stream Deck, Wave Link, OBS vía Connect, Camera Hub), sin descargas ni instalaciones manuales.
+- Mucho contenido de calidad es **gratuito**, incluidos los plugins oficiales más útiles.
+- Cubre bastante más que software: audio, visuales, música y hasta piezas 3D.
+- El **programa de Makers** abre la puerta a publicar y monetizar lo que ya construyes para ti.
+
+**Lo mejorable**
+
+- **La curación es irregular**. Al ser abierto, conviven plugins mantenidos con otros abandonados. Conviene mirar la fecha de última actualización antes de instalar.
+- El **descubrimiento se queda corto**. La búsqueda funciona si sabes qué buscas, pero es difícil dar con la joya que no sabías que existía. Por eso Window Mover se me pasó durante meses.
+- **Depende del ecosistema Elgato**. Fuera de sus apps, estos recursos no te sirven de nada.
+- Algunas fichas de producto son **muy escuetas** y tienes que instalar la herramienta para entender del todo qué hace.
+
+## Veredicto
+
+Marketplace no es algo que compres aparte. Es la capa que hace que el hardware que ya tienes rinda bastante más, y probablemente sea lo que más gente tiene delante sin llegar a usarlo.
+
+Si tienes un Stream Deck y lo estás usando solo como botonera de accesos directos, mi recomendación es concreta: dedica una tarde a recorrer el catálogo de plugins y perfiles, instala Marketplace Connect si trabajas con OBS, y monta los perfiles por contexto en lugar de por aplicación. En un par de semanas notas la diferencia en tu flujo diario.
+
+Si no tienes hardware Elgato, Marketplace por sí solo no es razón suficiente para comprarlo. Pero si ya estás dentro, o te lo estás planteando, es un argumento que casi nunca aparece en los análisis y que conviene tener en cuenta: además del dispositivo, te llevas todo lo que la comunidad ha construido encima.
+
+## Vídeo
+
+Lo resumí también en formato corto:
+
+<YouTube videoId="nzDMwWpMKII" />
