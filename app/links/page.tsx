@@ -108,6 +108,20 @@ export default async function LinksPage() {
           Ingeniero de software, profesor asociado en la Universidad Europea y creador de contenido educativo sobre JavaScript, arquitectura de software e IA.
         </p>
 
+        <div style={{ marginBottom: "1.75rem" }}>
+          <LinkButton
+            href="https://cloud.nan.builders/r/HD58NGYD"
+            bg="#7D39EB"
+            emoji="NaN"
+            logo="/logo-nan.svg"
+            title="NaN.builders"
+            sub="Comunidad para crear proyectos con IA y modelos abiertos."
+            cta="Descubre NaN"
+            affiliate
+            accentColor="#7D39EB"
+          />
+        </div>
+
         {/* ── Section: Comunidad ── */}
         <SectionHeader>Comunidad</SectionHeader>
         <div style={{ display: "flex", flexDirection: "column", gap: "0.625rem", marginBottom: "1rem" }}>
@@ -236,17 +250,18 @@ function SectionHeader({ children }: { children: React.ReactNode }) {
 }
 
 function LinkButton({
-  href, bg, textColor = "#fff", emoji, title, sub, thumbnail, cover, accent, isInternal,
+  href, bg, textColor = "#fff", emoji, title, sub, thumbnail, cover, accent, isInternal, cta, affiliate, logo, accentColor,
 }: {
   href: string; bg: string; textColor?: string; emoji: string;
   title: string; sub: string; thumbnail?: string; cover?: string; accent?: boolean; isInternal?: boolean;
+  cta?: string; affiliate?: boolean; logo?: string; accentColor?: string;
 }) {
   const hasMedia = thumbnail || cover;
   const inner = (
     <div style={{ display: "flex", alignItems: "center", gap: "0.875rem",
       padding: hasMedia ? "0.6rem 0.875rem 0.6rem 0.6rem" : "0.75rem 0.875rem",
       background: "#fff", border: "3px solid #1A1A1A", borderRadius: "4px",
-      boxShadow: `4px 4px 0 ${accent ? "#FFCC00" : "#1A1A1A"}`,
+      boxShadow: `4px 4px 0 ${accentColor ?? (accent ? "#FFCC00" : "#1A1A1A")}`,
       textDecoration: "none", width: "100%", boxSizing: "border-box" as const }}>
 
       {/* Icon / Thumbnail / Cover */}
@@ -266,6 +281,11 @@ function LinkButton({
           <Image src={cover} alt={title} width={32} height={44}
             style={{ display: "block", width: "100%", height: "100%", objectFit: "cover" }} />
         </div>
+      ) : logo ? (
+        <div style={{ width: 64, height: 40, background: bg, border: "2px solid #1A1A1A",
+          borderRadius: "4px", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+          <Image src={logo} alt="" width={52} height={22} style={{ objectFit: "contain" }} />
+        </div>
       ) : (
         <div style={{ width: 40, height: 40, background: bg, border: "2px solid #1A1A1A",
           borderRadius: "4px", display: "flex", alignItems: "center", justifyContent: "center",
@@ -283,12 +303,24 @@ function LinkButton({
           {title}
         </div>
         <div style={{ fontFamily: "'Space Mono', monospace", fontSize: "0.62rem",
-          color: "#888", marginTop: "2px", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+          color: affiliate ? "#444" : "#888", marginTop: "2px", lineHeight: affiliate ? 1.6 : undefined,
+          overflow: affiliate ? undefined : "hidden", textOverflow: affiliate ? undefined : "ellipsis",
+          whiteSpace: affiliate ? "normal" : "nowrap" }}>
           {sub}
         </div>
+        {cta && (
+          <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, fontSize: "0.85rem", color: "#1A1A1A", marginTop: "0.75rem" }}>
+            {cta} <span aria-hidden="true">→</span>
+          </div>
+        )}
+        {affiliate && (
+          <div style={{ fontFamily: "'Space Mono', monospace", fontSize: "0.75rem", color: "#444", marginTop: "0.375rem" }}>
+            Enlace de afiliado
+          </div>
+        )}
       </div>
 
-      <span style={{ color: "#ccc", fontSize: "0.85rem", flexShrink: 0 }}>→</span>
+      {!cta && <span style={{ color: "#ccc", fontSize: "0.85rem", flexShrink: 0 }}>→</span>}
     </div>
   );
 
@@ -297,7 +329,8 @@ function LinkButton({
   }
 
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" className="links-btn"
+    <a href={href} target="_blank" rel={affiliate ? "sponsored noopener noreferrer" : "noopener noreferrer"}
+      className={affiliate ? "links-btn rounded-sm focus-visible:outline-3 focus-visible:outline-offset-8 focus-visible:outline-[#1A1A1A]" : "links-btn"}
       style={{ display: "block", textDecoration: "none" }}>
       {inner}
     </a>
