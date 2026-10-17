@@ -50,7 +50,8 @@ jobs:
         run: |
           node --input-type=module <<'NODE'
           import { writeFileSync } from 'node:fs';
-          import { processEnv } from '@next/env';
+          import nextEnv from '@next/env';
+          const { processEnv } = nextEnv;
           if (!process.env.YOUTUBE_API_KEY) delete process.env.YOUTUBE_API_KEY;
           processEnv([{ path: '.env', contents: process.env.ENV_FILE ?? '', env: {} }]);
           writeFileSync(`${process.env.RUNNER_TEMP}/youtube-api-key`, process.env.YOUTUBE_API_KEY ?? '', { mode: 0o600 });
