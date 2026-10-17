@@ -56,4 +56,15 @@ const optimized = await request("/_next/image?url=%2Fog-background.jpg&w=640&q=7
 assert.match(optimized.headers.get("content-type") ?? "", /image\//);
 const redirect = await request("/blog/quetechcuentas-01", { status: 308 });
 assert.equal(new URL(redirect.headers.get("location"), base).pathname, "/podcast/quetechcuentas-01");
+if (new URL(base).hostname === "carlosazaustre.es" && !process.env.SMOKE_HOST) {
+  for (const protocol of ["http:", "https:"]) {
+    const source = new URL(`${blog}?deployment=canonical`, base);
+    source.protocol = protocol;
+    source.hostname = "www.carlosazaustre.es";
+    const canonical = await requestOrigin(source, { timeoutMs: 30_000 });
+    assert.equal(canonical.status, 301, "WWW must redirect permanently");
+    assert.equal(canonical.headers.get("location"), `https://carlosazaustre.es${blog}?deployment=canonical`);
+  }
+}
+
 console.log("Smoke checks passed: revision, pages, MDX, HTML/Markdown negotiation, feeds, static assets, images, and redirects.");
