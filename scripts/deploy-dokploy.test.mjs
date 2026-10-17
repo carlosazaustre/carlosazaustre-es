@@ -35,7 +35,7 @@ async function fixture(t, { failNewImage = false, failDeploy = false, cacheHealt
         return;
       }
       if (!failNewImage || configuredImage === image(before)) runningRevision = configuredImage.split(":").at(-1);
-      response.end("{}");
+      response.writeHead(204).end();
     } else if (url.pathname === "/api/health") {
       assert.equal(request.headers["x-api-key"], undefined, "Do not send API credentials to the app");
       assert.equal(request.headers.host, "preview.carlosazaustre.es");

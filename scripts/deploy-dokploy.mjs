@@ -24,6 +24,7 @@ export async function deployApplication({
       signal: AbortSignal.timeout(15_000),
     });
     if (!response.ok) throw new Error(`Dokploy ${procedure}: HTTP ${response.status}`);
+    if (body) return;
     return response.json();
   }
 
