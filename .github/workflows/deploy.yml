@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 concurrency:
-  group: deploy-production
+  group: ${{ vars.PRODUCTION_TARGET == 'dharma' && format('vps-disabled-{0}', github.run_id) || 'deploy-production' }}
   cancel-in-progress: false
 
 jobs:
