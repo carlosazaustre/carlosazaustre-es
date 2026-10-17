@@ -6,10 +6,11 @@ on:
 
 concurrency:
   group: deploy-production
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
+    if: vars.PRODUCTION_TARGET != 'dharma'
     name: Build & Deploy to VPS
     runs-on: ubuntu-latest
     timeout-minutes: 20

@@ -1,6 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "standalone",
+  outputFileTracingIncludes: {
+    "/*": [
+      "./content/**/*",
+      "./data/**/*",
+      "./node_modules/@fontsource/space-grotesk/files/*.woff",
+    ],
+  },
   // Elimina el header X-Powered-By: Next.js (fingerprinting)
   poweredByHeader: false,
 

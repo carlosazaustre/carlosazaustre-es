@@ -1,0 +1,135 @@
+name: Deploy to dharma
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      target:
+        description: Verify preview or the production domain after deployment
+        type: choice
+        options: [preview, production]
+        default: preview
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    if: github.event_name == 'workflow_dispatch' || vars.PRODUCTION_TARGET == 'dharma'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Report existing repository lint findings
+        id: repository-lint
+        continue-on-error: true
+        run: npm run lint
+      - name: Lint migration files
+        run: npx eslint next.config.ts app/api/health/route.ts scripts/deploy-dokploy.mjs scripts/smoke-deploy.mjs scripts/deploy-dokploy.test.mjs scripts/request-origin.mjs
+      - name: Report baseline lint status
+        if: steps.repository-lint.outcome == 'failure'
+        run: echo '::warning::Repository lint has pre-existing failures. Migration files are checked separately and must pass.'
+      - run: node --test scripts/deploy-dokploy.test.mjs
+      - name: Prepare build secret
+        env:
+          ENV_FILE: ${{ secrets.ENV_FILE }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: |
+          node --input-type=module <<'NODE'
+          import { writeFileSync } from 'node:fs';
+          import { processEnv } from '@next/env';
+          if (!process.env.YOUTUBE_API_KEY) delete process.env.YOUTUBE_API_KEY;
+          processEnv([{ path: '.env', contents: process.env.ENV_FILE ?? '', env: {} }]);
+          writeFileSync(`${process.env.RUNNER_TEMP}/youtube-api-key`, process.env.YOUTUBE_API_KEY ?? '', { mode: 0o600 });
+          NODE
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build image for validation
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          platforms: linux/amd64
+          load: true
+          tags: ghcr.io/carlosazaustre/cazaustre-web:${{ github.sha }}
+          build-args: APP_REVISION=${{ github.sha }}
+          secret-files: youtube_api_key=${{ runner.temp }}/youtube-api-key
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+      - name: Test production container
+        env:
+          APP_REVISION: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          docker run --detach --name web-smoke --publish 127.0.0.1:3100:3000 "ghcr.io/carlosazaustre/cazaustre-web:$APP_REVISION"
+          for attempt in {1..60}; do
+            if curl --fail --silent http://127.0.0.1:3100/api/health > /dev/null; then break; fi
+            sleep 2
+          done
+          SMOKE_BASE_URL=http://127.0.0.1:3100 node scripts/smoke-deploy.mjs
+          docker restart web-smoke
+          for attempt in {1..60}; do
+            if curl --fail --silent http://127.0.0.1:3100/api/health > /dev/null; then break; fi
+            sleep 2
+          done
+          SMOKE_BASE_URL=http://127.0.0.1:3100 node scripts/smoke-deploy.mjs
+      - name: Show container logs on failure
+        if: failure()
+        run: docker logs web-smoke 2>/dev/null || true
+      - name: Publish validated image
+        run: docker push "ghcr.io/carlosazaustre/cazaustre-web:${{ github.sha }}"
+      - name: Remove build secret and test container
+        if: always()
+        run: |
+          rm -f "$RUNNER_TEMP/youtube-api-key"
+          docker rm --force web-smoke 2>/dev/null || true
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Connect to Tailscale
+        uses: tailscale/github-action@v3
+        with:
+          oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
+          oauth-secret: ${{ secrets.TS_OAUTH_CLIENT_SECRET }}
+          tags: tag:ci
+      - name: Deploy immutable image and verify origin
+        env:
+          DOKPLOY_URL: ${{ vars.DOKPLOY_URL }}
+          DOKPLOY_API_KEY: ${{ secrets.DOKPLOY_API_KEY }}
+          DOKPLOY_APPLICATION_ID: ${{ vars.DOKPLOY_APPLICATION_ID }}
+          DEPLOY_ORIGIN_URL: http://100.64.170.71
+          DEPLOY_HOST: ${{ github.event.inputs.target == 'production' && 'carlosazaustre.es' || (github.event_name == 'push' && 'carlosazaustre.es' || 'preview.carlosazaustre.es') }}
+          DEPLOY_IMAGE: ghcr.io/carlosazaustre/cazaustre-web:${{ github.sha }}
+          APP_REVISION: ${{ github.sha }}
+        run: |
+          node scripts/deploy-dokploy.mjs
+          SMOKE_BASE_URL="$DEPLOY_ORIGIN_URL" SMOKE_HOST="$DEPLOY_HOST" node scripts/smoke-deploy.mjs
+      - name: Verify public production domain
+        if: github.event.inputs.target == 'production' || github.event_name == 'push'
+        env:
+          APP_REVISION: ${{ github.sha }}
+          SMOKE_BASE_URL: https://carlosazaustre.es
+        run: node scripts/smoke-deploy.mjs
