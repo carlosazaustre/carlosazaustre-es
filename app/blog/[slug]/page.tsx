@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getPostBySlug, getAllPosts, getRelatedPosts } from "@/lib/blog";
 import ReadingProgress from "@/components/ReadingProgress";
+import BlogArticleHeader from "@/components/blog-article-header";
+import "./article.css";
 import ArticleContent from "@/components/ArticleContent";
 import CitationBlock from "@/components/CitationBlock";
 import DisqusComments from "@/components/DisqusComments";
@@ -93,14 +95,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [ogImage],
     },
   };
-}
-
-function formatDate(dateStr: string): string {
-  return new Date(dateStr).toLocaleDateString("es-ES", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
 }
 
 export default async function BlogPostPage({ params }: Props) {
@@ -234,110 +228,22 @@ export default async function BlogPostPage({ params }: Props) {
       />
     )}
     <ReadingProgress />
-    <div style={{ maxWidth: "960px", margin: "0 auto", padding: "3rem 1.5rem" }}>
-      <article style={{ maxWidth: "915px" }}>
-        {/* Header */}
-        <header
-          style={{
-            borderBottom: "3px solid var(--border)",
-            paddingBottom: "2rem",
-            marginBottom: "2.5rem",
-          }}
-        >
-          {/* Title */}
-          <h1
-            style={{
-              fontFamily: "'Space Grotesk', sans-serif",
-              fontWeight: 800,
-              fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
-              lineHeight: 1.15,
-              color: "var(--text)",
-              marginBottom: "1.25rem",
-            }}
-          >
-            {post.title}
-          </h1>
-
-          {/* Meta row: date · reading time · tags */}
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              alignItems: "center",
-              gap: "1rem",
-            }}
-          >
-            {/* Date */}
-            <span
-              style={{
-                fontFamily: "'Space Mono', monospace",
-                fontSize: "0.82rem",
-                color: "var(--text-muted)",
-                fontWeight: 700,
-                display: "flex",
-                alignItems: "center",
-                gap: "0.35rem",
-              }}
-            >
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="3" y="4" width="18" height="18" rx="2"/>
-                <line x1="16" y1="2" x2="16" y2="6"/>
-                <line x1="8" y1="2" x2="8" y2="6"/>
-                <line x1="3" y1="10" x2="21" y2="10"/>
-              </svg>
-              {formatDate(post.date)}
-            </span>
-
-            {/* Reading time */}
-            <span
-              style={{
-                fontFamily: "'Space Mono', monospace",
-                fontSize: "0.82rem",
-                color: "var(--text-muted)",
-                fontWeight: 700,
-                display: "flex",
-                alignItems: "center",
-                gap: "0.35rem",
-              }}
-            >
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <polyline points="12 6 12 12 16 14"/>
-              </svg>
-              {post.readingTime} {isPodcast ? "escucha" : "lectura"}
-            </span>
-
-            {/* Tags */}
-            {post.tags.length > 0 && (
-              <>
-                <span style={{ color: "var(--text-muted)", fontFamily: "'Space Mono', monospace", fontSize: "0.75rem" }}>·</span>
-                {post.tags.map((tag) => (
-                  <span key={tag} className="neo-badge">
-                    {tag}
-                  </span>
+    <div className="blog-post">
+      <article className="blog-article">
+        <BlogArticleHeader post={post} isPodcast={isPodcast} />
+        {post.headings.length >= 3 && (
+          <nav className="blog-outline" aria-label="Índice del artículo">
+            <details open>
+              <summary>En este artículo</summary>
+              <ul>
+                {post.headings.map((heading) => (
+                  <li key={heading.id}>
+                    <a href={`#${heading.id}`}>{heading.text}</a>
+                  </li>
                 ))}
-              </>
-            )}
-          </div>
-        </header>
-
-        {/* Excerpt highlight */}
-        {post.excerpt && (
-          <div
-            style={{
-              background: "var(--accent)",
-              border: "3px solid var(--border)",
-              borderRadius: "4px",
-              padding: "1.25rem 1.5rem",
-              marginBottom: "2.5rem",
-              boxShadow: "var(--shadow)",
-              fontSize: "1.15rem",
-              fontWeight: 600,
-              lineHeight: 1.6,
-            }}
-          >
-            {post.excerpt}
-          </div>
+              </ul>
+            </details>
+          </nav>
         )}
 
         {/* Main content — primera mitad */}

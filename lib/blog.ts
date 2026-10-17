@@ -453,6 +453,8 @@ export interface PostMeta {
   related?: string[];
   readingTime: string;
   coverImage?: string;
+  headerImage?: string;
+  headerImageAlt?: string;
   faq?: FaqItem[];
   videoId?: string;           // YouTube video ID (used for podcast episodes og:image)
   episodeNumber?: number;     // Podcast episode number
@@ -462,6 +464,7 @@ export interface PostMeta {
 
 export interface Post extends PostMeta {
   content: string;
+  headings: { id: string; text: string }[];
 }
 
 // Convert self-closing MDX components to explicit open+close so the HTML
@@ -566,12 +569,23 @@ export async function readPostFromDir(
   const raw = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(raw);
 
+  const headings: Post["headings"] = [];
+  const collectHeadings: Plugin<[], Root> = () => (tree) => {
+    visit(tree, "element", (node) => {
+      if (node.tagName !== "h2" || !node.properties.id) return;
+      const parts: string[] = [];
+      visit(node, "text", (text) => { parts.push(text.value); });
+      headings.push({ id: String(node.properties.id), text: parts.join("") });
+    });
+  };
+
   const processed = await unified()
     .use(remarkParse)
     .use(remarkGfm)
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
     .use(rehypeSlug)
+    .use(collectHeadings)
     .use(rehypeMermaid)
     .use(rehypeYouTube)
     .use(rehypeSpotify)
@@ -598,7 +612,10 @@ export async function readPostFromDir(
     episodeNumber: data.episodeNumber ? Number(data.episodeNumber) : undefined,
     contentType,
     citable: data.citable === true,
+    headerImage: typeof data.headerImage === "string" ? data.headerImage : undefined,
+    headerImageAlt: typeof data.headerImageAlt === "string" ? data.headerImageAlt : undefined,
     content: processed.toString(),
+    headings,
   };
 }
 

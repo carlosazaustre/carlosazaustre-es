@@ -1,0 +1,154 @@
+---
+title: 'Así he montado mi VPS casero.'
+seoTitle: 'Mi homelab con Dokploy, Docker, Traefik y Cloudflare Tunnel'
+date: '2026-10-17'
+headerImage: '/images/blog/mis-webs-en-casa-con-dokploy-docker-y-cloudflare/home-server.svg'
+headerImageAlt: 'Un PC llamado Dharma con tres aplicaciones en su interior y una nube conectada mediante un túnel.'
+related:
+  - desplegando-contenedores-docker-en-digital-ocean
+  - docker-como-entorno-de-desarrollo-local
+tags:
+  - homelab
+  - docker
+  - devops
+  - self-hosting
+excerpt: 'Cómo alojo mi web y mis proyectos personales en casa con Dokploy, Docker, Traefik, Tailscale y Cloudflare Tunnel.'
+---
+
+Estoy trasladando mi web y varios proyectos personales a un PC que tengo en casa.
+
+Ya utilizaba esa máquina para otros proyectos. Quería reunir los despliegues y poder actualizar cada aplicación sin repetir la configuración del servidor.
+
+Dentro de mi red, mi PC se llama **Dharma**, y si, la red de mi casa es "*The-Swan*". ¿Entendiste la referencia 😜?
+
+Te cuento como utilizo **Dokploy** para gestionar los despliegues, **Docker** para ejecutar las aplicaciones y **Traefik** para dirigir las peticiones. Como accedo al servidor mediante **Tailscale** y publico las webs a través de **Cloudflare Tunnel**.
+
+## Una visita al blog y una visita al servidor
+
+Cuando alguien entra en este blog, su navegador conecta con Cloudflare. La petición llega a Dharma a través del túnel y Traefik la dirige a la aplicación de la web.
+
+Para administrar el servidor utilizo Tailscale. Desde esa red privada accedo a las herramientas de gestión, con los permisos y la autenticación de cada servicio.
+
+<figure style="margin: 2rem 0">
+<a href="/images/blog/mis-webs-en-casa-con-dokploy-docker-y-cloudflare/overview.svg" target="_blank" rel="noopener noreferrer" aria-label="Ampliar diagrama: overview"><img src="/images/blog/mis-webs-en-casa-con-dokploy-docker-y-cloudflare/overview.svg" alt="Un visitante accede por Cloudflare y el túnel hasta Traefik; el propietario gestiona el servidor mediante Tailscale y Dokploy." width="1280" height="720" style="display: block; width: 100%; height: auto" /></a>
+<figcaption style="margin-top: 1rem; font-size: 0.875rem; line-height: 1.6">Figura 1. Una visita a la web y una sesión de administración siguen caminos distintos. Los dispositivos ilustran funciones; varios servicios comparten el mismo PC. <a href="/images/blog/mis-webs-en-casa-con-dokploy-docker-y-cloudflare/overview.svg" target="_blank" rel="noopener noreferrer">Ampliar diagrama</a>.</figcaption>
+</figure>
+
+El visitante solo necesita un navegador. La red privada se queda para la gestión.
+
+Con **Dokploy** configuro y despliego las aplicaciones. **Traefik** recibe su tráfico web. El panel de administración no está disponible hacia afuera
+
+## Dominios en Namecheap, DNS en Cloudflare
+
+**Namecheap sigue siendo mi registrador.** Allí mantengo la mayoría de mis dominios y sus renovaciones. Para las zonas que he migrado, he configurado los nameservers de Cloudflare. Cambiarlos no implica trasladar el registro del dominio. [Así lo explica Namecheap](https://www.namecheap.com/support/knowledgebase/article.aspx/767/10/how-to-change-dns-for-a-domain/).
+
+**Cloudflare gestiona el DNS de esas zonas.** A partir de esa delegación, los cambios en sus registros se hacen allí.
+
+**Dharma ejecuta las aplicaciones.** Es quien genera la página o procesa la petición cuando esta llega al servidor.
+
+<figure style="margin: 2rem 0">
+<a href="/images/blog/mis-webs-en-casa-con-dokploy-docker-y-cloudflare/dns.svg" target="_blank" rel="noopener noreferrer" aria-label="Ampliar diagrama: dns"><img src="/images/blog/mis-webs-en-casa-con-dokploy-docker-y-cloudflare/dns.svg" alt="Namecheap delega el DNS a Cloudflare; tras resolver el nombre, el navegador conecta con Cloudflare y la petición alcanza Dharma." width="1280" height="720" style="display: block; width: 100%; height: auto" /></a>
+<figcaption style="margin-top: 1rem; font-size: 0.875rem; line-height: 1.6">Figura 2. Registrar el dominio, responder al DNS y servir la página son tareas diferentes. El dibujo simplifica las consultas y las respuestas. <a href="/images/blog/mis-webs-en-casa-con-dokploy-docker-y-cloudflare/dns.svg" target="_blank" rel="noopener noreferrer">Ampliar diagrama</a>.</figcaption>
+</figure>
+
+Antes de cambiar los nameservers exporté la zona DNS y revisé los registros de correo, las verificaciones y los subdominios. Comparé la exportación con los registros que detectó el escaneo de Cloudflare. La [guía de Cloudflare](https://developers.cloudflare.com/dns/zone-setups/full-setup/setup/) explica esa preparación y el cambio de delegación.
+
+En mi montaje, los nombres web seleccionados quedan asociados al túnel. Eso permite cambiar dónde corre una aplicación sin convertir la dirección de mi conexión de casa en su destino público.
+
+## El túnel: la conexión sale desde casa
+
+En el servidor corre **cloudflared**, el conector de Cloudflare. Es él quien establece una conexión saliente y la mantiene disponible. Cuando alguien visita uno de los dominios publicados, Cloudflare hace llegar la petición por ese túnel.
+
+Me evita tener que preparar una entrada directa desde Internet a cada aplicación en el router. Tampoco necesito una dirección doméstica fija para ese recorrido. [Cloudflare Tunnel funciona con conexiones iniciadas desde el origen](https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/).
+
+El navegador usa HTTPS con Cloudflare y el túnel también va cifrado. Son tramos distintos, Cloudflare termina la conexión HTTPS pública y entrega la petición al origen. Cloudflare puede procesar el tráfico web al terminar esa conexión.
+
+En mi caso, el túnel entrega las peticiones a Traefik. Así puedo mantener varios proyectos detrás de una misma entrada y decidir dentro del servidor cuál debe responder.
+
+## Traefik reparte cada petición
+
+**Traefik es un reverse proxy**: recibe peticiones y las dirige a los servicios que pueden atenderlas. Una de las cosas que mira es el dominio solicitado. Si llega una visita al blog, la entrega a la web; si llega una petición de otro proyecto, elige su servicio correspondiente. [Las reglas de Traefik](https://doc.traefik.io/traefik/reference/routing-configuration/http/routing/rules-and-priority/) permiten expresar ese reparto.
+
+<figure style="margin: 2rem 0">
+<a href="/images/blog/mis-webs-en-casa-con-dokploy-docker-y-cloudflare/routing.svg" target="_blank" rel="noopener noreferrer" aria-label="Ampliar diagrama: routing"><img src="/images/blog/mis-webs-en-casa-con-dokploy-docker-y-cloudflare/routing.svg" alt="Traefik dirige las peticiones a la web personal, CodeClaw, Umami y un servicio de redirecciones con Caddy." width="1280" height="720" style="display: block; width: 100%; height: auto" /></a>
+<figcaption style="margin-top: 1rem; font-size: 0.875rem; line-height: 1.6">Figura 3. Traefik reparte las peticiones entre proyectos. Los dibujos de pantallas representan aplicaciones, no máquinas separadas. <a href="/images/blog/mis-webs-en-casa-con-dokploy-docker-y-cloudflare/routing.svg" target="_blank" rel="noopener noreferrer">Ampliar diagrama</a>.</figcaption>
+</figure>
+
+En Dharma estoy desplegando estos proyectos:
+
+- **Mi web personal**, hecha con Next.js, reúne el blog y el resto de contenido que publico.
+- **OpenClaw**: Mi tenacitas que entre otras cosas se encarga de enviar noticias tech todos los días a mi canal público de telegram.
+- **Umami** se encarga de la analítica. Alternativa open source a Google Analytics.
+- **Los enlaces cortos** utilizan un pequeño servicio con Caddy para aplicar sus redirecciones.
+
+En el servicio de enlaces, Traefik entrega la petición a Caddy y este aplica la redirección correspondiente.
+
+Los proxies conservan el dominio solicitado y la información sobre el protocolo público. Una configuración incoherente entre ellos puede provocar bucles de redirección o enlaces incorrectos.
+
+Dokploy permite gestionar esa asociación entre dominio y aplicación. Su [guía de Cloudflare Tunnel](https://docs.dokploy.com/docs/core/guides/cloudflare-tunnels) describe precisamente el patrón de enviar el tráfico del túnel a Traefik.
+
+## Aplicaciones en Docker, despliegues en Dokploy
+
+Preparo cada aplicación en una imagen Docker para poder repetir el despliegue con las mismas dependencias.
+
+Con **Docker**, preparo una imagen con el código y lo necesario para ejecutarlo. Un contenedor es una ejecución de esa imagen. De esa manera, cada aplicación puede llevar sus propias dependencias y su propio proceso de arranque.
+
+Al cambiar de máquina, construyo la imagen para la arquitectura del destino. Las dependencias nativas también deben ser compatibles.
+
+**Dokploy** me da una interfaz para gestionar esos despliegues: aplicaciones, variables, dominios, registros de ejecución y servicios asociados. También permite trabajar con Docker Compose cuando un proyecto necesita varias piezas. [Su arquitectura integra Docker y Traefik](https://docs.dokploy.com/docs/core/architecture).
+
+En Compose agrupo los servicios de cada proyecto. Umami incluye su aplicación y PostgreSQL; el servicio de redirecciones solo necesita Caddy y su configuración.
+
+Los contenedores comparten una máquina. Si el PC se apaga, las aplicaciones dejan de responder.
+
+## El despliegue de mi web desde GitHub
+
+Para mi web personal he preparado un recorrido que empieza en GitHub y termina comprobando la versión que responde desde Dharma.
+
+<figure style="margin: 2rem 0">
+<a href="/images/blog/mis-webs-en-casa-con-dokploy-docker-y-cloudflare/deployment.svg" target="_blank" rel="noopener noreferrer" aria-label="Ampliar diagrama: deployment"><img src="/images/blog/mis-webs-en-casa-con-dokploy-docker-y-cloudflare/deployment.svg" alt="GitHub Actions valida una imagen y la publica en GHCR, el despliegue llega por Tailscale a Dokploy y se comprueba la versión publicada." width="1280" height="720" style="display: block; width: 100%; height: auto" /></a>
+<figcaption style="margin-top: 1rem; font-size: 0.875rem; line-height: 1.6">Figura 4. El recorrido automatizado de mi web personal: preparar, publicar, desplegar y comprobar. <a href="/images/blog/mis-webs-en-casa-con-dokploy-docker-y-cloudflare/deployment.svg" target="_blank" rel="noopener noreferrer">Ampliar diagrama</a>.</figcaption>
+</figure>
+
+Cuando publico un cambio en la rama de producción, **GitHub Actions** ejecuta las comprobaciones y construye la imagen. Después arranca un contenedor de prueba para comprobar que la aplicación responde y puede reiniciarse.
+
+La imagen validada se guarda en **GitHub Container Registry**, o GHCR. La identifico con la revisión del código que la ha generado. Así puedo relacionar un despliegue con un commit concreto y localizar una versión anterior si la necesito.
+
+A continuación, el proceso de despliegue se conecta por Tailscale y pide a Dokploy que actualice la aplicación. La orden de desplegar viaja por la red privada; la imagen se descarga desde el registro.
+
+Al terminar, compruebo la respuesta de la web y la revisión del código que está sirviendo. Así detecto si el despliegue sigue atendiendo peticiones con la versión anterior.
+
+También tengo una recuperación de la imagen anterior si falla la comprobación de la nueva versión durante el despliegue. Después reviso el acceso público: una incidencia de DNS o de conexión puede necesitar una solución distinta a cambiar de imagen.
+
+Este pipeline corresponde a mi web. Para los otros proyectos utilizo sus despliegues Compose en Dokploy. Pero proximamente migraré también ésta para que todo sea igual.
+
+## Administración remota con Tailscale
+
+Cuando salgo de casa, quiero poder seguir administrando Dharma sin convertir cada herramienta de gestión en un servicio público.
+
+**Tailscale** conecta los dispositivos de una red privada, la *tailnet*, mediante conexiones cifradas basadas en WireGuard. Puede usar conexiones directas o relés, según las condiciones de la red. [Aquí está su explicación](https://tailscale.com/docs/concepts/what-is-tailscale).
+
+En el día a día me permite trabajar desde el portátil y llegar al servidor como parte de esa red privada. También lo aprovecha el proceso de despliegue de la web.
+
+El acceso sigue teniendo dos partes: que la política de red permita llegar al servicio y que el propio servicio acepte tu autenticación. Entrar por SSH requiere ambas. Utilizar SSH a través de Tailscale tampoco implica que se esté usando su función específica llamada Tailscale SSH.
+
+Las visitas al blog acceden por Cloudflare y no necesitan conectarse a Tailscale.
+
+## Persistencia y copias de seguridad
+
+Guardo los datos persistentes fuera del contenedor. Si actualizo una aplicación, no quiero perder sus sesiones guardadas ni empezar de cero su base de datos. Los **volúmenes de Docker** permiten conservar ese estado más allá del contenedor que lo utiliza. [Documentación de volúmenes](https://docs.docker.com/engine/storage/volumes/).
+
+<figure style="margin: 2rem 0">
+<a href="/images/blog/mis-webs-en-casa-con-dokploy-docker-y-cloudflare/data.svg" target="_blank" rel="noopener noreferrer" aria-label="Ampliar diagrama: data"><img src="/images/blog/mis-webs-en-casa-con-dokploy-docker-y-cloudflare/data.svg" alt="Umami y CodeClaw conservan sus datos fuera del ciclo de vida del contenedor y requieren copias coherentes cuya restauración se compruebe." width="1280" height="720" style="display: block; width: 100%; height: auto" /></a>
+<figcaption style="margin-top: 1rem; font-size: 0.875rem; line-height: 1.6">Figura 5. Los datos sobreviven al contenedor. Las copias y las pruebas de restauración completan la recuperación. <a href="/images/blog/mis-webs-en-casa-con-dokploy-docker-y-cloudflare/data.svg" target="_blank" rel="noopener noreferrer">Ampliar diagrama</a>.</figcaption>
+</figure>
+
+En estos proyectos, Umami utiliza PostgreSQL y por ejemplo, otros proyectos utilizan SQLite. Son formas distintas de almacenar datos y también requieren pensar cómo obtener una copia coherente mientras la aplicación está funcionando.
+
+Además de los volúmenes, mantengo copias separadas para recuperar los datos ante un fallo de disco o un borrado accidental.
+
+## Mantener el servidor en casa
+
+Me encargo del sistema, los discos y las copias de seguridad. Las aplicaciones dependen de la electricidad y de la conexión de casa. El túnel permite acceder al servidor, pero no mantiene las aplicaciones disponibles cuando la máquina está apagada.
+
+Por ahora estoy trasladando los proyectos por etapas. Antes de retirar el VPS, me queda terminar las comprobaciones y resolver las dependencias que sigan allí.

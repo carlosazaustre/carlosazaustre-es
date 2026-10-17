@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="460" viewBox="0 0 440 460" fill="none">
+  <title>Un servidor en casa</title>
+  <desc>Un PC en perspectiva, con tres contenedores de aplicaciones visibles, conectado a una nube. Una etiqueta en la carcasa dice Dharma.</desc>
+  <g stroke="#1A1A1A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M63 413 257 446 385 379" stroke="#1A1A1A" stroke-opacity=".2"/>
+    <path d="M94 176 276 204 365 153 182 126Z" fill="#FFCC00"/>
+    <path d="M94 176 276 204 276 418 94 390Z" fill="#FAFAF5"/>
+    <path d="M276 204 365 153 365 368 276 418Z" fill="#FFCC00"/>
+    <path d="M107 391V405L128 409V395M331 388V401L350 390V378" fill="#1A1A1A"/>
+    <path d="m113 201 141 22v157l-141-22Z" fill="#EFEFE4"/>
+    <path d="m126 214 115 18v39l-115-18Z" fill="#FAFAF5"/>
+    <path d="m126 266 115 18v39l-115-18Z" fill="#FAFAF5"/>
+    <path d="m126 318 115 18v24l-115-18Z" fill="#FFCC00"/>
+    <path d="m138 227 25 4v13l-25-4Z" fill="#FFCC00"/>
+    <path d="m175 234 52 8m-52 7 35 5" stroke-width="2"/>
+    <path d="m138 279 25 4v13l-25-4Z" fill="#FFCC00"/>
+    <path d="m175 286 52 8m-52 7 35 5" stroke-width="2"/>
+    <path d="m138 330 8 1m10 2 8 1m10 2 8 1m10 2 8 1" stroke-width="4"/>
+    <path d="m291 228 58-33v56l-58 33Z" fill="#1A1A1A"/>
+    <ellipse cx="321" cy="240" rx="13" ry="17" transform="rotate(25 321 240)" stroke="#FFCC00" stroke-width="2"/>
+    <path d="m321 219 0 15" stroke="#FFCC00" stroke-width="3"/>
+    <path d="m300 314 39-22m-39 34 39-22m-39 34 39-22m-39 34 39-22" stroke-width="3"/>
+    <path d="m118 368 83 13v19l-83-13Z" fill="#1A1A1A"/>
+    <path d="M163 148 72 133V93" stroke-dasharray="6 8"/>
+    <path d="m156 139 9 10-12 5"/>
+    <path d="M48 91c-16 0-25-10-25-22 0-13 10-23 23-24C49 29 62 19 79 20c17 0 31 11 35 27 14-3 28 7 29 21 1 13-9 23-23 23Z" fill="#FFCC00"/>
+    <path d="m62 66 13-10 13 10m-13-10v23" stroke-width="2.5"/>
+    <path d="M325 102h18m-9-9v18M390 237h13m-6-7v14" stroke-width="2"/>
+    <circle cx="58" cy="258" r="4" fill="#FFCC00"/>
+    <circle cx="211" cy="77" r="3" fill="#1A1A1A" stroke="none"/>
+  </g>
+  <text x="126" y="382" fill="#FFCC00" font-family="monospace" font-size="11" font-weight="700" letter-spacing="1.5" transform="rotate(9 126 382)">DHARMA</text>
+</svg>
