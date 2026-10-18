@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import EditorialSectionHeader from "@/components/editorial-section-header";
+import "@/app/sections.css";
 import { getAllEducacionPosts } from "@/lib/educacion";
 
 const SECTION_TITLE = "Educación & eLearning";
@@ -40,7 +43,12 @@ const breadcrumbLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Inicio", item: "https://carlosazaustre.es" },
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Inicio",
+      item: "https://carlosazaustre.es",
+    },
     { "@type": "ListItem", position: 2, name: "Educación", item: SECTION_URL },
   ],
 };
@@ -62,185 +70,87 @@ export default function EducacionPage() {
   };
 
   return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }} />
-
-      <div style={{ maxWidth: "960px", margin: "0 auto", padding: "3rem 1.5rem" }}>
-        {/* Header */}
-        <div
-          style={{
-            borderBottom: "3px solid var(--border)",
-            paddingBottom: "2rem",
-            marginBottom: "3rem",
-          }}
+    <div className="editorial-home catalog-page education-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }}
+      />
+      <div className="editorial-wrap">
+        <EditorialSectionHeader
+          title="Educación"
+          action={
+            <span className="catalog-count">
+              {posts.length} {posts.length === 1 ? "ensayo" : "ensayos"}
+            </span>
+          }
         >
-          <div
-            style={{
-              display: "inline-block",
-              background: "var(--accent)",
-              border: "3px solid var(--border)",
-              borderRadius: "4px",
-              padding: "4px 12px",
-              marginBottom: "1rem",
-              fontFamily: "'Space Mono', monospace",
-              fontSize: "0.8rem",
-              fontWeight: 700,
-              textTransform: "uppercase",
-              letterSpacing: "1px",
-              boxShadow: "var(--shadow-sm)",
-            }}
-          >
-            /educacion
-          </div>
-
-          <h1
-            style={{
-              fontFamily: "'Space Grotesk', sans-serif",
-              fontWeight: 800,
-              fontSize: "clamp(2rem, 5vw, 3.5rem)",
-              lineHeight: 1.1,
-              color: "var(--text)",
-              marginBottom: "1rem",
-            }}
-          >
-            Educación & eLearning
-          </h1>
-
-          <p
-            style={{
-              color: "var(--text-secondary)",
-              fontSize: "1.1rem",
-              lineHeight: 1.6,
-              maxWidth: "620px",
-              margin: 0,
-            }}
-          >
-            Ensayos y reflexiones sobre educación, tecnología educativa y pedagogía digital.
-            Desde mi experiencia como profesor universitario y creador de contenido educativo,
-            con base en mi investigación en el Máster en Educación y TIC (eLearning) de la UOC.{" "}
-            <strong style={{ color: "var(--text)" }}>
-              {posts.length} {posts.length === 1 ? "ensayo" : "ensayos"}.
-            </strong>
+          <h2>
+            Educación
+            <br />& eLearning<span>.</span>
+          </h2>
+          <p>
+            Ensayos y reflexiones sobre educación, tecnología educativa y
+            pedagogía digital. Desde mi experiencia como profesor universitario
+            y creador de contenido educativo, con base en mi investigación en el
+            Máster en Educación y TIC (eLearning) de la UOC.
           </p>
-        </div>
-
-        {/* Essays list */}
-        {posts.length === 0 ? (
-          <p
-            style={{
-              color: "var(--text-muted)",
-              fontFamily: "'Space Mono', monospace",
-              fontSize: "0.9rem",
-              textAlign: "center",
-              padding: "3rem 0",
-            }}
-          >
-            Próximamente — ensayos en preparación.
-          </p>
-        ) : (
-          <ol
-            style={{ display: "flex", flexDirection: "column", gap: "1.5rem", padding: 0, listStyle: "none" }}
-            aria-label="Ensayos sobre educación"
-          >
-            {posts.map((post) => (
-              <li key={post.slug}>
-                <Link
-                  href={`/educacion/${post.slug}`}
-                  style={{ textDecoration: "none", display: "block" }}
-                >
-                  <article
-                    className="neo-card"
-                    style={{
-                      padding: "1.5rem",
-                      display: "flex",
-                      flexDirection: "column",
-                      gap: "0.75rem",
-                    }}
-                  >
-                    {/* Tags row */}
-                    {post.tags.length > 0 && (
-                      <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
-                        {post.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="neo-badge"
-                          >
-                            {tag}
-                          </span>
-                        ))}
+        </EditorialSectionHeader>
+      </div>
+      <section
+        className="essay-collection"
+        aria-label="Ensayos sobre educación"
+      >
+        <div className="editorial-wrap">
+          {!posts.length ? (
+            <p className="catalog-empty">
+              Próximamente — ensayos en preparación.
+            </p>
+          ) : (
+            <ol>
+              {posts.map((post) => (
+                <li key={post.slug}>
+                  <article className="essay-entry">
+                    <div className="essay-heading">
+                      <h2>
+                        <Link href={`/educacion/${post.slug}`}>
+                          {post.title}
+                        </Link>
+                      </h2>
+                      <div className="catalog-post-meta">
+                        <time dateTime={post.date}>
+                          {formatDate(post.date)}
+                        </time>
+                        <span>{post.readingTime} lectura</span>
                       </div>
-                    )}
-
-                    {/* Title */}
-                    <h2
-                      style={{
-                        fontFamily: "'Space Grotesk', sans-serif",
-                        fontWeight: 800,
-                        fontSize: "1.3rem",
-                        lineHeight: 1.3,
-                        color: "var(--text)",
-                        margin: 0,
-                      }}
-                    >
-                      {post.title}
-                    </h2>
-
-                    {/* Excerpt */}
-                    <p
-                      style={{
-                        color: "var(--text-secondary)",
-                        fontSize: "0.95rem",
-                        lineHeight: 1.6,
-                        margin: 0,
-                      }}
-                    >
-                      {post.excerpt}
-                    </p>
-
-                    {/* Footer */}
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-between",
-                        borderTop: "2px solid var(--border)",
-                        paddingTop: "0.75rem",
-                        marginTop: "0.25rem",
-                      }}
-                    >
-                      <span
-                        style={{
-                          fontFamily: "'Space Mono', monospace",
-                          fontSize: "0.78rem",
-                          color: "var(--text-muted)",
-                          fontWeight: 700,
-                        }}
+                    </div>
+                    <div className="essay-copy">
+                      <p>{post.excerpt}</p>
+                      <ul
+                        className="catalog-tags"
+                        aria-label="Temas del ensayo"
                       >
-                        {formatDate(post.date)} · {post.readingTime} lectura
-                      </span>
-                      <span
-                        style={{
-                          fontFamily: "'Space Mono', monospace",
-                          fontSize: "0.78rem",
-                          color: "var(--text)",
-                          fontWeight: 700,
-                          background: "var(--accent)",
-                          border: "2px solid var(--border)",
-                          borderRadius: "2px",
-                          padding: "2px 8px",
-                        }}
+                        {post.tags.map((tag) => (
+                          <li key={tag}>{tag}</li>
+                        ))}
+                      </ul>
+                      <Link
+                        href={`/educacion/${post.slug}`}
+                        className="solid-link"
                       >
-                        Leer ensayo →
-                      </span>
+                        Leer ensayo <ArrowUpRight />
+                      </Link>
                     </div>
                   </article>
-                </Link>
-              </li>
-            ))}
-          </ol>
-        )}
-      </div>
-    </>
+                </li>
+              ))}
+            </ol>
+          )}
+        </div>
+      </section>
+    </div>
   );
 }

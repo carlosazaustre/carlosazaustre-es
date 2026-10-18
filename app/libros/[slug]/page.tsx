@@ -1,9 +1,11 @@
-import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { getAllBooks, getBookBySlug } from "@/lib/books";
+import { ArrowLeft, ArrowUpRight, Check } from "lucide-react";
+import BookRating from "@/components/book-rating";
+import "@/app/sections.css";
 import CitationBlock from "@/components/CitationBlock";
 
 const BASE_URL = "https://carlosazaustre.es";
@@ -48,40 +50,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [`${BASE_URL}${book.cover}`],
     },
   };
-}
-
-function Stars({ value }: { value: number }) {
-  return (
-    <span aria-label={`${value} de 5 estrellas`}>
-      {[1, 2, 3, 4, 5].map((i) => (
-        <span key={i} style={{ color: i <= Math.round(value) ? "#FFCC00" : "#ccc", fontSize: "1.2rem" }}>
-          ★
-        </span>
-      ))}
-    </span>
-  );
-}
-
-const btnBase: React.CSSProperties = {
-  display: "block",
-  textAlign: "center",
-  border: "3px solid var(--border)",
-  borderRadius: "6px",
-  padding: "12px 16px",
-  fontFamily: "'Space Mono', monospace",
-  fontSize: "0.85rem",
-  fontWeight: 700,
-  textDecoration: "none",
-  boxShadow: "3px 3px 0 var(--border)",
-};
-
-function BuyButtons({ amazonUS }: { amazonUS: string }) {
-  return (
-    <a href={amazonUS} target="_blank" rel="noopener noreferrer"
-      style={{ ...btnBase, background: "var(--accent)", color: "var(--border)" }}>
-      🛒 Comprar en Amazon
-    </a>
-  );
 }
 
 export default async function BookPage({ params }: Props) {
@@ -129,8 +97,18 @@ export default async function BookPage({ params }: Props) {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Inicio", item: BASE_URL },
-      { "@type": "ListItem", position: 2, name: "Libros", item: `${BASE_URL}/libros` },
-      { "@type": "ListItem", position: 3, name: book.title, item: `${BASE_URL}/libros/${book.slug}` },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Libros",
+        item: `${BASE_URL}/libros`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: book.title,
+        item: `${BASE_URL}/libros/${book.slug}`,
+      },
     ],
   };
 
@@ -138,7 +116,7 @@ export default async function BookPage({ params }: Props) {
   const paragraphs = book.longDescription.split("\n\n").filter(Boolean);
 
   return (
-    <>
+    <div className="editorial-home catalog-page book-detail-page">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(bookLd) }}
@@ -147,289 +125,92 @@ export default async function BookPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
-
-      <div style={{ maxWidth: "960px", margin: "0 auto", padding: "3rem 1.5rem" }}>
-        {/* Breadcrumb */}
-        <nav
-          style={{
-            fontFamily: "'Space Mono', monospace",
-            fontSize: "0.78rem",
-            color: "var(--text-muted)",
-            marginBottom: "2rem",
-          }}
-          aria-label="Breadcrumb"
-        >
-          <Link href="/" style={{ color: "var(--text-muted)", textDecoration: "none" }}>
-            Inicio
-          </Link>
-          {" / "}
-          <Link href="/libros" style={{ color: "var(--text-muted)", textDecoration: "none" }}>
-            Libros
-          </Link>
-          {" / "}
-          <span style={{ color: "var(--text)" }}>{book.title}</span>
+      <div className="editorial-wrap">
+        <nav className="catalog-breadcrumb" aria-label="Breadcrumb">
+          <Link href="/">Inicio</Link>
+          <span>/</span>
+          <Link href="/libros">Libros</Link>
+          <span>/</span>
+          <span aria-current="page">{book.title}</span>
         </nav>
-
-        {/* Two-column layout */}
-        <div
-          className="book-detail-grid"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 2fr",
-            gap: "3rem",
-            alignItems: "start",
-          }}
-        >
-          {/* LEFT: Cover + buy buttons */}
-          <div style={{ position: "sticky", top: "80px" }}>
-            <div
-              style={{
-                border: "3px solid var(--border)",
-                borderRadius: "6px",
-                overflow: "hidden",
-                boxShadow: "3px 3px 0 var(--border)",
-                marginBottom: "1.5rem",
-              }}
-            >
-              <div style={{ position: "relative", aspectRatio: "2/3", width: "100%" }}>
-                <Image
-                  src={book.cover}
-                  alt={`Portada de ${book.title}`}
-                  fill
-                  priority
-                  style={{ objectFit: "cover" }}
-                  sizes="(max-width: 768px) 100vw, 300px"
-                />
-              </div>
-            </div>
-
-            <BuyButtons amazonUS={book.amazonUS} />
-
-            {book.isbn && (
-              <p
-                style={{
-                  fontFamily: "'Space Mono', monospace",
-                  fontSize: "0.68rem",
-                  color: "var(--text-muted)",
-                  marginTop: "1rem",
-                  textAlign: "center",
-                }}
-              >
-                ISBN: {book.isbn}
-              </p>
-            )}
-          </div>
-
-          {/* RIGHT: Book details */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
-            {/* Series badge */}
+        <header className="book-detail-hero">
+          <figure className="book-detail-cover">
+            <Image
+              src={book.cover}
+              alt={`Portada de ${book.title}`}
+              width={533}
+              height={800}
+              sizes="(max-width: 700px) 60vw, 300px"
+              preload
+            />
+          </figure>
+          <div>
+            <h1>
+              {book.title}
+              <span>.</span>
+            </h1>
+            <p className="book-detail-subtitle">{book.subtitle}</p>
             {book.series && (
-              <div>
-                <span
-                  style={{
-                    display: "inline-block",
-                    background: "var(--accent)",
-                    border: "2px solid var(--border)",
-                    borderRadius: "4px",
-                    padding: "4px 10px",
-                    fontFamily: "'Space Mono', monospace",
-                    fontSize: "0.75rem",
-                    fontWeight: 700,
-                    textTransform: "uppercase",
-                    letterSpacing: "0.5px",
-                    boxShadow: "2px 2px 0 var(--border)",
-                  }}
-                >
-                  {book.series} · Vol. {book.seriesNumber}
-                </span>
-              </div>
+              <p className="book-series">
+                {book.series} · Vol. {book.seriesNumber}
+              </p>
             )}
-
-            {/* Title */}
-            <div>
-              <h1
-                style={{
-                  fontFamily: "'Space Grotesk', sans-serif",
-                  fontWeight: 800,
-                  fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
-                  lineHeight: 1.1,
-                  color: "var(--text)",
-                  margin: "0 0 0.5rem 0",
-                }}
-              >
-                {book.title}
-              </h1>
-              <p
-                style={{
-                  fontFamily: "'Space Grotesk', sans-serif",
-                  fontSize: "1.15rem",
-                  color: "var(--text-secondary)",
-                  margin: 0,
-                  lineHeight: 1.4,
-                }}
-              >
-                {book.subtitle}
-              </p>
-            </div>
-
-            {/* Rating */}
-            <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-              <Stars value={book.ratingValue} />
-              <span
-                style={{
-                  fontFamily: "'Space Mono', monospace",
-                  fontSize: "0.8rem",
-                  color: "var(--text-secondary)",
-                }}
-              >
-                {book.ratingValue} ({book.ratingCount} valoraciones)
-              </span>
-            </div>
-
-            {/* Description paragraphs */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-              {paragraphs.map((p, i) => (
-                <p
-                  key={i}
-                  style={{
-                    color: "var(--text-secondary)",
-                    fontSize: "1rem",
-                    lineHeight: 1.7,
-                    margin: 0,
-                  }}
-                >
-                  {p}
-                </p>
-              ))}
-            </div>
-
-            {/* For who */}
-            <div
-              style={{
-                background: "var(--card)",
-                border: "3px solid var(--border)",
-                borderRadius: "6px",
-                padding: "1.25rem",
-                boxShadow: "3px 3px 0 var(--border)",
-              }}
+            <BookRating value={book.ratingValue} count={book.ratingCount} />
+            <p className="book-detail-summary">{book.description}</p>
+            <a
+              href={book.amazonUS}
+              className="solid-link"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <h2
-                style={{
-                  fontFamily: "'Space Grotesk', sans-serif",
-                  fontWeight: 700,
-                  fontSize: "1rem",
-                  color: "var(--text)",
-                  marginBottom: "0.6rem",
-                }}
-              >
-                ¿Para quién es este libro?
-              </h2>
-              <p
-                style={{
-                  color: "var(--text-secondary)",
-                  fontSize: "0.95rem",
-                  lineHeight: 1.6,
-                  margin: 0,
-                }}
-              >
-                {book.forWho}
-              </p>
-            </div>
-
-            {/* Topics checklist */}
-            <div>
-              <h2
-                style={{
-                  fontFamily: "'Space Grotesk', sans-serif",
-                  fontWeight: 700,
-                  fontSize: "1.1rem",
-                  color: "var(--text)",
-                  marginBottom: "0.75rem",
-                }}
-              >
-                Qué aprenderás
-              </h2>
-              <ul
-                style={{
-                  listStyle: "none",
-                  padding: 0,
-                  margin: 0,
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "0.5rem",
-                }}
-              >
-                {book.topics.map((topic, i) => (
-                  <li
-                    key={i}
-                    style={{
-                      display: "flex",
-                      alignItems: "flex-start",
-                      gap: "0.6rem",
-                      color: "var(--text-secondary)",
-                      fontSize: "0.95rem",
-                      lineHeight: 1.5,
-                    }}
-                  >
-                    <span
-                      style={{
-                        color: "var(--accent)",
-                        fontWeight: 700,
-                        fontSize: "1rem",
-                        flexShrink: 0,
-                        filter: "drop-shadow(0 0 0 var(--border))",
-                        WebkitTextStroke: "1px var(--border)",
-                      }}
-                    >
-                      ✓
-                    </span>
-                    {topic}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Tags */}
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
+              Comprar en Amazon <ArrowUpRight />
+            </a>
+            <p className="book-isbn">ISBN {book.isbn}</p>
+          </div>
+        </header>
+        <div className="book-reading-grid">
+          <div className="book-long-description">
+            {paragraphs.map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
+            ))}
+            <section
+              className="book-audience"
+              aria-labelledby="audience-heading"
+            >
+              <h2 id="audience-heading">¿Para quién es este libro?</h2>
+              <p>{book.forWho}</p>
+            </section>
+            <ul className="catalog-tags" aria-label="Temas del libro">
               {book.tags.map((tag) => (
-                <span
-                  key={tag}
-                  style={{
-                    fontFamily: "'Space Mono', monospace",
-                    fontSize: "0.72rem",
-                    fontWeight: 700,
-                    background: "var(--card)",
-                    border: "2px solid var(--border)",
-                    borderRadius: "4px",
-                    padding: "3px 8px",
-                    color: "var(--text-secondary)",
-                  }}
-                >
-                  {tag}
-                </span>
+                <li key={tag}>{tag}</li>
               ))}
-            </div>
-
-            {/* Repeat buy buttons */}
-            <div style={{ borderTop: "3px solid var(--border)", paddingTop: "1.5rem" }}>
-              <p
-                style={{
-                  fontFamily: "'Space Grotesk', sans-serif",
-                  fontWeight: 700,
-                  fontSize: "0.9rem",
-                  color: "var(--text-muted)",
-                  marginBottom: "0.75rem",
-                }}
+            </ul>
+            <div className="book-availability">
+              <p>Disponible en Amazon en formato digital y papel:</p>
+              <a
+                href={book.amazonUS}
+                className="quiet-link"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Disponible en Amazon en formato digital y papel:
-              </p>
-
-              <BuyButtons amazonUS={book.amazonUS} />
+                Comprar en Amazon <ArrowUpRight />
+              </a>
             </div>
           </div>
+          <section className="book-topics" aria-labelledby="topics-heading">
+            <h2 id="topics-heading">
+              Qué aprenderás<span>.</span>
+            </h2>
+            <ul>
+              {book.topics.map((topic) => (
+                <li key={topic}>
+                  <Check aria-hidden="true" />
+                  {topic}
+                </li>
+              ))}
+            </ul>
+          </section>
         </div>
-
-        {/* Cómo citar este libro */}
         <CitationBlock
           title={book.title}
           date={book.publishedDate}
@@ -437,87 +218,32 @@ export default async function BookPage({ params }: Props) {
           publisher="Amazon KDP"
           url={`${BASE_URL}/libros/${book.slug}`}
         />
-
-        {/* Otros libros */}
-        {otherBooks.length > 0 && (
-          <div
-            style={{
-              marginTop: "4rem",
-              paddingTop: "3rem",
-              borderTop: "3px solid var(--border)",
-            }}
+        {!!otherBooks.length && (
+          <section
+            className="book-related"
+            aria-labelledby="other-books-heading"
           >
-            <h2
-              style={{
-                fontFamily: "'Space Grotesk', sans-serif",
-                fontWeight: 800,
-                fontSize: "1.5rem",
-                color: "var(--text)",
-                marginBottom: "1.5rem",
-              }}
-            >
-              Otros libros
+            <h2 id="other-books-heading">
+              Otros libros<span>.</span>
             </h2>
-            <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+            <div>
               {otherBooks.map((other) => (
-                <Link
-                  key={other.slug}
-                  href={`/libros/${other.slug}`}
-                  style={{ textDecoration: "none" }}
-                >
-                  <div
-                    style={{
-                      display: "flex",
-                      gap: "1.25rem",
-                      alignItems: "center",
-                      background: "var(--card)",
-                      border: "3px solid var(--border)",
-                      boxShadow: "3px 3px 0 var(--border)",
-                      borderRadius: "6px",
-                      padding: "1rem",
-                      transition: "box-shadow 0.1s ease",
-                    }}
-                  >
-                    {/* Cover */}
-                    <div
-                      style={{
-                        position: "relative",
-                        width: "64px",
-                        height: "96px",
-                        flexShrink: 0,
-                        border: "2px solid var(--border)",
-                        borderRadius: "4px",
-                        overflow: "hidden",
-                      }}
-                    >
-                      <Image
-                        src={other.cover}
-                        alt={`Portada de ${other.title}`}
-                        fill
-                        style={{ objectFit: "cover" }}
-                        sizes="64px"
-                      />
-                    </div>
-
-                    {/* Text */}
-                    <div style={{ flex: 1, minWidth: 0 }}>
-                      <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 800, fontSize: "1rem", color: "var(--text)", margin: "0 0 0.25rem", lineHeight: 1.2 }}>
-                        {other.title}
-                      </p>
-                      <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "0.82rem", color: "var(--text-secondary)", margin: "0 0 0.5rem", lineHeight: 1.4 }}>
-                        {other.subtitle}
-                      </p>
-                      <span style={{ fontFamily: "'Space Mono', monospace", fontSize: "0.72rem", fontWeight: 700, color: "var(--text)" }}>
-                        Ver libro →
-                      </span>
-                    </div>
-                  </div>
+                <Link key={other.slug} href={`/libros/${other.slug}`}>
+                  <Image src={other.cover} alt="" width={64} height={96} />
+                  <span>
+                    <strong>{other.title}</strong>
+                    <span>{other.subtitle}</span>
+                  </span>
+                  <ArrowUpRight aria-hidden="true" />
                 </Link>
               ))}
             </div>
-          </div>
+          </section>
         )}
+        <Link href="/libros" className="catalog-back quiet-link">
+          <ArrowLeft /> Todos los libros
+        </Link>
       </div>
-    </>
+    </div>
   );
 }

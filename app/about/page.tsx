@@ -2,9 +2,23 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
-import { Youtube, Instagram, Twitter, Linkedin, Music2, Calendar, PlayCircle, Eye, PenLine, Star, Github } from "lucide-react";
+import {
+  Youtube,
+  Instagram,
+  Twitter,
+  Linkedin,
+  Music2,
+  Calendar,
+  PlayCircle,
+  Eye,
+  PenLine,
+  Star,
+  ArrowUpRight,
+  ArrowRight,
+} from "lucide-react";
 import { getStats } from "@/lib/stats";
-import { SectionTitle } from "@/components/SectionTitle";
+import HomeBooks from "@/components/home-books";
+import "./about.css";
 
 export const metadata: Metadata = {
   title: "Sobre mí",
@@ -94,7 +108,7 @@ const experience = [
     title: "Autor y Autoeditor",
     org: "Azacomic",
     desc: "CAzacomic fue mi primer proyecto de emprendimiento, se basaba en una editorial de comics independiente para publicar mis propias obras como dibujante/autor de cómic. Durante unos 4 años, estuve participando en cada paso de la gestión editorial.",
-  }
+  },
 ];
 
 const education = [
@@ -165,7 +179,12 @@ const aboutJsonLd = {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Inicio", item: BASE_URL },
-        { "@type": "ListItem", position: 2, name: "Sobre mí", item: `${BASE_URL}/about` },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Sobre mí",
+          item: `${BASE_URL}/about`,
+        },
       ],
     },
     ...books.map((book) => ({
@@ -203,7 +222,12 @@ export default async function AboutPage() {
     { label: "Instagram", value: "127k", icon: Instagram, color: "#E1306C" },
     { label: "X / Twitter", value: "80k", icon: Twitter, color: "#1DA1F2" },
     { label: "LinkedIn", value: "60k+", icon: Linkedin, color: "#0A66C2" },
-    { label: "Años en esto", value: "20+", icon: Calendar, color: "var(--border)" },
+    {
+      label: "Años en esto",
+      value: "20+",
+      icon: Calendar,
+      color: "var(--border)",
+    },
     {
       label: "Vídeos en YouTube",
       value: formatStat(siteStats.youtubeVideos),
@@ -235,483 +259,258 @@ export default async function AboutPage() {
   ];
 
   return (
-    <div style={{ maxWidth: "960px", margin: "0 auto", padding: "3rem 1.5rem" }}>
+    <div className="editorial-home about-page">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}
       />
-
-      {/* Hero */}
       <section
-        style={{
-          borderBottom: "3px solid var(--border)",
-          paddingBottom: "3rem",
-          marginBottom: "4rem",
-        }}
+        className="editorial-wrap about-opening"
+        aria-labelledby="about-heading"
       >
-        {/* Top row: h1 + photo */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "flex-start",
-            gap: "3rem",
-            flexWrap: "wrap",
-            marginBottom: "2rem",
-          }}
-        >
-          {/* Left: badge + h1 */}
-          <div style={{ flex: "1 1 300px", minWidth: 0 }}>
-            <div
-              style={{
-                display: "inline-block",
-                background: "var(--accent)",
-                border: "3px solid var(--border)",
-                borderRadius: "4px",
-                padding: "4px 12px",
-                marginBottom: "1.25rem",
-                fontFamily: "'Space Mono', monospace",
-                fontSize: "0.8rem",
-                fontWeight: 700,
-                textTransform: "uppercase",
-                letterSpacing: "1px",
-                boxShadow: "2px 2px 0 var(--border)",
-              }}
-            >
-              /about
-            </div>
-
-            <h1
-              style={{
-                fontFamily: "'Space Grotesk', sans-serif",
-                fontWeight: 800,
-                fontSize: "clamp(2rem, 4vw, 3.2rem)",
-                lineHeight: 1.1,
-                color: "var(--text)",
-                margin: 0,
-              }}
-            >
-              Hola, soy Carlos.<br />
+        <div className="masthead">
+          <h1 id="about-heading">
+            Sobre mí<span>.</span>
+          </h1>
+          <p>
+            Ingeniero de software.{" "}
+            <br />
+            Profesor. Creador.
+          </p>
+        </div>
+        <div className="about-hero">
+          <div className="about-intro">
+            <h2>
+              Hola,
+              <br />
+              soy <span className="marker">Carlos.</span>
+            </h2>
+            <p className="about-lead">
               Llevo más de 20 años haciendo cosas en internet.
-            </h1>
+            </p>
+            <p>
+              Ingeniero en Telemática por la Universidad Carlos III de Madrid.
+              He trabajado para <strong>Google</strong>,{" "}
+              <strong>IBM Research</strong> y <strong>Eventbrite</strong>, entre
+              otras empresas, además de haber cofundado mi propia startup y
+              trabajar como freelance.
+            </p>
+            <Link className="quiet-link" href="#trayectoria">
+              Mi trayectoria <ArrowRight />
+            </Link>
           </div>
-
-          {/* Right: photo */}
-          <div style={{ flex: "0 0 auto" }}>
-            <div
-              style={{
-                border: "3px solid var(--border)",
-                borderRadius: "8px",
-                boxShadow: "8px 8px 0 var(--border)",
-                overflow: "hidden",
-                lineHeight: 0,
-              }}
-            >
+          <figure className="portrait about-portrait">
+            <div className="photo">
               <Image
                 src="/carlos-azaustre.jpg"
                 alt="Carlos Azaustre en su setup de streaming"
-                width={380}
-                height={285}
-                style={{ display: "block", maxWidth: "100%", height: "auto" }}
-                priority
+                width={1280}
+                height={960}
+                sizes="(max-width: 700px) 85vw, 48vw"
+                preload
               />
             </div>
-          </div>
-        </div>
-
-        {/* Bottom: description + buttons (full width) */}
-        <p
-          style={{
-            color: "var(--text-secondary)",
-            fontSize: "1.1rem",
-            lineHeight: 1.75,
-            marginBottom: "1rem",
-          }}
-        >
-          Ingeniero en Telemática por la Universidad Carlos III de Madrid. He trabajado para{" "}
-          <strong style={{ color: "var(--text)" }}>Google</strong>,{" "}
-          <strong style={{ color: "var(--text)" }}>IBM Research</strong> y{" "}
-          <strong style={{ color: "var(--text)" }}>Eventbrite</strong> y{" "} entre otras empresas,
-          además de haber cofundado mi propia startup y trabajar como freelance.
-        </p>
-        <p
-          style={{
-            color: "var(--text-secondary)",
-            fontSize: "1.1rem",
-            lineHeight: 1.75,
-            marginBottom: "1rem",
-          }}
-        >
-          Ahora trabajo como <strong style={{ color: "var(--text)" }}>creador de contenido educativo y académico</strong>{" "}
-          sobre programación y desarrollo web, y soy{" "}
-          <strong style={{ color: "var(--text)" }}>profesor asociado en la Universidad Europea</strong>{" "}
-          en el Grado de Ingeniería Informática y en el Máster en Desarrollo de Aplicaciones Web.
-          Estoy reconocido por Google como{" "}
-          <strong style={{ color: "var(--text)" }}>Developer Expert (GDE) en Web y Firebase</strong>{" "}
-          desde 2019 (ya unos cuantos añitos...) y desde 2022 premiado anualmente como{" "}
-          <strong style={{ color: "var(--text)" }}>Microsoft MVP</strong> (Most Valuable Professional).
-        </p>
-        <p
-          style={{
-            color: "var(--text-secondary)",
-            fontSize: "1.1rem",
-            lineHeight: 1.75,
-            marginBottom: "2rem",
-          }}
-        >
-          Durante los últimos años he publicado varios libros, cursos online e impartido charlas
-          y talleres. También publico contenido en este blog y en mi{" "}
-          <a
-            href="https://youtube.com/@carlosazaustre"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "var(--text)", fontWeight: 700, textDecoration: "underline" }}
-          >
-            canal de YouTube
-          </a>
-          , al que te animo a que te suscribas.
-        </p>
-
-        <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-          <Link href="/blog" className="neo-btn neo-btn-primary">
-            Leer el blog →
-          </Link>
-          <a
-            href="https://youtube.com/@carlosazaustre"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="neo-btn"
-          >
-            YouTube
-          </a>
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section style={{ marginBottom: "4rem" }}>
-        <SectionTitle>En números</SectionTitle>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(160px, 1fr))",
-            gap: "1rem",
-          }}
-        >
-          {allStats.map((s) => {
-            const Icon = s.icon;
-            const card = (
-              <div
-                className="neo-card"
-                style={{ padding: "1.25rem", textAlign: "center" }}
-              >
-                <div style={{ marginBottom: "0.6rem", display: "flex", justifyContent: "center" }}>
-                  <div style={{
-                    width: "40px",
-                    height: "40px",
-                    background: s.color,
-                    border: "2px solid var(--border)",
-                    borderRadius: "8px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    boxShadow: "2px 2px 0 var(--border)",
-                  }}>
-                    <Icon size={20} strokeWidth={2} color="#ffffff" />
-                  </div>
-                </div>
-                <div
-                  style={{
-                    fontFamily: "'Space Mono', monospace",
-                    fontWeight: 800,
-                    fontSize: "1.6rem",
-                    color: "var(--text)",
-                    lineHeight: 1,
-                    marginBottom: "0.3rem",
-                  }}
-                >
-                  {s.value}
-                </div>
-                <div
-                  style={{
-                    fontFamily: "'Space Mono', monospace",
-                    fontSize: "0.75rem",
-                    fontWeight: 700,
-                    textTransform: "uppercase",
-                    color: "var(--text-muted)",
-                    letterSpacing: "0.5px",
-                  }}
-                >
-                  {s.label}
-                </div>
-              </div>
-            );
-
-            return s.href ? (
-              <a
-                key={s.label}
-                href={s.href}
-                target={s.href.startsWith("http") ? "_blank" : undefined}
-                rel={s.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                style={{ textDecoration: "none" }}
-              >
-                {card}
-              </a>
-            ) : (
-              <div key={s.label}>{card}</div>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* Awards photo */}
-      <div
-        style={{
-          marginBottom: "4rem",
-          border: "3px solid var(--border)",
-          borderRadius: "8px",
-          boxShadow: "6px 6px 0 var(--border)",
-          overflow: "hidden",
-          lineHeight: 0,
-        }}
-      >
-        <Image
-          src="/carlos-awards.jpg"
-          alt="Carlos Azaustre con el botón de plata de YouTube (100k suscriptores) y el trofeo Microsoft MVP 2022"
-          width={960}
-          height={720}
-          style={{ display: "block", width: "100%", height: "auto" }}
-        />
-      </div>
-
-      {/* Experience + Education */}
-      <section style={{ marginBottom: "4rem" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(440px, 100%), 1fr))", gap: "3rem" }}>
-
-          {/* Experiencia */}
-          <div>
-            <SectionTitle>💼 Experiencia</SectionTitle>
-            <div style={{ position: "relative", paddingLeft: "2.5rem" }}>
-              <div style={{ position: "absolute", left: "10px", top: "10px", bottom: "10px", width: "3px", background: "var(--border)" }} />
-              {experience.map((item, i) => {
-                const isFirst = i === 0;
-                const isLast = i === experience.length - 1;
-                return (
-                  <div key={i} style={{ position: "relative", marginBottom: isLast ? 0 : "1.5rem" }}>
-                    <div style={{
-                      position: "absolute", left: "-2.5rem", top: "14px",
-                      width: "20px", height: "20px", borderRadius: "50%",
-                      background: isFirst ? "var(--text)" : "var(--accent)",
-                      border: "3px solid var(--border)", boxShadow: "2px 2px 0 var(--border)", zIndex: 1,
-                    }} />
-                    <div className="neo-card" style={{ padding: "1rem 1.25rem", background: isFirst ? "var(--text)" : "var(--card)" }}>
-                      <span style={{
-                        display: "inline-block", background: "var(--accent)", color: "var(--text)",
-                        border: "2px solid var(--border)", borderRadius: "3px", padding: "1px 8px",
-                        fontFamily: "'Space Mono', monospace", fontSize: "0.65rem", fontWeight: 800,
-                        boxShadow: "2px 2px 0 var(--border)", marginBottom: "0.4rem",
-                      }}>
-                        {item.period}
-                      </span>
-                      <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 800, fontSize: "0.95rem", color: isFirst ? "var(--accent)" : "var(--text)", marginBottom: "0.15rem" }}>
-                        {item.title}
-                      </h3>
-                      <p style={{ fontFamily: "'Space Mono', monospace", fontSize: "0.72rem", fontWeight: 700, color: isFirst ? "#888" : "var(--text-muted)", marginBottom: "0.4rem" }}>
-                        {item.org}
-                      </p>
-                      <p style={{ fontSize: "0.85rem", color: isFirst ? "#aaa" : "var(--text-secondary)", lineHeight: 1.6, margin: 0 }}>
-                        {item.desc}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Educación */}
-          <div>
-            <SectionTitle>🎓 Educación</SectionTitle>
-            <div style={{ position: "relative", paddingLeft: "2.5rem" }}>
-              <div style={{ position: "absolute", left: "10px", top: "10px", bottom: "10px", width: "3px", background: "var(--border)" }} />
-              {education.map((item, i) => {
-                const isLast = i === education.length - 1;
-                return (
-                  <div key={i} style={{ position: "relative", marginBottom: isLast ? 0 : "1.5rem" }}>
-                    <div style={{
-                      position: "absolute", left: "-2.5rem", top: "14px",
-                      width: "20px", height: "20px", borderRadius: "50%",
-                      background: "var(--accent)", border: "3px solid var(--border)",
-                      boxShadow: "2px 2px 0 var(--border)", zIndex: 1,
-                    }} />
-                    <div className="neo-card" style={{ padding: "1rem 1.25rem" }}>
-                      <span style={{
-                        display: "inline-block", background: "var(--accent)", color: "var(--text)",
-                        border: "2px solid var(--border)", borderRadius: "3px", padding: "1px 8px",
-                        fontFamily: "'Space Mono', monospace", fontSize: "0.65rem", fontWeight: 800,
-                        boxShadow: "2px 2px 0 var(--border)", marginBottom: "0.4rem",
-                      }}>
-                        {item.period}
-                      </span>
-                      <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 800, fontSize: "0.95rem", color: "var(--text)", marginBottom: "0.15rem" }}>
-                        {item.title}
-                      </h3>
-                      <p style={{ fontFamily: "'Space Mono', monospace", fontSize: "0.72rem", fontWeight: 700, color: "var(--text-muted)", marginBottom: "0.4rem" }}>
-                        {item.org}
-                      </p>
-                      <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.6, margin: 0 }}>
-                        {item.desc}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      {/* Books */}
-      <section style={{ marginBottom: "4rem" }}>
-        <SectionTitle>Libros publicados</SectionTitle>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
-            gap: "1.25rem",
-          }}
-        >
-          {books.map((book) => (
-            <a
-              key={book.title}
-              href={book.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="neo-card"
-              style={{
-                padding: "1.25rem",
-                textDecoration: "none",
-                display: "flex",
-                flexDirection: "column",
-                gap: "0.75rem",
-              }}
-            >
-              {/* Cover */}
-              <div
-                style={{
-                  border: "2px solid var(--border)",
-                  borderRadius: "4px",
-                  overflow: "hidden",
-                  lineHeight: 0,
-                }}
-              >
-                <Image
-                  src={book.cover}
-                  alt={book.title}
-                  width={400}
-                  height={533}
-                  style={{ width: "100%", height: "auto", display: "block" }}
-                />
-              </div>
-              <h3
-                style={{
-                  fontFamily: "'Space Grotesk', sans-serif",
-                  fontWeight: 800,
-                  fontSize: "1rem",
-                  color: "var(--text)",
-                  margin: 0,
-                }}
-              >
-                {book.title}
-              </h3>
-              <p
-                style={{
-                  fontSize: "0.85rem",
-                  color: "var(--text-secondary)",
-                  lineHeight: 1.6,
-                  margin: 0,
-                  flex: 1,
-                }}
-              >
-                {book.desc}
-              </p>
-              <div style={{ fontFamily: "'Space Mono', monospace", fontSize: "0.62rem", color: "var(--text-muted)", lineHeight: 1.5 }}>
-                Amazon KDP · ISBN {book.isbn}
-              </div>
-              <span
-                style={{
-                  fontFamily: "'Space Mono', monospace",
-                  fontSize: "0.75rem",
-                  fontWeight: 700,
-                  textTransform: "uppercase",
-                  color: "var(--text-muted)",
-                  borderBottom: "2px solid var(--accent)",
-                  alignSelf: "flex-start",
-                }}
-              >
-                Ver libro →
+            <figcaption>
+              <span>Al otro lado de la pantalla.</span>
+              <span className="portrait-cross" aria-hidden="true">
+                +
               </span>
+            </figcaption>
+            <Link className="photo-tab" href="/uses">
+              Mi setup <ArrowUpRight />
+            </Link>
+          </figure>
+        </div>
+        <nav className="about-index" aria-label="En esta página">
+          <span>Un poco más de contexto</span>
+          <a href="#ahora">A qué me dedico</a>
+          <a href="#trayectoria">Trayectoria</a>
+          <a href="#formacion">Formación</a>
+          <a href="#libros">Libros</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+      </section>
+      <section
+        className="about-present editorial-wrap"
+        id="ahora"
+        aria-labelledby="present-heading"
+      >
+        <h2 id="present-heading">
+          Hago software.
+          <br />
+          También <span className="marker">lo enseño.</span>
+        </h2>
+        <div className="about-prose">
+          <p>
+            Ahora trabajo como{" "}
+            <strong>creador de contenido educativo y académico</strong> sobre
+            programación y desarrollo web, y soy{" "}
+            <strong>profesor asociado en la Universidad Europea</strong> en el
+            Grado de Ingeniería Informática y en el Máster en Desarrollo de
+            Aplicaciones Web.
+          </p>
+          <p>
+            Estoy reconocido por Google como{" "}
+            <strong>Developer Expert (GDE) en Web y Firebase</strong> desde 2019
+            (ya unos cuantos añitos...) y desde 2022 premiado anualmente como{" "}
+            <strong>Microsoft MVP</strong> (Most Valuable Professional).
+          </p>
+          <p>
+            Durante los últimos años he publicado varios libros, cursos online e
+            impartido charlas y talleres. También publico contenido en este blog
+            y en mi{" "}
+            <a href="https://youtube.com/@carlosazaustre">canal de YouTube</a>,
+            al que te animo a que te suscribas.
+          </p>
+          <div className="about-actions">
+            <Link href="/blog" className="solid-link">
+              Leer el blog <ArrowRight />
+            </Link>
+            <a
+              href="https://youtube.com/@carlosazaustre"
+              className="quiet-link"
+            >
+              Mi canal de YouTube <ArrowUpRight />
             </a>
-          ))}
+          </div>
         </div>
       </section>
-
-      {/* Contact */}
+      <section className="about-numbers" aria-labelledby="numbers-heading">
+        <div className="editorial-wrap">
+          <div className="section-heading">
+            <h2 id="numbers-heading">
+              En números<span>.</span>
+            </h2>
+            <a href="https://github.com/carlosazaustre">
+              Mi GitHub <ArrowUpRight />
+            </a>
+          </div>
+          <dl className="about-stats">
+            {allStats.map((stat) => {
+              const Icon = stat.icon;
+              return (
+                <div key={stat.label}>
+                  <dt>
+                    <Icon size={17} aria-hidden="true" />
+                    {stat.label}
+                  </dt>
+                  <dd>
+                    {stat.href ? (
+                      <a href={stat.href}>
+                        {stat.value}
+                        <ArrowUpRight aria-hidden="true" />
+                      </a>
+                    ) : (
+                      stat.value
+                    )}
+                  </dd>
+                </div>
+              );
+            })}
+          </dl>
+        </div>
+      </section>
       <section
-        style={{
-          background: "var(--text)",
-          border: "3px solid var(--border)",
-          borderRadius: "8px",
-          padding: "2rem",
-          boxShadow: "8px 8px 0 var(--border)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          flexWrap: "wrap",
-          gap: "1.5rem",
-        }}
+        className="about-recognition editorial-wrap"
+        aria-labelledby="recognition-heading"
+      >
+        <figure>
+          <Image
+            src="/carlos-awards.jpg"
+            alt="Carlos Azaustre con el botón de plata de YouTube y el trofeo Microsoft MVP 2022"
+            width={960}
+            height={720}
+            sizes="(max-width: 700px) 90vw, 55vw"
+            loading="lazy"
+          />
+          <figcaption>
+            El botón de plata de YouTube y el trofeo Microsoft MVP 2022.
+          </figcaption>
+        </figure>
+        <div>
+          <h2 id="recognition-heading">
+            Fuera del IDE{" "}
+            <br />
+            y la terminal<span>.</span>
+          </h2>
+          <p>Google Developer Expert en Web y Firebase desde 2019.</p>
+          <p>Microsoft MVP desde 2022.</p>
+        </div>
+      </section>
+      <section
+        className="about-career editorial-wrap"
+        id="trayectoria"
+        aria-labelledby="career-heading"
+      >
+        <div className="about-experience">
+          <h2 id="career-heading">
+            Por dónde
+            <br />
+            he pasado<span>.</span>
+          </h2>
+          <ol className="career-list">
+            {experience.map((item) => (
+              <li key={`${item.org}-${item.period}`}>
+                <span className="career-period">{item.period}</span>
+                <div>
+                  <h3>{item.title}</h3>
+                  <p className="career-org">{item.org}</p>
+                  <p className="career-description">{item.desc}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+        <aside
+          id="formacion"
+          className="about-education"
+          aria-labelledby="education-heading"
+        >
+          <h2 id="education-heading">
+            Sigo
+            <br />
+            aprendiendo<span>.</span>
+          </h2>
+          <ol>
+            {education.map((item) => (
+              <li key={item.title}>
+                <span className="career-period">{item.period}</span>
+                <h3>{item.title}</h3>
+                <p className="career-org">{item.org}</p>
+                <p className="career-description">{item.desc}</p>
+              </li>
+            ))}
+          </ol>
+        </aside>
+      </section>
+      <HomeBooks />
+      <section
+        className="about-contact editorial-wrap"
+        id="contacto"
+        aria-labelledby="contact-heading"
       >
         <div>
-          <h2
-            style={{
-              fontFamily: "'Space Grotesk', sans-serif",
-              fontWeight: 800,
-              fontSize: "1.4rem",
-              color: "var(--accent)",
-              marginBottom: "0.4rem",
-            }}
-          >
-            ¿Hablamos?
+          <h2 id="contact-heading">
+            ¿Hablamos<span>?</span>
           </h2>
-          <p
-            style={{
-              fontFamily: "'Space Mono', monospace",
-              fontSize: "0.85rem",
-              color: "#aaa",
-              margin: 0,
-            }}
-          >
-            Colaboraciones, charlas o simplemente saludar.
-          </p>
+          <p>Colaboraciones, charlas o simplemente saludar.</p>
         </div>
-        <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+        <nav aria-label="Contactar con Carlos">
           {[
             { label: "Twitter/X", href: "https://twitter.com/carlosazaustre" },
-            { label: "LinkedIn", href: "https://linkedin.com/in/carlosazaustre" },
+            {
+              label: "LinkedIn",
+              href: "https://linkedin.com/in/carlosazaustre",
+            },
             { label: "YouTube", href: "https://youtube.com/@carlosazaustre" },
           ].map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="neo-btn neo-btn-primary"
-            >
+            <a key={link.href} href={link.href}>
               {link.label}
+              <ArrowUpRight />
             </a>
           ))}
-        </div>
+        </nav>
       </section>
-
     </div>
   );
 }

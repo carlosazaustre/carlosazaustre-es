@@ -530,6 +530,8 @@ export function readPostsFromDir(
       related: Array.isArray(data.related) ? data.related : undefined,
       readingTime: formatReadingTime(content),
       coverImage: data.coverImage ?? `/api/og?title=${encodeURIComponent(data.title ?? "")}`,
+      headerImage: typeof data.headerImage === "string" ? data.headerImage : undefined,
+      headerImageAlt: typeof data.headerImageAlt === "string" ? data.headerImageAlt : undefined,
       faq: Array.isArray(data.faq) ? data.faq : undefined,
       videoId: data.videoId ? String(data.videoId) : undefined,
       episodeNumber: data.episodeNumber ? Number(data.episodeNumber) : undefined,

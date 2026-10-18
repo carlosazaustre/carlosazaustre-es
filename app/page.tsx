@@ -1,363 +1,224 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import { getAllPosts } from "@/lib/blog";
-import BlogCard from "@/components/BlogCard";
 import { getLatestVideos } from "@/lib/youtube";
-import SubscribeNewsletter from "@/components/SubscribeNewsletter";
-import { SectionTitle } from "@/components/SectionTitle";
-
-const books = [
-  {
-    title: "Aprendiendo JavaScript",
-    desc: "Desde cero hasta ECMAScript 6+. Uno de los libros de JavaScript más vendidos en Amazon España.",
-    url: "https://amzn.to/4tZb96k",
-    cover: "/book-aprendiendo-javascript.jpg",
-    isbn: "979-8700179263",
-  },
-  {
-    title: "Aprendiendo React",
-    desc: "Guía para aprender React.js desde cero con ejemplos reales y el ecosistema moderno.",
-    url: "https://amzn.to/4aFSHZ4",
-    cover: "/book-aprendiendo-react.jpg",
-    isbn: "979-8852737427",
-  },
-  {
-    title: "Dominando JavaScript",
-    desc: "Técnicas avanzadas para el desarrollo web moderno. ES2015+ y buenas prácticas.",
-    url: "https://amzn.to/4aOMxVe",
-    cover: "/book-dominando-javascript.jpg",
-    isbn: "979-8338283325",
-  },
-];
+import HomeBooks from "@/components/home-books";
+import HomeJournal from "@/components/home-journal";
+import HomeVideos from "@/components/home-videos";
 
 export default async function HomePage() {
-  const recentPosts = getAllPosts().slice(0, 6);
-  const videos = await getLatestVideos(4);
-
+  const posts = getAllPosts();
+  const featured = posts[0];
+  const journalPosts = posts.slice(1, 13);
+  const videos = await getLatestVideos(3, { includeShorts: true });
   return (
-    <div style={{ maxWidth: "960px", margin: "0 auto", padding: "3rem 1.5rem", overflowX: "hidden" }}>
-      {/* Hero */}
-      <section
-        style={{
-          borderBottom: "3px solid var(--border)",
-          paddingBottom: "3rem",
-          marginBottom: "4rem",
-        }}
+    <div className="editorial-home">
+      <svg
+        className="symbols"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
       >
-        {/* Top row: h1 + photo */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "flex-start",
-            gap: "3rem",
-            flexWrap: "wrap",
-            marginBottom: "2rem",
-          }}
-        >
-          {/* Left: h1 */}
-          <div style={{ flex: "1 1 300px", minWidth: 0 }}>
-            <h1
-              style={{
-                fontFamily: "'Space Grotesk', sans-serif",
-                fontWeight: 800,
-                fontSize: "clamp(2.2rem, 5vw, 4rem)",
-                lineHeight: 1.05,
-                color: "var(--text)",
-                margin: 0,
-              }}
-            >
-              Hola, soy{" "}
-              <span
-                style={{
-                  background: "var(--accent)",
-                  padding: "0 8px",
-                  border: "3px solid var(--border)",
-                  borderRadius: "4px",
-                  boxShadow: "var(--shadow-sm)",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                Carlos
-              </span>
-              .
+        <symbol id="arrow" viewBox="0 0 24 24">
+          <path d="M5 19 19 5M5 5h14v14" />
+        </symbol>
+        <symbol id="right" viewBox="0 0 24 24">
+          <path d="M4 12h16m-7-7 7 7-7 7" />
+        </symbol>
+        <symbol id="play" viewBox="0 0 24 24">
+          <path d="m8 5 11 7-11 7Z" />
+        </symbol>
+      </svg>
+      <section className="opening editorial-wrap" aria-labelledby="name">
+        <div className="masthead">
+          <h1 id="name">
+            Carlos Azaustre<span>.</span>
+          </h1>
+          <p>
+            Ingeniero de software. <br />
+            Profesor. Creador.
+          </p>
+        </div>
+        <div className="front-page">
+          <div className="intro">
+            <h2>
+              Hago software.
+              <br />Y te cuento
               <br />
-              Ingeniero de Software
-              <br />
-              y creador de contenido educativo.
-            </h1>
-          </div>
-
-          {/* Right: photo */}
-          <div className="hero-photo-wrapper" style={{ flex: "0 1 auto", minWidth: 0, maxWidth: "390px", width: "100%" }}>
-            <Image
-              src="/carlos-azaustre.png"
-              alt="Carlos Azaustre — Ingeniero de Software y creador de contenido educativo"
-              width={460}
-              height={460}
-              className="hero-photo"
-              priority
-              style={{ maxWidth: "390px"}}
-            />
-          </div>
-        </div>
-
-        {/* Bottom: description + buttons (full width) */}
-        <p
-          style={{
-            color: "var(--text-secondary)",
-            fontSize: "1.1rem",
-            lineHeight: 1.7,
-            marginBottom: "2rem",
-          }}
-        >
-          20+ años haciendo webs. Escribo sobre JavaScript, TypeScript,
-          arquitectura de software e inteligencia artificial.{" "}
-          <strong style={{ color: "var(--text)" }}>640k seguidores</strong>{" "}
-          en redes, profesor asociado en la Universidad Europea.
-        </p>
-
-        <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-          <Link href="/blog" className="neo-btn neo-btn-primary">
-            Leer el blog →
-          </Link>
-          <Link href="/about" className="neo-btn">
-            Sobre mí
-          </Link>
-        </div>
-      </section>
-
-      {/* Newsletter */}
-      <SubscribeNewsletter />
-
-      {/* Books */}
-      <section style={{ marginBottom: "4rem" }}>
-        <SectionTitle>Libros publicados</SectionTitle>
-
-        <div
-          className="books-grid"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))",
-            gap: "1.25rem",
-          }}
-        >
-          {books.map((book) => (
-            <a
-              key={book.title}
-              href={book.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="neo-card"
-              style={{
-                padding: "1.25rem",
-                textDecoration: "none",
-                display: "flex",
-                flexDirection: "column",
-                gap: "0.75rem",
-              }}
-            >
-              {/* Cover */}
-              <div
-                style={{
-                  border: "2px solid var(--border)",
-                  borderRadius: "4px",
-                  overflow: "hidden",
-                  lineHeight: 0,
-                }}
-              >
-                <Image
-                  src={book.cover}
-                  alt={book.title}
-                  width={400}
-                  height={533}
-                  style={{ width: "100%", height: "auto", display: "block" }}
-                />
-              </div>
-
-              <h3
-                style={{
-                  fontFamily: "'Space Grotesk', sans-serif",
-                  fontWeight: 800,
-                  fontSize: "1rem",
-                  color: "var(--text)",
-                  margin: 0,
-                }}
-              >
-                {book.title}
-              </h3>
-              <p
-                style={{
-                  fontSize: "0.85rem",
-                  color: "var(--text-secondary)",
-                  lineHeight: 1.6,
-                  margin: 0,
-                  flex: 1,
-                }}
-              >
-                {book.desc}
-              </p>
-              <div style={{ fontFamily: "'Space Mono', monospace", fontSize: "0.62rem", color: "var(--text-muted)", lineHeight: 1.5 }}>
-                Amazon KDP · ISBN {book.isbn}
-              </div>
-              <span
-                style={{
-                  fontFamily: "'Space Mono', monospace",
-                  fontSize: "0.72rem",
-                  fontWeight: 700,
-                  textTransform: "uppercase",
-                  color: "var(--text-muted)",
-                  borderBottom: "2px solid var(--accent)",
-                  alignSelf: "flex-start",
-                }}
-              >
-                Ver libro →
-              </span>
-            </a>
-          ))}
-        </div>
-      </section>
-
-      {/* YouTube */}
-      {videos.length > 0 && (
-        <section style={{ marginBottom: "4rem" }}>
-          <SectionTitle action={
-            <a
-              href="https://youtube.com/@carlosazaustre?sub_confirmation=1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="neo-btn"
-              style={{ fontSize: "0.85rem", background: "#FF0000", color: "#fff", borderColor: "#1A1A1A", whiteSpace: "nowrap" }}
-            >
-              Suscribirse ▶
-            </a>
-          }>Últimos vídeos</SectionTitle>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: "1.25rem" }}>
-            {videos.map((v, i) => (
-              <a
-                key={v.id}
-                href={v.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`neo-card${i === 3 ? " yt-card-4" : ""}`}
-                style={{ padding: 0, textDecoration: "none", overflow: "hidden", display: "flex", flexDirection: "column" }}
-              >
-                {/* Thumbnail */}
-                <div style={{ position: "relative", paddingBottom: "56.25%", background: "#000", overflow: "hidden" }}>
-                  <Image
-                    src={v.thumbnail}
-                    alt={v.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 280px"
-                    style={{ objectFit: "cover" }}
-                    unoptimized
-                  />
-                  <div style={{
-                    position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", opacity: 0,
-                    background: "rgba(0,0,0,0.4)", transition: "opacity 0.2s"
-                  }} className="yt-play-overlay">
-                    <div style={{ width: 48, height: 48, background: "#FF0000", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                      <span style={{ color: "#fff", fontSize: "1.2rem", marginLeft: 3 }}>▶</span>
-                    </div>
-                  </div>
-                </div>
-                {/* Title */}
-                <div style={{ padding: "0.85rem 1rem", flex: 1 }}>
-                  <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, fontSize: "0.9rem", color: "var(--text)", lineHeight: 1.4, margin: 0 }}>
-                    {v.title}
-                  </p>
-                  <p style={{ fontFamily: "'Space Mono', monospace", fontSize: "0.65rem", color: "var(--text-muted)", marginTop: "0.4rem" }}>
-                    {new Date(v.published).toLocaleDateString("es-ES", { day: "numeric", month: "short", year: "numeric" })}
-                  </p>
-                </div>
-              </a>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* aprendiendo.dev */}
-      <section style={{ marginBottom: "4rem" }}>
-        <div
-          className="neo-card"
-          style={{
-            padding: "2rem",
-            background: "var(--text)",
-            display: "flex",
-            gap: "2rem",
-            alignItems: "center",
-            flexWrap: "wrap",
-          }}
-        >
-          <div style={{ flex: "1 1 300px", minWidth: 0 }}>
-            <div style={{
-              display: "inline-block",
-              background: "var(--accent)",
-              border: "2px solid var(--border)",
-              borderRadius: "3px",
-              padding: "2px 10px",
-              fontFamily: "'Space Mono', monospace",
-              fontSize: "0.7rem",
-              fontWeight: 700,
-              textTransform: "uppercase",
-              letterSpacing: "1px",
-              marginBottom: "1rem",
-              boxShadow: "2px 2px 0 var(--border)",
-            }}>
-              Proyecto principal
-            </div>
-            <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 800, fontSize: "1.75rem", color: "var(--accent)", marginBottom: "0.75rem", lineHeight: 1.1 }}>
-              aprendiendo.dev
+              <span className="marker">cómo.</span>
             </h2>
-            <p style={{ color: "#aaa", fontSize: "0.95rem", lineHeight: 1.75, marginBottom: "1.25rem" }}>
-              Plataforma de cursos de programación con acceso de por vida. Aprende JavaScript, arquitectura de software y desarrollo web moderno a tu ritmo.
+            <p>
+              Llevo más de 20 años escribiendo código. Aquí comparto lo que
+              aprendo sobre desarrollo web, IA y los proyectos que voy montando.
             </p>
-            <a
-              href="https://aprendiendo.dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="neo-btn neo-btn-primary"
-              style={{ display: "inline-block" }}
-            >
-              Explorar cursos →
+            <a href="#cuaderno" className="solid-link">
+              Leer el blog{" "}
+              <svg aria-hidden="true">
+                <use href="#right" />
+              </svg>
             </a>
+            <Link href="/about" className="quiet-link">
+              Un poco más sobre mí{" "}
+              <svg aria-hidden="true">
+                <use href="#arrow" />
+              </svg>
+            </Link>
           </div>
-          <div style={{ flex: "0 0 auto", textAlign: "center" }}>
-            <Image
-              src="/logo_aprendiendodev.png"
-              alt="aprendiendo.dev"
-              width={80}
-              height={80}
-              style={{ borderRadius: "12px" }}
-            />
-            <div style={{ fontFamily: "'Space Mono', monospace", fontSize: "0.75rem", color: "#666", marginTop: "0.5rem" }}>
-              learn by doing
+          <figure className="portrait">
+            <div className="photo">
+              <Image
+                src="/carlos-azaustre.jpg"
+                alt="Carlos en su estudio, junto al micrófono"
+                width={1280}
+                height={960}
+                fetchPriority="high"
+              />
             </div>
+            <figcaption>
+              <span>Al otro lado de la pantalla.</span>
+              <span className="portrait-cross" aria-hidden="true">
+                +
+              </span>
+            </figcaption>
+            <Link className="photo-tab" href="/uses">
+              Mi setup{" "}
+              <svg aria-hidden="true">
+                <use href="#arrow" />
+              </svg>
+            </Link>
+          </figure>
+          {featured && (
+            <article className="cover-story">
+              <div className="story-meta">
+                <span>Lo último que he publicado</span>
+                <time dateTime={featured.date}>
+                  {new Date(featured.date).toLocaleDateString("es-ES", {
+                    day: "2-digit",
+                    month: "2-digit",
+                    year: "2-digit",
+                  })}
+                </time>
+              </div>
+              <Link href={`/blog/${featured.slug}`} className="cover-link">
+                <div className="cover-art">
+                  {featured.headerImage && (
+                    <Image
+                      src={featured.headerImage}
+                      alt={featured.headerImageAlt ?? ""}
+                      width={440}
+                      height={460}
+                    />
+                  )}
+                  <span className="round-arrow">
+                    <ArrowUpRight />
+                  </span>
+                </div>
+                <h2>{featured.title}</h2>
+              </Link>
+              <p>{featured.excerpt}</p>
+              <div className="story-tags">
+                {featured.tags.slice(0, 3).join(" / ")}
+              </div>
+            </article>
+          )}
+        </div>
+        <div className="contents-strip">
+          <span>De lo que suelo hablar</span>
+          <Link href="/blog/tag/javascript">JavaScript</Link>
+          <Link href="/blog/tag/typescript">TypeScript</Link>
+          <Link href="/blog/tag/ai">Inteligencia artificial</Link>
+          <Link href="/blog">Arquitectura web</Link>
+        </div>
+      </section>
+      <HomeJournal posts={journalPosts} />
+      <HomeBooks />
+      <HomeVideos videos={videos} />
+      <section
+        className="project-section editorial-wrap"
+        id="aprendiendo"
+        aria-labelledby="project-heading"
+      >
+        <div className="project-art" aria-hidden="true">
+          <Image
+            src="/logo_aprendiendodev.png"
+            alt=""
+            width={320}
+            height={320}
+          />
+          <span>aprender · construir · compartir</span>
+        </div>
+        <div className="project-copy">
+          <div className="project-title">
+            <h2 id="project-heading">
+              aprendiendo<span>.dev</span>
+            </h2>
+            <span className="project-status">En desarrollo</span>
+          </div>
+          <p>
+            Estoy preparando un espacio de formación para desarrolladores, con
+            guías técnicas, cursos y herramientas para llevar lo aprendido a tus
+            proyectos.
+          </p>
+          <div className="project-footer">
+            <a href="https://aprendiendo.dev" className="solid-link">
+              Conocer el proyecto{" "}
+              <svg aria-hidden="true">
+                <use href="#arrow" />
+              </svg>
+            </a>
+            <p>
+              El lanzamiento completo está en preparación.
+              <br />
+              Puedes seguir las novedades en la web del proyecto.
+            </p>
           </div>
         </div>
       </section>
-
-      {/* Recent posts */}
-      {recentPosts.length > 0 && (
-        <section>
-          <SectionTitle action={
-            <Link href="/blog" className="neo-btn" style={{ fontSize: "0.85rem", whiteSpace: "nowrap" }}>
-              Ver todos →
-            </Link>
-          }>Últimos artículos</SectionTitle>
-
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(min(320px, 100%), 1fr))",
-              gap: "1.5rem",
-            }}
-          >
-            {recentPosts.map((post) => (
-              <BlogCard key={post.slug} post={post} />
-            ))}
+      <section
+        className="letter editorial-wrap"
+        aria-labelledby="letter-heading"
+      >
+        <div className="letter-top">
+          <span>DE CARLOS A TU BANDEJA DE ENTRADA</span>
+          <span className="postmark" aria-hidden="true">
+            @
+          </span>
+        </div>
+        <div className="letter-body">
+          <div>
+            <h2 id="letter-heading">
+              ¿Seguimos
+              <br />
+              por email<span>?</span>
+            </h2>
+            <p>
+              Lo que voy aprendiendo sobre JavaScript, arquitectura e IA,
+              también en mi newsletter.
+            </p>
           </div>
-        </section>
-      )}
+          <div className="letter-action">
+            <a
+              className="solid-link"
+              href="https://carlosazaustre.substack.com/subscribe"
+            >
+              Apuntarme a la newsletter{" "}
+              <svg aria-hidden="true">
+                <use href="#right" />
+              </svg>
+            </a>
+            <small>En Substack. Puedes darte de baja cuando quieras.</small>
+            <a
+              className="quiet-link"
+              href="https://carlosazaustre.substack.com"
+            >
+              Leer antes una edición{" "}
+              <svg aria-hidden="true">
+                <use href="#arrow" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
