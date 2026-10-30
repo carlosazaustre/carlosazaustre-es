@@ -11,6 +11,8 @@ export default function Footer() {
         <a href="https://linkedin.com/in/carlosazaustre">LinkedIn</a>
         <Link href="/now">Ahora</Link>
         <a href="/rss.xml">RSS</a>
+        <a href="/legal/postiz/terms.html">Postiz: condiciones</a>
+        <a href="/legal/postiz/privacy.html">Postiz: privacidad</a>
       </nav>
     </footer>
   );
