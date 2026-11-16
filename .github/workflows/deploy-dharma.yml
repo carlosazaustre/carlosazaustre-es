@@ -21,7 +21,7 @@ permissions:
 jobs:
   build:
     if: github.event_name == 'workflow_dispatch' || vars.PRODUCTION_TARGET == 'dharma'
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:
       contents: read
@@ -103,7 +103,7 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
@@ -116,6 +116,8 @@ jobs:
           oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
           oauth-secret: ${{ secrets.TS_OAUTH_CLIENT_SECRET }}
           tags: tag:ci
+          # CI reaches dharma by IP; the tailnet resolver breaks public DNS for tag:ci.
+          args: --accept-dns=false
       - name: Deploy immutable image and verify origin
         env:
           DOKPLOY_URL: ${{ vars.DOKPLOY_URL }}
