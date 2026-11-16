@@ -21,7 +21,7 @@ permissions:
 jobs:
   build:
     if: github.event_name == 'workflow_dispatch' || vars.PRODUCTION_TARGET == 'dharma'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 30
     permissions:
       contents: read
@@ -103,7 +103,7 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
